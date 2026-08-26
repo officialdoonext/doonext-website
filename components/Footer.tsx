@@ -197,32 +197,29 @@ export default function Footer() {
           <div className="lg:col-span-2 space-y-4">
             <h4 className="text-xs font-bold text-slate-400 uppercase tracking-widest flex items-center gap-1.5">
               <span className="w-1.5 h-1.5 rounded-full bg-[#8C5288]" />
-              Software Suite
+              Softwares
             </h4>
             <ul className="space-y-2.5 text-sm font-medium text-slate-600">
               <li>
-                <Link href="/products" className="hover:text-[#8C5288] transition-colors flex items-center justify-between group">
+                <Link href="/softwares" className="hover:text-[#8C5288] transition-colors flex items-center justify-between group">
                   <span>Billing POS</span>
                   <span className="text-[9px] font-bold text-[#8C5288] bg-[#8C5288]/10 px-1.5 py-0.5 rounded">HOT</span>
                 </Link>
               </li>
               <li>
-                <Link href="/products" className="hover:text-[#8C5288] transition-colors">ERP &amp; Inventory</Link>
+                <Link href="/softwares" className="hover:text-[#8C5288] transition-colors">ERP &amp; Inventory</Link>
               </li>
               <li>
-                <Link href="/products" className="hover:text-[#8C5288] transition-colors flex items-center justify-between group">
+                <Link href="/softwares" className="hover:text-[#8C5288] transition-colors flex items-center justify-between group">
                   <span>CRM &amp; Marketing</span>
                   <span className="text-[9px] font-bold text-[#40C351] bg-[#40C351]/10 px-1.5 py-0.5 rounded">NEW</span>
                 </Link>
               </li>
               <li>
-                <Link href="/products" className="hover:text-[#8C5288] transition-colors">Payroll &amp; HRMS</Link>
+                <Link href="/softwares" className="hover:text-[#8C5288] transition-colors">Payroll &amp; HRMS</Link>
               </li>
               <li>
-                <Link href="/products" className="hover:text-[#8C5288] transition-colors">Custom Software</Link>
-              </li>
-              <li>
-                <Link href="/products" className="hover:text-[#8C5288] transition-colors">Hardware Bundles</Link>
+                <Link href="/softwares" className="hover:text-[#8C5288] transition-colors">Custom Software</Link>
               </li>
             </ul>
           </div>
@@ -259,7 +256,7 @@ export default function Footer() {
           <div className="lg:col-span-2 space-y-4">
             <h4 className="text-xs font-bold text-slate-400 uppercase tracking-widest flex items-center gap-1.5">
               <span className="w-1.5 h-1.5 rounded-full bg-[#EFAF08]" />
-              Company
+              Quick Links
             </h4>
             <ul className="space-y-2.5 text-sm font-medium text-slate-600">
               <li>
@@ -269,16 +266,19 @@ export default function Footer() {
                 <Link href="/about" className="hover:text-[#8C5288] transition-colors">About Us</Link>
               </li>
               <li>
-                <Link href="/products" className="hover:text-[#8C5288] transition-colors">Product Catalog</Link>
+                <Link href="/softwares" className="hover:text-[#8C5288] transition-colors">Softwares</Link>
               </li>
               <li>
-                <Link href="/contact" className="hover:text-[#8C5288] transition-colors">Pricing &amp; Plans</Link>
+                <Link href="/products" className="hover:text-[#8C5288] transition-colors">Products</Link>
               </li>
               <li>
-                <Link href="/contact" className="hover:text-[#8C5288] transition-colors">Contact Support</Link>
+                <Link href="/contact" className="hover:text-[#8C5288] transition-colors">Contact Us</Link>
               </li>
               <li>
-                <Link href="/privacy-policy" className="hover:text-[#8C5288] transition-colors">Trust &amp; Privacy</Link>
+                <Link href="/login" className="hover:text-[#8C5288] transition-colors">Merchant Login</Link>
+              </li>
+              <li>
+                <Link href="/profile" className="hover:text-[#8C5288] transition-colors">Store Profile</Link>
               </li>
             </ul>
           </div>
