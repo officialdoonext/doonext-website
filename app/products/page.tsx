@@ -3,29 +3,24 @@
 import React, { useState } from "react";
 import Link from "next/link";
 import { 
-  Receipt, 
-  Boxes, 
-  Users, 
-  Wallet, 
-  Code2, 
+  Sparkles, 
+  Printer, 
+  Laptop, 
+  Cpu, 
+  Zap, 
   CheckCircle2, 
   ArrowRight, 
-  Sparkles, 
-  Store, 
-  Utensils, 
-  Building2, 
-  Coffee, 
+  ShieldCheck, 
   Package, 
-  HeartPulse, 
-  GraduationCap, 
-  Hotel,
-  Layers,
-  Printer,
-  Barcode,
-  Smartphone,
-  ShieldCheck,
-  Zap,
-  BarChart3
+  Scale, 
+  Keyboard, 
+  Mouse, 
+  Tv, 
+  QrCode, 
+  CreditCard, 
+  Truck,
+  Check,
+  Phone
 } from "lucide-react";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
@@ -33,163 +28,257 @@ import RequestDemoModal from "@/components/RequestDemoModal";
 
 export default function ProductsPage() {
   const [demoModalOpen, setDemoModalOpen] = useState(false);
-  const [selectedProduct, setSelectedProduct] = useState("Doonext Billing");
+  const [selectedProduct, setSelectedProduct] = useState("Retail POS Starter Bundle");
   const [activeCategory, setActiveCategory] = useState("all");
 
-  const openDemoFor = (productName: string) => {
+  const openQuoteFor = (productName: string) => {
     setSelectedProduct(productName);
     setDemoModalOpen(true);
   };
 
-  const productCatalog = [
+  const hardwareCatalog = [
     {
-      id: "billing",
-      category: "retail",
-      title: "Doonext Billing",
-      badge: "Retail & Counter POS",
-      tagline: "Ultra-fast billing with barcode scanner, inventory control & GST compliance.",
-      icon: Receipt,
-      accentColor: "bg-[#8C5288]",
-      features: [
-        "Barcode Scanning & Fast Search (<0.2 sec response)",
-        "GST Invoice Generator & E-Way Bill Integration",
-        "Multi-Counter & Multi-Branch Synchronization",
-        "Low Stock Alerts & Automated Purchase Orders",
-        "Thermal & Laser Printer Support (2-inch, 3-inch, A4)",
-        "Offline-First Mode with Automatic Cloud Sync",
+      id: "touch-pos",
+      category: "computers",
+      title: "15.6\" Capacitive Touch POS Billing Machine",
+      badge: "Commercial All-in-One",
+      tagline: "Heavy-duty capacitive touchscreen desktop POS with dual customer display option.",
+      icon: Tv,
+      specs: [
+        "15.6-inch Full HD (1920x1080) True-Flat Touchscreen",
+        "Intel Core i5 High Performance Processor",
+        "8GB DDR4 RAM + 256GB High-Speed SSD",
+        "IP54 Spill & Dust Resistant Bezel",
+        "Multiple Ports: 6x USB, 2x COM (RS232), 1x LAN, 1x VGA",
+        "Pre-installed Windows 11 Pro & Doonext Drivers"
       ],
-      idealFor: "Supermarkets, Apparel Stores, Footwear, Electronics, Grocery & Stationery Shops",
+      idealFor: "Supermarket Counters, Restaurant Dining Terminals, Apparel Stores, Bakeries",
+      warranty: "1 Year Onsite Warranty + Lifetime Driver Support"
     },
     {
-      id: "restaurant",
-      category: "food",
-      title: "Doonext Restaurant",
-      badge: "Food & Beverage POS",
-      tagline: "End-to-end table management, instant Kitchen Order Tickets (KOT) & online orders.",
-      icon: Utensils,
-      accentColor: "bg-[#EFAF08]",
-      features: [
-        "Visual Table Layout & Real-Time Table Status",
-        "Multi-Station Kitchen Order Tickets (KOT) via Network Printers",
-        "Captains Ordering Mobile App for Waiters",
-        "Recipe Management & Food Costing Analytics",
-        "Splitting Bills & Custom Discount Authorizations",
-        "Zomato & Swiggy Integration Support",
+      id: "commercial-laptop",
+      category: "laptops",
+      title: "Commercial Business Laptop for Store Managers",
+      badge: "Portable Workstation",
+      tagline: "Durable business laptop designed for store managers, stock audits & mobile billing.",
+      icon: Laptop,
+      specs: [
+        "15.6-inch Anti-Glare Eye-Care IPS Display",
+        "Intel Core i5 12th Gen Turbo Processor",
+        "16GB DDR4 RAM + 512GB NVMe M.2 SSD",
+        "Full-Size Numeric Keyboard for Fast Data Entry",
+        "Up to 10 Hours Long Battery Backup",
+        "Wi-Fi 6, Bluetooth 5.2, USB-C & HDMI"
       ],
-      idealFor: "Fine Dining, Quick Service Restaurants (QSR), Food Courts, Bars & Bakeries",
+      idealFor: "Store Management, Godown Stock Audits, Backoffice Accounting & Mobile Sales",
+      warranty: "1 Year Manufacturer Comprehensive Warranty"
     },
     {
-      id: "hotel",
-      category: "hospitality",
-      title: "Doonext Hotel",
-      badge: "Hospitality & Room ERP",
-      tagline: "Complete hotel management system for room reservations, housekeeping & guest billing.",
-      icon: Hotel,
-      accentColor: "bg-sky-600",
-      features: [
-        "Interactive Room Grid & Live Occupancy Matrix",
-        "Express Check-In / Check-Out with ID Proof Archiving",
-        "Integrated Room Service & Restaurant Folio Billing",
-        "Housekeeping & Room Maintenance Status Tracking",
-        "Corporate & Travel Agent Commission Management",
-        "GST Compliant Master Folio Invoicing",
+      id: "printer-3inch",
+      category: "printers",
+      title: "3-Inch High Speed Thermal Receipt Printer",
+      badge: "Fast 260mm/s Auto-Cutter",
+      tagline: "Heavy-duty 80mm thermal receipt printer with USB, Ethernet (LAN) & Bluetooth connectivity.",
+      icon: Printer,
+      specs: [
+        "High-Speed 260mm/sec Ultra-Quiet Printing",
+        "Auto-Cutter Mechanism (Rated for 1.5 Million Cuts)",
+        "Triple Interface: USB + LAN (Ethernet) + Serial / Bluetooth",
+        "Supports ESC/POS & OPOS Standard Drivers",
+        "Drop-in Easy Paper Roll Loading Mechanism",
+        "Direct RJ11 Cash Drawer Kick-Out Port"
       ],
-      idealFor: "Hotels, Resorts, Serviced Apartments, Boutique Stays & Motels",
+      idealFor: "High-Traffic Supermarket Checkouts, Kitchen KOT Stations, Retail Billing Counters",
+      warranty: "1 Year Replacement Warranty"
     },
     {
-      id: "crm",
-      category: "sales",
-      title: "Doonext CRM",
-      badge: "Sales Pipeline & Leads",
-      tagline: "Track prospective leads, automate follow-ups, and accelerate deal closures.",
-      icon: Users,
-      accentColor: "bg-[#8C5288]",
-      features: [
-        "Omni-channel Lead Ingestion (Website, WhatsApp, Calls)",
-        "Visual Kanban Pipeline & Stage Tracking",
-        "Automated WhatsApp & Email Follow-up Triggers",
-        "Team Performance & Sales Target Dashboards",
-        "Quotation & Proposal Generator with 1-Click Approval",
-        "Customer Lifetime Value (CLV) Analytics",
+      id: "printer-2inch",
+      category: "printers",
+      title: "2-Inch Portable Bluetooth Thermal Printer",
+      badge: "Wireless & Compact",
+      tagline: "Rechargeable 58mm pocket printer for van sales, delivery billing & table ordering.",
+      icon: Printer,
+      specs: [
+        "Compact Pocket Size with Rugged Silicone Casing",
+        "Bluetooth 4.0 + USB Dual Mode Connection",
+        "Long-Lasting 2000mAh Rechargeable Li-Ion Battery",
+        "Prints 2-inch Receipts, QR Codes & UPI Payment Receipts",
+        "Compatible with Android, iOS & Windows Tablets",
+        "Clear 203 DPI Thermal Resolution"
       ],
-      idealFor: "B2B Enterprises, Real Estate, Consultancies, Agencies & Service Providers",
+      idealFor: "Home Delivery Agents, Van Sales, Table-Side Dining Billing, Event Counters",
+      warranty: "1 Year Standard Warranty"
     },
     {
-      id: "payroll",
-      category: "hr",
-      title: "Doonext Payroll",
-      badge: "HRMS & Salary Compliance",
-      tagline: "Automate biometric attendance, PF, ESI, TDS calculations & payslip generation.",
-      icon: Wallet,
-      accentColor: "bg-[#40C351]",
-      features: [
-        "Biometric Machine & Geofenced Mobile Attendance Sync",
-        "Automated PF, ESI, Professional Tax & TDS Compliance",
-        "Custom Shift Scheduling & Overtime Calculations",
-        "Employee Self-Service Portal for Leave Requests & Slips",
-        "1-Click Direct Bank Transfer File Generator",
-        "Automated Form 16 & Year-End Tax Reports",
+      id: "scanner-2d-wireless",
+      category: "scanners",
+      title: "2D Wireless Barcode & QR Code Scanner",
+      badge: "Long Range 50m",
+      tagline: "High-precision handheld scanner that reads printed barcodes and mobile phone screens.",
+      icon: QrCode,
+      specs: [
+        "Advanced CMOS Image Sensor (Reads 1D & 2D QR Codes)",
+        "2.4GHz Wireless + USB Wired Dual Mode (50m Range)",
+        "Reads damaged, smudged, low-contrast & digital screen codes",
+        "2000mAh Battery with 30 Hours Continuous Scanning",
+        "Drop-Resistant (Withstands 1.8m Concrete Drops)",
+        "Includes Hands-Free Auto-Sensing Charging Stand"
       ],
-      idealFor: "Manufacturing Units, Retail Chains, Offices, Hospitals & Educational Institutes",
+      idealFor: "Retail Counters, Warehouse Godowns, Pharmacy Counters, Courier Hubs",
+      warranty: "1 Year Full Warranty"
     },
     {
-      id: "custom",
-      category: "custom",
-      title: "Custom Software Solutions",
-      badge: "Tailor-Made Architecture",
-      tagline: "Bespoke software engineered specifically to solve your unique business workflows.",
-      icon: Code2,
-      accentColor: "bg-[#FB5454]",
-      features: [
-        "Dedicated Requirement Analysis & Custom Architecture Design",
-        "Modern Cloud-Native Tech Stack (Next.js, Node, PostgreSQL, AWS)",
-        "API Integration with Legacy ERPs & Third-Party Hardware",
-        "Enterprise-Grade Role-Based Access Control (RBAC)",
-        "Full Source Code Handover & Dedicated SLA Support",
-        "Continuous Deployment & Scalable Infrastructure",
+      id: "scanner-desktop",
+      category: "scanners",
+      title: "Omnidirectional Desktop Counter Barcode Scanner",
+      badge: "Hands-Free Multi-Beam",
+      tagline: "High-throughput supermarket hands-free scanner with 360-degree automatic scan zone.",
+      icon: Zap,
+      specs: [
+        "Multi-line 360° Omnidirectional Optical Scanning",
+        "Instant Scan Rate: 1500 Scans / Second",
+        "Heavy-Duty Anti-Slip Base for Countertop Stability",
+        "Automatic Sleep & Instant Wakeup Sensor",
+        "Plug-and-Play USB HID Keyboard Emulation",
+        "Reads All 1D / 2D / GS1 DataBar Barcodes"
       ],
-      idealFor: "Specialized Manufacturers, Large Supply Chain Networks, Fintech & Scaled Enterprises",
+      idealFor: "Busy Hypermarkets, Grocery Superstores, Department Stores, Wholesale Counters",
+      warranty: "1 Year Replacement Warranty"
     },
+    {
+      id: "keyboard-mouse-combo",
+      category: "keyboards",
+      title: "Spill-Resistant POS Mechanical Keyboard & Mouse Combo",
+      badge: "Tactile & Heavy-Duty",
+      tagline: "Commercial billing keyboard with spill drainage and ergonomic optical mouse.",
+      icon: Keyboard,
+      specs: [
+        "Spill-Resistant Sealed Membrane with Drainage Holes",
+        "Laser-Etched Durable Keycaps (Rated for 20M Keystrokes)",
+        "Full Numeric Numpad with Large '+ / Enter' Cashier Keys",
+        "Precision 1600 DPI Ergonomic Optical USB Mouse",
+        "1.8 Meter Reinforced USB Cable",
+        "Plug & Play Driverless Setup on Windows & Linux"
+      ],
+      idealFor: "All Retail Billing Counters, Grocery Desks, Restaurant Order Stations",
+      warranty: "1 Year Comprehensive Warranty"
+    },
+    {
+      id: "pos-keypad",
+      category: "keyboards",
+      title: "50-Key Programmable POS Shortcut Keypad",
+      badge: "Cashier Turbo Keys",
+      tagline: "Programmable mechanical keypad with custom labels for fast product shortcuts.",
+      icon: Cpu,
+      specs: [
+        "50 Fully Programmable Mechanical Switch Keys",
+        "Clear Removable Keycap Lids for Custom Label Inserts",
+        "Single, Double & Quadruple Key Matrix Configuration",
+        "Direct PLU Hotkeys for Top 50 Fast-Moving Items",
+        "Built-in EEPROM (Retains Key Maps Without Drivers)",
+        "Solid Steel Internal Plate for Maximum Counter Durability"
+      ],
+      idealFor: "Fast Food Counters, Bakeries, Canteens, Juice Bars, High-Speed Express Checkouts",
+      warranty: "1 Year Warranty"
+    },
+    {
+      id: "cash-drawer",
+      category: "accessories",
+      title: "Heavy-Duty Metal RJ11 Electronic Cash Drawer",
+      badge: "Auto-Kick on Bill Print",
+      tagline: "Solid steel electronic cash drawer with steel ball-bearing rollers and dual media slots.",
+      icon: CreditCard,
+      specs: [
+        "Heavy Gauge Thick Cold-Rolled Steel Construction",
+        "5 Adjustable Bill Compartments with Steel Spring Clips",
+        "8 Removable Coin Cups for Easy Tallying",
+        "Dual Front Media Slots for Card Slips & Checks",
+        "Standard RJ11 Interface with 12V/24V Printer Kick Trigger",
+        "3-Position Key Lock (Manual Open, Auto, Locked)"
+      ],
+      idealFor: "All Retail & Hospitality Billing Counters, Supermarkets, Bars",
+      warranty: "1 Year Warranty"
+    },
+    {
+      id: "weighing-scale",
+      category: "accessories",
+      title: "Certified Digital Weighing Scale with POS Auto-Sync",
+      badge: "Legal Metrology Approved",
+      tagline: "High-precision digital weighing scale with RS232 port for instant weight transfer to billing POS.",
+      icon: Scale,
+      specs: [
+        "Government Legal Metrology Model Approved (Stamped)",
+        "Capacity: Up to 31 Kg with 1g / 2g High Accuracy",
+        "Dual Bright Green LED Display (Cashier & Customer Facing)",
+        "RS232 Serial Port for Real-Time Weight Sync to Doonext POS",
+        "Stainless Steel Grade 304 Removable Platter",
+        "Built-in Rechargeable Battery with 40 Hours Backup"
+      ],
+      idealFor: "Supermarket Vegetable & Fruit Counters, Sweet Shops, Butcheries, Dry Fruit Stores",
+      warranty: "1 Year Stamping & Service Warranty"
+    },
+    {
+      id: "retail-starter-bundle",
+      category: "bundles",
+      title: "Complete Retail POS Starter Hardware Bundle",
+      badge: "Best Value Kit",
+      tagline: "Everything you need to launch a modern, high-speed retail checkout counter.",
+      icon: Package,
+      specs: [
+        "1x 15.6\" Capacitive Touch POS All-in-One Terminal (i5 / 8GB / 256GB)",
+        "1x 3-Inch High Speed Thermal Receipt Printer with Auto-Cutter",
+        "1x 2D Wireless Barcode & QR Code Scanner with Stand",
+        "1x Heavy-Duty Metal Cash Drawer (Auto-Kick RJ11)",
+        "Free 10x 3-Inch Thermal Paper Rolls Included",
+        "Free Onsite Setup & Doonext Driver Pre-Installation"
+      ],
+      idealFor: "New Store Openings, Supermarkets, Apparel Stores, Electronics Showrooms",
+      warranty: "1 Year Full Hardware Onsite Replacement Warranty"
+    }
   ];
 
-  const filteredProducts = activeCategory === "all" 
-    ? productCatalog 
-    : productCatalog.filter(p => p.category === activeCategory);
+  const filteredHardware = activeCategory === "all"
+    ? hardwareCatalog
+    : hardwareCatalog.filter(h => h.category === activeCategory);
 
   return (
-    <div className="min-h-screen bg-[#fafbfc] text-[#282023] flex flex-col selection:bg-[#8C5288] selection:text-white">
+    <div className="min-h-screen bg-[#fafbfc] text-[#282023] flex flex-col selection:bg-[#8C5288] selection:text-white font-sans">
       <Navbar onRequestDemo={() => setDemoModalOpen(true)} />
       <RequestDemoModal isOpen={demoModalOpen} onClose={() => setDemoModalOpen(false)} defaultProduct={selectedProduct} />
 
-      <main className="flex-1">
+      <main className="flex-1 pb-20">
         
-        {/* Hero Header Solid Color */}
-        <section className="relative pt-16 pb-16 bg-[#fbf6fa] text-center">
-          <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#8C5288]/10 border border-[#8C5288]/20 text-[#8C5288] text-xs font-bold uppercase tracking-wider mb-4">
+        {/* ========================================================================= */}
+        {/* 1. HERO HEADER */}
+        {/* ========================================================================= */}
+        <section className="pt-14 pb-16 lg:pt-16 lg:pb-20 bg-gradient-to-b from-[#fbf8fc] via-white to-[#fafbfc] border-b border-slate-100 relative overflow-hidden text-center">
+          <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            
+            <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#8C5288]/10 border border-[#8C5288]/20 text-[#8C5288] text-xs font-bold uppercase tracking-wider mb-5">
               <Sparkles className="w-3.5 h-3.5" />
-              Software Product Suite
+              <span>Certified POS Hardware &amp; Equipment</span>
             </div>
-            <h1 className="text-4xl sm:text-5xl font-bold text-[#282023] tracking-tight leading-tight">
-              Powerful Products Built to <br />
-              <span className="text-[#8C5288]">
-                Scale Your Business Operations
-              </span>
+
+            <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-[#282023] tracking-tight leading-[1.14]">
+              Commercial POS Hardware <br className="hidden sm:inline" />
+              <span className="text-[#8C5288]">&amp; Business Devices</span>
             </h1>
-            <p className="mt-4 text-base sm:text-lg text-slate-600 max-w-2xl mx-auto leading-relaxed">
-              Explore our comprehensive range of specialized software solutions designed with high speed, zero downtime, and unmatched simplicity.
+
+            <p className="mt-4 text-base sm:text-lg text-slate-600 max-w-3xl mx-auto leading-relaxed">
+              Equip your stores with heavy-duty commercial touch POS computers, business laptops, thermal receipt printers, wireless barcode scanners, spill-proof keyboards, and electronic cash drawers.
             </p>
 
             {/* Category Filter Pills */}
             <div className="flex flex-wrap items-center justify-center gap-2 mt-8">
               {[
-                { id: "all", label: "All Products" },
-                { id: "retail", label: "Billing & POS" },
-                { id: "food", label: "Restaurant & KOT" },
-                { id: "hospitality", label: "Hotel ERP" },
-                { id: "sales", label: "CRM & Leads" },
-                { id: "hr", label: "Payroll & HRMS" },
-                { id: "custom", label: "Custom Software" },
+                { id: "all", label: "All Products (11)" },
+                { id: "computers", label: "Touch POS & Desktops" },
+                { id: "laptops", label: "Laptops" },
+                { id: "printers", label: "Thermal Printers" },
+                { id: "scanners", label: "Barcode Scanners" },
+                { id: "keyboards", label: "Keyboards & Mice" },
+                { id: "accessories", label: "Cash Drawers & Scales" },
+                { id: "bundles", label: "Starter Bundles" },
               ].map((tab) => (
                 <button
                   key={tab.id}
@@ -204,134 +293,178 @@ export default function ProductsPage() {
                 </button>
               ))}
             </div>
+
           </div>
         </section>
 
-        {/* Product Details Section */}
+        {/* ========================================================================= */}
+        {/* 2. HARDWARE PRODUCTS CATALOG GRID */}
+        {/* ========================================================================= */}
         <section className="py-12 bg-white">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
-              {filteredProducts.map((prod) => {
-                const Icon = prod.icon;
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+              
+              {filteredHardware.map((item) => {
+                const Icon = item.icon;
                 return (
                   <div
-                    key={prod.id}
-                    id={prod.id}
-                    className="p-8 rounded-3xl bg-[#fafbfc] border border-slate-200 shadow-xs hover:shadow-xl transition-all duration-300 flex flex-col justify-between group scroll-mt-24"
+                    key={item.id}
+                    id={item.id}
+                    className="p-7 rounded-3xl bg-[#fafbfc] border border-slate-200 shadow-xs hover:shadow-xl transition-all duration-300 flex flex-col justify-between group scroll-mt-24"
                   >
-                    <div>
-                      <div className="flex items-center justify-between gap-4 mb-4">
-                        <div className="flex items-center gap-3">
-                          <div className={`w-12 h-12 rounded-2xl ${prod.accentColor} text-white flex items-center justify-center shadow-md`}>
-                            <Icon className="w-6 h-6" />
-                          </div>
-                          <div>
-                            <span className="text-[11px] font-bold uppercase tracking-wider text-[#8C5288]">
-                              {prod.badge}
-                            </span>
-                            <h3 className="text-2xl font-bold text-[#282023] group-hover:text-[#8C5288] transition-colors">
-                              {prod.title}
-                            </h3>
-                          </div>
+                    <div className="space-y-4">
+                      
+                      {/* Top Header */}
+                      <div className="flex items-start justify-between gap-3">
+                        <div className="w-12 h-12 rounded-2xl bg-[#8C5288]/10 text-[#8C5288] flex items-center justify-center shrink-0 shadow-2xs group-hover:bg-[#8C5288] group-hover:text-white transition-colors">
+                          <Icon className="w-6 h-6" />
                         </div>
+                        <span className="text-[10px] font-bold uppercase tracking-wider px-2.5 py-0.5 rounded-full bg-[#8C5288]/10 text-[#8C5288] border border-[#8C5288]/20">
+                          {item.badge}
+                        </span>
                       </div>
 
-                      <p className="text-sm text-slate-600 leading-relaxed mb-6 font-medium">
-                        {prod.tagline}
-                      </p>
+                      {/* Title & Tagline */}
+                      <div>
+                        <h3 className="text-xl font-bold text-[#282023] group-hover:text-[#8C5288] transition-colors leading-snug">
+                          {item.title}
+                        </h3>
+                        <p className="text-xs text-slate-500 mt-1 leading-relaxed">
+                          {item.tagline}
+                        </p>
+                      </div>
 
-                      <div className="space-y-2.5 mb-6">
-                        <h4 className="text-xs font-bold uppercase tracking-wider text-slate-400">
-                          Key Capabilities &amp; Features:
-                        </h4>
-                        <div className="grid grid-cols-1 sm:grid-cols-2 gap-2 text-xs text-[#282023]">
-                          {prod.features.map((feat, fIdx) => (
-                            <div key={fIdx} className="flex items-start gap-2">
-                              <CheckCircle2 className="w-4 h-4 text-[#40C351] shrink-0 mt-0.5" />
-                              <span className="leading-snug">{feat}</span>
+                      {/* Technical Specifications */}
+                      <div className="space-y-2 pt-1">
+                        <div className="text-[11px] font-bold text-slate-400 uppercase tracking-wider">
+                          Hardware Specifications:
+                        </div>
+                        <div className="space-y-1.5">
+                          {item.specs.slice(0, 4).map((spec, sIdx) => (
+                            <div key={sIdx} className="flex items-start gap-2 text-xs text-slate-700">
+                              <CheckCircle2 className="w-3.5 h-3.5 text-[#40C351] shrink-0 mt-0.5" />
+                              <span className="leading-snug">{spec}</span>
                             </div>
                           ))}
                         </div>
                       </div>
 
-                      <div className="p-3.5 rounded-xl bg-[#8C5288]/5 border border-[#8C5288]/15 text-xs text-[#282023]">
-                        <span className="font-bold text-[#8C5288]">Best Suited For: </span>
-                        {prod.idealFor}
+                      {/* Ideal For */}
+                      <div className="p-3 rounded-xl bg-slate-100/80 border border-slate-200/70 text-[11px] text-slate-600 leading-snug">
+                        <span className="font-bold text-[#282023]">Best for: </span>
+                        {item.idealFor}
                       </div>
+
+                      {/* Warranty Badge */}
+                      <div className="inline-flex items-center gap-1.5 text-[11px] text-[#40C351] font-semibold">
+                        <ShieldCheck className="w-3.5 h-3.5" />
+                        <span>{item.warranty}</span>
+                      </div>
+
                     </div>
 
-                    <div className="pt-6 mt-6 border-t border-slate-200 flex items-center justify-between">
+                    {/* Action Row */}
+                    <div className="pt-6 mt-6 border-t border-slate-200/80 flex items-center justify-between gap-3">
                       <button
-                        onClick={() => openDemoFor(prod.title)}
-                        className="px-6 py-2.5 rounded-xl bg-[#8C5288] hover:bg-[#763f72] text-white font-bold text-xs sm:text-sm shadow-md transition-all flex items-center gap-2 cursor-pointer"
+                        onClick={() => openQuoteFor(item.title)}
+                        className="flex-1 py-2.5 px-4 rounded-xl bg-[#8C5288] hover:bg-[#763f72] text-white font-bold text-xs shadow-md transition-all flex items-center justify-center gap-1.5 cursor-pointer"
                       >
-                        <span>Schedule Free Demo</span>
-                        <ArrowRight className="w-4 h-4" />
+                        <span>Get Hardware Quote</span>
+                        <ArrowRight className="w-3.5 h-3.5" />
                       </button>
+                      
                       <Link
                         href="/contact"
-                        className="text-xs font-bold text-slate-600 hover:text-[#8C5288] transition-colors"
+                        className="px-3 py-2.5 rounded-xl bg-white hover:bg-slate-50 text-slate-700 border border-slate-200 font-bold text-xs transition-colors shrink-0"
                       >
-                        Talk to Specialist →
+                        Inquire
                       </Link>
                     </div>
+
                   </div>
                 );
               })}
+
             </div>
           </div>
         </section>
 
-        {/* Industries Section */}
-        <section id="industries" className="py-20 bg-[#fafbfc] border-t border-slate-100 scroll-mt-20">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-            <div className="inline-block text-xs font-bold text-[#8C5288] uppercase tracking-widest bg-[#8C5288]/10 px-3 py-1 rounded-full border border-[#8C5288]/20 mb-2">
-              SECTOR ADAPTABILITY
+        {/* ========================================================================= */}
+        {/* 3. HARDWARE COMPATIBILITY & SUPPORT GUARANTEES */}
+        {/* ========================================================================= */}
+        <section className="py-16 bg-[#fafbfc] border-t border-slate-100">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="text-center max-w-3xl mx-auto mb-12">
+              <div className="inline-block text-xs font-bold text-[#8C5288] uppercase tracking-widest bg-[#8C5288]/10 px-3 py-1 rounded-full border border-[#8C5288]/20 mb-2">
+                RELIABILITY COMMITMENTS
+              </div>
+              <h2 className="text-3xl font-bold text-[#282023]">The Doonext Hardware Guarantee</h2>
+              <p className="text-slate-600 mt-2 text-sm">
+                Every hardware device sold by Doonext is pre-flashed with universal drivers, tested for 48-hour continuous burn-in, and backed by direct engineer replacement support.
+              </p>
             </div>
-            <h2 className="text-3xl font-bold text-[#282023]">Software Tailored to Your Industry</h2>
-            <p className="text-slate-600 mt-2 text-sm max-w-xl mx-auto">
-              Our products are engineered with pre-configured templates for specific business models across India.
-            </p>
 
-            <div className="mt-12 grid grid-cols-2 sm:grid-cols-4 gap-6 text-left">
-              {[
-                { title: "Retail Stores", desc: "Supermarkets, boutiques, hardware & mobile shops.", icon: Store },
-                { title: "Restaurants & Bars", desc: "Fine dining, QSR, cafes, bakeries & cloud kitchens.", icon: Utensils },
-                { title: "Hotels & Stays", desc: "Resorts, boutique hotels, lodges & service apartments.", icon: Building2 },
-                { title: "Wholesale & Distributors", desc: "Bulk billing, batch tracking & multi-warehouse stock.", icon: Package },
-                { title: "Cafes & Bakeries", desc: "Recipe costing, combo menus & instant counter receipts.", icon: Coffee },
-                { title: "Healthcare & Clinics", desc: "Patient billing, pharmacy POS & doctor scheduling.", icon: HeartPulse },
-                { title: "Education Institutes", desc: "Fee collection, employee payroll & inventory.", icon: GraduationCap },
-                { title: "Custom Enterprises", desc: "Tailored ERP integrations for unique operational workflows.", icon: Code2 },
-              ].map((ind, idx) => {
-                const Icon = ind.icon;
-                return (
-                  <div key={idx} className="p-5 rounded-2xl bg-white border border-slate-200 hover:border-[#8C5288]/40 hover:shadow-md transition-all group">
-                    <div className="w-10 h-10 rounded-xl bg-[#8C5288]/10 text-[#8C5288] flex items-center justify-center mb-3 group-hover:bg-[#8C5288] group-hover:text-white transition-colors">
-                      <Icon className="w-5 h-5" />
-                    </div>
-                    <h3 className="font-bold text-[#282023] text-sm mb-1">{ind.title}</h3>
-                    <p className="text-xs text-slate-500 leading-relaxed">{ind.desc}</p>
-                  </div>
-                );
-              })}
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 text-left">
+              <div className="p-6 rounded-2xl bg-white border border-slate-200 shadow-2xs space-y-2">
+                <div className="w-10 h-10 rounded-xl bg-[#8C5288]/10 text-[#8C5288] flex items-center justify-center">
+                  <ShieldCheck className="w-5 h-5" />
+                </div>
+                <h3 className="font-bold text-[#282023] text-sm">1-Year Replacement Warranty</h3>
+                <p className="text-xs text-slate-500 leading-relaxed">
+                  Fast replacement warranty across Tamil Nadu &amp; major cities in India.
+                </p>
+              </div>
+
+              <div className="p-6 rounded-2xl bg-white border border-slate-200 shadow-2xs space-y-2">
+                <div className="w-10 h-10 rounded-xl bg-[#40C351]/10 text-[#40C351] flex items-center justify-center">
+                  <Zap className="w-5 h-5" />
+                </div>
+                <h3 className="font-bold text-[#282023] text-sm">Plug &amp; Play Driver Stack</h3>
+                <p className="text-xs text-slate-500 leading-relaxed">
+                  Pre-configured with ESC/POS, OPOS and USB HID drivers — zero manual setup headaches.
+                </p>
+              </div>
+
+              <div className="p-6 rounded-2xl bg-white border border-slate-200 shadow-2xs space-y-2">
+                <div className="w-10 h-10 rounded-xl bg-amber-50 text-[#EFAF08] flex items-center justify-center">
+                  <Truck className="w-5 h-5" />
+                </div>
+                <h3 className="font-bold text-[#282023] text-sm">Fast Pan-India Dispatch</h3>
+                <p className="text-xs text-slate-500 leading-relaxed">
+                  Dispatched within 24 hours from Coimbatore with transit insurance.
+                </p>
+              </div>
+
+              <div className="p-6 rounded-2xl bg-white border border-slate-200 shadow-2xs space-y-2">
+                <div className="w-10 h-10 rounded-xl bg-sky-50 text-sky-600 flex items-center justify-center">
+                  <Phone className="w-5 h-5" />
+                </div>
+                <h3 className="font-bold text-[#282023] text-sm">Direct Remote Installation</h3>
+                <p className="text-xs text-slate-500 leading-relaxed">
+                  Our Coimbatore technical desk connects via remote desktop to test print and calibrate scales.
+                </p>
+              </div>
             </div>
           </div>
         </section>
 
-        {/* CTA Banner Solid Color */}
-        <section className="py-12 px-4 sm:px-6 lg:px-8">
-          <div className="max-w-7xl mx-auto rounded-3xl bg-[#8C5288] p-8 sm:p-12 shadow-xl text-white flex flex-col md:flex-row items-center justify-between gap-6">
-            <div>
-              <h3 className="text-2xl sm:text-3xl font-bold">Need a tailored solution for your trade?</h3>
-              <p className="text-purple-100 text-sm mt-1">Our technical consultants will build a customized live demo for your store or enterprise.</p>
+        {/* ========================================================================= */}
+        {/* 4. BOTTOM CTA BANNER */}
+        {/* ========================================================================= */}
+        <section className="pt-8">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="rounded-3xl bg-gradient-to-r from-[#8C5288] via-[#763f72] to-[#5b2857] p-8 sm:p-12 shadow-xl text-white flex flex-col md:flex-row items-center justify-between gap-6">
+              <div>
+                <h3 className="text-2xl sm:text-3xl font-bold">Need a custom hardware quote for multiple counters?</h3>
+                <p className="text-purple-100 text-sm mt-1">Get discounted bulk pricing and free on-site installation for your store chain.</p>
+              </div>
+              <button
+                onClick={() => setDemoModalOpen(true)}
+                className="px-8 py-3.5 rounded-full bg-white text-[#8C5288] font-bold text-sm hover:bg-slate-50 shadow-md transition-all shrink-0 cursor-pointer"
+              >
+                Request Hardware Pricing
+              </button>
             </div>
-            <button
-              onClick={() => setDemoModalOpen(true)}
-              className="px-7 py-3.5 rounded-full bg-white text-[#8C5288] font-bold text-sm hover:bg-slate-50 shadow-md transition-all shrink-0 cursor-pointer"
-            >
-              Request Custom Demo
-            </button>
           </div>
         </section>
 

@@ -23,7 +23,13 @@ import {
   Building2,
   TrendingUp,
   Star,
-  Check
+  Check,
+  Utensils,
+  Hotel,
+  Pill,
+  Truck,
+  HelpCircle,
+  ChevronDown
 } from "lucide-react";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
@@ -31,431 +37,382 @@ import RequestDemoModal from "@/components/RequestDemoModal";
 
 export default function SoftwaresPage() {
   const [demoModalOpen, setDemoModalOpen] = useState(false);
-  const [activeTab, setActiveTab] = useState<"billing" | "erp" | "crm" | "payroll" | "custom">("billing");
+  const [selectedSoftware, setSelectedSoftware] = useState("Doonext Billing POS");
+  const [activeCategory, setActiveCategory] = useState("all");
 
-  const softwareModules = [
+  const openDemoFor = (softwareName: string) => {
+    setSelectedSoftware(softwareName);
+    setDemoModalOpen(true);
+  };
+
+  const allSoftwares = [
     {
       id: "billing",
-      name: "Doonext Billing POS",
-      badge: "Flagship Core",
-      tagline: "Sub-Second Offline-First Counter Point of Sale",
-      description: "Engineered for high-volume retail stores, supermarkets, restaurants, and cafes. Scans, calculates GST splits, and prints thermal receipts in under 0.2 seconds with guaranteed offline resilience.",
+      category: "retail",
+      title: "Doonext Billing POS",
+      badge: "Flagship Counter Engine",
+      tagline: "Sub-second express barcode billing with offline-first guaranteed zero downtime.",
       icon: Receipt,
       color: "bg-[#8C5288]/10 text-[#8C5288] border-[#8C5288]/20",
-      accent: "text-[#8C5288]",
+      accentBg: "bg-[#8C5288]",
       btnBg: "bg-[#8C5288] hover:bg-[#763f72]",
       features: [
-        "Barcode & touch-first express counter billing (< 0.2s)",
-        "Offline-first local cache engine with zero internet downtime",
+        "Barcode & QR express scan checkout (< 0.2s response)",
+        "Offline-first local database with auto cloud sync",
         "Automated Multi-GST tax slabs, HSN codes & E-Way bills",
         "Supports thermal receipt printers (2-inch, 3-inch, LAN, USB, Bluetooth)",
         "Hold cart, split bills, customer credits & loyalty points",
-        "Kitchen Order Token (KOT) multi-printer station routing"
+        "Digital weighing scale auto-weight RS232 sync"
       ],
-      metrics: [
-        { label: "Scan Velocity", val: "< 0.2s" },
-        { label: "Offline Uptime", val: "100%" },
-        { label: "Daily Bills", val: "50,000+" }
-      ]
+      idealFor: "Supermarkets, Grocery Stores, Apparel & Footwear Boutiques, Electronics, Department Stores",
+      metrics: { speed: "< 0.2s", uptime: "100% Offline", scale: "50,000+ Bills/Day" }
+    },
+    {
+      id: "restaurant",
+      category: "food",
+      title: "Doonext Restaurant POS",
+      badge: "Food & Dining Engine",
+      tagline: "Visual table floor map, multi-station Kitchen Order Tokens (KOT) and Captain mobile ordering.",
+      icon: Utensils,
+      color: "bg-[#EFAF08]/15 text-amber-700 border-[#EFAF08]/30",
+      accentBg: "bg-[#EFAF08]",
+      btnBg: "bg-[#EFAF08] hover:bg-[#d69d07] text-[#282023]",
+      features: [
+        "Interactive live table grid with occupancy status & merge bills",
+        "Multi-station KOT routing to kitchen & bar network printers",
+        "Android Captain mobile app for wireless table ordering",
+        "Recipe ingredient BOM & live food costing wastage control",
+        "Split bills, customized item modifiers & discount controls",
+        "Zomato & Swiggy online order integration support"
+      ],
+      idealFor: "Fine Dining, Quick Service Restaurants (QSR), Cafes, Bakeries, Food Courts, Pubs & Bars",
+      metrics: { speed: "< 0.3s KOT", uptime: "100%", scale: "300+ Tables" }
+    },
+    {
+      id: "hotel",
+      category: "hospitality",
+      title: "Doonext Hotel ERP",
+      badge: "Hospitality & Room Suites",
+      tagline: "End-to-end hotel management with live room grid, guest folio billing, and housekeeping sync.",
+      icon: Hotel,
+      color: "bg-sky-50 text-sky-700 border-sky-200",
+      accentBg: "bg-sky-600",
+      btnBg: "bg-sky-600 hover:bg-sky-700 text-white",
+      features: [
+        "Color-coded room reservation calendar & occupancy matrix",
+        "Express check-in / check-out with digital ID scanning",
+        "Integrated room service & dining restaurant folio posting",
+        "Housekeeping room inspection & maintenance dispatch",
+        "Corporate rates, travel agent commission tracking & advance deposits",
+        "Comprehensive GST master folio invoice generation"
+      ],
+      idealFor: "Hotels, Luxury Resorts, Boutique Stays, Lodges, Serviced Apartments, Highway Motels",
+      metrics: { speed: "Instant Check-In", uptime: "99.98%", scale: "500+ Rooms" }
     },
     {
       id: "erp",
-      name: "Doonext Cloud ERP",
-      badge: "Multi-Godown",
-      tagline: "End-to-End Inventory, Purchase & Warehouse Intelligence",
-      description: "Manage multi-branch stock transfers, purchase orders, vendor ledgers, and barcode batch/expiry tracking with automated low-stock reordering alerts.",
+      category: "enterprise",
+      title: "Doonext Cloud ERP",
+      badge: "Multi-Godown Intelligence",
+      tagline: "Centralized multi-branch stock sync, batch/expiry alerts, and automated purchase ordering.",
       icon: Boxes,
-      color: "bg-[#40C351]/10 text-[#40C351] border-[#40C351]/20",
-      accent: "text-[#40C351]",
-      btnBg: "bg-[#40C351] hover:bg-[#34a543]",
+      color: "bg-[#40C351]/10 text-[#2d963b] border-[#40C351]/25",
+      accentBg: "bg-[#40C351]",
+      btnBg: "bg-[#40C351] hover:bg-[#34a543] text-white",
       features: [
-        "Centralized multi-branch & multi-godown stock sync",
-        "Batch number, serial number & expiry date tracking",
-        "Automated purchase orders & vendor rate comparison",
-        "Stock audit verification with barcode mobile scanner",
-        "Raw material BOM (Bill of Materials) for manufacturing",
-        "Dead stock analysis & profit margin reports"
+        "Real-time inter-branch & godown stock transfers with tracking",
+        "Batch number, serial number & manufacturer expiry date matrix",
+        "Automated purchase orders based on minimum stock threshold",
+        "Stock audit reconciliation using handheld barcode terminals",
+        "Vendor price comparison, accounts payable & purchase returns",
+        "Dead stock analysis & gross profit margin drill-down"
       ],
-      metrics: [
-        { label: "Warehouses Sync", val: "Real-time" },
-        { label: "Inventory Accuracy", val: "99.9%" },
-        { label: "SKU Capacity", val: "500,000+" }
-      ]
+      idealFor: "Multi-Store Chains, Central Warehouses, Distributors, FMCG Wholesalers, Manufacturers",
+      metrics: { speed: "Real-time Sync", uptime: "99.99%", scale: "500,000+ SKUs" }
     },
     {
       id: "crm",
-      name: "Doonext CRM & Marketing",
+      category: "marketing",
+      title: "Doonext CRM & WhatsApp Retention",
       badge: "WhatsApp Ready",
-      tagline: "Omnichannel Customer Retention & Automated Invoicing",
-      description: "Convert walk-in buyers into repeat lifetime customers with automated WhatsApp digital receipts, personalized promotional campaigns, and loyalty points.",
+      tagline: "Automate digital PDF bills, broadcast festive campaigns, and turn walk-ins into repeat buyers.",
       icon: Users2,
-      color: "bg-sky-50 text-sky-600 border-sky-200",
-      accent: "text-sky-600",
-      btnBg: "bg-sky-600 hover:bg-sky-700",
+      color: "bg-purple-50 text-purple-700 border-purple-200",
+      accentBg: "bg-purple-700",
+      btnBg: "bg-purple-700 hover:bg-purple-800 text-white",
       features: [
-        "Automated WhatsApp digital invoice delivery upon checkout",
-        "Customer buying history, credit limits & payment reminders",
-        "Tiered loyalty reward programs & cashback wallet",
-        "Targeted SMS & WhatsApp promotional broadcast campaigns",
-        "Lead pipeline tracking for B2B sales & wholesale orders",
-        "Customer feedback & Google review boost triggers"
+        "1-Click automated WhatsApp invoice delivery at checkout counter",
+        "Customer purchasing history, credit limits & payment reminders",
+        "Tiered loyalty reward programs, points redemption & gift vouchers",
+        "Targeted WhatsApp & SMS broadcast campaigns for offers",
+        "Visual sales pipeline tracking for high-value B2B deals",
+        "Customer satisfaction feedback & Google review booster"
       ],
-      metrics: [
-        { label: "WhatsApp Open Rate", val: "98%" },
-        { label: "Repeat Sales Boost", val: "+28%" },
-        { label: "Leads Managed", val: "1M+" }
-      ]
+      idealFor: "Retail Brands, Service Providers, Boutiques, Dealerships, Salons, B2B Sales Teams",
+      metrics: { speed: "Instant Send", uptime: "98% Open Rate", scale: "1M+ Customers" }
     },
     {
       id: "payroll",
-      name: "Doonext Payroll & HRMS",
+      category: "hr",
+      title: "Doonext Biometric Payroll & HRMS",
       badge: "1-Click Compliance",
-      tagline: "Biometric Attendance, Automated Payslips & PF/ESI Filing",
-      description: "Eliminate spreadsheet payroll errors. Seamlessly calculate salaries, overtime, deductions, advances, and generate bank-ready disbursement sheets in seconds.",
+      tagline: "Biometric attendance sync, automated salary calculations, and statutory PF/ESI filing.",
       icon: Wallet,
-      color: "bg-amber-50 text-amber-600 border-amber-200",
-      accent: "text-amber-600",
-      btnBg: "bg-[#EFAF08] hover:bg-[#d69d07] text-[#282023]",
+      color: "bg-amber-50 text-amber-700 border-amber-200",
+      accentBg: "bg-amber-600",
+      btnBg: "bg-amber-600 hover:bg-amber-700 text-white",
       features: [
-        "Biometric fingerprint & facial recognition attendance sync",
-        "Automated salary calculation with OT, shifts & deductions",
-        "One-click PDF payslips delivered via WhatsApp & Email",
-        "Statutory compliance: PF, ESI, TDS & Professional Tax",
-        "Employee self-service mobile portal for leave requests",
-        "Bank disbursement batch transfer sheet generator"
+        "Biometric fingerprint & facial recognition device real-time sync",
+        "Automated salary calculation with overtime, shifts & advances",
+        "One-click PDF payslip generation sent via WhatsApp & Email",
+        "Statutory compliance: PF, ESI, TDS, Professional Tax & Form 16",
+        "Employee self-service mobile portal for leave requests & approvals",
+        "Bank disbursement batch transfer sheet generator for any bank"
       ],
-      metrics: [
-        { label: "Payroll Processing", val: "< 2 mins" },
-        { label: "Compliance Accuracy", val: "100%" },
-        { label: "Staff Supported", val: "Unlimited" }
-      ]
+      idealFor: "Retail Stores, Factories, Hospitals, Educational Institutes, Offices, Logistics Firms",
+      metrics: { speed: "< 2 Min Payroll", uptime: "100% Compliant", scale: "Unlimited Staff" }
+    },
+    {
+      id: "pharmacy",
+      category: "retail",
+      title: "Doonext Pharmacy & Healthcare POS",
+      badge: "Drug Slabs & Batch Expiry",
+      tagline: "Prescription management, Schedule H/H1 registers, and instant medicine rack locator.",
+      icon: Pill,
+      color: "bg-teal-50 text-teal-700 border-teal-200",
+      accentBg: "bg-teal-600",
+      btnBg: "bg-teal-600 hover:bg-teal-700 text-white",
+      features: [
+        "Medicine batch, expiry date & strip/tablet fraction billing",
+        "Instant rack & shelf locator during customer counter billing",
+        "Automated Schedule H & H1 narcotics audit registers",
+        "Doctor prescription history & customer refill alerts via WhatsApp",
+        "Substitute salt/generic drug suggestion search engine",
+        "Drug distributor purchase import with automated invoice mapping"
+      ],
+      idealFor: "Retail Pharmacies, Medical Stores, Ayurvedic Clinics, Hospital Dispensaries, Chemists",
+      metrics: { speed: "< 0.2s Search", uptime: "100% Offline", scale: "100,000+ Salts" }
+    },
+    {
+      id: "wholesale",
+      category: "enterprise",
+      title: "Doonext Wholesale & Distribution Suite",
+      badge: "Bulk Trade & Field Sales",
+      tagline: "B2B bulk invoicing, custom tier pricing, transport LR tracking, and sales agent routing.",
+      icon: Truck,
+      color: "bg-indigo-50 text-indigo-700 border-indigo-200",
+      accentBg: "bg-indigo-700",
+      btnBg: "bg-indigo-700 hover:bg-indigo-800 text-white",
+      features: [
+        "Bulk wholesale B2B billing with multi-level pricing & scheme discounts",
+        "Customer credit limit enforcement & outstanding payment ledger",
+        "Field sales agent mobile app for geo-tagged shop order booking",
+        "Transport Lorry Receipt (LR) tracking, dispatch & e-Way bill sync",
+        "Automated bank reconciliation & payment receipt collection",
+        "Multi-company billing from a single unified accounting console"
+      ],
+      idealFor: "FMCG Distributors, Wholesale Traders, Building Material Dealers, Electrical & Hardware Wholesalers",
+      metrics: { speed: "Bulk Print", uptime: "99.98%", scale: "₹100Cr+ GMV" }
     },
     {
       id: "custom",
-      name: "Custom Enterprise Software",
-      badge: "Tailored Architecture",
-      tagline: "Bespoke Web & Mobile Applications Built for Your Workflow",
-      description: "When off-the-shelf software doesn't fit your specialized business rules, our Coimbatore engineering team designs and deploys custom software tailored to your exact needs.",
+      category: "custom",
+      title: "Doonext Custom Enterprise Solutions",
+      badge: "Tailor-Made Architecture",
+      tagline: "Bespoke software architecture engineered specifically to solve your unique trade rules.",
       icon: Code2,
-      color: "bg-purple-50 text-purple-700 border-purple-200",
-      accent: "text-purple-700",
-      btnBg: "bg-purple-700 hover:bg-purple-800",
+      color: "bg-rose-50 text-rose-700 border-rose-200",
+      accentBg: "bg-rose-600",
+      btnBg: "bg-rose-600 hover:bg-rose-700 text-white",
       features: [
         "Custom API integrations with SAP, Tally, Zoho & payment gateways",
-        "Bespoke Android / iOS mobile applications for field agents",
-        "Custom analytics dashboards & automated executive reporting",
+        "Bespoke Android / iOS mobile applications for internal field teams",
+        "Custom executive dashboards & automated daily KPI report triggers",
         "Dedicated cloud server architecture with high-security VPC",
         "On-premise or private cloud deployment flexibility",
-        "Dedicated engineering squad with continuous SLA maintenance"
+        "Dedicated Coimbatore engineering squad with continuous SLA maintenance"
       ],
-      metrics: [
-        { label: "Custom Modules", val: "50+" },
-        { label: "API Response", val: "< 120ms" },
-        { label: "SLA Guarantee", val: "99.98%" }
-      ]
+      idealFor: "Large Scale Enterprises, Specialized Manufacturers, Supply Chain Networks, Fintech & Logistics",
+      metrics: { speed: "< 100ms API", uptime: "99.99% SLA", scale: "Full Source Code" }
     }
   ];
 
-  const selectedModule = softwareModules.find(m => m.id === activeTab) || softwareModules[0];
+  const filteredSoftwares = activeCategory === "all"
+    ? allSoftwares
+    : allSoftwares.filter(s => s.category === activeCategory);
 
   return (
     <div className="min-h-screen bg-[#fafbfc] text-[#282023] flex flex-col selection:bg-[#8C5288] selection:text-white font-sans">
       <Navbar onRequestDemo={() => setDemoModalOpen(true)} />
-      <RequestDemoModal isOpen={demoModalOpen} onClose={() => setDemoModalOpen(false)} />
+      <RequestDemoModal isOpen={demoModalOpen} onClose={() => setDemoModalOpen(false)} defaultProduct={selectedSoftware} />
 
       <main className="flex-1 pb-20">
         
         {/* ========================================================================= */}
-        {/* 1. HERO SECTION -> Softwares Platform Overview */}
+        {/* 1. HERO HEADER */}
         {/* ========================================================================= */}
-        <section className="pt-12 pb-16 lg:pt-16 lg:pb-24 bg-gradient-to-b from-[#fbf8fc] via-white to-[#fafbfc] border-b border-slate-100 relative overflow-hidden">
-          <div className="absolute top-10 left-1/4 w-[500px] h-[350px] bg-[#8C5288]/5 rounded-full blur-3xl pointer-events-none" />
-          <div className="absolute bottom-10 right-10 w-[400px] h-[300px] bg-[#40C351]/5 rounded-full blur-3xl pointer-events-none" />
-
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center">
+        <section className="pt-14 pb-16 lg:pt-16 lg:pb-20 bg-gradient-to-b from-[#fbf8fc] via-white to-[#fafbfc] border-b border-slate-100 relative overflow-hidden text-center">
+          <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
             
-            <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#8C5288]/10 border border-[#8C5288]/20 text-[#8C5288] text-xs font-bold uppercase tracking-wider mb-6">
+            <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#8C5288]/10 border border-[#8C5288]/20 text-[#8C5288] text-xs font-bold uppercase tracking-wider mb-5">
               <Sparkles className="w-3.5 h-3.5" />
-              <span>DOONEXT SOFTWARES PLATFORM</span>
+              <span>Complete Softwares Suite</span>
             </div>
 
-            <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-[#282023] tracking-tight max-w-4xl mx-auto leading-[1.14]">
-              High-Velocity Softwares Built for <br className="hidden sm:inline" />
-              <span className="text-[#8C5288]">Modern Indian Businesses</span>
+            <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-[#282023] tracking-tight leading-[1.14]">
+              Explore All <span className="text-[#8C5288]">Doonext Softwares</span>
             </h1>
 
-            <p className="mt-5 text-base sm:text-lg text-slate-600 max-w-2xl mx-auto leading-relaxed">
-              From high-traffic retail POS counters and kitchen KOT networks to multi-warehouse ERPs and automated payroll — experience softwares engineered for 100% reliability.
+            <p className="mt-4 text-base sm:text-lg text-slate-600 max-w-3xl mx-auto leading-relaxed">
+              Explore our full directory of high-velocity, offline-first softwares engineered for retail POS counters, restaurants, hotels, warehouses, payroll, and enterprise operations.
             </p>
 
-            {/* Quick Actions */}
-            <div className="flex flex-wrap items-center justify-center gap-4 pt-6">
-              <button
-                onClick={() => setDemoModalOpen(true)}
-                className="px-8 py-3.5 rounded-full bg-[#8C5288] hover:bg-[#763f72] text-white font-bold text-sm shadow-md shadow-[#8C5288]/25 hover:shadow-lg transition-all flex items-center gap-2 cursor-pointer"
-              >
-                <span>Request Free Software Demo</span>
-                <ArrowRight className="w-4 h-4" />
-              </button>
-
-              <Link
-                href="/products"
-                className="px-7 py-3.5 rounded-full bg-white hover:bg-slate-50 text-[#282023] font-bold text-sm border border-slate-200 shadow-xs transition-all"
-              >
-                Explore Hardware &amp; Products
-              </Link>
-            </div>
-
-            {/* Top Quick Specs Ribbon */}
-            <div className="mt-14 grid grid-cols-2 md:grid-cols-4 gap-4 max-w-5xl mx-auto text-left">
-              <div className="p-4 rounded-2xl bg-white border border-slate-200/90 shadow-2xs">
-                <div className="text-xs font-bold text-[#8C5288]">Offline-First Tech</div>
-                <div className="text-[11px] text-slate-500 mt-0.5">Zero counter downtime</div>
-              </div>
-              <div className="p-4 rounded-2xl bg-white border border-slate-200/90 shadow-2xs">
-                <div className="text-xs font-bold text-[#40C351]">Sub-Second Speed</div>
-                <div className="text-[11px] text-slate-500 mt-0.5">&lt; 0.2s barcode checkouts</div>
-              </div>
-              <div className="p-4 rounded-2xl bg-white border border-slate-200/90 shadow-2xs">
-                <div className="text-xs font-bold text-amber-600">GST &amp; E-Way Compliant</div>
-                <div className="text-[11px] text-slate-500 mt-0.5">Automated tax splits</div>
-              </div>
-              <div className="p-4 rounded-2xl bg-white border border-slate-200/90 shadow-2xs">
-                <div className="text-xs font-bold text-sky-600">Direct Engineer Desk</div>
-                <div className="text-[11px] text-slate-500 mt-0.5">Phone &amp; WhatsApp support</div>
-              </div>
+            {/* Filter Pills */}
+            <div className="flex flex-wrap items-center justify-center gap-2 mt-8">
+              {[
+                { id: "all", label: "All Softwares (9)" },
+                { id: "retail", label: "Retail & Pharmacy POS" },
+                { id: "food", label: "Restaurant & Dining" },
+                { id: "hospitality", label: "Hotel ERP" },
+                { id: "enterprise", label: "Warehouse & ERP" },
+                { id: "marketing", label: "CRM & WhatsApp" },
+                { id: "hr", label: "Payroll & HRMS" },
+                { id: "custom", label: "Custom Software" },
+              ].map((tab) => (
+                <button
+                  key={tab.id}
+                  onClick={() => setActiveCategory(tab.id)}
+                  className={`px-4 py-2 rounded-full text-xs sm:text-sm font-bold transition-all cursor-pointer ${
+                    activeCategory === tab.id
+                      ? "bg-[#8C5288] text-white shadow-md shadow-[#8C5288]/25"
+                      : "bg-white text-[#282023] hover:bg-[#8C5288]/5 hover:text-[#8C5288] border border-slate-200"
+                  }`}
+                >
+                  {tab.label}
+                </button>
+              ))}
             </div>
 
           </div>
         </section>
 
         {/* ========================================================================= */}
-        {/* 2. INTERACTIVE SOFTWARE MODULE EXPLORER */}
+        {/* 2. COMPLETE SOFTWARES GRID */}
         {/* ========================================================================= */}
-        <section className="py-20 bg-white border-b border-slate-100">
+        <section className="py-12 bg-white">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            
-            <div className="text-center max-w-3xl mx-auto mb-12">
-              <div className="inline-block text-xs font-bold text-[#8C5288] uppercase tracking-widest bg-[#8C5288]/10 px-3 py-1 rounded-full border border-[#8C5288]/20 mb-2">
-                MODULE ECOSYSTEM
-              </div>
-              <h2 className="text-3xl sm:text-4xl font-bold text-[#282023]">
-                Explore Doonext Softwares Suite
-              </h2>
-              <p className="text-slate-600 text-sm sm:text-base mt-2">
-                Select a solution below to see core features, performance benchmarks, and live integration architecture.
-              </p>
-            </div>
-
-            {/* Navigation Tabs */}
-            <div className="flex flex-wrap items-center justify-center gap-2 p-1.5 rounded-2xl bg-slate-100 border border-slate-200/80 max-w-3xl mx-auto mb-12">
-              {softwareModules.map((m) => {
-                const Icon = m.icon;
-                const isSelected = activeTab === m.id;
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+              
+              {filteredSoftwares.map((software) => {
+                const Icon = software.icon;
                 return (
-                  <button
-                    key={m.id}
-                    onClick={() => setActiveTab(m.id as any)}
-                    className={`flex items-center gap-2 px-4 py-2.5 rounded-xl text-xs font-bold transition-all cursor-pointer ${
-                      isSelected 
-                        ? "bg-white text-[#8C5288] shadow-sm border border-slate-200/80" 
-                        : "text-slate-600 hover:text-[#8C5288] hover:bg-white/50"
-                    }`}
+                  <div
+                    key={software.id}
+                    id={software.id}
+                    className="p-7 rounded-3xl bg-[#fafbfc] border border-slate-200 shadow-xs hover:shadow-xl transition-all duration-300 flex flex-col justify-between group scroll-mt-24"
                   >
-                    <Icon className="w-4 h-4" />
-                    <span>{m.name.replace("Doonext ", "")}</span>
-                  </button>
+                    <div className="space-y-4">
+                      
+                      {/* Top Badge & Icon */}
+                      <div className="flex items-start justify-between gap-3">
+                        <div className={`w-12 h-12 rounded-2xl ${software.color} flex items-center justify-center shrink-0 shadow-2xs`}>
+                          <Icon className="w-6 h-6" />
+                        </div>
+                        <span className={`text-[10px] font-bold uppercase tracking-wider px-2.5 py-0.5 rounded-full border ${software.color}`}>
+                          {software.badge}
+                        </span>
+                      </div>
+
+                      {/* Title & Tagline */}
+                      <div>
+                        <h3 className="text-xl font-bold text-[#282023] group-hover:text-[#8C5288] transition-colors">
+                          {software.title}
+                        </h3>
+                        <p className="text-xs text-slate-500 mt-1 leading-relaxed">
+                          {software.tagline}
+                        </p>
+                      </div>
+
+                      {/* Performance Mini Badges */}
+                      <div className="grid grid-cols-3 gap-2 py-1 text-center">
+                        <div className="p-2 rounded-xl bg-white border border-slate-200/80">
+                          <div className="text-[11px] font-bold text-[#282023]">{software.metrics.speed}</div>
+                          <div className="text-[9px] text-slate-400">Response</div>
+                        </div>
+                        <div className="p-2 rounded-xl bg-white border border-slate-200/80">
+                          <div className="text-[11px] font-bold text-[#40C351]">{software.metrics.uptime}</div>
+                          <div className="text-[9px] text-slate-400">Uptime</div>
+                        </div>
+                        <div className="p-2 rounded-xl bg-white border border-slate-200/80">
+                          <div className="text-[11px] font-bold text-[#8C5288]">{software.metrics.scale}</div>
+                          <div className="text-[9px] text-slate-400">Capacity</div>
+                        </div>
+                      </div>
+
+                      {/* Features List */}
+                      <div className="space-y-2 pt-1">
+                        <div className="text-[11px] font-bold text-slate-400 uppercase tracking-wider">
+                          Key Capabilities:
+                        </div>
+                        <div className="space-y-1.5">
+                          {software.features.slice(0, 4).map((feat, idx) => (
+                            <div key={idx} className="flex items-start gap-2 text-xs text-slate-700">
+                              <CheckCircle2 className="w-3.5 h-3.5 text-[#40C351] shrink-0 mt-0.5" />
+                              <span className="leading-snug">{feat}</span>
+                            </div>
+                          ))}
+                        </div>
+                      </div>
+
+                      {/* Ideal For */}
+                      <div className="p-3 rounded-xl bg-slate-100/80 border border-slate-200/70 text-[11px] text-slate-600 leading-snug">
+                        <span className="font-bold text-[#282023]">Best for: </span>
+                        {software.idealFor}
+                      </div>
+
+                    </div>
+
+                    {/* Action Row */}
+                    <div className="pt-6 mt-6 border-t border-slate-200/80 flex items-center justify-between gap-3">
+                      <button
+                        onClick={() => openDemoFor(software.title)}
+                        className={`flex-1 py-2.5 px-4 rounded-xl ${software.btnBg} text-white font-bold text-xs shadow-md transition-all flex items-center justify-center gap-1.5 cursor-pointer`}
+                      >
+                        <span>Request Demo</span>
+                        <ArrowRight className="w-3.5 h-3.5" />
+                      </button>
+                      
+                      <Link
+                        href="/contact"
+                        className="px-3 py-2.5 rounded-xl bg-white hover:bg-slate-50 text-slate-700 border border-slate-200 font-bold text-xs transition-colors shrink-0"
+                      >
+                        Pricing
+                      </Link>
+                    </div>
+
+                  </div>
                 );
               })}
+
             </div>
-
-            {/* Dynamic Module Showcase Panel */}
-            <div className="p-8 sm:p-12 rounded-3xl bg-gradient-to-br from-[#faf8fb] via-white to-[#fafbfc] border border-slate-200/90 shadow-xl">
-              <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
-                
-                {/* Left Specs & Features (7 cols) */}
-                <div className="lg:col-span-7 space-y-6">
-                  <div className="flex items-center gap-3">
-                    <span className={`text-[10px] font-bold uppercase tracking-wider px-2.5 py-0.5 rounded-full border ${selectedModule.color}`}>
-                      {selectedModule.badge}
-                    </span>
-                    <span className="text-xs font-semibold text-slate-400">Enterprise Ready</span>
-                  </div>
-
-                  <h3 className="text-2xl sm:text-3xl font-bold text-[#282023]">
-                    {selectedModule.name}
-                  </h3>
-
-                  <p className="text-sm font-semibold text-[#8C5288]">
-                    {selectedModule.tagline}
-                  </p>
-
-                  <p className="text-sm text-slate-600 leading-relaxed">
-                    {selectedModule.description}
-                  </p>
-
-                  {/* Feature Checklist */}
-                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 pt-2">
-                    {selectedModule.features.map((feat, idx) => (
-                      <div key={idx} className="flex items-start gap-2.5 text-xs text-slate-700">
-                        <CheckCircle2 className="w-4 h-4 text-[#40C351] shrink-0 mt-0.5" />
-                        <span className="leading-snug">{feat}</span>
-                      </div>
-                    ))}
-                  </div>
-
-                  {/* Action Row */}
-                  <div className="flex flex-wrap items-center gap-4 pt-4 border-t border-slate-100">
-                    <button
-                      onClick={() => setDemoModalOpen(true)}
-                      className={`px-7 py-3 rounded-full ${selectedModule.btnBg} text-white font-bold text-xs shadow-md transition-all flex items-center gap-2 cursor-pointer`}
-                    >
-                      <span>Book {selectedModule.name.replace("Doonext ", "")} Walkthrough</span>
-                      <ArrowRight className="w-3.5 h-3.5" />
-                    </button>
-                    <Link
-                      href="/contact"
-                      className="px-5 py-3 rounded-full bg-white hover:bg-slate-50 text-[#282023] font-bold text-xs border border-slate-200 transition-all"
-                    >
-                      Contact Sales
-                    </Link>
-                  </div>
-                </div>
-
-                {/* Right Metrics & Architecture Visual (5 cols) */}
-                <div className="lg:col-span-5 space-y-4">
-                  
-                  {/* Performance Proof Metrics Card */}
-                  <div className="p-6 rounded-2xl bg-white border border-slate-200/90 shadow-sm space-y-4">
-                    <h4 className="text-xs font-bold text-slate-400 uppercase tracking-wider">
-                      Performance Benchmarks
-                    </h4>
-                    
-                    <div className="grid grid-cols-3 gap-3 text-center">
-                      {selectedModule.metrics.map((met, idx) => (
-                        <div key={idx} className="p-3 rounded-xl bg-slate-50 border border-slate-100">
-                          <div className="text-base sm:text-lg font-bold text-[#282023]">{met.val}</div>
-                          <div className="text-[10px] text-slate-500 mt-0.5">{met.label}</div>
-                        </div>
-                      ))}
-                    </div>
-                  </div>
-
-                  {/* Connected Stack Pill */}
-                  <div className="p-5 rounded-2xl bg-white border border-slate-200/90 shadow-sm space-y-3 text-xs">
-                    <div className="font-bold text-[#282023] flex items-center justify-between">
-                      <span>Deployment &amp; Compatibility</span>
-                      <span className="text-[#40C351] font-bold">100% Ready</span>
-                    </div>
-
-                    <div className="space-y-2 text-slate-500 text-[11px]">
-                      <div className="flex items-center justify-between py-1 border-b border-slate-50">
-                        <span className="flex items-center gap-1.5"><Laptop className="w-3.5 h-3.5 text-[#8C5288]" /> Desktop Windows / Linux</span>
-                        <span className="font-semibold text-slate-700">Supported</span>
-                      </div>
-                      <div className="flex items-center justify-between py-1 border-b border-slate-50">
-                        <span className="flex items-center gap-1.5"><Smartphone className="w-3.5 h-3.5 text-[#40C351]" /> Android Tabs &amp; POS Terminals</span>
-                        <span className="font-semibold text-slate-700">Supported</span>
-                      </div>
-                      <div className="flex items-center justify-between py-1 border-b border-slate-50">
-                        <span className="flex items-center gap-1.5"><Printer className="w-3.5 h-3.5 text-amber-600" /> Thermal Receipt &amp; Barcode Printers</span>
-                        <span className="font-semibold text-slate-700">Plug &amp; Play</span>
-                      </div>
-                      <div className="flex items-center justify-between pt-1">
-                        <span className="flex items-center gap-1.5"><Database className="w-3.5 h-3.5 text-sky-600" /> Cloud Database &amp; Local Offline Storage</span>
-                        <span className="font-semibold text-slate-700">Hybrid Sync</span>
-                      </div>
-                    </div>
-                  </div>
-
-                </div>
-
-              </div>
-            </div>
-
           </div>
         </section>
 
         {/* ========================================================================= */}
-        {/* 3. HARDWARE COMPATIBILITY & DEPLOYMENT SPECS */}
+        {/* 3. BOTTOM CTA BANNER */}
         {/* ========================================================================= */}
-        <section className="py-20 bg-[#fafbfc] border-b border-slate-100">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            
-            <div className="text-center max-w-3xl mx-auto mb-16">
-              <div className="inline-block text-xs font-bold text-[#8C5288] uppercase tracking-widest bg-[#8C5288]/10 px-3 py-1 rounded-full border border-[#8C5288]/20 mb-2">
-                PLUG &amp; PLAY ARCHITECTURE
-              </div>
-              <h2 className="text-3xl font-bold text-[#282023]">
-                Zero Hardware Lock-In. Works with Your Existing Devices.
-              </h2>
-              <p className="text-slate-600 text-sm sm:text-base mt-2">
-                Doonext softwares are built on an open driver stack that connects seamlessly with all standard POS peripherals in India.
-              </p>
-            </div>
-
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-              
-              <div className="p-6 rounded-2xl bg-white border border-slate-200 shadow-xs space-y-3">
-                <div className="w-10 h-10 rounded-xl bg-[#8C5288]/10 text-[#8C5288] flex items-center justify-center">
-                  <Printer className="w-5 h-5" />
-                </div>
-                <h4 className="font-bold text-[#282023] text-base">Receipt &amp; KOT Printers</h4>
-                <p className="text-xs text-slate-500 leading-relaxed">
-                  2-inch, 3-inch thermal printers, ESC/POS, LAN network printers, Bluetooth and USB thermal machines.
-                </p>
-              </div>
-
-              <div className="p-6 rounded-2xl bg-white border border-slate-200 shadow-xs space-y-3">
-                <div className="w-10 h-10 rounded-xl bg-[#40C351]/10 text-[#40C351] flex items-center justify-center">
-                  <Zap className="w-5 h-5" />
-                </div>
-                <h4 className="font-bold text-[#282023] text-base">Barcode Scanners &amp; Scales</h4>
-                <p className="text-xs text-slate-500 leading-relaxed">
-                  1D/2D QR handheld scanners, omnidirectional laser counters, and digital weighing scale RS232 integrations.
-                </p>
-              </div>
-
-              <div className="p-6 rounded-2xl bg-white border border-slate-200 shadow-xs space-y-3">
-                <div className="w-10 h-10 rounded-xl bg-amber-50 text-amber-600 flex items-center justify-center">
-                  <Laptop className="w-5 h-5" />
-                </div>
-                <h4 className="font-bold text-[#282023] text-base">POS Machines &amp; Desktops</h4>
-                <p className="text-xs text-slate-500 leading-relaxed">
-                  Windows 10/11 desktops, all-in-one capacitive touch POS terminals, and Android tablets.
-                </p>
-              </div>
-
-              <div className="p-6 rounded-2xl bg-white border border-slate-200 shadow-xs space-y-3">
-                <div className="w-10 h-10 rounded-xl bg-sky-50 text-sky-600 flex items-center justify-center">
-                  <Database className="w-5 h-5" />
-                </div>
-                <h4 className="font-bold text-[#282023] text-base">Biometric &amp; Drawers</h4>
-                <p className="text-xs text-slate-500 leading-relaxed">
-                  Electronic cash drawers (RJ11), biometric fingerprint machines, and facial recognition terminals.
-                </p>
-              </div>
-
-            </div>
-
-          </div>
-        </section>
-
-        {/* ========================================================================= */}
-        {/* 4. BOTTOM CTA BANNER */}
-        {/* ========================================================================= */}
-        <section className="pt-16">
+        <section className="pt-8">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="rounded-3xl bg-gradient-to-r from-[#8C5288] via-[#763f72] to-[#5b2857] p-8 sm:p-12 shadow-xl text-white flex flex-col md:flex-row items-center justify-between gap-6">
               <div>
-                <h3 className="text-2xl sm:text-3xl font-bold">Ready to streamline your business operations?</h3>
-                <p className="text-purple-100 text-sm mt-1">Schedule a 1-on-1 personalized live demo with our Coimbatore solution specialists.</p>
+                <h3 className="text-2xl sm:text-3xl font-bold">Need a specialized workflow or multi-branch deployment?</h3>
+                <p className="text-purple-100 text-sm mt-1">Our Coimbatore engineering squad can configure pre-built modules or build custom architecture for you.</p>
               </div>
               <button
                 onClick={() => setDemoModalOpen(true)}
                 className="px-8 py-3.5 rounded-full bg-white text-[#8C5288] font-bold text-sm hover:bg-slate-50 shadow-md transition-all shrink-0 cursor-pointer"
               >
-                Schedule Free Demo
+                Schedule Free Software Demo
               </button>
             </div>
           </div>
