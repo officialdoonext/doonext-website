@@ -274,12 +274,6 @@ export default function Footer() {
               <li>
                 <Link href="/contact" className="hover:text-[#5e2b9d] transition-colors">Contact Us</Link>
               </li>
-              <li>
-                <Link href="/login" className="hover:text-[#5e2b9d] transition-colors">Merchant Login</Link>
-              </li>
-              <li>
-                <Link href="/profile" className="hover:text-[#5e2b9d] transition-colors">Store Profile</Link>
-              </li>
             </ul>
           </div>
 

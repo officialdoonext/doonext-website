@@ -7,7 +7,6 @@ import { usePathname } from "next/navigation";
 import { 
   Menu, 
   X, 
-  User,
   ArrowRight
 } from "lucide-react";
 
@@ -58,43 +57,29 @@ export default function Navbar({ onRequestDemo }: NavbarProps) {
                 <Link
                   key={link.href}
                   href={link.href}
-                  className={`px-4 py-2 rounded-lg transition-all ${
+                  className={`relative py-2.5 px-4 transition-colors group ${
                     active
-                      ? "text-[#5e2b9d] font-bold bg-[#5e2b9d]/5"
-                      : "hover:text-[#5e2b9d] hover:bg-[#5e2b9d]/5"
+                      ? "text-[#5e2b9d]"
+                      : "text-[#282023] hover:text-[#5e2b9d]"
                   }`}
                 >
-                  {link.label}
+                  <span>{link.label}</span>
+                  {/* Underline animation from center (width: 40%) */}
+                  <span
+                    aria-hidden="true"
+                    className={`absolute bottom-0 left-1/2 -translate-x-1/2 w-[40%] h-[2.5px] rounded-full bg-[#5e2b9d] transition-all duration-300 ease-out origin-center pointer-events-none ${
+                      active
+                        ? "scale-x-100 opacity-100"
+                        : "scale-x-0 opacity-0 group-hover:scale-x-100 group-hover:opacity-100"
+                    }`}
+                  />
                 </Link>
               );
             })}
           </nav>
 
-          {/* Right Action Buttons: Login, Profile, Demo */}
-          <div className="hidden lg:flex items-center gap-3">
-            <Link
-              href="/login"
-              className={`px-3.5 py-2 rounded-lg text-sm font-semibold transition-all ${
-                isActive("/login")
-                  ? "text-[#5e2b9d] font-bold"
-                  : "text-[#282023] hover:text-[#5e2b9d] hover:bg-[#5e2b9d]/5"
-              }`}
-            >
-              Sign In
-            </Link>
-
-            <Link
-              href="/profile"
-              className={`inline-flex items-center gap-1.5 px-3.5 py-2 rounded-lg text-sm font-semibold transition-all ${
-                isActive("/profile")
-                  ? "text-[#5e2b9d] font-bold bg-[#5e2b9d]/10"
-                  : "text-[#282023] hover:text-[#5e2b9d] hover:bg-[#5e2b9d]/5"
-              }`}
-            >
-              <User className="w-4 h-4 text-[#5e2b9d]" />
-              <span>Profile</span>
-            </Link>
-
+          {/* Right Action Button: Demo */}
+          <div className="hidden lg:flex items-center">
             <button
               onClick={onRequestDemo}
               className="px-5 py-2.5 rounded-full bg-[#5e2b9d] hover:bg-[#4d2282] text-white text-xs font-bold tracking-wide shadow-md shadow-[#5e2b9d]/25 hover:shadow-lg transition-all transform hover:-translate-y-0.5 active:translate-y-0 cursor-pointer"
@@ -105,12 +90,12 @@ export default function Navbar({ onRequestDemo }: NavbarProps) {
 
           {/* Mobile Menu Toggle */}
           <div className="flex lg:hidden items-center gap-2">
-            <Link
-              href="/login"
-              className="px-3 py-1.5 rounded-lg text-xs font-bold text-[#5e2b9d] bg-[#5e2b9d]/10"
+            <button
+              onClick={onRequestDemo}
+              className="px-3.5 py-1.5 rounded-full bg-[#5e2b9d] text-white text-xs font-bold shadow-xs cursor-pointer"
             >
-              Sign In
-            </Link>
+              Demo
+            </button>
             <button
               onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
               className="p-2 rounded-lg text-[#282023] hover:bg-[#5e2b9d]/5 transition-colors"
@@ -126,43 +111,35 @@ export default function Navbar({ onRequestDemo }: NavbarProps) {
       {/* Mobile Drawer Navigation */}
       {mobileMenuOpen && (
         <div className="lg:hidden border-t border-[#5e2b9d]/15 bg-white px-4 pt-3 pb-6 space-y-2 shadow-xl animate-in slide-in-from-top-2">
-          {navLinks.map((link) => (
-            <Link
-              key={link.href}
-              href={link.href}
-              onClick={() => setMobileMenuOpen(false)}
-              className={`block px-4 py-2.5 rounded-xl font-medium ${
-                isActive(link.href) ? "bg-[#5e2b9d]/10 text-[#5e2b9d] font-bold" : "text-[#282023]"
-              }`}
-            >
-              {link.label}
-            </Link>
-          ))}
+          {navLinks.map((link) => {
+            const active = isActive(link.href);
+            return (
+              <Link
+                key={link.href}
+                href={link.href}
+                onClick={() => setMobileMenuOpen(false)}
+                className={`relative block px-4 py-2.5 rounded-xl font-medium transition-colors ${
+                  active ? "text-[#5e2b9d]" : "text-[#282023] hover:text-[#5e2b9d]"
+                }`}
+              >
+                <span>{link.label}</span>
+                {active && (
+                  <span
+                    aria-hidden="true"
+                    className="block mt-1 w-8 h-[2px] rounded-full bg-[#5e2b9d]"
+                  />
+                )}
+              </Link>
+            );
+          })}
 
-          <div className="pt-2 border-t border-slate-100 flex items-center gap-2">
-            <Link
-              href="/login"
-              onClick={() => setMobileMenuOpen(false)}
-              className="flex-1 text-center py-2.5 rounded-xl bg-slate-100 font-bold text-xs text-slate-700"
-            >
-              Sign In
-            </Link>
-            <Link
-              href="/profile"
-              onClick={() => setMobileMenuOpen(false)}
-              className="flex-1 text-center py-2.5 rounded-xl bg-[#5e2b9d]/10 font-bold text-xs text-[#5e2b9d]"
-            >
-              Profile
-            </Link>
-          </div>
-
-          <div className="pt-2">
+          <div className="pt-2 border-t border-slate-100">
             <button
               onClick={() => {
                 setMobileMenuOpen(false);
                 if (onRequestDemo) onRequestDemo();
               }}
-              className="w-full py-3 rounded-xl bg-[#5e2b9d] hover:bg-[#4d2282] text-white font-bold text-sm shadow-md"
+              className="w-full py-3 rounded-xl bg-[#5e2b9d] hover:bg-[#4d2282] text-white font-bold text-sm shadow-md cursor-pointer"
             >
               Request Free Demo
             </button>

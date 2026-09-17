@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,500;1,600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;1,300;1,400;1,500&display=swap');
 @import "tailwindcss";
 
 :root {
@@ -24,6 +24,11 @@
   --color-orange: #EFAF08;
   --color-red: #FB5454;
   --font-sans: 'Poppins', var(--font-poppins), sans-serif;
+  --font-weight-medium: 500;
+  --font-weight-semibold: 500;
+  --font-weight-bold: 500;
+  --font-weight-extrabold: 500;
+  --font-weight-black: 500;
 }
 
 /* Absolute Global Font Rule */
@@ -31,20 +36,31 @@ html, body, *, ::before, ::after {
   font-family: 'Poppins', var(--font-poppins), -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif !important;
 }
 
+html, body {
+  font-synthesis: none;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
 body {
   background: var(--background);
   color: #282023;
 }
 
-/* Global Font Weight Capping: Max 600 across entire site */
+/* Global Font Weight Capping: Maximum font-weight 500 across entire site */
 h1, h2, h3, h4, h5, h6,
-b, strong,
-.font-bold, .font-extrabold, .font-black,
-.font-semibold, .poppins-semibold, .poppins-bold {
-  font-weight: 600 !important;
+b, strong, th, optgroup,
+.font-semibold, .font-bold, .font-extrabold, .font-black,
+.poppins-semibold, .poppins-bold,
+[class*="font-semibold"], [class*="font-bold"], [class*="font-extrabold"], [class*="font-black"] {
+  font-weight: 500 !important;
 }
 
 /* Poppins Utility Classes */
+.poppins-light, .font-light {
+  font-weight: 300 !important;
+}
+
 .poppins-regular, .font-normal {
   font-weight: 400 !important;
 }
