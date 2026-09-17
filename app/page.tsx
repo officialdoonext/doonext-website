@@ -411,10 +411,10 @@ export default function HomePage() {
           {/* Tech Grid Pattern Overlay */}
           <div className="absolute inset-0 bg-grid-tech opacity-70 pointer-events-none" />
           
-          {/* Ambient Radiant Glow Blobs */}
-          <div className="absolute -top-24 -left-24 w-96 h-96 bg-[#5e2b9d]/12 rounded-full blur-3xl pointer-events-none" />
-          <div className="absolute top-1/3 -right-24 w-[420px] h-[420px] bg-[#40C351]/10 rounded-full blur-3xl pointer-events-none" />
-          <div className="absolute -bottom-20 left-1/2 -translate-x-1/2 w-[520px] h-64 bg-[#EFAF08]/08 rounded-full blur-3xl pointer-events-none" />
+          {/* Ambient Radiant Glow Blobs with Breathing Animations */}
+          <div className="absolute -top-24 -left-24 w-96 h-96 bg-[#5e2b9d]/12 rounded-full blur-3xl pointer-events-none animate-pulse-glow" />
+          <div className="absolute top-1/3 -right-24 w-[420px] h-[420px] bg-[#40C351]/10 rounded-full blur-3xl pointer-events-none animate-pulse-glow-delayed" />
+          <div className="absolute -bottom-20 left-1/2 -translate-x-1/2 w-[520px] h-64 bg-[#EFAF08]/08 rounded-full blur-3xl pointer-events-none animate-pulse-glow" />
 
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
             <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-8 items-center">
@@ -422,48 +422,98 @@ export default function HomePage() {
               {/* Left Column: Hero Copy */}
               <div className="lg:col-span-6 space-y-6 text-left">
                 
-                <h1 className="text-4xl sm:text-5xl lg:text-[52px] font-bold tracking-tight text-[#282023] leading-[1.15]">
+                {/* 1. Live Announcement Pill */}
+                <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-gradient-to-r from-[#5e2b9d]/10 via-[#40C351]/10 to-[#5e2b9d]/10 border border-[#5e2b9d]/25 text-xs font-medium text-[#282023] shadow-2xs backdrop-blur-xs hover:border-[#5e2b9d]/50 transition-all">
+                  <span className="flex h-2 w-2 relative">
+                    <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-[#40C351] opacity-75" />
+                    <span className="relative inline-flex rounded-full h-2 w-2 bg-[#40C351]" />
+                  </span>
+                  <span className="font-medium text-[11px] sm:text-xs text-[#282023]">Next-Gen Business Suite</span>
+                  <span className="text-slate-300">•</span>
+                  <span className="text-[#5e2b9d] font-bold text-[11px] sm:text-xs flex items-center gap-1">
+                    500+ Outlets in India 🇮🇳
+                  </span>
+                </div>
+
+                {/* 2. Elevated Headline with Gradient Shimmer Animation */}
+                <h1 className="text-4xl sm:text-5xl lg:text-[54px] font-bold tracking-tight text-[#282023] leading-[1.14]">
                   Smart Software <br className="hidden sm:inline" />
-                  Solutions for Every <br className="hidden sm:inline" />
-                  <span className="text-[#5e2b9d]">
-                    Business
+                  Solutions for Every{" "}
+                  <span className="relative inline-block">
+                    <span className="bg-gradient-to-r from-[#5e2b9d] via-[#9333ea] to-[#40C351] bg-clip-text text-transparent animate-gradient-shimmer">
+                      Growing Business
+                    </span>
+                    {/* Decorative curved brush stroke */}
+                    <svg className="absolute -bottom-2.5 left-0 w-full h-2.5 text-[#5e2b9d]/30" viewBox="0 0 260 12" fill="none" preserveAspectRatio="none">
+                      <path d="M2 9C75 2 185 2 258 9" stroke="currentColor" strokeWidth="3.5" strokeLinecap="round" />
+                    </svg>
                   </span>
                 </h1>
 
+                {/* 3. Subheadline */}
                 <p className="text-base sm:text-lg text-slate-600 leading-relaxed max-w-xl">
-                  Doonext provides powerful and easy-to-use software solutions to manage your business efficiently. From billing to ERP, CRM to payroll – we&apos;ve got you covered.
+                  Doonext provides high-performance, offline-first billing POS, multi-branch ERP, CRM, and payroll software. Experience sub-second checkout speeds with zero internet downtime.
                 </p>
 
-                {/* CTA Buttons */}
-                <div className="flex flex-wrap items-center gap-4 pt-2">
+                {/* 4. Enhanced CTA Buttons */}
+                <div className="flex flex-wrap items-center gap-4 pt-1">
+                  <button
+                    onClick={() => openDemoWithProduct("Doonext Billing")}
+                    className="px-8 py-3.5 rounded-full bg-[#5e2b9d] hover:bg-[#4d2282] text-white font-bold text-sm sm:text-base shadow-lg shadow-[#5e2b9d]/25 hover:shadow-xl transition-all transform hover:-translate-y-0.5 cursor-pointer flex items-center gap-2 group"
+                  >
+                    <span>Request Free Demo</span>
+                    <ArrowRight className="w-4 h-4 group-hover:translate-x-1.5 transition-transform" />
+                  </button>
                   <Link
                     href="/products"
-                    className="px-7 py-3.5 rounded-full bg-[#5e2b9d] hover:bg-[#4d2282] text-white font-bold text-sm sm:text-base shadow-lg shadow-[#5e2b9d]/25 hover:shadow-xl transition-all transform hover:-translate-y-0.5 cursor-pointer"
+                    className="px-7 py-3.5 rounded-full bg-white hover:bg-slate-50 text-[#282023] hover:text-[#5e2b9d] font-bold text-sm sm:text-base border border-slate-200/90 shadow-2xs hover:shadow-xs transition-all flex items-center gap-2 cursor-pointer transform hover:-translate-y-0.5"
                   >
-                    Explore Solutions
+                    <span>Explore Products</span>
                   </Link>
-                  <button
-                    onClick={() => setDemoModalOpen(true)}
-                    className="px-7 py-3.5 rounded-full bg-white hover:bg-[#5e2b9d]/5 text-[#5e2b9d] font-bold text-sm sm:text-base border border-[#5e2b9d]/30 hover:border-[#5e2b9d] shadow-xs transition-all flex items-center gap-2 cursor-pointer group"
-                  >
-                    <span>Request Demo</span>
-                    <ArrowRight className="w-4 h-4 text-[#5e2b9d] group-hover:translate-x-1 transition-transform" />
-                  </button>
                 </div>
 
-                {/* Feature Badges */}
-                <div className="flex flex-wrap items-center gap-3 pt-4">
-                  <div className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-[#40C351]/10 border border-[#40C351]/30 text-[#282023] text-xs font-bold">
-                    <CheckCircle2 className="w-3.5 h-3.5 text-[#40C351]" />
-                    <span>All-in-One Solutions</span>
+                {/* 5. Four Micro Trust Chips with Hover Animations */}
+                <div className="grid grid-cols-2 sm:grid-cols-4 gap-2 pt-2">
+                  <div className="flex items-center gap-1.5 text-xs font-semibold text-slate-700 bg-white/80 backdrop-blur-xs px-2.5 py-1.5 rounded-xl border border-slate-200/70 shadow-2xs hover:-translate-y-0.5 hover:shadow-xs hover:border-[#40C351]/50 transition-all duration-200 cursor-default">
+                    <Zap className="w-3.5 h-3.5 text-[#40C351] shrink-0" />
+                    <span>&lt;0.2s POS Scan</span>
                   </div>
-                  <div className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-[#40C351]/10 border border-[#40C351]/30 text-[#282023] text-xs font-bold">
-                    <CheckCircle2 className="w-3.5 h-3.5 text-[#40C351]" />
-                    <span>Secure &amp; Reliable</span>
+                  <div className="flex items-center gap-1.5 text-xs font-semibold text-slate-700 bg-white/80 backdrop-blur-xs px-2.5 py-1.5 rounded-xl border border-slate-200/70 shadow-2xs hover:-translate-y-0.5 hover:shadow-xs hover:border-[#5e2b9d]/50 transition-all duration-200 cursor-default">
+                    <ShieldCheck className="w-3.5 h-3.5 text-[#5e2b9d] shrink-0" />
+                    <span>Offline-First</span>
                   </div>
-                  <div className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-[#40C351]/10 border border-[#40C351]/30 text-[#282023] text-xs font-bold">
-                    <CheckCircle2 className="w-3.5 h-3.5 text-[#40C351]" />
-                    <span>Scalable &amp; Flexible</span>
+                  <div className="flex items-center gap-1.5 text-xs font-semibold text-slate-700 bg-white/80 backdrop-blur-xs px-2.5 py-1.5 rounded-xl border border-slate-200/70 shadow-2xs hover:-translate-y-0.5 hover:shadow-xs hover:border-[#EFAF08]/50 transition-all duration-200 cursor-default">
+                    <Receipt className="w-3.5 h-3.5 text-[#EFAF08] shrink-0" />
+                    <span>GST Compliant</span>
+                  </div>
+                  <div className="flex items-center gap-1.5 text-xs font-semibold text-slate-700 bg-white/80 backdrop-blur-xs px-2.5 py-1.5 rounded-xl border border-slate-200/70 shadow-2xs hover:-translate-y-0.5 hover:shadow-xs hover:border-sky-400 transition-all duration-200 cursor-default">
+                    <Sparkles className="w-3.5 h-3.5 text-sky-600 shrink-0" />
+                    <span>Zero Setup Fee</span>
+                  </div>
+                </div>
+
+                {/* 6. Social Proof & Star Rating Strip */}
+                <div className="flex items-center gap-3 pt-3 border-t border-slate-200/60">
+                  <div className="flex -space-x-2 overflow-hidden shrink-0">
+                    <div className="w-8 h-8 rounded-full ring-2 ring-white bg-[#5e2b9d] text-white text-[10px] font-bold flex items-center justify-center">
+                      SK
+                    </div>
+                    <div className="w-8 h-8 rounded-full ring-2 ring-white bg-[#40C351] text-white text-[10px] font-bold flex items-center justify-center">
+                      RM
+                    </div>
+                    <div className="w-8 h-8 rounded-full ring-2 ring-white bg-[#EFAF08] text-white text-[10px] font-bold flex items-center justify-center">
+                      AJ
+                    </div>
+                    <div className="w-8 h-8 rounded-full ring-2 ring-white bg-[#282023] text-white text-[10px] font-bold flex items-center justify-center">
+                      +500
+                    </div>
+                  </div>
+                  <div className="text-xs">
+                    <div className="flex items-center text-amber-500 gap-1">
+                      <span className="tracking-tighter">★★★★★</span>
+                      <span className="font-bold text-[#282023] ml-0.5">4.9 / 5</span>
+                    </div>
+                    <p className="text-slate-500 text-[11px]">Recommended by 500+ store owners &amp; restaurateurs</p>
                   </div>
                 </div>
 

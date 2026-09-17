@@ -1,247 +1,431 @@
 "use client";
 
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { 
   TrendingUp, 
-  TrendingDown, 
-  Search, 
-  Bell, 
-  LayoutDashboard, 
-  Users, 
-  ShoppingBag, 
-  Settings, 
-  ChevronDown, 
-  ArrowUpRight,
-  FileText,
-  CheckCircle,
-  CreditCard
+  Zap, 
+  Receipt,
+  Utensils,
+  Boxes,
+  Printer,
+  Sparkles,
+  ShieldCheck,
+  Building2,
+  Clock,
+  ArrowRight,
+  Barcode
 } from "lucide-react";
 
 export default function HeroDashboardMockup() {
-  const [activeTab, setActiveTab] = useState("Sales");
+  const [activeMode, setActiveMode] = useState<"pos" | "restaurant" | "erp">("pos");
+  const [isPaused, setIsPaused] = useState(false);
+
+  // Auto-cycle through the 3 tabs every 5 seconds unless user hovers or clicks
+  useEffect(() => {
+    if (isPaused) return;
+
+    const interval = setInterval(() => {
+      setActiveMode((prev) => {
+        if (prev === "pos") return "restaurant";
+        if (prev === "restaurant") return "erp";
+        return "pos";
+      });
+    }, 5000);
+
+    return () => clearInterval(interval);
+  }, [isPaused]);
 
   return (
-    <div className="relative mx-auto w-full max-w-2xl select-none group">
-      {/* Background Soft Solid Shadow/Glow */}
-      <div className="absolute -inset-2 bg-[#5e2b9d]/10 rounded-3xl blur-2xl -z-10 transition-all opacity-80" />
+    <div 
+      className="relative mx-auto w-full max-w-2xl select-none group"
+      onMouseEnter={() => setIsPaused(true)}
+      onMouseLeave={() => setIsPaused(false)}
+    >
+      
+      {/* Dynamic Multi-Color Ambient Glow Aura with breathing pulse */}
+      <div className="absolute -inset-4 bg-gradient-to-tr from-[#5e2b9d]/25 via-[#40C351]/15 to-[#EFAF08]/15 rounded-3xl blur-2xl -z-10 transition-all opacity-80 group-hover:opacity-100 duration-700 animate-pulse-glow" />
 
-      {/* Main Dashboard Window */}
-      <div className="relative rounded-2xl bg-white border border-slate-200 shadow-[0_20px_50px_rgba(40,32,35,0.10)] overflow-hidden font-sans text-xs">
+      {/* ========================================================================= */}
+      {/* FLOATING BADGE 1: Top-Left Instant Scan Chip (Float Animation) */}
+      {/* ========================================================================= */}
+      <div className="absolute -top-6 -left-3 sm:-left-6 z-30 bg-white/95 backdrop-blur-md px-3.5 py-2.5 rounded-2xl shadow-xl border border-slate-200/80 flex items-center gap-3 animate-float-slow hover:scale-105 transition-transform duration-300">
+        <div className="w-9 h-9 rounded-xl bg-[#40C351]/15 text-[#40C351] flex items-center justify-center shrink-0 shadow-2xs">
+          <Zap className="w-5 h-5" />
+        </div>
+        <div>
+          <div className="text-[10px] font-medium text-slate-500 flex items-center gap-1">
+            <span>Express POS Engine</span>
+            <span className="w-1.5 h-1.5 rounded-full bg-[#40C351] animate-ping" />
+          </div>
+          <div className="text-xs font-bold text-[#282023]">&lt; 0.2s Sub-Second Scan ⚡</div>
+        </div>
+      </div>
+
+      {/* ========================================================================= */}
+      {/* FLOATING BADGE 2: Bottom-Right Revenue Pill (Reverse Float Animation) */}
+      {/* ========================================================================= */}
+      <div className="absolute -bottom-6 -right-3 sm:-right-6 z-30 bg-white/95 backdrop-blur-md px-4 py-2.5 rounded-2xl shadow-xl border border-slate-200/80 flex items-center gap-3 animate-float-reverse hover:scale-105 transition-transform duration-300">
+        <div className="w-9 h-9 rounded-xl bg-[#5e2b9d]/15 text-[#5e2b9d] flex items-center justify-center shrink-0 shadow-2xs">
+          <TrendingUp className="w-5 h-5" />
+        </div>
+        <div>
+          <div className="text-[10px] font-medium text-slate-500">Gross MTD Volume</div>
+          <div className="text-xs sm:text-sm font-bold text-[#282023] flex items-center gap-1.5">
+            <span>₹ 2.45 Cr</span>
+            <span className="text-[10px] text-[#40C351] font-bold bg-[#40C351]/10 px-1.5 py-0.5 rounded-full">+18.4%</span>
+          </div>
+        </div>
+      </div>
+
+      {/* ========================================================================= */}
+      {/* FLOATING BADGE 3: Bottom-Left Offline Guarantee */}
+      {/* ========================================================================= */}
+      <div className="hidden sm:flex absolute -bottom-4 left-6 z-30 bg-[#282023]/90 backdrop-blur-md text-white px-3 py-1.5 rounded-full shadow-lg border border-white/10 items-center gap-2 text-[11px] animate-pulse-glow-delayed">
+        <span className="w-2 h-2 rounded-full bg-[#40C351] animate-pulse" />
+        <span className="font-medium">Offline-First Core Active</span>
+        <span className="text-slate-400 text-[10px]">• 0 Outages</span>
+      </div>
+
+      {/* ========================================================================= */}
+      {/* MAIN DASHBOARD CONTAINER */}
+      {/* ========================================================================= */}
+      <div className="relative rounded-2xl bg-white border border-slate-200/90 shadow-[0_25px_60px_rgba(40,32,35,0.12)] overflow-hidden font-sans text-xs transition-all">
         
-        {/* Top Header Mockup */}
-        <div className="flex items-center justify-between px-4 py-3 border-b border-slate-100 bg-slate-50">
-          <div className="flex items-center gap-3">
-            {/* Logo Mark in Dashboard */}
-            <div className="w-7 h-7 rounded-lg bg-[#5e2b9d] flex items-center justify-center text-white font-bold text-xs shadow-xs">
-              D
-            </div>
-            <span className="font-bold text-[#282023] text-sm tracking-tight">Dashboard</span>
+        {/* 1. Window Frame Bar with macOS dots & URL chip */}
+        <div className="flex items-center justify-between px-4 py-2.5 border-b border-slate-100 bg-slate-50/90 backdrop-blur-xs">
+          {/* macOS 3 Dots */}
+          <div className="flex items-center gap-1.5">
+            <span className="w-2.5 h-2.5 rounded-full bg-rose-400 border border-rose-500/20" />
+            <span className="w-2.5 h-2.5 rounded-full bg-amber-400 border border-amber-500/20" />
+            <span className="w-2.5 h-2.5 rounded-full bg-emerald-400 border border-emerald-500/20" />
           </div>
 
-          {/* Search bar & User controls */}
-          <div className="flex items-center gap-3">
-            <div className="hidden sm:flex items-center gap-1.5 px-2.5 py-1.5 rounded-lg bg-white border border-slate-200 text-slate-400 w-44">
-              <Search className="w-3.5 h-3.5" />
-              <span className="text-[11px] text-slate-400">Search...</span>
-            </div>
+          {/* URL Pill with security icon */}
+          <div className="flex items-center gap-1.5 px-3 py-1 rounded-full bg-white border border-slate-200 text-[11px] text-slate-500 max-w-[210px] sm:max-w-xs truncate shadow-2xs">
+            <span className="text-[#40C351]">🔒</span>
+            <span className="font-medium text-[#282023]">app.doonext.com</span>
+            <span className="text-slate-300">/</span>
+            <span className="text-[#5e2b9d] font-semibold">{activeMode}</span>
+          </div>
 
-            {/* Notification Bell */}
-            <div className="relative p-1.5 rounded-lg text-slate-500 hover:bg-slate-200/60 cursor-pointer">
-              <Bell className="w-4 h-4" />
-              <span className="absolute top-1 right-1 w-2 h-2 rounded-full bg-[#FB5454] ring-2 ring-white" />
-            </div>
-
-            {/* Avatar */}
-            <div className="flex items-center gap-2 pl-1 border-l border-slate-200">
-              <div className="w-7 h-7 rounded-full bg-[#5e2b9d] flex items-center justify-center text-white font-bold text-[10px] ring-2 ring-[#5e2b9d]/30">
-                JD
-              </div>
-            </div>
+          {/* Right Live Sync Beacon */}
+          <div className="flex items-center gap-1.5 text-[10px] text-[#40C351] font-semibold">
+            <span className="w-1.5 h-1.5 rounded-full bg-[#40C351] animate-pulse" />
+            <span className="hidden sm:inline">POS Cloud Sync</span>
           </div>
         </div>
 
-        {/* Dashboard Body with Left Icon Sidebar & Content */}
-        <div className="flex min-h-[380px]">
+        {/* 2. Interactive Mode Switcher Tabs */}
+        <div className="bg-slate-100/70 p-1.5 border-b border-slate-200/80 flex items-center justify-between gap-1 overflow-x-auto">
+          <button
+            onClick={() => {
+              setActiveMode("pos");
+              setIsPaused(true);
+            }}
+            className={`relative flex-1 py-1.5 px-3 rounded-lg text-[11px] font-bold flex items-center justify-center gap-1.5 transition-all cursor-pointer overflow-hidden ${
+              activeMode === "pos"
+                ? "bg-white text-[#5e2b9d] shadow-xs"
+                : "text-slate-600 hover:text-[#5e2b9d] hover:bg-white/50"
+            }`}
+          >
+            <Barcode className="w-3.5 h-3.5 text-[#5e2b9d]" />
+            <span>Retail &amp; Supermarket POS</span>
+            {activeMode === "pos" && (
+              <span className="absolute bottom-0 left-0 right-0 h-0.5 bg-[#5e2b9d]" />
+            )}
+          </button>
+
+          <button
+            onClick={() => {
+              setActiveMode("restaurant");
+              setIsPaused(true);
+            }}
+            className={`relative flex-1 py-1.5 px-3 rounded-lg text-[11px] font-bold flex items-center justify-center gap-1.5 transition-all cursor-pointer overflow-hidden ${
+              activeMode === "restaurant"
+                ? "bg-white text-[#EFAF08] shadow-xs"
+                : "text-slate-600 hover:text-[#EFAF08] hover:bg-white/50"
+            }`}
+          >
+            <Utensils className="w-3.5 h-3.5 text-[#EFAF08]" />
+            <span>Restaurant &amp; KOT</span>
+            {activeMode === "restaurant" && (
+              <span className="absolute bottom-0 left-0 right-0 h-0.5 bg-[#EFAF08]" />
+            )}
+          </button>
+
+          <button
+            onClick={() => {
+              setActiveMode("erp");
+              setIsPaused(true);
+            }}
+            className={`relative flex-1 py-1.5 px-3 rounded-lg text-[11px] font-bold flex items-center justify-center gap-1.5 transition-all cursor-pointer overflow-hidden ${
+              activeMode === "erp"
+                ? "bg-white text-[#40C351] shadow-xs"
+                : "text-slate-600 hover:text-[#40C351] hover:bg-white/50"
+            }`}
+          >
+            <Boxes className="w-3.5 h-3.5 text-[#40C351]" />
+            <span>ERP &amp; Inventory</span>
+            {activeMode === "erp" && (
+              <span className="absolute bottom-0 left-0 right-0 h-0.5 bg-[#40C351]" />
+            )}
+          </button>
+        </div>
+
+        {/* 3. Dynamic Mode Content */}
+        <div className="p-4 bg-slate-50/40 min-h-[360px]">
           
-          {/* Mini Sidebar */}
-          <div className="w-12 bg-[#282023] text-purple-200 flex flex-col items-center py-4 space-y-4 shrink-0">
-            <div className="p-2 rounded-lg bg-[#5e2b9d] text-white cursor-pointer shadow-xs">
-              <LayoutDashboard className="w-4 h-4" />
-            </div>
-            <div className="p-2 rounded-lg hover:bg-white/10 cursor-pointer text-slate-300">
-              <Users className="w-4 h-4" />
-            </div>
-            <div className="p-2 rounded-lg hover:bg-white/10 cursor-pointer text-slate-300">
-              <ShoppingBag className="w-4 h-4" />
-            </div>
-            <div className="p-2 rounded-lg hover:bg-white/10 cursor-pointer text-slate-300">
-              <CreditCard className="w-4 h-4" />
-            </div>
-            <div className="mt-auto p-2 rounded-lg hover:bg-white/10 cursor-pointer text-slate-300">
-              <Settings className="w-4 h-4" />
-            </div>
-          </div>
-
-          {/* Right Main Analytics Pane */}
-          <div className="flex-1 p-4 bg-slate-50/60 space-y-4 overflow-hidden">
-            
-            {/* Top 4 KPI Metrics */}
-            <div className="grid grid-cols-2 sm:grid-cols-4 gap-2.5">
+          {/* ========================================================================= */}
+          {/* MODE A: RETAIL & SUPERMARKET POS */}
+          {/* ========================================================================= */}
+          {activeMode === "pos" && (
+            <div className="space-y-3.5 animate-in fade-in-50 duration-300">
               
-              {/* Stat 1: Total Sales */}
-              <div className="p-2.5 rounded-xl bg-white border border-slate-100 shadow-xs hover:border-[#5e2b9d]/40 transition-colors">
-                <div className="text-[10px] font-medium text-slate-500">Total Sales</div>
-                <div className="text-sm sm:text-base font-bold text-[#282023] mt-0.5">₹ 25,68,930</div>
-                <div className="flex items-center gap-1 mt-1">
-                  <span className="inline-flex items-center text-[10px] font-bold text-[#40C351] bg-[#40C351]/10 px-1 py-0.5 rounded">
-                    +12.5%
-                  </span>
-                  <svg className="w-12 h-3 stroke-[#40C351] fill-none" viewBox="0 0 50 12">
-                    <path d="M1 9 L15 6 L30 8 L49 2" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
-                  </svg>
-                </div>
-              </div>
-
-              {/* Stat 2: Total Customers */}
-              <div className="p-2.5 rounded-xl bg-white border border-slate-100 shadow-xs hover:border-[#5e2b9d]/40 transition-colors">
-                <div className="text-[10px] font-medium text-slate-500">Total Customers</div>
-                <div className="text-sm sm:text-base font-bold text-[#282023] mt-0.5">2,568</div>
-                <div className="flex items-center gap-1 mt-1">
-                  <span className="inline-flex items-center text-[10px] font-bold text-[#40C351] bg-[#40C351]/10 px-1 py-0.5 rounded">
-                    +8.3%
-                  </span>
-                  <svg className="w-12 h-3 stroke-[#40C351] fill-none" viewBox="0 0 50 12">
-                    <path d="M1 10 L15 7 L28 4 L49 1" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
-                  </svg>
-                </div>
-              </div>
-
-              {/* Stat 3: Total Orders */}
-              <div className="p-2.5 rounded-xl bg-white border border-slate-100 shadow-xs hover:border-[#5e2b9d]/40 transition-colors">
-                <div className="text-[10px] font-medium text-slate-500">Total Orders</div>
-                <div className="text-sm sm:text-base font-bold text-[#282023] mt-0.5">1,456</div>
-                <div className="flex items-center gap-1 mt-1">
-                  <span className="inline-flex items-center text-[10px] font-bold text-[#40C351] bg-[#40C351]/10 px-1 py-0.5 rounded">
-                    +5.7%
-                  </span>
-                  <svg className="w-12 h-3 stroke-[#40C351] fill-none" viewBox="0 0 50 12">
-                    <path d="M1 8 L18 10 L32 5 L49 2" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
-                  </svg>
-                </div>
-              </div>
-
-              {/* Stat 4: Pending Invoices */}
-              <div className="p-2.5 rounded-xl bg-white border border-slate-100 shadow-xs hover:border-[#5e2b9d]/40 transition-colors">
-                <div className="text-[10px] font-medium text-slate-500">Pending Invoices</div>
-                <div className="text-sm sm:text-base font-bold text-[#282023] mt-0.5">128</div>
-                <div className="flex items-center gap-1 mt-1">
-                  <span className="inline-flex items-center text-[10px] font-bold text-[#FB5454] bg-[#FB5454]/10 px-1 py-0.5 rounded">
-                    -2.1%
-                  </span>
-                  <svg className="w-12 h-3 stroke-[#FB5454] fill-none" viewBox="0 0 50 12">
-                    <path d="M1 3 L16 4 L31 8 L49 11" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
-                  </svg>
-                </div>
-              </div>
-
-            </div>
-
-            {/* Bottom Row: Spline Chart & Recent Transactions */}
-            <div className="grid grid-cols-1 md:grid-cols-12 gap-3">
-              
-              {/* Sales Overview Chart (7 cols) */}
-              <div className="md:col-span-7 p-3 rounded-xl bg-white border border-slate-100 shadow-xs">
-                <div className="flex items-center justify-between mb-3">
+              {/* POS Top Bar: Counter & Cashier */}
+              <div className="flex items-center justify-between bg-white p-2.5 rounded-xl border border-slate-200/80 shadow-2xs">
+                <div className="flex items-center gap-2">
+                  <div className="w-7 h-7 rounded-lg bg-[#5e2b9d] text-white flex items-center justify-center font-bold text-xs shadow-xs">
+                    01
+                  </div>
                   <div>
-                    <h5 className="font-bold text-[#282023] text-xs">Sales Overview</h5>
-                  </div>
-                  <div className="flex items-center gap-1 text-[10px] bg-slate-50 border border-slate-200 px-2 py-0.5 rounded-md text-[#282023] cursor-pointer">
-                    <span>This Year</span>
-                    <ChevronDown className="w-3 h-3 text-slate-400" />
+                    <div className="font-bold text-[#282023] text-xs flex items-center gap-1.5">
+                      <span>Express Checkout Counter #1</span>
+                      <span className="w-1.5 h-1.5 rounded-full bg-[#40C351] animate-pulse" />
+                    </div>
+                    <div className="text-[10px] text-slate-500">Scanner: Honeywell 2D • Offline Mode Active</div>
                   </div>
                 </div>
-
-                {/* Spline Graph SVG */}
-                <div className="relative w-full h-36 pt-1">
-                  <svg className="w-full h-full" viewBox="0 0 320 110" preserveAspectRatio="none">
-                    {/* Grid lines */}
-                    <line x1="25" y1="15" x2="310" y2="15" stroke="#f1f5f9" strokeDasharray="3 3" />
-                    <line x1="25" y1="45" x2="310" y2="45" stroke="#f1f5f9" strokeDasharray="3 3" />
-                    <line x1="25" y1="75" x2="310" y2="75" stroke="#f1f5f9" strokeDasharray="3 3" />
-
-                    {/* Y Axis Numbers */}
-                    <text x="18" y="18" fill="#94a3b8" fontSize="8" textAnchor="end">100</text>
-                    <text x="18" y="48" fill="#94a3b8" fontSize="8" textAnchor="end">50</text>
-                    <text x="18" y="78" fill="#94a3b8" fontSize="8" textAnchor="end">0</text>
-
-                    {/* Solid fill & line */}
-                    <path
-                      d="M35 70 C 65 72, 85 45, 115 50 C 145 55, 165 30, 195 20 C 225 15, 245 42, 275 35 C 290 30, 305 25, 310 22 L 310 95 L 35 95 Z"
-                      fill="#5e2b9d"
-                      fillOpacity="0.12"
-                    />
-                    <path
-                      d="M35 70 C 65 72, 85 45, 115 50 C 145 55, 165 30, 195 20 C 225 15, 245 42, 275 35 C 290 30, 305 25, 310 22"
-                      fill="none"
-                      stroke="#5e2b9d"
-                      strokeWidth="2.5"
-                      strokeLinecap="round"
-                    />
-
-                    {/* Coordinate Nodes */}
-                    <circle cx="35" cy="70" r="3" fill="#ffffff" stroke="#5e2b9d" strokeWidth="2" />
-                    <circle cx="115" cy="50" r="3" fill="#ffffff" stroke="#5e2b9d" strokeWidth="2" />
-                    <circle cx="195" cy="20" r="3.5" fill="#5e2b9d" stroke="#ffffff" strokeWidth="2" />
-                    <circle cx="275" cy="35" r="3" fill="#ffffff" stroke="#5e2b9d" strokeWidth="2" />
-                    <circle cx="310" cy="22" r="3" fill="#ffffff" stroke="#5e2b9d" strokeWidth="2" />
-
-                    {/* X Axis Months */}
-                    <text x="35" y="105" fill="#94a3b8" fontSize="8" textAnchor="middle">Jan</text>
-                    <text x="80" y="105" fill="#94a3b8" fontSize="8" textAnchor="middle">Feb</text>
-                    <text x="125" y="105" fill="#94a3b8" fontSize="8" textAnchor="middle">Mar</text>
-                    <text x="170" y="105" fill="#94a3b8" fontSize="8" textAnchor="middle">Apr</text>
-                    <text x="215" y="105" fill="#94a3b8" fontSize="8" textAnchor="middle">May</text>
-                    <text x="260" y="105" fill="#94a3b8" fontSize="8" textAnchor="middle">Jun</text>
-                    <text x="305" y="105" fill="#94a3b8" fontSize="8" textAnchor="middle">Jul</text>
-                  </svg>
+                <div className="flex items-center gap-2">
+                  <span className="text-[10px] font-bold px-2 py-0.5 rounded bg-[#40C351]/10 text-[#2d963b] border border-[#40C351]/25">
+                    GST Active
+                  </span>
+                  <span className="text-[10px] text-slate-400 font-mono">INV-9842</span>
                 </div>
               </div>
 
-              {/* Recent Transactions (5 cols) */}
-              <div className="md:col-span-5 p-3 rounded-xl bg-white border border-slate-100 shadow-xs flex flex-col justify-between">
-                <div>
-                  <h5 className="font-bold text-[#282023] text-xs mb-2">Recent Transactions</h5>
-                  <div className="space-y-2">
-                    {[
-                      { inv: "Invoice #INV-001", amount: "₹25,000", time: "Just now" },
-                      { inv: "Invoice #INV-002", amount: "₹18,500", time: "10m ago" },
-                      { inv: "Invoice #INV-003", amount: "₹32,000", time: "25m ago" },
-                      { inv: "Invoice #INV-004", amount: "₹21,250", time: "1h ago" },
-                    ].map((item, idx) => (
-                      <div key={idx} className="flex items-center justify-between py-1 border-b border-slate-50 last:border-0">
-                        <div className="flex items-center gap-1.5">
-                          <div className="w-1.5 h-1.5 rounded-full bg-[#40C351]" />
-                          <span className="text-[11px] font-medium text-slate-700">{item.inv}</span>
-                        </div>
-                        <span className="text-[11px] font-bold text-[#282023]">{item.amount}</span>
+              {/* Scanned Cart Items List with Animated Laser Scanner Line */}
+              <div className="relative bg-white rounded-xl border border-slate-200/80 shadow-2xs overflow-hidden">
+                
+                {/* Laser Barcode Scanner Animation Beam */}
+                <div className="absolute left-0 right-0 h-[2px] bg-gradient-to-r from-transparent via-[#FB5454] to-transparent shadow-[0_0_8px_rgba(251,84,84,0.9)] pointer-events-none z-10 animate-scanner-laser" />
+
+                <div className="bg-slate-50 px-3 py-1.5 border-b border-slate-100 flex justify-between text-[10px] font-bold text-slate-500 uppercase">
+                  <span>Item &amp; Barcode</span>
+                  <span>Qty / Rate</span>
+                  <span>Total</span>
+                </div>
+
+                <div className="divide-y divide-slate-100 text-xs">
+                  <div className="px-3 py-2 flex items-center justify-between hover:bg-purple-50/40 transition-colors">
+                    <div>
+                      <div className="font-bold text-[#282023] flex items-center gap-1.5">
+                        <span>Aashirvaad Shudh Chakki Atta 5kg</span>
+                        <span className="text-[9px] font-bold text-[#40C351] bg-[#40C351]/10 px-1 rounded">Scanned</span>
                       </div>
-                    ))}
+                      <div className="text-[10px] text-slate-400 font-mono">8901030384912</div>
+                    </div>
+                    <div className="text-slate-600 text-[11px]">2 × ₹240.00</div>
+                    <div className="font-bold text-[#282023]">₹480.00</div>
+                  </div>
+
+                  <div className="px-3 py-2 flex items-center justify-between hover:bg-purple-50/40 transition-colors">
+                    <div>
+                      <div className="font-bold text-[#282023]">Amul Pasteurized Butter 500g</div>
+                      <div className="text-[10px] text-slate-400 font-mono">8901262010053</div>
+                    </div>
+                    <div className="text-slate-600 text-[11px]">1 × ₹275.00</div>
+                    <div className="font-bold text-[#282023]">₹275.00</div>
+                  </div>
+
+                  <div className="px-3 py-2 flex items-center justify-between hover:bg-purple-50/40 transition-colors">
+                    <div>
+                      <div className="font-bold text-[#282023]">Tata Tea Gold Leaf 500g</div>
+                      <div className="text-[10px] text-slate-400 font-mono">8901052002108</div>
+                    </div>
+                    <div className="text-slate-600 text-[11px]">1 × ₹310.00</div>
+                    <div className="font-bold text-[#282023]">₹310.00</div>
                   </div>
                 </div>
 
-                <div className="pt-2 text-center">
-                  <button className="w-full py-1 text-[10px] font-bold text-[#5e2b9d] hover:text-[#4d2282] border border-[#5e2b9d]/30 hover:border-[#5e2b9d] rounded-lg hover:bg-[#5e2b9d]/5 transition-all cursor-pointer">
-                    View All
+                {/* Subtotal & GST Calculation */}
+                <div className="bg-slate-50/80 px-3 py-2 border-t border-slate-200/70 flex items-center justify-between text-xs">
+                  <div className="text-[10px] text-slate-500">
+                    Subtotal: ₹1,065.00 • CGST (2.5%): ₹26.62 • SGST (2.5%): ₹26.62
+                  </div>
+                  <div className="text-right">
+                    <span className="text-[10px] text-slate-500 mr-1">Net Pay:</span>
+                    <span className="text-base font-bold text-[#5e2b9d]">₹ 1,118.25</span>
+                  </div>
+                </div>
+              </div>
+
+              {/* Instant Payment Actions */}
+              <div className="grid grid-cols-4 gap-2">
+                <button className="py-2.5 rounded-xl bg-white border border-slate-200 text-[#282023] font-bold text-[11px] hover:border-[#5e2b9d] hover:bg-slate-50 transition-all flex items-center justify-center gap-1 shadow-2xs cursor-pointer">
+                  <span>💵 Cash</span>
+                </button>
+                <button className="py-2.5 rounded-xl bg-[#40C351]/10 border border-[#40C351]/30 text-[#2d963b] font-bold text-[11px] hover:bg-[#40C351]/20 transition-all flex items-center justify-center gap-1 shadow-2xs cursor-pointer">
+                  <span>📱 UPI Pay</span>
+                </button>
+                <button className="py-2.5 rounded-xl bg-white border border-slate-200 text-[#282023] font-bold text-[11px] hover:border-[#5e2b9d] hover:bg-slate-50 transition-all flex items-center justify-center gap-1 shadow-2xs cursor-pointer">
+                  <span>💳 Card</span>
+                </button>
+                <button className="py-2.5 rounded-xl bg-[#5e2b9d] hover:bg-[#4d2282] text-white font-bold text-[11px] transition-all flex items-center justify-center gap-1 shadow-md shadow-[#5e2b9d]/20 cursor-pointer group/btn">
+                  <Printer className="w-3.5 h-3.5 group-hover/btn:scale-110 transition-transform" />
+                  <span>Print &lt;0.2s</span>
+                </button>
+              </div>
+
+            </div>
+          )}
+
+          {/* ========================================================================= */}
+          {/* MODE B: RESTAURANT & KOT */}
+          {/* ========================================================================= */}
+          {activeMode === "restaurant" && (
+            <div className="space-y-3.5 animate-in fade-in-50 duration-300">
+              
+              {/* Tables Overview Bar */}
+              <div className="grid grid-cols-4 gap-2 text-center">
+                <div className="p-2.5 rounded-xl bg-white border border-[#40C351]/40 shadow-2xs">
+                  <div className="text-[10px] text-slate-500 font-bold">Table 01</div>
+                  <div className="text-xs font-bold text-[#40C351] mt-0.5">Dining (4 Pax)</div>
+                  <div className="text-[9px] text-slate-400">₹850 • KOT #1</div>
+                </div>
+
+                <div className="p-2.5 rounded-xl bg-[#EFAF08]/15 border border-[#EFAF08]/40 shadow-2xs">
+                  <div className="text-[10px] text-slate-500 font-bold">Table 02</div>
+                  <div className="text-xs font-bold text-[#c79105] mt-0.5 flex items-center justify-center gap-1">
+                    <span>Cooking</span>
+                    <span className="w-1.5 h-1.5 rounded-full bg-[#EFAF08] animate-pulse" />
+                  </div>
+                  <div className="text-[9px] text-slate-600">8 mins ago</div>
+                </div>
+
+                <div className="p-2.5 rounded-xl bg-white border border-slate-200 shadow-2xs">
+                  <div className="text-[10px] text-slate-400 font-bold">Table 03</div>
+                  <div className="text-xs font-bold text-slate-400 mt-0.5">Vacant</div>
+                  <div className="text-[9px] text-slate-400">Ready</div>
+                </div>
+
+                <div className="p-2.5 rounded-xl bg-[#5e2b9d]/10 border border-[#5e2b9d]/30 shadow-2xs">
+                  <div className="text-[10px] text-slate-500 font-bold">Table 04</div>
+                  <div className="text-xs font-bold text-[#5e2b9d] mt-0.5">Bill Printed</div>
+                  <div className="text-[9px] text-slate-600">₹1,420.00</div>
+                </div>
+              </div>
+
+              {/* Live Kitchen Order Ticket (KOT) */}
+              <div className="bg-white rounded-xl border border-slate-200 p-3 shadow-2xs">
+                <div className="flex items-center justify-between pb-2 border-b border-slate-100">
+                  <div className="flex items-center gap-1.5 font-bold text-xs text-[#282023]">
+                    <Utensils className="w-3.5 h-3.5 text-[#EFAF08]" />
+                    <span>Live Kitchen Display (KDS) — Order #KOT-402</span>
+                  </div>
+                  <span className="text-[10px] font-bold px-2 py-0.5 rounded bg-emerald-50 text-emerald-700 flex items-center gap-1">
+                    <span className="w-1.5 h-1.5 rounded-full bg-[#40C351] animate-pulse" />
+                    <span>In Preparation</span>
+                  </span>
+                </div>
+
+                <div className="py-2.5 space-y-1.5 text-xs text-slate-700">
+                  <div className="flex justify-between items-center">
+                    <span>1 × Paneer Butter Masala (Less Spicy)</span>
+                    <span className="font-bold text-[#282023]">₹ 260</span>
+                  </div>
+                  <div className="flex justify-between items-center">
+                    <span>4 × Garlic Butter Naan</span>
+                    <span className="font-bold text-[#282023]">₹ 180</span>
+                  </div>
+                  <div className="flex justify-between items-center">
+                    <span>2 × Fresh Sweet Lime Soda</span>
+                    <span className="font-bold text-[#282023]">₹ 120</span>
+                  </div>
+                </div>
+
+                <div className="pt-2 border-t border-slate-100 flex items-center justify-between text-[11px]">
+                  <span className="text-slate-400">Captain: Rajesh • Station: Tandoor</span>
+                  <button className="px-3 py-1 rounded-lg bg-[#40C351] text-white font-bold text-[10px] shadow-xs hover:bg-[#349c42] transition-colors cursor-pointer">
+                    Mark Ready &amp; Serve
                   </button>
                 </div>
               </div>
 
             </div>
+          )}
 
-          </div>
+          {/* ========================================================================= */}
+          {/* MODE C: ERP & MULTI-STORE INVENTORY */}
+          {/* ========================================================================= */}
+          {activeMode === "erp" && (
+            <div className="space-y-3.5 animate-in fade-in-50 duration-300">
+              
+              {/* Multi-Branch Live Revenue */}
+              <div className="grid grid-cols-3 gap-2 text-center">
+                <div className="p-2 rounded-xl bg-white border border-slate-200 shadow-2xs">
+                  <div className="text-[10px] text-slate-500">Coimbatore Hub</div>
+                  <div className="text-xs sm:text-sm font-bold text-[#5e2b9d] mt-0.5">₹ 14.80 L</div>
+                  <div className="text-[9px] text-[#40C351] font-bold">+14.2% Today</div>
+                </div>
+
+                <div className="p-2 rounded-xl bg-white border border-slate-200 shadow-2xs">
+                  <div className="text-[10px] text-slate-500">Chennai Outlet</div>
+                  <div className="text-xs sm:text-sm font-bold text-[#282023] mt-0.5">₹ 9.40 L</div>
+                  <div className="text-[9px] text-[#40C351] font-bold">+9.8% Today</div>
+                </div>
+
+                <div className="p-2 rounded-xl bg-white border border-slate-200 shadow-2xs">
+                  <div className="text-[10px] text-slate-500">Bangalore Store</div>
+                  <div className="text-xs sm:text-sm font-bold text-[#282023] mt-0.5">₹ 11.25 L</div>
+                  <div className="text-[9px] text-[#40C351] font-bold">+12.5% Today</div>
+                </div>
+              </div>
+
+              {/* Warehouse Inventory Health & Reorder Alert */}
+              <div className="bg-white rounded-xl border border-slate-200 p-3 shadow-2xs space-y-2">
+                <div className="flex items-center justify-between text-xs">
+                  <span className="font-bold text-[#282023]">Central Depot Stock Synchronization</span>
+                  <span className="text-[10px] font-bold text-[#40C351] bg-[#40C351]/10 px-1.5 py-0.5 rounded flex items-center gap-1">
+                    <span className="w-1.5 h-1.5 rounded-full bg-[#40C351] animate-pulse" />
+                    <span>100% Synced</span>
+                  </span>
+                </div>
+
+                <div className="space-y-1.5">
+                  <div>
+                    <div className="flex justify-between text-[10px] text-slate-500 mb-0.5">
+                      <span>FMCG &amp; Packaged Goods (4,250 SKUs)</span>
+                      <span className="font-bold text-[#282023]">92% In Stock</span>
+                    </div>
+                    <div className="w-full h-1.5 bg-slate-100 rounded-full overflow-hidden">
+                      <div className="w-[92%] h-full bg-[#40C351] rounded-full" />
+                    </div>
+                  </div>
+
+                  <div>
+                    <div className="flex justify-between text-[10px] text-slate-500 mb-0.5">
+                      <span>Dairy &amp; Fresh Perishables (380 SKUs)</span>
+                      <span className="font-bold text-[#EFAF08]">Low Reorder Alert</span>
+                    </div>
+                    <div className="w-full h-1.5 bg-slate-100 rounded-full overflow-hidden">
+                      <div className="w-[45%] h-full bg-[#EFAF08] rounded-full" />
+                    </div>
+                  </div>
+                </div>
+
+                <div className="pt-2 border-t border-slate-100 flex justify-between items-center text-[10px]">
+                  <span className="text-slate-500">Auto-Generated PO #PO-8812 ready for supplier review</span>
+                  <span className="text-[#5e2b9d] font-bold hover:underline cursor-pointer">View PO</span>
+                </div>
+              </div>
+
+            </div>
+          )}
+
         </div>
 
       </div>
+
     </div>
   );
 }
