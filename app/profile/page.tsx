@@ -50,7 +50,7 @@ export default function ProfilePage() {
   };
 
   return (
-    <div className="min-h-screen bg-[#fafbfc] text-[#282023] flex flex-col selection:bg-[#8C5288] selection:text-white font-sans">
+    <div className="min-h-screen bg-[#fafbfc] text-[#282023] flex flex-col selection:bg-[#5e2b9d] selection:text-white font-sans">
       <Navbar />
 
       <main className="flex-1 py-10 lg:py-14">
@@ -64,7 +64,7 @@ export default function ProfilePage() {
               
               {/* Avatar */}
               <div className="relative">
-                <div className="w-20 h-20 rounded-2xl bg-gradient-to-br from-[#8C5288] to-[#6d3769] text-white flex items-center justify-center font-bold text-2xl shadow-md shadow-purple-900/10">
+                <div className="w-20 h-20 rounded-2xl bg-gradient-to-br from-[#5e2b9d] to-[#4a1f7d] text-white flex items-center justify-center font-bold text-2xl shadow-md shadow-purple-900/10">
                   AP
                 </div>
                 <span className="absolute -bottom-1 -right-1 w-5 h-5 rounded-full bg-[#40C351] border-2 border-white flex items-center justify-center" title="Active Account" />
@@ -76,7 +76,7 @@ export default function ProfilePage() {
                   <h1 className="text-xl sm:text-2xl font-bold text-[#282023]">
                     {profileData.fullName}
                   </h1>
-                  <span className="text-[10px] font-bold px-2.5 py-0.5 rounded-full bg-[#8C5288]/10 text-[#8C5288] border border-[#8C5288]/20 uppercase tracking-wider">
+                  <span className="text-[10px] font-bold px-2.5 py-0.5 rounded-full bg-[#5e2b9d]/10 text-[#5e2b9d] border border-[#5e2b9d]/20 uppercase tracking-wider">
                     Store Owner
                   </span>
                   <span className="text-[10px] font-bold px-2 py-0.5 rounded-full bg-[#40C351]/10 text-[#40C351] border border-[#40C351]/25">
@@ -106,7 +106,7 @@ export default function ProfilePage() {
 
               <Link
                 href="/contact"
-                className="inline-flex items-center gap-2 px-5 py-2.5 rounded-xl bg-[#8C5288] hover:bg-[#763f72] text-white text-xs font-bold shadow-md shadow-[#8C5288]/20 transition-all cursor-pointer"
+                className="inline-flex items-center gap-2 px-5 py-2.5 rounded-xl bg-[#5e2b9d] hover:bg-[#4d2282] text-white text-xs font-bold shadow-md shadow-[#5e2b9d]/20 transition-all cursor-pointer"
               >
                 <span>Support Desk</span>
               </Link>
@@ -134,8 +134,8 @@ export default function ProfilePage() {
                     onClick={() => setActiveSection(tab.id as any)}
                     className={`w-full flex items-center gap-3 px-4 py-3 rounded-2xl text-xs font-bold transition-all text-left cursor-pointer ${
                       isSelected
-                        ? "bg-[#8C5288]/10 text-[#8C5288] border border-[#8C5288]/20"
-                        : "text-slate-600 hover:bg-slate-50 hover:text-[#8C5288]"
+                        ? "bg-[#5e2b9d]/10 text-[#5e2b9d] border border-[#5e2b9d]/20"
+                        : "text-slate-600 hover:bg-slate-50 hover:text-[#5e2b9d]"
                     }`}
                   >
                     <Icon className="w-4 h-4 shrink-0" />
@@ -144,8 +144,8 @@ export default function ProfilePage() {
                 );
               })}
 
-              <div className="pt-4 mt-2 border-t border-slate-100 p-3 bg-[#faf8fb] rounded-2xl space-y-2">
-                <div className="text-xs font-bold text-[#8C5288] flex items-center justify-between">
+              <div className="pt-4 mt-2 border-t border-slate-100 p-3 bg-[#faf7fd] rounded-2xl space-y-2">
+                <div className="text-xs font-bold text-[#5e2b9d] flex items-center justify-between">
                   <span>Cloud Database Sync</span>
                   <span className="text-[10px] text-[#40C351] font-bold">Live</span>
                 </div>
@@ -185,7 +185,7 @@ export default function ProfilePage() {
                           type="text"
                           value={profileData.fullName}
                           onChange={(e) => setProfileData({ ...profileData, fullName: e.target.value })}
-                          className="w-full px-3.5 py-2.5 text-sm rounded-xl border border-slate-200 focus:border-[#8C5288] focus:ring-2 focus:ring-[#8C5288]/15 outline-hidden text-[#282023] bg-white"
+                          className="w-full px-3.5 py-2.5 text-sm rounded-xl border border-slate-200 focus:border-[#5e2b9d] focus:ring-2 focus:ring-[#5e2b9d]/15 outline-hidden text-[#282023] bg-white"
                         />
                       </div>
 
@@ -197,7 +197,7 @@ export default function ProfilePage() {
                           type="text"
                           value={profileData.phone}
                           onChange={(e) => setProfileData({ ...profileData, phone: e.target.value })}
-                          className="w-full px-3.5 py-2.5 text-sm rounded-xl border border-slate-200 focus:border-[#8C5288] focus:ring-2 focus:ring-[#8C5288]/15 outline-hidden text-[#282023] bg-white"
+                          className="w-full px-3.5 py-2.5 text-sm rounded-xl border border-slate-200 focus:border-[#5e2b9d] focus:ring-2 focus:ring-[#5e2b9d]/15 outline-hidden text-[#282023] bg-white"
                         />
                       </div>
                     </div>
@@ -211,7 +211,7 @@ export default function ProfilePage() {
                           type="email"
                           value={profileData.email}
                           onChange={(e) => setProfileData({ ...profileData, email: e.target.value })}
-                          className="w-full px-3.5 py-2.5 text-sm rounded-xl border border-slate-200 focus:border-[#8C5288] focus:ring-2 focus:ring-[#8C5288]/15 outline-hidden text-[#282023] bg-white"
+                          className="w-full px-3.5 py-2.5 text-sm rounded-xl border border-slate-200 focus:border-[#5e2b9d] focus:ring-2 focus:ring-[#5e2b9d]/15 outline-hidden text-[#282023] bg-white"
                         />
                       </div>
 
@@ -223,7 +223,7 @@ export default function ProfilePage() {
                           type="text"
                           value={profileData.businessName}
                           onChange={(e) => setProfileData({ ...profileData, businessName: e.target.value })}
-                          className="w-full px-3.5 py-2.5 text-sm rounded-xl border border-slate-200 focus:border-[#8C5288] focus:ring-2 focus:ring-[#8C5288]/15 outline-hidden text-[#282023] bg-white"
+                          className="w-full px-3.5 py-2.5 text-sm rounded-xl border border-slate-200 focus:border-[#5e2b9d] focus:ring-2 focus:ring-[#5e2b9d]/15 outline-hidden text-[#282023] bg-white"
                         />
                       </div>
                     </div>
@@ -237,7 +237,7 @@ export default function ProfilePage() {
                           type="text"
                           value={profileData.gstin}
                           onChange={(e) => setProfileData({ ...profileData, gstin: e.target.value })}
-                          className="w-full px-3.5 py-2.5 text-sm rounded-xl border border-slate-200 focus:border-[#8C5288] focus:ring-2 focus:ring-[#8C5288]/15 outline-hidden text-[#282023] bg-white uppercase"
+                          className="w-full px-3.5 py-2.5 text-sm rounded-xl border border-slate-200 focus:border-[#5e2b9d] focus:ring-2 focus:ring-[#5e2b9d]/15 outline-hidden text-[#282023] bg-white uppercase"
                         />
                       </div>
 
@@ -249,7 +249,7 @@ export default function ProfilePage() {
                           type="text"
                           value={profileData.tradeCategory}
                           onChange={(e) => setProfileData({ ...profileData, tradeCategory: e.target.value })}
-                          className="w-full px-3.5 py-2.5 text-sm rounded-xl border border-slate-200 focus:border-[#8C5288] focus:ring-2 focus:ring-[#8C5288]/15 outline-hidden text-[#282023] bg-white"
+                          className="w-full px-3.5 py-2.5 text-sm rounded-xl border border-slate-200 focus:border-[#5e2b9d] focus:ring-2 focus:ring-[#5e2b9d]/15 outline-hidden text-[#282023] bg-white"
                         />
                       </div>
                     </div>
@@ -262,14 +262,14 @@ export default function ProfilePage() {
                         rows={2}
                         value={profileData.address}
                         onChange={(e) => setProfileData({ ...profileData, address: e.target.value })}
-                        className="w-full px-3.5 py-2.5 text-sm rounded-xl border border-slate-200 focus:border-[#8C5288] focus:ring-2 focus:ring-[#8C5288]/15 outline-hidden text-[#282023] bg-white resize-none"
+                        className="w-full px-3.5 py-2.5 text-sm rounded-xl border border-slate-200 focus:border-[#5e2b9d] focus:ring-2 focus:ring-[#5e2b9d]/15 outline-hidden text-[#282023] bg-white resize-none"
                       />
                     </div>
 
                     <div className="pt-2">
                       <button
                         type="submit"
-                        className="px-6 py-2.5 rounded-xl bg-[#8C5288] hover:bg-[#763f72] text-white font-bold text-xs shadow-md shadow-[#8C5288]/20 flex items-center gap-2 cursor-pointer transition-all"
+                        className="px-6 py-2.5 rounded-xl bg-[#5e2b9d] hover:bg-[#4d2282] text-white font-bold text-xs shadow-md shadow-[#5e2b9d]/20 flex items-center gap-2 cursor-pointer transition-all"
                       >
                         <Save className="w-3.5 h-3.5" />
                         <span>Save Account Changes</span>
@@ -293,7 +293,7 @@ export default function ProfilePage() {
                     
                     <div className="p-5 rounded-2xl bg-white border border-slate-200 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
                       <div className="flex items-center gap-3.5">
-                        <div className="w-11 h-11 rounded-xl bg-[#8C5288]/10 text-[#8C5288] flex items-center justify-center shrink-0">
+                        <div className="w-11 h-11 rounded-xl bg-[#5e2b9d]/10 text-[#5e2b9d] flex items-center justify-center shrink-0">
                           <Receipt className="w-5 h-5" />
                         </div>
                         <div>
@@ -369,7 +369,7 @@ export default function ProfilePage() {
                         <span className="w-2 h-2 rounded-full bg-[#40C351]" />
                       </div>
                       <p className="text-xs text-slate-500">Windows Touch POS • Thermal 3-inch USB</p>
-                      <div className="text-[11px] text-[#8C5288] font-bold">Driver: POS-80 Series OK</div>
+                      <div className="text-[11px] text-[#5e2b9d] font-bold">Driver: POS-80 Series OK</div>
                     </div>
 
                     <div className="p-4 rounded-2xl bg-slate-50 border border-slate-200 space-y-2">
@@ -378,7 +378,7 @@ export default function ProfilePage() {
                         <span className="w-2 h-2 rounded-full bg-[#40C351]" />
                       </div>
                       <p className="text-xs text-slate-500">Desktop PC • 2D Omnidirectional Scanner</p>
-                      <div className="text-[11px] text-[#8C5288] font-bold">Driver: USB HID OK</div>
+                      <div className="text-[11px] text-[#5e2b9d] font-bold">Driver: USB HID OK</div>
                     </div>
 
                     <div className="p-4 rounded-2xl bg-slate-50 border border-slate-200 space-y-2">
@@ -413,9 +413,9 @@ export default function ProfilePage() {
                   </div>
 
                   <div className="space-y-4 text-xs">
-                    <div className="p-4 rounded-2xl bg-[#faf8fb] border border-[#8C5288]/15 flex items-center justify-between">
+                    <div className="p-4 rounded-2xl bg-[#faf7fd] border border-[#5e2b9d]/15 flex items-center justify-between">
                       <div className="flex items-center gap-3">
-                        <Database className="w-5 h-5 text-[#8C5288]" />
+                        <Database className="w-5 h-5 text-[#5e2b9d]" />
                         <div>
                           <div className="font-bold text-[#282023]">Automated Cloud Backup</div>
                           <div className="text-slate-500 mt-0.5">Hourly snapshot stored in Indian Cloud Tier-4</div>
@@ -426,9 +426,9 @@ export default function ProfilePage() {
                       </span>
                     </div>
 
-                    <div className="p-4 rounded-2xl bg-[#faf8fb] border border-[#8C5288]/15 flex items-center justify-between">
+                    <div className="p-4 rounded-2xl bg-[#faf7fd] border border-[#5e2b9d]/15 flex items-center justify-between">
                       <div className="flex items-center gap-3">
-                        <Key className="w-5 h-5 text-[#8C5288]" />
+                        <Key className="w-5 h-5 text-[#5e2b9d]" />
                         <div>
                           <div className="font-bold text-[#282023]">Two-Factor Authentication (2FA)</div>
                           <div className="text-slate-500 mt-0.5">Require OTP for manager override and tax changes</div>
@@ -439,7 +439,7 @@ export default function ProfilePage() {
                       </span>
                     </div>
 
-                    <div className="p-4 rounded-2xl bg-[#faf8fb] border border-[#8C5288]/15 flex items-center justify-between">
+                    <div className="p-4 rounded-2xl bg-[#faf7fd] border border-[#5e2b9d]/15 flex items-center justify-between">
                       <div className="flex items-center gap-3">
                         <ShieldCheck className="w-5 h-5 text-[#40C351]" />
                         <div>
@@ -447,7 +447,7 @@ export default function ProfilePage() {
                           <div className="text-slate-500 mt-0.5">Cashiers cannot delete bills without manager PIN</div>
                         </div>
                       </div>
-                      <span className="font-bold text-[#8C5288] bg-[#8C5288]/10 px-2.5 py-1 rounded-full">
+                      <span className="font-bold text-[#5e2b9d] bg-[#5e2b9d]/10 px-2.5 py-1 rounded-full">
                         Enforced
                       </span>
                     </div>

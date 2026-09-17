@@ -46,12 +46,12 @@ export default function LoginPage() {
   };
 
   return (
-    <div className="min-h-screen bg-[#fafbfc] text-[#282023] flex flex-col selection:bg-[#8C5288] selection:text-white font-sans">
+    <div className="min-h-screen bg-[#fafbfc] text-[#282023] flex flex-col selection:bg-[#5e2b9d] selection:text-white font-sans">
       <Navbar />
 
       <main className="flex-1 py-12 lg:py-16 flex items-center justify-center relative overflow-hidden">
         {/* Subtle background ambient blur */}
-        <div className="absolute top-1/4 left-1/4 w-[500px] h-[350px] bg-[#8C5288]/5 rounded-full blur-3xl pointer-events-none" />
+        <div className="absolute top-1/4 left-1/4 w-[500px] h-[350px] bg-[#5e2b9d]/5 rounded-full blur-3xl pointer-events-none" />
         <div className="absolute bottom-1/4 right-1/4 w-[500px] h-[350px] bg-[#40C351]/5 rounded-full blur-3xl pointer-events-none" />
 
         <div className="max-w-md w-full mx-auto px-4 sm:px-6 relative z-10">
@@ -99,7 +99,7 @@ export default function LoginPage() {
                       onClick={() => setSelectedRole(role.id)}
                       className={`flex items-center justify-center gap-1.5 py-2 px-2 rounded-xl text-xs font-bold border transition-all cursor-pointer ${
                         isSelected
-                          ? "bg-[#8C5288]/10 text-[#8C5288] border-[#8C5288]/30 shadow-2xs"
+                          ? "bg-[#5e2b9d]/10 text-[#5e2b9d] border-[#5e2b9d]/30 shadow-2xs"
                           : "bg-slate-50 text-slate-600 border-slate-200 hover:bg-slate-100"
                       }`}
                     >
@@ -118,7 +118,7 @@ export default function LoginPage() {
                 onClick={() => setLoginMethod("password")}
                 className={`flex-1 py-1.5 text-xs font-bold rounded-lg transition-all cursor-pointer ${
                   loginMethod === "password"
-                    ? "bg-white text-[#8C5288] shadow-xs"
+                    ? "bg-white text-[#5e2b9d] shadow-xs"
                     : "text-slate-500 hover:text-slate-800"
                 }`}
               >
@@ -129,7 +129,7 @@ export default function LoginPage() {
                 onClick={() => setLoginMethod("otp")}
                 className={`flex-1 py-1.5 text-xs font-bold rounded-lg transition-all cursor-pointer ${
                   loginMethod === "otp"
-                    ? "bg-white text-[#8C5288] shadow-xs"
+                    ? "bg-white text-[#5e2b9d] shadow-xs"
                     : "text-slate-500 hover:text-slate-800"
                 }`}
               >
@@ -153,7 +153,7 @@ export default function LoginPage() {
                     placeholder="e.g. 9876543210 or store@domain.com"
                     value={formData.identifier}
                     onChange={(e) => setFormData({ ...formData, identifier: e.target.value })}
-                    className="w-full pl-10 pr-4 py-2.5 text-sm rounded-xl border border-slate-200 focus:border-[#8C5288] focus:ring-2 focus:ring-[#8C5288]/15 outline-hidden transition-all text-[#282023] bg-white placeholder:text-slate-400"
+                    className="w-full pl-10 pr-4 py-2.5 text-sm rounded-xl border border-slate-200 focus:border-[#5e2b9d] focus:ring-2 focus:ring-[#5e2b9d]/15 outline-hidden transition-all text-[#282023] bg-white placeholder:text-slate-400"
                   />
                 </div>
               </div>
@@ -165,7 +165,7 @@ export default function LoginPage() {
                     <label className="text-xs font-bold text-[#282023]">
                       Password <span className="text-red-500">*</span>
                     </label>
-                    <a href="#" className="text-xs font-semibold text-[#8C5288] hover:underline">
+                    <a href="#" className="text-xs font-semibold text-[#5e2b9d] hover:underline">
                       Forgot Password?
                     </a>
                   </div>
@@ -177,7 +177,7 @@ export default function LoginPage() {
                       placeholder="••••••••••••"
                       value={formData.password}
                       onChange={(e) => setFormData({ ...formData, password: e.target.value })}
-                      className="w-full pl-10 pr-10 py-2.5 text-sm rounded-xl border border-slate-200 focus:border-[#8C5288] focus:ring-2 focus:ring-[#8C5288]/15 outline-hidden transition-all text-[#282023] bg-white"
+                      className="w-full pl-10 pr-10 py-2.5 text-sm rounded-xl border border-slate-200 focus:border-[#5e2b9d] focus:ring-2 focus:ring-[#5e2b9d]/15 outline-hidden transition-all text-[#282023] bg-white"
                     />
                     <button
                       type="button"
@@ -196,7 +196,7 @@ export default function LoginPage() {
                     <label className="text-xs font-bold text-[#282023]">
                       Enter 6-Digit OTP <span className="text-red-500">*</span>
                     </label>
-                    <button type="button" className="text-xs font-bold text-[#8C5288] hover:underline cursor-pointer">
+                    <button type="button" className="text-xs font-bold text-[#5e2b9d] hover:underline cursor-pointer">
                       Send OTP
                     </button>
                   </div>
@@ -207,7 +207,7 @@ export default function LoginPage() {
                     placeholder="Enter 6-digit OTP"
                     value={formData.otp}
                     onChange={(e) => setFormData({ ...formData, otp: e.target.value })}
-                    className="w-full px-4 py-2.5 text-center tracking-widest text-base font-bold rounded-xl border border-slate-200 focus:border-[#8C5288] focus:ring-2 focus:ring-[#8C5288]/15 outline-hidden transition-all text-[#282023] bg-white placeholder:text-slate-400 placeholder:tracking-normal placeholder:font-normal placeholder:text-sm"
+                    className="w-full px-4 py-2.5 text-center tracking-widest text-base font-bold rounded-xl border border-slate-200 focus:border-[#5e2b9d] focus:ring-2 focus:ring-[#5e2b9d]/15 outline-hidden transition-all text-[#282023] bg-white placeholder:text-slate-400 placeholder:tracking-normal placeholder:font-normal placeholder:text-sm"
                   />
                 </div>
               )}
@@ -219,7 +219,7 @@ export default function LoginPage() {
                     type="checkbox"
                     checked={formData.rememberMe}
                     onChange={(e) => setFormData({ ...formData, rememberMe: e.target.checked })}
-                    className="w-4 h-4 rounded text-[#8C5288] border-slate-300 focus:ring-[#8C5288]"
+                    className="w-4 h-4 rounded text-[#5e2b9d] border-slate-300 focus:ring-[#5e2b9d]"
                   />
                   <span>Keep me logged in on this device</span>
                 </label>
@@ -230,7 +230,7 @@ export default function LoginPage() {
                 <button
                   type="submit"
                   disabled={loading}
-                  className="w-full py-3.5 px-6 rounded-xl bg-[#8C5288] hover:bg-[#763f72] text-white font-bold text-sm shadow-lg shadow-[#8C5288]/20 flex items-center justify-center gap-2 transition-all cursor-pointer disabled:opacity-75"
+                  className="w-full py-3.5 px-6 rounded-xl bg-[#5e2b9d] hover:bg-[#4d2282] text-white font-bold text-sm shadow-lg shadow-[#5e2b9d]/20 flex items-center justify-center gap-2 transition-all cursor-pointer disabled:opacity-75"
                 >
                   {loading ? (
                     <div className="w-5 h-5 border-2 border-white/30 border-t-white rounded-full animate-spin" />
@@ -249,7 +249,7 @@ export default function LoginPage() {
             <div className="pt-4 border-t border-slate-100 text-center text-xs text-slate-500 space-y-2">
               <p>
                 Don&apos;t have a Doonext account yet?{" "}
-                <Link href="/contact" className="font-bold text-[#8C5288] hover:underline">
+                <Link href="/contact" className="font-bold text-[#5e2b9d] hover:underline">
                   Get Free Account Setup
                 </Link>
               </p>

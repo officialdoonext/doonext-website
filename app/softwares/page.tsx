@@ -53,9 +53,9 @@ export default function SoftwaresPage() {
       badge: "Flagship Counter Engine",
       tagline: "Sub-second express barcode billing with offline-first guaranteed zero downtime.",
       icon: Receipt,
-      color: "bg-[#8C5288]/10 text-[#8C5288] border-[#8C5288]/20",
-      accentBg: "bg-[#8C5288]",
-      btnBg: "bg-[#8C5288] hover:bg-[#763f72]",
+      color: "bg-[#5e2b9d]/10 text-[#5e2b9d] border-[#5e2b9d]/20",
+      accentBg: "bg-[#5e2b9d]",
+      btnBg: "bg-[#5e2b9d] hover:bg-[#4d2282]",
       features: [
         "Barcode & QR express scan checkout (< 0.2s response)",
         "Offline-first local database with auto cloud sync",
@@ -242,7 +242,7 @@ export default function SoftwaresPage() {
     : allSoftwares.filter(s => s.category === activeCategory);
 
   return (
-    <div className="min-h-screen bg-[#fafbfc] text-[#282023] flex flex-col selection:bg-[#8C5288] selection:text-white font-sans">
+    <div className="min-h-screen bg-[#fafbfc] text-[#282023] flex flex-col selection:bg-[#5e2b9d] selection:text-white font-sans">
       <Navbar onRequestDemo={() => setDemoModalOpen(true)} />
       <RequestDemoModal isOpen={demoModalOpen} onClose={() => setDemoModalOpen(false)} defaultProduct={selectedSoftware} />
 
@@ -254,13 +254,13 @@ export default function SoftwaresPage() {
         <section className="pt-14 pb-16 lg:pt-16 lg:pb-20 bg-gradient-to-b from-[#fbf8fc] via-white to-[#fafbfc] border-b border-slate-100 relative overflow-hidden text-center">
           <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
             
-            <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#8C5288]/10 border border-[#8C5288]/20 text-[#8C5288] text-xs font-bold uppercase tracking-wider mb-5">
+            <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#5e2b9d]/10 border border-[#5e2b9d]/20 text-[#5e2b9d] text-xs font-bold uppercase tracking-wider mb-5">
               <Sparkles className="w-3.5 h-3.5" />
               <span>Complete Softwares Suite</span>
             </div>
 
             <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-[#282023] tracking-tight leading-[1.14]">
-              Explore All <span className="text-[#8C5288]">Doonext Softwares</span>
+              Explore All <span className="text-[#5e2b9d]">Doonext Softwares</span>
             </h1>
 
             <p className="mt-4 text-base sm:text-lg text-slate-600 max-w-3xl mx-auto leading-relaxed">
@@ -284,8 +284,8 @@ export default function SoftwaresPage() {
                   onClick={() => setActiveCategory(tab.id)}
                   className={`px-4 py-2 rounded-full text-xs sm:text-sm font-bold transition-all cursor-pointer ${
                     activeCategory === tab.id
-                      ? "bg-[#8C5288] text-white shadow-md shadow-[#8C5288]/25"
-                      : "bg-white text-[#282023] hover:bg-[#8C5288]/5 hover:text-[#8C5288] border border-slate-200"
+                      ? "bg-[#5e2b9d] text-white shadow-md shadow-[#5e2b9d]/25"
+                      : "bg-white text-[#282023] hover:bg-[#5e2b9d]/5 hover:text-[#5e2b9d] border border-slate-200"
                   }`}
                 >
                   {tab.label}
@@ -325,7 +325,7 @@ export default function SoftwaresPage() {
 
                       {/* Title & Tagline */}
                       <div>
-                        <h3 className="text-xl font-bold text-[#282023] group-hover:text-[#8C5288] transition-colors">
+                        <h3 className="text-xl font-bold text-[#282023] group-hover:text-[#5e2b9d] transition-colors">
                           {software.title}
                         </h3>
                         <p className="text-xs text-slate-500 mt-1 leading-relaxed">
@@ -344,7 +344,7 @@ export default function SoftwaresPage() {
                           <div className="text-[9px] text-slate-400">Uptime</div>
                         </div>
                         <div className="p-2 rounded-xl bg-white border border-slate-200/80">
-                          <div className="text-[11px] font-bold text-[#8C5288]">{software.metrics.scale}</div>
+                          <div className="text-[11px] font-bold text-[#5e2b9d]">{software.metrics.scale}</div>
                           <div className="text-[9px] text-slate-400">Capacity</div>
                         </div>
                       </div>
@@ -403,14 +403,14 @@ export default function SoftwaresPage() {
         {/* ========================================================================= */}
         <section className="pt-8">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="rounded-3xl bg-gradient-to-r from-[#8C5288] via-[#763f72] to-[#5b2857] p-8 sm:p-12 shadow-xl text-white flex flex-col md:flex-row items-center justify-between gap-6">
+            <div className="rounded-3xl bg-gradient-to-r from-[#5e2b9d] via-[#4d2282] to-[#3b1766] p-8 sm:p-12 shadow-xl text-white flex flex-col md:flex-row items-center justify-between gap-6">
               <div>
                 <h3 className="text-2xl sm:text-3xl font-bold">Need a specialized workflow or multi-branch deployment?</h3>
                 <p className="text-purple-100 text-sm mt-1">Our Coimbatore engineering squad can configure pre-built modules or build custom architecture for you.</p>
               </div>
               <button
                 onClick={() => setDemoModalOpen(true)}
-                className="px-8 py-3.5 rounded-full bg-white text-[#8C5288] font-bold text-sm hover:bg-slate-50 shadow-md transition-all shrink-0 cursor-pointer"
+                className="px-8 py-3.5 rounded-full bg-white text-[#5e2b9d] font-bold text-sm hover:bg-slate-50 shadow-md transition-all shrink-0 cursor-pointer"
               >
                 Schedule Free Software Demo
               </button>

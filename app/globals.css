@@ -5,9 +5,9 @@
   --background: #ffffff;
   --foreground: #282023;
   --dark: #282023;
-  --primary: #8C5288;
-  --primary-hover: #763f72;
-  --primary-light: #fbf6fa;
+  --primary: #5e2b9d;
+  --primary-hover: #4d2282;
+  --primary-light: #f8f4fc;
   --green: #40C351;
   --orange: #EFAF08;
   --red: #FB5454;
@@ -17,9 +17,9 @@
   --color-background: var(--background);
   --color-foreground: #282023;
   --color-dark: #282023;
-  --color-primary: #8C5288;
-  --color-primary-hover: #763f72;
-  --color-primary-light: #fbf6fa;
+  --color-primary: #5e2b9d;
+  --color-primary-hover: #4d2282;
+  --color-primary-light: #f8f4fc;
   --color-green: #40C351;
   --color-orange: #EFAF08;
   --color-red: #FB5454;

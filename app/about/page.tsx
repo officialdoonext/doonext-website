@@ -43,10 +43,10 @@ export default function AboutPage() {
       badge: "Zero Friction UX",
       desc: "Software should feel like second nature. We design intuitive, uncluttered workflows that any cashier or manager can master in under 10 minutes.",
       icon: Zap,
-      color: "bg-[#8C5288]/10 text-[#8C5288]",
-      badgeColor: "bg-[#8C5288]/10 text-[#8C5288] border-[#8C5288]/20",
-      borderColor: "hover:border-[#8C5288]",
-      glowColor: "bg-[#8C5288]/5",
+      color: "bg-[#5e2b9d]/10 text-[#5e2b9d]",
+      badgeColor: "bg-[#5e2b9d]/10 text-[#5e2b9d] border-[#5e2b9d]/20",
+      borderColor: "hover:border-[#5e2b9d]",
+      glowColor: "bg-[#5e2b9d]/5",
       highlights: [
         "Single-screen express checkout",
         "Barcode & keyboard-first navigation",
@@ -108,9 +108,9 @@ export default function AboutPage() {
       desc: "Founded by engineers who witnessed Indian retail businesses crippled by slow, crash-prone legacy desktop software. Engineered our first sub-second offline-first POS engine.",
       icon: Store,
       achievement: "First 50 Retail Outlets • Sub-Second Billing Engine",
-      color: "bg-[#8C5288]/10 text-[#8C5288] border-[#8C5288]/20",
-      accent: "text-[#8C5288]",
-      cardBorder: "hover:border-[#8C5288]",
+      color: "bg-[#5e2b9d]/10 text-[#5e2b9d] border-[#5e2b9d]/20",
+      accent: "text-[#5e2b9d]",
+      cardBorder: "hover:border-[#5e2b9d]",
     },
     {
       year: "2018",
@@ -148,7 +148,7 @@ export default function AboutPage() {
   ];
 
   return (
-    <div className="min-h-screen bg-[#fafbfc] text-[#282023] flex flex-col selection:bg-[#8C5288] selection:text-white">
+    <div className="min-h-screen bg-[#fafbfc] text-[#282023] flex flex-col selection:bg-[#5e2b9d] selection:text-white">
       <Navbar onRequestDemo={() => setDemoModalOpen(true)} />
       <RequestDemoModal isOpen={demoModalOpen} onClose={() => setDemoModalOpen(false)} />
 
@@ -156,9 +156,9 @@ export default function AboutPage() {
         {/* ========================================================================= */}
         {/* 1. HERO SECTION -> Dynamic Split Composition */}
         {/* ========================================================================= */}
-        <section className="relative pt-12 pb-20 lg:pt-16 lg:pb-28 bg-gradient-to-b from-[#fbf6fa] via-white to-[#fafbfc] border-b border-slate-100 overflow-hidden">
+        <section className="relative pt-12 pb-20 lg:pt-16 lg:pb-28 bg-gradient-to-b from-[#f8f4fc] via-white to-[#fafbfc] border-b border-slate-100 overflow-hidden">
           {/* Subtle ambient lighting decorations */}
-          <div className="absolute top-10 left-1/4 w-[500px] h-[350px] bg-[#8C5288]/5 rounded-full blur-3xl pointer-events-none" />
+          <div className="absolute top-10 left-1/4 w-[500px] h-[350px] bg-[#5e2b9d]/5 rounded-full blur-3xl pointer-events-none" />
           <div className="absolute bottom-10 right-10 w-[400px] h-[300px] bg-[#40C351]/5 rounded-full blur-3xl pointer-events-none" />
 
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
@@ -168,7 +168,7 @@ export default function AboutPage() {
               <div className="lg:col-span-6 space-y-6 text-left">
                 
                 {/* Badge */}
-                <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#8C5288]/10 border border-[#8C5288]/20 text-[#8C5288] text-xs font-bold uppercase tracking-wider">
+                <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#5e2b9d]/10 border border-[#5e2b9d]/20 text-[#5e2b9d] text-xs font-bold uppercase tracking-wider">
                   <Sparkles className="w-3.5 h-3.5" />
                   <span>ABOUT DOONEXT SOFTWARE</span>
                 </div>
@@ -177,7 +177,7 @@ export default function AboutPage() {
                 <h1 className="text-4xl sm:text-5xl lg:text-[50px] font-bold text-[#282023] tracking-tight leading-[1.14]">
                   Pioneering Next-Gen <br className="hidden sm:inline" />
                   Software for India&apos;s <br className="hidden sm:inline" />
-                  <span className="text-[#8C5288]">
+                  <span className="text-[#5e2b9d]">
                     Fastest-Growing Businesses
                   </span>
                 </h1>
@@ -190,7 +190,7 @@ export default function AboutPage() {
                 {/* Key Pillars Strip */}
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 pt-2">
                   <div className="flex items-center gap-2.5 p-3 rounded-2xl bg-white border border-slate-200/80 shadow-2xs">
-                    <div className="w-8 h-8 rounded-xl bg-[#8C5288]/10 text-[#8C5288] flex items-center justify-center shrink-0">
+                    <div className="w-8 h-8 rounded-xl bg-[#5e2b9d]/10 text-[#5e2b9d] flex items-center justify-center shrink-0">
                       <MapPin className="w-4 h-4" />
                     </div>
                     <div>
@@ -234,7 +234,7 @@ export default function AboutPage() {
                 <div className="flex flex-wrap items-center gap-4 pt-3">
                   <button
                     onClick={() => setDemoModalOpen(true)}
-                    className="px-7 py-3.5 rounded-full bg-[#8C5288] hover:bg-[#763f72] text-white font-bold text-sm shadow-md shadow-[#8C5288]/25 hover:shadow-lg transition-all flex items-center gap-2 cursor-pointer"
+                    className="px-7 py-3.5 rounded-full bg-[#5e2b9d] hover:bg-[#4d2282] text-white font-bold text-sm shadow-md shadow-[#5e2b9d]/25 hover:shadow-lg transition-all flex items-center gap-2 cursor-pointer"
                   >
                     <span>Schedule Free Demo</span>
                     <ArrowRight className="w-4 h-4" />
@@ -254,7 +254,7 @@ export default function AboutPage() {
                 <div className="w-full max-w-lg relative">
                   
                   {/* Decorative Background Glow Behind Card */}
-                  <div className="absolute -inset-1.5 bg-gradient-to-r from-[#8C5288]/20 via-[#40C351]/20 to-[#8C5288]/20 rounded-3xl blur-lg opacity-70" />
+                  <div className="absolute -inset-1.5 bg-gradient-to-r from-[#5e2b9d]/20 via-[#40C351]/20 to-[#5e2b9d]/20 rounded-3xl blur-lg opacity-70" />
 
                   {/* Main Showcase Panel */}
                   <div className="relative bg-white rounded-3xl border border-slate-200/90 shadow-xl p-6 sm:p-8 space-y-6">
@@ -262,7 +262,7 @@ export default function AboutPage() {
                     {/* Header of Panel */}
                     <div className="flex items-center justify-between pb-5 border-b border-slate-100">
                       <div className="flex items-center gap-3">
-                        <div className="w-10 h-10 rounded-xl bg-[#8C5288] text-white flex items-center justify-center font-bold text-lg shadow-sm">
+                        <div className="w-10 h-10 rounded-xl bg-[#5e2b9d] text-white flex items-center justify-center font-bold text-lg shadow-sm">
                           D
                         </div>
                         <div>
@@ -277,12 +277,12 @@ export default function AboutPage() {
                     </div>
 
                     {/* Central Diagram / Node Modules Preview */}
-                    <div className="p-5 rounded-2xl bg-[#faf8fb] border border-[#8C5288]/15 space-y-4">
+                    <div className="p-5 rounded-2xl bg-[#faf7fd] border border-[#5e2b9d]/15 space-y-4">
                       
                       {/* Central Node */}
                       <div className="bg-white rounded-xl p-3.5 border border-slate-200/80 shadow-2xs flex items-center justify-between">
                         <div className="flex items-center gap-3">
-                          <div className="w-9 h-9 rounded-lg bg-[#8C5288]/10 text-[#8C5288] flex items-center justify-center">
+                          <div className="w-9 h-9 rounded-lg bg-[#5e2b9d]/10 text-[#5e2b9d] flex items-center justify-center">
                             <Layers className="w-5 h-5" />
                           </div>
                           <div>
@@ -290,7 +290,7 @@ export default function AboutPage() {
                             <div className="text-[10px] text-slate-500">Centralized Database &amp; API</div>
                           </div>
                         </div>
-                        <span className="text-[10px] font-bold text-[#8C5288] bg-[#8C5288]/10 px-2 py-0.5 rounded">
+                        <span className="text-[10px] font-bold text-[#5e2b9d] bg-[#5e2b9d]/10 px-2 py-0.5 rounded">
                           Unified Hub
                         </span>
                       </div>
@@ -298,7 +298,7 @@ export default function AboutPage() {
                       {/* 3 Connected Branches */}
                       <div className="grid grid-cols-3 gap-2.5 pt-1 text-center">
                         <div className="bg-white rounded-xl p-2.5 border border-slate-200 shadow-2xs">
-                          <Receipt className="w-4 h-4 text-[#8C5288] mx-auto mb-1.5" />
+                          <Receipt className="w-4 h-4 text-[#5e2b9d] mx-auto mb-1.5" />
                           <div className="text-[11px] font-bold text-[#282023]">Billing POS</div>
                           <div className="text-[9px] text-[#40C351] font-semibold">&lt; 0.2s Scan</div>
                         </div>
@@ -345,7 +345,7 @@ export default function AboutPage() {
                         <CheckCircle2 className="w-3.5 h-3.5 text-[#40C351]" />
                         100% Indian GST &amp; E-Way Ready
                       </span>
-                      <span className="text-[#8C5288] font-bold">Made in India 🇮🇳</span>
+                      <span className="text-[#5e2b9d] font-bold">Made in India 🇮🇳</span>
                     </div>
 
                   </div>
@@ -361,20 +361,20 @@ export default function AboutPage() {
         {/* ========================================================================= */}
         <section className="py-24 bg-white border-b border-slate-100 relative overflow-hidden">
           {/* Subtle decorative background glow */}
-          <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[400px] bg-[#8C5288]/5 rounded-full blur-3xl pointer-events-none" />
+          <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[400px] bg-[#5e2b9d]/5 rounded-full blur-3xl pointer-events-none" />
 
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
             
             {/* Header */}
             <div className="text-center max-w-3xl mx-auto mb-16">
-              <div className="inline-flex items-center gap-2 text-xs font-bold text-[#8C5288] uppercase tracking-widest mb-3 bg-[#8C5288]/10 px-3.5 py-1.5 rounded-full border border-[#8C5288]/20">
-                <Target className="w-3.5 h-3.5 text-[#8C5288]" />
+              <div className="inline-flex items-center gap-2 text-xs font-bold text-[#5e2b9d] uppercase tracking-widest mb-3 bg-[#5e2b9d]/10 px-3.5 py-1.5 rounded-full border border-[#5e2b9d]/20">
+                <Target className="w-3.5 h-3.5 text-[#5e2b9d]" />
                 <span>PURPOSE &amp; STRATEGIC HORIZON</span>
               </div>
               
               <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-[#282023] tracking-tight">
                 Driven by Purpose, <br className="hidden sm:inline" />
-                <span className="text-[#8C5288]">Built for Real-World Impact</span>
+                <span className="text-[#5e2b9d]">Built for Real-World Impact</span>
               </h2>
               
               <p className="mt-3 text-base sm:text-lg text-slate-600 leading-relaxed">
@@ -386,20 +386,20 @@ export default function AboutPage() {
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
               
               {/* Mission Card */}
-              <div className="p-8 sm:p-10 rounded-3xl bg-gradient-to-br from-[#8C5288]/[0.04] via-white to-[#8C5288]/[0.02] border border-[#8C5288]/25 shadow-xs hover:shadow-xl transition-all duration-300 flex flex-col justify-between group relative overflow-hidden">
-                <div className="absolute -top-20 -right-20 w-48 h-48 bg-[#8C5288]/10 rounded-full blur-2xl group-hover:scale-125 transition-transform duration-500 pointer-events-none" />
+              <div className="p-8 sm:p-10 rounded-3xl bg-gradient-to-br from-[#5e2b9d]/[0.04] via-white to-[#5e2b9d]/[0.02] border border-[#5e2b9d]/25 shadow-xs hover:shadow-xl transition-all duration-300 flex flex-col justify-between group relative overflow-hidden">
+                <div className="absolute -top-20 -right-20 w-48 h-48 bg-[#5e2b9d]/10 rounded-full blur-2xl group-hover:scale-125 transition-transform duration-500 pointer-events-none" />
                 
                 <div>
                   <div className="flex items-center justify-between mb-6">
-                    <div className="w-14 h-14 rounded-2xl bg-[#8C5288]/10 text-[#8C5288] flex items-center justify-center shadow-xs group-hover:bg-[#8C5288] group-hover:text-white transition-all duration-300">
+                    <div className="w-14 h-14 rounded-2xl bg-[#5e2b9d]/10 text-[#5e2b9d] flex items-center justify-center shadow-xs group-hover:bg-[#5e2b9d] group-hover:text-white transition-all duration-300">
                       <Target className="w-7 h-7" />
                     </div>
-                    <span className="text-[11px] font-bold px-3 py-1 rounded-full bg-[#8C5288]/10 text-[#8C5288] border border-[#8C5288]/20 uppercase tracking-wider">
+                    <span className="text-[11px] font-bold px-3 py-1 rounded-full bg-[#5e2b9d]/10 text-[#5e2b9d] border border-[#5e2b9d]/20 uppercase tracking-wider">
                       Why We Build
                     </span>
                   </div>
 
-                  <h3 className="text-2xl sm:text-3xl font-bold text-[#282023] group-hover:text-[#8C5288] transition-colors mb-3">
+                  <h3 className="text-2xl sm:text-3xl font-bold text-[#282023] group-hover:text-[#5e2b9d] transition-colors mb-3">
                     Our Mission
                   </h3>
                   
@@ -424,7 +424,7 @@ export default function AboutPage() {
                       },
                     ].map((item, idx) => (
                       <div key={idx} className="flex items-start gap-3 p-2.5 rounded-xl bg-white/80 border border-slate-200/80">
-                        <div className="w-5 h-5 rounded-md bg-[#8C5288]/10 text-[#8C5288] flex items-center justify-center shrink-0 mt-0.5">
+                        <div className="w-5 h-5 rounded-md bg-[#5e2b9d]/10 text-[#5e2b9d] flex items-center justify-center shrink-0 mt-0.5">
                           <CheckCircle2 className="w-3.5 h-3.5" />
                         </div>
                         <div>
@@ -437,7 +437,7 @@ export default function AboutPage() {
                 </div>
 
                 <div className="pt-4 border-t border-slate-100 flex items-center justify-between text-xs">
-                  <span className="font-bold text-[#8C5288] flex items-center gap-1">
+                  <span className="font-bold text-[#5e2b9d] flex items-center gap-1">
                     <span>Active in 500+ Indian Businesses</span>
                   </span>
                   <span className="font-semibold text-slate-400">Continuous Evolution →</span>
@@ -507,8 +507,8 @@ export default function AboutPage() {
 
             {/* Bottom 3 Strategic Brand Promises Strip */}
             <div className="mt-12 grid grid-cols-1 md:grid-cols-3 gap-5">
-              <div className="p-6 rounded-2xl bg-[#faf8fb] border border-[#8C5288]/15 flex items-start gap-4">
-                <div className="w-10 h-10 rounded-xl bg-white border border-[#8C5288]/20 flex items-center justify-center text-[#8C5288] shrink-0 shadow-2xs">
+              <div className="p-6 rounded-2xl bg-[#faf7fd] border border-[#5e2b9d]/15 flex items-start gap-4">
+                <div className="w-10 h-10 rounded-xl bg-white border border-[#5e2b9d]/20 flex items-center justify-center text-[#5e2b9d] shrink-0 shadow-2xs">
                   <ShieldCheck className="w-5 h-5" />
                 </div>
                 <div>
@@ -519,8 +519,8 @@ export default function AboutPage() {
                 </div>
               </div>
 
-              <div className="p-6 rounded-2xl bg-[#faf8fb] border border-[#8C5288]/15 flex items-start gap-4">
-                <div className="w-10 h-10 rounded-xl bg-white border border-[#8C5288]/20 flex items-center justify-center text-[#8C5288] shrink-0 shadow-2xs">
+              <div className="p-6 rounded-2xl bg-[#faf7fd] border border-[#5e2b9d]/15 flex items-start gap-4">
+                <div className="w-10 h-10 rounded-xl bg-white border border-[#5e2b9d]/20 flex items-center justify-center text-[#5e2b9d] shrink-0 shadow-2xs">
                   <Award className="w-5 h-5" />
                 </div>
                 <div>
@@ -531,8 +531,8 @@ export default function AboutPage() {
                 </div>
               </div>
 
-              <div className="p-6 rounded-2xl bg-[#faf8fb] border border-[#8C5288]/15 flex items-start gap-4">
-                <div className="w-10 h-10 rounded-xl bg-white border border-[#8C5288]/20 flex items-center justify-center text-[#8C5288] shrink-0 shadow-2xs">
+              <div className="p-6 rounded-2xl bg-[#faf7fd] border border-[#5e2b9d]/15 flex items-start gap-4">
+                <div className="w-10 h-10 rounded-xl bg-white border border-[#5e2b9d]/20 flex items-center justify-center text-[#5e2b9d] shrink-0 shadow-2xs">
                   <HeartHandshake className="w-5 h-5" />
                 </div>
                 <div>
@@ -552,21 +552,21 @@ export default function AboutPage() {
         {/* ========================================================================= */}
         <section className="py-24 bg-[#fafbfc] border-b border-slate-100 relative overflow-hidden">
           {/* Subtle background ambient blur */}
-          <div className="absolute top-1/2 left-1/4 w-[500px] h-[300px] bg-[#8C5288]/5 rounded-full blur-3xl pointer-events-none" />
+          <div className="absolute top-1/2 left-1/4 w-[500px] h-[300px] bg-[#5e2b9d]/5 rounded-full blur-3xl pointer-events-none" />
           <div className="absolute top-1/2 right-1/4 w-[500px] h-[300px] bg-[#40C351]/5 rounded-full blur-3xl pointer-events-none" />
 
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
             
             {/* Section Header */}
             <div className="text-center max-w-3xl mx-auto mb-16">
-              <div className="inline-flex items-center gap-2 text-xs font-bold text-[#8C5288] uppercase tracking-widest mb-3 bg-[#8C5288]/10 px-3.5 py-1.5 rounded-full border border-[#8C5288]/20">
-                <TrendingUp className="w-3.5 h-3.5 text-[#8C5288]" />
+              <div className="inline-flex items-center gap-2 text-xs font-bold text-[#5e2b9d] uppercase tracking-widest mb-3 bg-[#5e2b9d]/10 px-3.5 py-1.5 rounded-full border border-[#5e2b9d]/20">
+                <TrendingUp className="w-3.5 h-3.5 text-[#5e2b9d]" />
                 <span>SCALE, IMPACT &amp; NATIONWIDE TRUST</span>
               </div>
               
               <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-[#282023] tracking-tight">
                 Empowering Scaled Commerce <br className="hidden sm:inline" />
-                <span className="text-[#8C5288]">Across Every Corner of India</span>
+                <span className="text-[#5e2b9d]">Across Every Corner of India</span>
               </h2>
               
               <p className="mt-3 text-base sm:text-lg text-slate-600 leading-relaxed">
@@ -578,20 +578,20 @@ export default function AboutPage() {
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
               
               {/* Metric 1 */}
-              <div className="p-8 rounded-3xl bg-white border border-slate-200/90 shadow-xs hover:shadow-xl hover:border-[#8C5288]/40 transition-all duration-300 flex flex-col justify-between group relative overflow-hidden">
-                <div className="absolute top-0 right-0 w-28 h-28 bg-[#8C5288]/5 rounded-full blur-xl group-hover:scale-125 transition-transform pointer-events-none" />
+              <div className="p-8 rounded-3xl bg-white border border-slate-200/90 shadow-xs hover:shadow-xl hover:border-[#5e2b9d]/40 transition-all duration-300 flex flex-col justify-between group relative overflow-hidden">
+                <div className="absolute top-0 right-0 w-28 h-28 bg-[#5e2b9d]/5 rounded-full blur-xl group-hover:scale-125 transition-transform pointer-events-none" />
                 
                 <div>
                   <div className="flex items-center justify-between mb-4">
-                    <div className="w-12 h-12 rounded-2xl bg-[#8C5288]/10 text-[#8C5288] flex items-center justify-center shadow-2xs group-hover:bg-[#8C5288] group-hover:text-white transition-all duration-300">
+                    <div className="w-12 h-12 rounded-2xl bg-[#5e2b9d]/10 text-[#5e2b9d] flex items-center justify-center shadow-2xs group-hover:bg-[#5e2b9d] group-hover:text-white transition-all duration-300">
                       <Building2 className="w-6 h-6" />
                     </div>
-                    <span className="text-[10px] font-bold px-2.5 py-1 rounded-full bg-[#8C5288]/10 text-[#8C5288] border border-[#8C5288]/20">
+                    <span className="text-[10px] font-bold px-2.5 py-1 rounded-full bg-[#5e2b9d]/10 text-[#5e2b9d] border border-[#5e2b9d]/20">
                       18+ States
                     </span>
                   </div>
 
-                  <div className="text-4xl sm:text-5xl font-bold text-[#282023] group-hover:text-[#8C5288] transition-colors tracking-tight">
+                  <div className="text-4xl sm:text-5xl font-bold text-[#282023] group-hover:text-[#5e2b9d] transition-colors tracking-tight">
                     500+
                   </div>
                   
@@ -606,7 +606,7 @@ export default function AboutPage() {
 
                 <div className="mt-6 pt-4 border-t border-slate-100 flex items-center justify-between text-[11px] font-semibold text-slate-400">
                   <span>12+ Verticals</span>
-                  <span className="text-[#8C5288]">Growing Fast →</span>
+                  <span className="text-[#5e2b9d]">Growing Fast →</span>
                 </div>
               </div>
 
@@ -714,7 +714,7 @@ export default function AboutPage() {
             {/* Bottom Multi-Vertical Footprint Strip */}
             <div className="mt-12 rounded-2xl bg-white border border-slate-200/80 p-5 shadow-xs flex flex-wrap items-center justify-between gap-4 text-xs text-slate-600">
               <div className="flex items-center gap-2 font-bold text-[#282023]">
-                <Sparkles className="w-4 h-4 text-[#8C5288]" />
+                <Sparkles className="w-4 h-4 text-[#5e2b9d]" />
                 <span>Sector Footprint Across India:</span>
               </div>
               <div className="flex flex-wrap items-center gap-4 sm:gap-6 font-medium text-slate-500">
@@ -734,21 +734,21 @@ export default function AboutPage() {
         {/* ========================================================================= */}
         <section className="py-24 bg-white border-b border-slate-100 relative overflow-hidden">
           {/* Ambient background decoration */}
-          <div className="absolute top-1/3 -right-20 w-96 h-96 bg-[#8C5288]/5 rounded-full blur-3xl pointer-events-none" />
+          <div className="absolute top-1/3 -right-20 w-96 h-96 bg-[#5e2b9d]/5 rounded-full blur-3xl pointer-events-none" />
           <div className="absolute bottom-10 -left-20 w-96 h-96 bg-[#40C351]/5 rounded-full blur-3xl pointer-events-none" />
 
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
             
             {/* Section Header */}
             <div className="text-center max-w-3xl mx-auto mb-16">
-              <div className="inline-flex items-center gap-2 text-xs font-bold text-[#8C5288] uppercase tracking-widest mb-3 bg-[#8C5288]/10 px-3.5 py-1.5 rounded-full border border-[#8C5288]/20">
-                <Sparkles className="w-3.5 h-3.5 text-[#8C5288]" />
+              <div className="inline-flex items-center gap-2 text-xs font-bold text-[#5e2b9d] uppercase tracking-widest mb-3 bg-[#5e2b9d]/10 px-3.5 py-1.5 rounded-full border border-[#5e2b9d]/20">
+                <Sparkles className="w-3.5 h-3.5 text-[#5e2b9d]" />
                 <span>WHAT DRIVES US</span>
               </div>
               
               <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-[#282023] tracking-tight">
                 Architected on Values, <br className="hidden sm:inline" />
-                <span className="text-[#8C5288]">Engineered for Trust</span>
+                <span className="text-[#5e2b9d]">Engineered for Trust</span>
               </h2>
               
               <p className="mt-3 text-base sm:text-lg text-slate-600 leading-relaxed">
@@ -780,7 +780,7 @@ export default function AboutPage() {
                       </div>
 
                       {/* Title & Description */}
-                      <h3 className="text-xl font-bold text-[#282023] group-hover:text-[#8C5288] transition-colors mb-2">
+                      <h3 className="text-xl font-bold text-[#282023] group-hover:text-[#5e2b9d] transition-colors mb-2">
                         {v.title}
                       </h3>
                       
@@ -810,9 +810,9 @@ export default function AboutPage() {
             </div>
 
             {/* Quality Pledge Banner */}
-            <div className="mt-12 rounded-2xl bg-[#faf8fb] border border-[#8C5288]/15 p-6 sm:p-7 shadow-2xs flex flex-col sm:flex-row items-center justify-between gap-5 text-left">
+            <div className="mt-12 rounded-2xl bg-[#faf7fd] border border-[#5e2b9d]/15 p-6 sm:p-7 shadow-2xs flex flex-col sm:flex-row items-center justify-between gap-5 text-left">
               <div className="flex items-center gap-4">
-                <div className="w-12 h-12 rounded-xl bg-white border border-[#8C5288]/20 flex items-center justify-center text-[#8C5288] shadow-2xs shrink-0">
+                <div className="w-12 h-12 rounded-xl bg-white border border-[#5e2b9d]/20 flex items-center justify-center text-[#5e2b9d] shadow-2xs shrink-0">
                   <ShieldCheck className="w-6 h-6" />
                 </div>
                 <div>
@@ -824,7 +824,7 @@ export default function AboutPage() {
               </div>
               <button
                 onClick={() => setDemoModalOpen(true)}
-                className="px-6 py-2.5 rounded-xl bg-[#8C5288] hover:bg-[#763f72] text-white text-xs font-bold shadow-xs hover:shadow-md transition-all shrink-0 cursor-pointer"
+                className="px-6 py-2.5 rounded-xl bg-[#5e2b9d] hover:bg-[#4d2282] text-white text-xs font-bold shadow-xs hover:shadow-md transition-all shrink-0 cursor-pointer"
               >
                 Experience the Difference
               </button>
@@ -838,21 +838,21 @@ export default function AboutPage() {
         {/* ========================================================================= */}
         <section className="py-24 bg-[#fafbfc] border-b border-slate-100 relative overflow-hidden">
           {/* Ambient blur */}
-          <div className="absolute top-1/3 left-10 w-96 h-96 bg-[#8C5288]/5 rounded-full blur-3xl pointer-events-none" />
+          <div className="absolute top-1/3 left-10 w-96 h-96 bg-[#5e2b9d]/5 rounded-full blur-3xl pointer-events-none" />
           <div className="absolute bottom-10 right-10 w-96 h-96 bg-[#40C351]/5 rounded-full blur-3xl pointer-events-none" />
 
           <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
             
             {/* Header */}
             <div className="text-center max-w-3xl mx-auto mb-16">
-              <div className="inline-flex items-center gap-2 text-xs font-bold text-[#8C5288] uppercase tracking-widest mb-3 bg-[#8C5288]/10 px-3.5 py-1.5 rounded-full border border-[#8C5288]/20">
-                <Sparkles className="w-3.5 h-3.5 text-[#8C5288]" />
+              <div className="inline-flex items-center gap-2 text-xs font-bold text-[#5e2b9d] uppercase tracking-widest mb-3 bg-[#5e2b9d]/10 px-3.5 py-1.5 rounded-full border border-[#5e2b9d]/20">
+                <Sparkles className="w-3.5 h-3.5 text-[#5e2b9d]" />
                 <span>A DECADE OF EXCELLENCE</span>
               </div>
               
               <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-[#282023] tracking-tight">
                 From Coimbatore Roots to <br className="hidden sm:inline" />
-                <span className="text-[#8C5288]">Nationwide Impact</span>
+                <span className="text-[#5e2b9d]">Nationwide Impact</span>
               </h2>
               
               <p className="mt-3 text-base sm:text-lg text-slate-600 leading-relaxed">
@@ -861,7 +861,7 @@ export default function AboutPage() {
             </div>
 
             {/* Timeline Milestones Cards */}
-            <div className="space-y-8 relative before:absolute before:inset-0 before:left-8 sm:before:left-1/2 before:-translate-x-1/2 before:h-full before:w-0.5 before:bg-gradient-to-b before:from-[#8C5288]/30 before:via-[#40C351]/30 before:to-[#8C5288]/30 before:hidden sm:before:block">
+            <div className="space-y-8 relative before:absolute before:inset-0 before:left-8 sm:before:left-1/2 before:-translate-x-1/2 before:h-full before:w-0.5 before:bg-gradient-to-b before:from-[#5e2b9d]/30 before:via-[#40C351]/30 before:to-[#5e2b9d]/30 before:hidden sm:before:block">
               {milestones.map((m, idx) => {
                 const Icon = m.icon;
                 const isEven = idx % 2 === 0;
@@ -873,7 +873,7 @@ export default function AboutPage() {
                     }`}
                   >
                     {/* Center Node Badge on Timeline */}
-                    <div className="hidden sm:flex absolute left-1/2 -translate-x-1/2 w-12 h-12 rounded-2xl bg-white border-2 border-[#8C5288] shadow-md items-center justify-center text-xs font-bold text-[#8C5288] z-10">
+                    <div className="hidden sm:flex absolute left-1/2 -translate-x-1/2 w-12 h-12 rounded-2xl bg-white border-2 border-[#5e2b9d] shadow-md items-center justify-center text-xs font-bold text-[#5e2b9d] z-10">
                       {m.year}
                     </div>
 
@@ -884,7 +884,7 @@ export default function AboutPage() {
                         {/* Top Bar with Year badge & Icon */}
                         <div className="flex items-center justify-between mb-4">
                           <div className="flex items-center gap-2.5">
-                            <span className="sm:hidden text-xs font-bold px-3 py-1 rounded-full bg-[#8C5288]/10 text-[#8C5288] border border-[#8C5288]/20">
+                            <span className="sm:hidden text-xs font-bold px-3 py-1 rounded-full bg-[#5e2b9d]/10 text-[#5e2b9d] border border-[#5e2b9d]/20">
                               {m.year}
                             </span>
                             <span className={`text-[10px] font-bold uppercase tracking-wider px-2.5 py-0.5 rounded-full border ${m.color}`}>
@@ -897,7 +897,7 @@ export default function AboutPage() {
                         </div>
 
                         {/* Title & Description */}
-                        <h3 className="text-xl font-bold text-[#282023] group-hover:text-[#8C5288] transition-colors mb-2">
+                        <h3 className="text-xl font-bold text-[#282023] group-hover:text-[#5e2b9d] transition-colors mb-2">
                           {m.title}
                         </h3>
                         
@@ -921,7 +921,7 @@ export default function AboutPage() {
             </div>
 
             {/* Future Vision 2026+ Roadmap Card */}
-            <div className="mt-14 p-8 rounded-3xl bg-gradient-to-r from-[#8C5288] via-[#763f72] to-[#8C5288] text-white shadow-xl flex flex-col sm:flex-row items-center justify-between gap-6 text-left">
+            <div className="mt-14 p-8 rounded-3xl bg-gradient-to-r from-[#5e2b9d] via-[#4d2282] to-[#5e2b9d] text-white shadow-xl flex flex-col sm:flex-row items-center justify-between gap-6 text-left">
               <div className="flex items-center gap-5">
                 <div className="w-14 h-14 rounded-2xl bg-white/15 border border-white/20 flex items-center justify-center text-white shrink-0 shadow-inner">
                   <Sparkles className="w-7 h-7 text-[#EFAF08]" />
@@ -940,7 +940,7 @@ export default function AboutPage() {
               </div>
               <button
                 onClick={() => setDemoModalOpen(true)}
-                className="px-6 py-3 rounded-full bg-white text-[#8C5288] font-bold text-xs sm:text-sm hover:bg-slate-50 shadow-md transition-all shrink-0 cursor-pointer"
+                className="px-6 py-3 rounded-full bg-white text-[#5e2b9d] font-bold text-xs sm:text-sm hover:bg-slate-50 shadow-md transition-all shrink-0 cursor-pointer"
               >
                 Join the Journey
               </button>
@@ -954,20 +954,20 @@ export default function AboutPage() {
         {/* ========================================================================= */}
         <section className="py-24 bg-white border-b border-slate-100 relative overflow-hidden">
           {/* Subtle ambient lighting */}
-          <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[700px] h-[350px] bg-[#8C5288]/5 rounded-full blur-3xl pointer-events-none" />
+          <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[700px] h-[350px] bg-[#5e2b9d]/5 rounded-full blur-3xl pointer-events-none" />
 
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
             
             {/* Header */}
             <div className="text-center max-w-3xl mx-auto mb-16">
-              <div className="inline-flex items-center gap-2 text-xs font-bold text-[#8C5288] uppercase tracking-widest mb-3 bg-[#8C5288]/10 px-3.5 py-1.5 rounded-full border border-[#8C5288]/20">
-                <HeartHandshake className="w-3.5 h-3.5 text-[#8C5288]" />
+              <div className="inline-flex items-center gap-2 text-xs font-bold text-[#5e2b9d] uppercase tracking-widest mb-3 bg-[#5e2b9d]/10 px-3.5 py-1.5 rounded-full border border-[#5e2b9d]/20">
+                <HeartHandshake className="w-3.5 h-3.5 text-[#5e2b9d]" />
                 <span>OUR CULTURE &amp; SUPPORT DNA</span>
               </div>
               
               <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-[#282023] tracking-tight">
                 Crafted in Coimbatore. <br className="hidden sm:inline" />
-                <span className="text-[#8C5288]">Engineered for Human Connection.</span>
+                <span className="text-[#5e2b9d]">Engineered for Human Connection.</span>
               </h2>
               
               <p className="mt-3 text-base sm:text-lg text-slate-600 leading-relaxed">
@@ -979,12 +979,12 @@ export default function AboutPage() {
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
               
               {/* Pillar 1 */}
-              <div className="p-8 rounded-3xl bg-[#faf8fb] border border-[#8C5288]/15 shadow-2xs hover:shadow-lg hover:border-[#8C5288]/40 transition-all flex flex-col justify-between group">
+              <div className="p-8 rounded-3xl bg-[#faf7fd] border border-[#5e2b9d]/15 shadow-2xs hover:shadow-lg hover:border-[#5e2b9d]/40 transition-all flex flex-col justify-between group">
                 <div>
-                  <div className="w-12 h-12 rounded-2xl bg-white border border-[#8C5288]/20 text-[#8C5288] flex items-center justify-center mb-6 shadow-2xs group-hover:scale-105 transition-transform">
+                  <div className="w-12 h-12 rounded-2xl bg-white border border-[#5e2b9d]/20 text-[#5e2b9d] flex items-center justify-center mb-6 shadow-2xs group-hover:scale-105 transition-transform">
                     <Headphones className="w-6 h-6" />
                   </div>
-                  <div className="inline-block text-[10px] font-bold uppercase tracking-wider px-2.5 py-0.5 rounded-full bg-[#8C5288]/10 text-[#8C5288] mb-3">
+                  <div className="inline-block text-[10px] font-bold uppercase tracking-wider px-2.5 py-0.5 rounded-full bg-[#5e2b9d]/10 text-[#5e2b9d] mb-3">
                     &lt; 3 Min Response
                   </div>
                   <h3 className="text-lg font-bold text-[#282023] mb-2">Direct Engineer Desk</h3>
@@ -992,14 +992,14 @@ export default function AboutPage() {
                     Zero automated bot blackholes. Reach real product engineers on phone and WhatsApp who resolve issues in minutes.
                   </p>
                 </div>
-                <div className="mt-6 pt-4 border-t border-[#8C5288]/10 flex items-center gap-1.5 text-xs text-[#8C5288] font-bold">
+                <div className="mt-6 pt-4 border-t border-[#5e2b9d]/10 flex items-center gap-1.5 text-xs text-[#5e2b9d] font-bold">
                   <CheckCircle2 className="w-3.5 h-3.5 text-[#40C351]" />
                   <span>Call &amp; WhatsApp Ready</span>
                 </div>
               </div>
 
               {/* Pillar 2 */}
-              <div className="p-8 rounded-3xl bg-[#faf8fb] border border-[#8C5288]/15 shadow-2xs hover:shadow-lg hover:border-[#40C351]/40 transition-all flex flex-col justify-between group">
+              <div className="p-8 rounded-3xl bg-[#faf7fd] border border-[#5e2b9d]/15 shadow-2xs hover:shadow-lg hover:border-[#40C351]/40 transition-all flex flex-col justify-between group">
                 <div>
                   <div className="w-12 h-12 rounded-2xl bg-white border border-[#40C351]/20 text-[#40C351] flex items-center justify-center mb-6 shadow-2xs group-hover:scale-105 transition-transform">
                     <Lock className="w-6 h-6" />
@@ -1012,14 +1012,14 @@ export default function AboutPage() {
                     Your financial, inventory &amp; customer ledgers are strictly hosted on ISO-certified Indian servers with hourly backups.
                   </p>
                 </div>
-                <div className="mt-6 pt-4 border-t border-[#8C5288]/10 flex items-center gap-1.5 text-xs text-[#40C351] font-bold">
+                <div className="mt-6 pt-4 border-t border-[#5e2b9d]/10 flex items-center gap-1.5 text-xs text-[#40C351] font-bold">
                   <CheckCircle2 className="w-3.5 h-3.5 text-[#40C351]" />
                   <span>Bank-Grade Encryption</span>
                 </div>
               </div>
 
               {/* Pillar 3 */}
-              <div className="p-8 rounded-3xl bg-[#faf8fb] border border-[#8C5288]/15 shadow-2xs hover:shadow-lg hover:border-[#EFAF08] transition-all flex flex-col justify-between group">
+              <div className="p-8 rounded-3xl bg-[#faf7fd] border border-[#5e2b9d]/15 shadow-2xs hover:shadow-lg hover:border-[#EFAF08] transition-all flex flex-col justify-between group">
                 <div>
                   <div className="w-12 h-12 rounded-2xl bg-white border border-amber-200 text-[#EFAF08] flex items-center justify-center mb-6 shadow-2xs group-hover:scale-105 transition-transform">
                     <Clock className="w-6 h-6" />
@@ -1032,14 +1032,14 @@ export default function AboutPage() {
                     We ship continuous improvements and tax compliance updates every 14 days directly requested by store owners.
                   </p>
                 </div>
-                <div className="mt-6 pt-4 border-t border-[#8C5288]/10 flex items-center gap-1.5 text-xs text-amber-700 font-bold">
+                <div className="mt-6 pt-4 border-t border-[#5e2b9d]/10 flex items-center gap-1.5 text-xs text-amber-700 font-bold">
                   <CheckCircle2 className="w-3.5 h-3.5 text-[#40C351]" />
                   <span>Zero Downtime Updates</span>
                 </div>
               </div>
 
               {/* Pillar 4 */}
-              <div className="p-8 rounded-3xl bg-[#faf8fb] border border-[#8C5288]/15 shadow-2xs hover:shadow-lg hover:border-sky-400 transition-all flex flex-col justify-between group">
+              <div className="p-8 rounded-3xl bg-[#faf7fd] border border-[#5e2b9d]/15 shadow-2xs hover:shadow-lg hover:border-sky-400 transition-all flex flex-col justify-between group">
                 <div>
                   <div className="w-12 h-12 rounded-2xl bg-white border border-sky-200 text-sky-600 flex items-center justify-center mb-6 shadow-2xs group-hover:scale-105 transition-transform">
                     <Users2 className="w-6 h-6" />
@@ -1052,7 +1052,7 @@ export default function AboutPage() {
                     From thermal printers to item catalog imports and staff training, our team guides you from day zero with zero disruption.
                   </p>
                 </div>
-                <div className="mt-6 pt-4 border-t border-[#8C5288]/10 flex items-center gap-1.5 text-xs text-sky-600 font-bold">
+                <div className="mt-6 pt-4 border-t border-[#5e2b9d]/10 flex items-center gap-1.5 text-xs text-sky-600 font-bold">
                   <CheckCircle2 className="w-3.5 h-3.5 text-[#40C351]" />
                   <span>Free Setup &amp; Training</span>
                 </div>
@@ -1067,7 +1067,7 @@ export default function AboutPage() {
         {/* 7. HIGH-CONVERTING BOTTOM CTA */}
         {/* ========================================================================= */}
         <section className="py-20 px-4 sm:px-6 lg:px-8 bg-[#fafbfc]">
-          <div className="max-w-7xl mx-auto rounded-3xl bg-gradient-to-br from-[#8C5288] via-[#763f72] to-[#5b2857] p-8 sm:p-14 shadow-2xl text-white relative overflow-hidden">
+          <div className="max-w-7xl mx-auto rounded-3xl bg-gradient-to-br from-[#5e2b9d] via-[#4d2282] to-[#3b1766] p-8 sm:p-14 shadow-2xl text-white relative overflow-hidden">
             {/* Ambient glows inside CTA banner */}
             <div className="absolute top-0 right-0 w-96 h-96 bg-white/10 rounded-full blur-3xl pointer-events-none" />
             <div className="absolute bottom-0 left-0 w-80 h-80 bg-[#40C351]/20 rounded-full blur-3xl pointer-events-none" />
@@ -1098,7 +1098,7 @@ export default function AboutPage() {
               <div className="flex flex-col sm:flex-row items-center gap-4 shrink-0">
                 <button
                   onClick={() => setDemoModalOpen(true)}
-                  className="w-full sm:w-auto px-8 py-4 rounded-full bg-white text-[#8C5288] font-bold text-sm hover:bg-slate-50 shadow-lg hover:shadow-xl hover:scale-105 transition-all flex items-center justify-center gap-2 cursor-pointer"
+                  className="w-full sm:w-auto px-8 py-4 rounded-full bg-white text-[#5e2b9d] font-bold text-sm hover:bg-slate-50 shadow-lg hover:shadow-xl hover:scale-105 transition-all flex items-center justify-center gap-2 cursor-pointer"
                 >
                   <span>Schedule Free Demo</span>
                   <ArrowRight className="w-4 h-4" />

@@ -52,11 +52,11 @@ export default function RequestDemoModal({
   return (
     <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-[#282023]/60 backdrop-blur-xs animate-in fade-in duration-200">
       <div 
-        className="relative w-full max-w-lg bg-white rounded-2xl shadow-2xl border border-[#8C5288]/20 overflow-hidden transform transition-all"
+        className="relative w-full max-w-lg bg-white rounded-2xl shadow-2xl border border-[#5e2b9d]/20 overflow-hidden transform transition-all"
         onClick={(e) => e.stopPropagation()}
       >
         {/* Header Ribbon Solid Color */}
-        <div className="bg-[#8C5288] p-6 text-white relative">
+        <div className="bg-[#5e2b9d] p-6 text-white relative">
           <button
             onClick={onClose}
             className="absolute top-4 right-4 text-white/80 hover:text-white p-1 rounded-full hover:bg-white/10 transition-colors"
@@ -82,11 +82,11 @@ export default function RequestDemoModal({
               </div>
               <h4 className="text-2xl font-bold text-[#282023]">Demo Request Received!</h4>
               <p className="text-sm text-slate-600 max-w-sm mx-auto">
-                Thank you <span className="font-bold text-[#8C5288]">{formData.name}</span>. Our software specialist will reach out within 2 hours at <span className="font-bold text-[#282023]">{formData.phone || formData.email}</span> with your personalized live demo link.
+                Thank you <span className="font-bold text-[#5e2b9d]">{formData.name}</span>. Our software specialist will reach out within 2 hours at <span className="font-bold text-[#282023]">{formData.phone || formData.email}</span> with your personalized live demo link.
               </p>
               <button
                 onClick={handleReset}
-                className="mt-4 px-6 py-2.5 bg-[#8C5288] text-white rounded-xl text-sm font-bold hover:bg-[#763f72] transition-colors"
+                className="mt-4 px-6 py-2.5 bg-[#5e2b9d] text-white rounded-xl text-sm font-bold hover:bg-[#4d2282] transition-colors"
               >
                 Close Window
               </button>
@@ -105,7 +105,7 @@ export default function RequestDemoModal({
                     placeholder="Rajesh Kumar"
                     value={formData.name}
                     onChange={(e) => setFormData({ ...formData, name: e.target.value })}
-                    className="w-full pl-10 pr-4 py-2.5 text-sm rounded-xl border border-slate-200 focus:border-[#8C5288] focus:ring-2 focus:ring-[#8C5288]/15 outline-hidden transition-all text-[#282023]"
+                    className="w-full pl-10 pr-4 py-2.5 text-sm rounded-xl border border-slate-200 focus:border-[#5e2b9d] focus:ring-2 focus:ring-[#5e2b9d]/15 outline-hidden transition-all text-[#282023]"
                   />
                 </div>
               </div>
@@ -123,7 +123,7 @@ export default function RequestDemoModal({
                       placeholder="+91 98765 43210"
                       value={formData.phone}
                       onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
-                      className="w-full pl-10 pr-4 py-2.5 text-sm rounded-xl border border-slate-200 focus:border-[#8C5288] focus:ring-2 focus:ring-[#8C5288]/15 outline-hidden transition-all text-[#282023]"
+                      className="w-full pl-10 pr-4 py-2.5 text-sm rounded-xl border border-slate-200 focus:border-[#5e2b9d] focus:ring-2 focus:ring-[#5e2b9d]/15 outline-hidden transition-all text-[#282023]"
                     />
                   </div>
                 </div>
@@ -140,7 +140,7 @@ export default function RequestDemoModal({
                       placeholder="rajesh@business.com"
                       value={formData.email}
                       onChange={(e) => setFormData({ ...formData, email: e.target.value })}
-                      className="w-full pl-10 pr-4 py-2.5 text-sm rounded-xl border border-slate-200 focus:border-[#8C5288] focus:ring-2 focus:ring-[#8C5288]/15 outline-hidden transition-all text-[#282023]"
+                      className="w-full pl-10 pr-4 py-2.5 text-sm rounded-xl border border-slate-200 focus:border-[#5e2b9d] focus:ring-2 focus:ring-[#5e2b9d]/15 outline-hidden transition-all text-[#282023]"
                     />
                   </div>
                 </div>
@@ -158,7 +158,7 @@ export default function RequestDemoModal({
                       placeholder="Grand Retail Hub"
                       value={formData.businessName}
                       onChange={(e) => setFormData({ ...formData, businessName: e.target.value })}
-                      className="w-full pl-10 pr-4 py-2.5 text-sm rounded-xl border border-slate-200 focus:border-[#8C5288] focus:ring-2 focus:ring-[#8C5288]/15 outline-hidden transition-all text-[#282023]"
+                      className="w-full pl-10 pr-4 py-2.5 text-sm rounded-xl border border-slate-200 focus:border-[#5e2b9d] focus:ring-2 focus:ring-[#5e2b9d]/15 outline-hidden transition-all text-[#282023]"
                     />
                   </div>
                 </div>
@@ -170,7 +170,7 @@ export default function RequestDemoModal({
                   <select
                     value={formData.product}
                     onChange={(e) => setFormData({ ...formData, product: e.target.value })}
-                    className="w-full px-3.5 py-2.5 text-sm rounded-xl border border-slate-200 focus:border-[#8C5288] focus:ring-2 focus:ring-[#8C5288]/15 outline-hidden bg-white text-[#282023] cursor-pointer"
+                    className="w-full px-3.5 py-2.5 text-sm rounded-xl border border-slate-200 focus:border-[#5e2b9d] focus:ring-2 focus:ring-[#5e2b9d]/15 outline-hidden bg-white text-[#282023] cursor-pointer"
                   >
                     <option value="Doonext Billing">Doonext Billing POS</option>
                     <option value="Doonext Restaurant">Doonext Restaurant POS</option>
@@ -191,7 +191,7 @@ export default function RequestDemoModal({
                   placeholder="Tell us what features you need or questions you have..."
                   value={formData.notes}
                   onChange={(e) => setFormData({ ...formData, notes: e.target.value })}
-                  className="w-full px-3.5 py-2 text-sm rounded-xl border border-slate-200 focus:border-[#8C5288] focus:ring-2 focus:ring-[#8C5288]/15 outline-hidden transition-all text-[#282023] resize-none"
+                  className="w-full px-3.5 py-2 text-sm rounded-xl border border-slate-200 focus:border-[#5e2b9d] focus:ring-2 focus:ring-[#5e2b9d]/15 outline-hidden transition-all text-[#282023] resize-none"
                 />
               </div>
 
@@ -199,7 +199,7 @@ export default function RequestDemoModal({
                 <button
                   type="submit"
                   disabled={loading}
-                  className="w-full py-3 px-4 rounded-xl bg-[#8C5288] hover:bg-[#763f72] text-white font-bold text-sm shadow-lg shadow-[#8C5288]/20 flex items-center justify-center gap-2 transition-all cursor-pointer disabled:opacity-75"
+                  className="w-full py-3 px-4 rounded-xl bg-[#5e2b9d] hover:bg-[#4d2282] text-white font-bold text-sm shadow-lg shadow-[#5e2b9d]/20 flex items-center justify-center gap-2 transition-all cursor-pointer disabled:opacity-75"
                 >
                   {loading ? (
                     <div className="w-5 h-5 border-2 border-white/30 border-t-white rounded-full animate-spin" />

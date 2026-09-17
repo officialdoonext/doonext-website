@@ -50,8 +50,8 @@ export default function HomePage() {
       title: "Billing Solutions",
       desc: "Smart billing for retail, restaurants, hotels, cafes, & more.",
       icon: Receipt,
-      color: "bg-[#8C5288]/10 text-[#8C5288]",
-      borderColor: "hover:border-[#8C5288]/40",
+      color: "bg-[#5e2b9d]/10 text-[#5e2b9d]",
+      borderColor: "hover:border-[#5e2b9d]/40",
       link: "/products#billing",
     },
     {
@@ -129,9 +129,9 @@ export default function HomePage() {
       desc: "Coffee shops, bakeries & sweet stalls with recipe costing & combo deals.",
       icon: Coffee,
       features: ["Speed counter POS", "Recipe ingredient cost", "Combos & discounts"],
-      iconColor: "text-[#8C5288] bg-[#8C5288]/10 group-hover:bg-[#8C5288] group-hover:text-white",
-      badgeColor: "bg-[#8C5288]/15 text-[#8C5288] border-[#8C5288]/20",
-      cardBorder: "hover:border-[#8C5288] group-hover:shadow-[#8C5288]/10",
+      iconColor: "text-[#5e2b9d] bg-[#5e2b9d]/10 group-hover:bg-[#5e2b9d] group-hover:text-white",
+      badgeColor: "bg-[#5e2b9d]/15 text-[#5e2b9d] border-[#5e2b9d]/20",
+      cardBorder: "hover:border-[#5e2b9d] group-hover:shadow-[#5e2b9d]/10",
       link: "/products#restaurant",
     },
     {
@@ -225,7 +225,7 @@ export default function HomePage() {
               </div>
               <span className="text-[8px] font-bold bg-[#EFAF08]/20 text-[#282023] px-1 py-0.5 rounded text-center">KOT Sent</span>
             </div>
-            <div className="w-16 h-18 bg-[#8C5288] text-white rounded-lg p-2 flex flex-col justify-center items-center gap-1 shadow-md">
+            <div className="w-16 h-18 bg-[#5e2b9d] text-white rounded-lg p-2 flex flex-col justify-center items-center gap-1 shadow-md">
               <Utensils className="w-5 h-5 text-[#EFAF08]" />
               <span className="text-[8px] font-bold">Kitchen KOT</span>
             </div>
@@ -247,7 +247,7 @@ export default function HomePage() {
               </div>
               <div className="text-[9px] font-bold text-[#282023]">Room 302 - Deluxe</div>
               <div className="text-[8px] text-slate-500">Check-in: 02:00 PM</div>
-              <div className="w-full bg-[#8C5288] text-white text-[8px] text-center py-0.5 rounded font-bold">Checkout</div>
+              <div className="w-full bg-[#5e2b9d] text-white text-[8px] text-center py-0.5 rounded font-bold">Checkout</div>
             </div>
           </div>
         </div>
@@ -258,17 +258,17 @@ export default function HomePage() {
       desc: "Customer relationship management made simple.",
       tag: "Sales & Leads",
       illustration: (
-        <div className="w-full h-40 bg-[#8C5288]/10 rounded-xl p-4 flex items-center justify-center relative overflow-hidden border border-[#8C5288]/20">
+        <div className="w-full h-40 bg-[#5e2b9d]/10 rounded-xl p-4 flex items-center justify-center relative overflow-hidden border border-[#5e2b9d]/20">
           <div className="flex items-center gap-3">
-            <div className="w-20 h-22 bg-white rounded-xl shadow-md border border-[#8C5288]/20 p-2 flex flex-col justify-between">
-              <div className="text-[9px] font-bold text-[#8C5288]">Lead Pipeline</div>
+            <div className="w-20 h-22 bg-white rounded-xl shadow-md border border-[#5e2b9d]/20 p-2 flex flex-col justify-between">
+              <div className="text-[9px] font-bold text-[#5e2b9d]">Lead Pipeline</div>
               <div className="space-y-1">
-                <div className="w-full bg-[#8C5288]/15 text-[#8C5288] text-[7px] px-1 py-0.5 rounded font-bold">Hot: 24 Leads</div>
+                <div className="w-full bg-[#5e2b9d]/15 text-[#5e2b9d] text-[7px] px-1 py-0.5 rounded font-bold">Hot: 24 Leads</div>
                 <div className="w-full bg-[#40C351]/15 text-[#40C351] text-[7px] px-1 py-0.5 rounded font-bold">Won: 18 Deals</div>
               </div>
               <div className="text-[8px] font-bold text-[#282023]">₹8,40,000</div>
             </div>
-            <div className="w-14 h-16 bg-[#8C5288] rounded-lg text-white p-1.5 flex flex-col items-center justify-center gap-1 shadow">
+            <div className="w-14 h-16 bg-[#5e2b9d] rounded-lg text-white p-1.5 flex flex-col items-center justify-center gap-1 shadow">
               <Users className="w-5 h-5 text-purple-200" />
               <span className="text-[7px]">Conversion</span>
             </div>
@@ -363,7 +363,7 @@ export default function HomePage() {
       category: "Artisan Bakery & Cafe",
       location: "Kochi & Chennai",
       icon: Coffee,
-      color: "bg-[#8C5288]/10 text-[#8C5288] border-[#8C5288]/20",
+      color: "bg-[#5e2b9d]/10 text-[#5e2b9d] border-[#5e2b9d]/20",
     },
     {
       name: "Aura Trends Lifestyle",
@@ -383,14 +383,14 @@ export default function HomePage() {
 
   // High-Impact Trust Metrics
   const trustMetrics = [
-    { value: "500+", label: "Active Businesses", sub: "Across 18+ Indian States", icon: Building2, color: "text-[#8C5288]" },
+    { value: "500+", label: "Active Businesses", sub: "Across 18+ Indian States", icon: Building2, color: "text-[#5e2b9d]" },
     { value: "₹250Cr+", label: "Gross Billing Volume", sub: "Processed seamlessly", icon: Wallet, color: "text-[#40C351]" },
     { value: "10M+", label: "Invoices & KOTs", sub: "Sub-second generation", icon: Receipt, color: "text-[#EFAF08]" },
     { value: "99.98%", label: "Operational Uptime", sub: "Offline-first reliability", icon: ShieldCheck, color: "text-sky-600" },
   ];
 
   return (
-    <div className="min-h-screen bg-[#fafbfc] text-[#282023] flex flex-col selection:bg-[#8C5288] selection:text-white">
+    <div className="min-h-screen bg-[#fafbfc] text-[#282023] flex flex-col selection:bg-[#5e2b9d] selection:text-white">
       {/* Navbar */}
       <Navbar onRequestDemo={() => setDemoModalOpen(true)} />
 
@@ -407,7 +407,7 @@ export default function HomePage() {
         {/* ========================================================================= */}
         {/* 1. HERO SECTION */}
         {/* ========================================================================= */}
-        <section className="relative pt-12 pb-20 lg:pt-16 lg:pb-24 bg-[#fbf6fa]">
+        <section className="relative pt-12 pb-20 lg:pt-16 lg:pb-24 bg-[#f8f4fc]">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-8 items-center">
               
@@ -417,7 +417,7 @@ export default function HomePage() {
                 <h1 className="text-4xl sm:text-5xl lg:text-[52px] font-bold tracking-tight text-[#282023] leading-[1.15]">
                   Smart Software <br className="hidden sm:inline" />
                   Solutions for Every <br className="hidden sm:inline" />
-                  <span className="text-[#8C5288]">
+                  <span className="text-[#5e2b9d]">
                     Business
                   </span>
                 </h1>
@@ -430,16 +430,16 @@ export default function HomePage() {
                 <div className="flex flex-wrap items-center gap-4 pt-2">
                   <Link
                     href="/products"
-                    className="px-7 py-3.5 rounded-full bg-[#8C5288] hover:bg-[#763f72] text-white font-bold text-sm sm:text-base shadow-lg shadow-[#8C5288]/25 hover:shadow-xl transition-all transform hover:-translate-y-0.5 cursor-pointer"
+                    className="px-7 py-3.5 rounded-full bg-[#5e2b9d] hover:bg-[#4d2282] text-white font-bold text-sm sm:text-base shadow-lg shadow-[#5e2b9d]/25 hover:shadow-xl transition-all transform hover:-translate-y-0.5 cursor-pointer"
                   >
                     Explore Solutions
                   </Link>
                   <button
                     onClick={() => setDemoModalOpen(true)}
-                    className="px-7 py-3.5 rounded-full bg-white hover:bg-[#8C5288]/5 text-[#8C5288] font-bold text-sm sm:text-base border border-[#8C5288]/30 hover:border-[#8C5288] shadow-xs transition-all flex items-center gap-2 cursor-pointer group"
+                    className="px-7 py-3.5 rounded-full bg-white hover:bg-[#5e2b9d]/5 text-[#5e2b9d] font-bold text-sm sm:text-base border border-[#5e2b9d]/30 hover:border-[#5e2b9d] shadow-xs transition-all flex items-center gap-2 cursor-pointer group"
                   >
                     <span>Request Demo</span>
-                    <ArrowRight className="w-4 h-4 text-[#8C5288] group-hover:translate-x-1 transition-transform" />
+                    <ArrowRight className="w-4 h-4 text-[#5e2b9d] group-hover:translate-x-1 transition-transform" />
                   </button>
                 </div>
 
@@ -475,18 +475,18 @@ export default function HomePage() {
         {/* ========================================================================= */}
         <section className="py-16 bg-white border-y border-slate-100 relative overflow-hidden">
           {/* Subtle ambient background glow */}
-          <div className="absolute inset-0 bg-gradient-to-r from-[#8C5288]/[0.02] via-slate-50/60 to-[#40C351]/[0.02] pointer-events-none" />
+          <div className="absolute inset-0 bg-gradient-to-r from-[#5e2b9d]/[0.02] via-slate-50/60 to-[#40C351]/[0.02] pointer-events-none" />
 
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
             
             {/* Header with Pill & Title */}
             <div className="text-center max-w-3xl mx-auto mb-10">
-              <div className="inline-flex items-center gap-2 text-xs font-bold text-[#8C5288] uppercase tracking-widest mb-2.5 bg-[#8C5288]/10 px-3.5 py-1 rounded-full border border-[#8C5288]/20">
-                <ShieldCheck className="w-3.5 h-3.5 text-[#8C5288]" />
+              <div className="inline-flex items-center gap-2 text-xs font-bold text-[#5e2b9d] uppercase tracking-widest mb-2.5 bg-[#5e2b9d]/10 px-3.5 py-1 rounded-full border border-[#5e2b9d]/20">
+                <ShieldCheck className="w-3.5 h-3.5 text-[#5e2b9d]" />
                 <span>PROVEN AT SCALE</span>
               </div>
               <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-[#282023] tracking-tight">
-                Trusted by <span className="text-[#8C5288]">500+ Businesses</span> Across India
+                Trusted by <span className="text-[#5e2b9d]">500+ Businesses</span> Across India
               </h2>
               <p className="mt-2 text-xs sm:text-sm text-slate-500 leading-relaxed">
                 From bustling retail stores and high-volume restaurants to boutique hotels and wholesale depots.
@@ -500,10 +500,10 @@ export default function HomePage() {
                 return (
                   <div
                     key={idx}
-                    className="p-5 rounded-2xl bg-[#fafbfc] border border-slate-200/80 shadow-xs hover:shadow-md hover:border-[#8C5288]/30 transition-all group text-left flex flex-col justify-between"
+                    className="p-5 rounded-2xl bg-[#fafbfc] border border-slate-200/80 shadow-xs hover:shadow-md hover:border-[#5e2b9d]/30 transition-all group text-left flex flex-col justify-between"
                   >
                     <div className="flex items-center justify-between mb-3">
-                      <div className="text-2xl sm:text-3xl font-bold text-[#282023] tracking-tight group-hover:text-[#8C5288] transition-colors">
+                      <div className="text-2xl sm:text-3xl font-bold text-[#282023] tracking-tight group-hover:text-[#5e2b9d] transition-colors">
                         {metric.value}
                       </div>
                       <div className={`w-9 h-9 rounded-xl bg-white border border-slate-200 flex items-center justify-center ${metric.color} shadow-xs group-hover:scale-110 transition-transform`}>
@@ -531,17 +531,17 @@ export default function HomePage() {
                   return (
                     <div
                       key={idx}
-                      className="flex items-center gap-3.5 px-4 sm:px-5 py-3 rounded-2xl bg-white border border-slate-200/90 shadow-xs hover:shadow-md hover:border-[#8C5288]/40 transition-all duration-300 shrink-0 group cursor-default"
+                      className="flex items-center gap-3.5 px-4 sm:px-5 py-3 rounded-2xl bg-white border border-slate-200/90 shadow-xs hover:shadow-md hover:border-[#5e2b9d]/40 transition-all duration-300 shrink-0 group cursor-default"
                     >
                       <div className={`w-10 h-10 rounded-xl flex items-center justify-center border ${brand.color} shrink-0 group-hover:scale-105 transition-transform`}>
                         <Icon className="w-5 h-5" />
                       </div>
                       <div className="text-left">
-                        <div className="text-xs sm:text-sm font-bold text-[#282023] group-hover:text-[#8C5288] transition-colors whitespace-nowrap">
+                        <div className="text-xs sm:text-sm font-bold text-[#282023] group-hover:text-[#5e2b9d] transition-colors whitespace-nowrap">
                           {brand.name}
                         </div>
                         <div className="flex items-center gap-1.5 text-[10px] text-slate-500 whitespace-nowrap">
-                          <span className="font-medium text-[#8C5288]">{brand.category}</span>
+                          <span className="font-medium text-[#5e2b9d]">{brand.category}</span>
                           <span>•</span>
                           <span>{brand.location}</span>
                         </div>
@@ -583,21 +583,21 @@ export default function HomePage() {
         {/* ========================================================================= */}
         <section className="py-24 bg-[#fafbfc] border-t border-slate-100 relative overflow-hidden">
           {/* Ambient background glow decoration */}
-          <div className="absolute top-1/3 -right-20 w-96 h-96 bg-[#8C5288]/5 rounded-full blur-3xl pointer-events-none" />
+          <div className="absolute top-1/3 -right-20 w-96 h-96 bg-[#5e2b9d]/5 rounded-full blur-3xl pointer-events-none" />
           <div className="absolute bottom-10 -left-20 w-96 h-96 bg-[#40C351]/5 rounded-full blur-3xl pointer-events-none" />
 
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             
             {/* Header */}
             <div className="text-center max-w-3xl mx-auto mb-16">
-              <div className="inline-flex items-center gap-2 text-xs font-bold text-[#8C5288] uppercase tracking-widest mb-3 bg-[#8C5288]/10 px-3.5 py-1.5 rounded-full border border-[#8C5288]/20">
-                <Layers className="w-3.5 h-3.5 text-[#8C5288]" />
+              <div className="inline-flex items-center gap-2 text-xs font-bold text-[#5e2b9d] uppercase tracking-widest mb-3 bg-[#5e2b9d]/10 px-3.5 py-1.5 rounded-full border border-[#5e2b9d]/20">
+                <Layers className="w-3.5 h-3.5 text-[#5e2b9d]" />
                 <span>WHAT WE OFFER</span>
               </div>
               
               <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-[#282023] tracking-tight">
                 Complete Software Ecosystem <br className="hidden sm:inline" />
-                <span className="text-[#8C5288]">to Scale Every Dimension</span>
+                <span className="text-[#5e2b9d]">to Scale Every Dimension</span>
               </h2>
               
               <p className="mt-3 text-base sm:text-lg text-slate-600 leading-relaxed">
@@ -609,21 +609,21 @@ export default function HomePage() {
             <div className="grid grid-cols-1 lg:grid-cols-12 gap-6">
               
               {/* Bento Card 1: Flagship Billing & POS (Span 7 cols) */}
-              <div className="lg:col-span-7 bg-white rounded-3xl p-8 border border-[#8C5288]/25 shadow-xs hover:shadow-xl transition-all duration-300 flex flex-col justify-between group relative overflow-hidden">
-                <div className="absolute -top-24 -right-24 w-60 h-60 bg-[#8C5288]/10 rounded-full blur-2xl group-hover:scale-125 transition-transform duration-500 pointer-events-none" />
+              <div className="lg:col-span-7 bg-white rounded-3xl p-8 border border-[#5e2b9d]/25 shadow-xs hover:shadow-xl transition-all duration-300 flex flex-col justify-between group relative overflow-hidden">
+                <div className="absolute -top-24 -right-24 w-60 h-60 bg-[#5e2b9d]/10 rounded-full blur-2xl group-hover:scale-125 transition-transform duration-500 pointer-events-none" />
                 
                 <div>
                   {/* Top Bar */}
                   <div className="flex items-center justify-between gap-3 mb-6">
                     <div className="flex items-center gap-3">
-                      <div className="w-13 h-13 rounded-2xl bg-[#8C5288]/10 text-[#8C5288] flex items-center justify-center shadow-xs group-hover:bg-[#8C5288] group-hover:text-white transition-all duration-300">
+                      <div className="w-13 h-13 rounded-2xl bg-[#5e2b9d]/10 text-[#5e2b9d] flex items-center justify-center shadow-xs group-hover:bg-[#5e2b9d] group-hover:text-white transition-all duration-300">
                         <Receipt className="w-6 h-6" />
                       </div>
                       <div>
-                        <span className="text-[11px] font-bold text-[#8C5288] uppercase tracking-wider block">
+                        <span className="text-[11px] font-bold text-[#5e2b9d] uppercase tracking-wider block">
                           FLAGSHIP SOLUTION
                         </span>
-                        <h3 className="text-2xl font-bold text-[#282023] group-hover:text-[#8C5288] transition-colors">
+                        <h3 className="text-2xl font-bold text-[#282023] group-hover:text-[#5e2b9d] transition-colors">
                           Billing &amp; Smart POS
                         </h3>
                       </div>
@@ -654,7 +654,7 @@ export default function HomePage() {
                   </div>
 
                   {/* Mini Interactive POS Preview Strip */}
-                  <div className="p-4 rounded-2xl bg-[#faf8fb] border border-[#8C5288]/15 flex items-center justify-between gap-4">
+                  <div className="p-4 rounded-2xl bg-[#faf7fd] border border-[#5e2b9d]/15 flex items-center justify-between gap-4">
                     <div className="flex items-center gap-3">
                       <div className="w-3 h-3 rounded-full bg-[#40C351] animate-ping" />
                       <div className="text-xs">
@@ -664,7 +664,7 @@ export default function HomePage() {
                     </div>
                     <button
                       onClick={() => openDemoWithProduct("Doonext Billing")}
-                      className="px-3.5 py-1.5 rounded-lg bg-[#8C5288] text-white text-[11px] font-bold hover:bg-[#763f72] transition-colors shrink-0 shadow-xs cursor-pointer"
+                      className="px-3.5 py-1.5 rounded-lg bg-[#5e2b9d] text-white text-[11px] font-bold hover:bg-[#4d2282] transition-colors shrink-0 shadow-xs cursor-pointer"
                     >
                       Test POS
                     </button>
@@ -675,7 +675,7 @@ export default function HomePage() {
                 <div className="pt-6 mt-6 border-t border-slate-100 flex items-center justify-between gap-4">
                   <Link
                     href="/products#billing"
-                    className="text-xs sm:text-sm font-bold text-[#8C5288] hover:text-[#763f72] flex items-center gap-1.5 group/btn"
+                    className="text-xs sm:text-sm font-bold text-[#5e2b9d] hover:text-[#4d2282] flex items-center gap-1.5 group/btn"
                   >
                     <span>Explore Complete Billing Suite</span>
                     <ArrowRight className="w-4 h-4 group-hover/btn:translate-x-1 transition-transform" />
@@ -895,7 +895,7 @@ export default function HomePage() {
             {/* Bottom Ecosystem Capabilities Strip */}
             <div className="mt-12 rounded-2xl bg-white border border-slate-200/80 p-5 shadow-xs flex flex-wrap items-center justify-between gap-4 text-xs text-slate-600">
               <div className="flex items-center gap-2 font-bold text-[#282023]">
-                <Sparkles className="w-4 h-4 text-[#8C5288]" />
+                <Sparkles className="w-4 h-4 text-[#5e2b9d]" />
                 <span>Seamless Hardware &amp; Ecosystem Integrations:</span>
               </div>
               <div className="flex flex-wrap items-center gap-4 sm:gap-6 font-medium text-slate-500">
@@ -913,22 +913,22 @@ export default function HomePage() {
         {/* ========================================================================= */}
         {/* 4. INDUSTRIES WE SERVE -> Software for Every Industry */}
         {/* ========================================================================= */}
-        <section className="relative py-24 bg-gradient-to-b from-white via-[#faf8fb]/50 to-white border-t border-slate-100 overflow-hidden">
+        <section className="relative py-24 bg-gradient-to-b from-white via-[#faf7fd]/50 to-white border-t border-slate-100 overflow-hidden">
           {/* Subtle ambient decorative blurs */}
-          <div className="absolute top-10 left-1/2 -translate-x-1/2 w-[600px] h-[300px] bg-[#8C5288]/5 rounded-full blur-3xl pointer-events-none -z-10" />
+          <div className="absolute top-10 left-1/2 -translate-x-1/2 w-[600px] h-[300px] bg-[#5e2b9d]/5 rounded-full blur-3xl pointer-events-none -z-10" />
           
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             
             {/* Section Header */}
             <div className="text-center max-w-3xl mx-auto">
-              <div className="inline-flex items-center gap-2 text-xs font-bold text-[#8C5288] uppercase tracking-widest mb-3 bg-[#8C5288]/10 px-3.5 py-1.5 rounded-full border border-[#8C5288]/20">
-                <Sparkles className="w-3.5 h-3.5 text-[#8C5288]" />
+              <div className="inline-flex items-center gap-2 text-xs font-bold text-[#5e2b9d] uppercase tracking-widest mb-3 bg-[#5e2b9d]/10 px-3.5 py-1.5 rounded-full border border-[#5e2b9d]/20">
+                <Sparkles className="w-3.5 h-3.5 text-[#5e2b9d]" />
                 <span>INDUSTRIES WE SERVE</span>
               </div>
               
               <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-[#282023] tracking-tight">
                 Software Tailored to <br className="hidden sm:inline" />
-                <span className="text-[#8C5288]">Your Exact Industry Needs</span>
+                <span className="text-[#5e2b9d]">Your Exact Industry Needs</span>
               </h2>
               
               <p className="mt-3 text-base sm:text-lg text-slate-600 leading-relaxed">
@@ -947,7 +947,7 @@ export default function HomePage() {
                     className={`bg-white rounded-2xl p-6 border border-slate-200/90 shadow-xs hover:shadow-xl transition-all duration-300 flex flex-col justify-between group hover:-translate-y-1.5 ${ind.cardBorder} cursor-pointer relative overflow-hidden`}
                   >
                     {/* Top Glow bar on hover */}
-                    <div className="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-transparent via-[#8C5288]/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity" />
+                    <div className="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-transparent via-[#5e2b9d]/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity" />
 
                     <div>
                       {/* Icon & Badge Row */}
@@ -961,7 +961,7 @@ export default function HomePage() {
                       </div>
 
                       {/* Title & Description */}
-                      <h3 className="text-lg font-bold text-[#282023] group-hover:text-[#8C5288] transition-colors">
+                      <h3 className="text-lg font-bold text-[#282023] group-hover:text-[#5e2b9d] transition-colors">
                         {ind.name}
                       </h3>
                       <p className="text-xs text-slate-500 mt-1.5 leading-relaxed">
@@ -981,7 +981,7 @@ export default function HomePage() {
 
                     {/* Bottom Action Link */}
                     <div className="mt-5 pt-3.5 border-t border-slate-100 flex items-center justify-between text-xs">
-                      <span className="font-bold text-[#8C5288] group-hover:text-[#763f72] flex items-center gap-1">
+                      <span className="font-bold text-[#5e2b9d] group-hover:text-[#4d2282] flex items-center gap-1">
                         <span>Explore Solutions</span>
                         <ArrowRight className="w-3.5 h-3.5 group-hover:translate-x-1 transition-transform" />
                       </span>
@@ -995,9 +995,9 @@ export default function HomePage() {
             </div>
 
             {/* Bottom Custom Industry Callout Banner */}
-            <div className="mt-12 rounded-2xl bg-white border border-[#8C5288]/20 shadow-md p-6 sm:p-8 flex flex-col md:flex-row items-center justify-between gap-6">
+            <div className="mt-12 rounded-2xl bg-white border border-[#5e2b9d]/20 shadow-md p-6 sm:p-8 flex flex-col md:flex-row items-center justify-between gap-6">
               <div className="flex items-start sm:items-center gap-4 text-left">
-                <div className="w-12 h-12 rounded-xl bg-[#8C5288]/10 border border-[#8C5288]/20 flex items-center justify-center text-[#8C5288] shrink-0">
+                <div className="w-12 h-12 rounded-xl bg-[#5e2b9d]/10 border border-[#5e2b9d]/20 flex items-center justify-center text-[#5e2b9d] shrink-0">
                   <Building2 className="w-6 h-6" />
                 </div>
                 <div>
@@ -1012,7 +1012,7 @@ export default function HomePage() {
               <div className="flex items-center gap-3 shrink-0 w-full md:w-auto">
                 <button
                   onClick={() => openDemoWithProduct("Custom Enterprise Solution")}
-                  className="flex-1 md:flex-none px-5 py-2.5 rounded-xl bg-[#8C5288] hover:bg-[#763f72] text-white text-xs font-bold shadow-sm hover:shadow-md transition-all text-center cursor-pointer"
+                  className="flex-1 md:flex-none px-5 py-2.5 rounded-xl bg-[#5e2b9d] hover:bg-[#4d2282] text-white text-xs font-bold shadow-sm hover:shadow-md transition-all text-center cursor-pointer"
                 >
                   Request Custom Demo
                 </button>
@@ -1034,7 +1034,7 @@ export default function HomePage() {
         <section className="py-20 bg-[#fafbfc] border-t border-slate-100">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
             
-            <div className="inline-block text-xs font-bold text-[#8C5288] uppercase tracking-widest mb-2 bg-[#8C5288]/10 px-3 py-1 rounded-full border border-[#8C5288]/20">
+            <div className="inline-block text-xs font-bold text-[#5e2b9d] uppercase tracking-widest mb-2 bg-[#5e2b9d]/10 px-3 py-1 rounded-full border border-[#5e2b9d]/20">
               OUR PRODUCTS
             </div>
             
@@ -1059,10 +1059,10 @@ export default function HomePage() {
 
                   <div className="p-5 flex-1 flex flex-col justify-between">
                     <div>
-                      <div className="text-[10px] font-bold text-[#8C5288] tracking-wider uppercase mb-1">
+                      <div className="text-[10px] font-bold text-[#5e2b9d] tracking-wider uppercase mb-1">
                         {prod.tag}
                       </div>
-                      <h3 className="text-base font-bold text-[#282023] group-hover:text-[#8C5288] transition-colors">
+                      <h3 className="text-base font-bold text-[#282023] group-hover:text-[#5e2b9d] transition-colors">
                         {prod.title}
                       </h3>
                       <p className="text-xs text-slate-500 mt-1.5 leading-relaxed">
@@ -1073,7 +1073,7 @@ export default function HomePage() {
                     <div className="pt-4 mt-2 border-t border-slate-100 flex items-center justify-between">
                       <Link
                         href="/products"
-                        className="text-xs font-bold text-[#8C5288] hover:text-[#763f72] flex items-center gap-1 group/btn"
+                        className="text-xs font-bold text-[#5e2b9d] hover:text-[#4d2282] flex items-center gap-1 group/btn"
                       >
                         <span>Learn More</span>
                         <ArrowRight className="w-3.5 h-3.5 group-hover/btn:translate-x-1 transition-transform" />
@@ -1098,7 +1098,7 @@ export default function HomePage() {
         {/* ========================================================================= */}
         <section className="py-24 bg-white border-t border-slate-100 relative overflow-hidden">
           {/* Subtle ambient lighting */}
-          <div className="absolute top-1/4 -left-32 w-96 h-96 bg-[#8C5288]/5 rounded-full blur-3xl pointer-events-none" />
+          <div className="absolute top-1/4 -left-32 w-96 h-96 bg-[#5e2b9d]/5 rounded-full blur-3xl pointer-events-none" />
           <div className="absolute bottom-1/4 -right-32 w-96 h-96 bg-[#40C351]/5 rounded-full blur-3xl pointer-events-none" />
 
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
@@ -1109,14 +1109,14 @@ export default function HomePage() {
               {/* Left Column: Bold Narrative, Checkmarks & Trust Proof */}
               <div className="lg:col-span-5 space-y-6 text-left">
                 
-                <div className="inline-flex items-center gap-2 text-xs font-bold text-[#8C5288] uppercase tracking-widest bg-[#8C5288]/10 px-3.5 py-1.5 rounded-full border border-[#8C5288]/20">
-                  <ShieldCheck className="w-3.5 h-3.5 text-[#8C5288]" />
+                <div className="inline-flex items-center gap-2 text-xs font-bold text-[#5e2b9d] uppercase tracking-widest bg-[#5e2b9d]/10 px-3.5 py-1.5 rounded-full border border-[#5e2b9d]/20">
+                  <ShieldCheck className="w-3.5 h-3.5 text-[#5e2b9d]" />
                   <span>WHY CHOOSE DOONEXT?</span>
                 </div>
                 
                 <h2 className="text-3xl sm:text-4xl lg:text-[44px] font-bold text-[#282023] tracking-tight leading-[1.18]">
                   The Next-Gen Engine <br />
-                  <span className="text-[#8C5288]">Engineered for Growth</span>
+                  <span className="text-[#5e2b9d]">Engineered for Growth</span>
                 </h2>
                 
                 <p className="text-base text-slate-600 leading-relaxed font-normal">
@@ -1159,7 +1159,7 @@ export default function HomePage() {
                 <div className="pt-3 flex flex-wrap items-center gap-4">
                   <button
                     onClick={() => openDemoWithProduct("Doonext Suite")}
-                    className="px-7 py-3.5 rounded-full bg-[#8C5288] hover:bg-[#763f72] text-white font-bold text-sm shadow-md shadow-[#8C5288]/25 hover:shadow-lg transition-all flex items-center gap-2 cursor-pointer"
+                    className="px-7 py-3.5 rounded-full bg-[#5e2b9d] hover:bg-[#4d2282] text-white font-bold text-sm shadow-md shadow-[#5e2b9d]/25 hover:shadow-lg transition-all flex items-center gap-2 cursor-pointer"
                   >
                     <span>Request Live Demo</span>
                     <ArrowRight className="w-4 h-4" />
@@ -1209,20 +1209,20 @@ export default function HomePage() {
                 </div>
 
                 {/* Card 2: Sub-Second Speed */}
-                <div className="p-7 rounded-3xl bg-white border border-slate-200/90 shadow-xs hover:shadow-xl hover:border-[#8C5288] transition-all duration-300 flex flex-col justify-between group relative overflow-hidden">
-                  <div className="absolute top-0 right-0 w-32 h-32 bg-[#8C5288]/5 rounded-full blur-xl group-hover:scale-150 transition-transform pointer-events-none" />
+                <div className="p-7 rounded-3xl bg-white border border-slate-200/90 shadow-xs hover:shadow-xl hover:border-[#5e2b9d] transition-all duration-300 flex flex-col justify-between group relative overflow-hidden">
+                  <div className="absolute top-0 right-0 w-32 h-32 bg-[#5e2b9d]/5 rounded-full blur-xl group-hover:scale-150 transition-transform pointer-events-none" />
 
                   <div>
                     <div className="flex items-center justify-between mb-5">
-                      <div className="w-13 h-13 rounded-2xl bg-[#8C5288]/10 text-[#8C5288] flex items-center justify-center shadow-xs group-hover:bg-[#8C5288] group-hover:text-white transition-all duration-300">
+                      <div className="w-13 h-13 rounded-2xl bg-[#5e2b9d]/10 text-[#5e2b9d] flex items-center justify-center shadow-xs group-hover:bg-[#5e2b9d] group-hover:text-white transition-all duration-300">
                         <Zap className="w-6 h-6" />
                       </div>
-                      <span className="text-[10px] font-bold px-2.5 py-1 rounded-full bg-[#8C5288]/15 text-[#8C5288] border border-[#8C5288]/20">
+                      <span className="text-[10px] font-bold px-2.5 py-1 rounded-full bg-[#5e2b9d]/15 text-[#5e2b9d] border border-[#5e2b9d]/20">
                         &lt; 0.2s Scan Speed
                       </span>
                     </div>
 
-                    <h3 className="text-xl font-bold text-[#282023] group-hover:text-[#8C5288] transition-colors">
+                    <h3 className="text-xl font-bold text-[#282023] group-hover:text-[#5e2b9d] transition-colors">
                       Lightning Performance
                     </h3>
                     <p className="text-xs text-slate-500 mt-2 leading-relaxed">
@@ -1231,7 +1231,7 @@ export default function HomePage() {
                   </div>
 
                   <div className="mt-6 pt-4 border-t border-slate-100 flex items-center justify-between">
-                    <span className="text-[11px] font-bold text-[#8C5288]">
+                    <span className="text-[11px] font-bold text-[#5e2b9d]">
                       Instant Hardware Sync
                     </span>
                     <span className="text-xs font-bold text-slate-400">500+ Items/Min</span>
@@ -1303,9 +1303,9 @@ export default function HomePage() {
             </div>
 
             {/* Comparison Matrix: Doonext vs Legacy Software */}
-            <div className="mt-16 rounded-3xl bg-[#faf8fb] border border-[#8C5288]/20 p-6 sm:p-8 shadow-xs">
+            <div className="mt-16 rounded-3xl bg-[#faf7fd] border border-[#5e2b9d]/20 p-6 sm:p-8 shadow-xs">
               <div className="text-center max-w-xl mx-auto mb-6">
-                <span className="text-xs font-bold uppercase tracking-wider text-[#8C5288]">THE DOONEXT ADVANTAGE</span>
+                <span className="text-xs font-bold uppercase tracking-wider text-[#5e2b9d]">THE DOONEXT ADVANTAGE</span>
                 <h3 className="text-lg sm:text-xl font-bold text-[#282023] mt-1">Why Modern Brands Switch from Legacy POS to Doonext</h3>
               </div>
 
@@ -1355,7 +1355,7 @@ export default function HomePage() {
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             
             <div className="text-center mb-12">
-              <div className="inline-block text-xs font-bold text-[#8C5288] uppercase tracking-widest mb-2 bg-[#8C5288]/10 px-3 py-1 rounded-full border border-[#8C5288]/20">
+              <div className="inline-block text-xs font-bold text-[#5e2b9d] uppercase tracking-widest mb-2 bg-[#5e2b9d]/10 px-3 py-1 rounded-full border border-[#5e2b9d]/20">
                 WHAT OUR CLIENTS SAY
               </div>
               <h2 className="text-3xl sm:text-4xl font-bold text-[#282023] tracking-tight">
@@ -1370,7 +1370,7 @@ export default function HomePage() {
               <button
                 onClick={() => setActiveTestimonialIdx((prev) => (prev === 0 ? testimonials.length - 1 : prev - 1))}
                 aria-label="Previous Testimonial"
-                className="hidden md:flex absolute -left-5 top-1/2 -translate-y-1/2 z-10 w-10 h-10 rounded-full bg-white border border-slate-200 text-[#282023] hover:text-[#8C5288] shadow-md items-center justify-center hover:bg-[#8C5288]/5 transition-all cursor-pointer"
+                className="hidden md:flex absolute -left-5 top-1/2 -translate-y-1/2 z-10 w-10 h-10 rounded-full bg-white border border-slate-200 text-[#282023] hover:text-[#5e2b9d] shadow-md items-center justify-center hover:bg-[#5e2b9d]/5 transition-all cursor-pointer"
               >
                 <ChevronLeft className="w-5 h-5" />
               </button>
@@ -1379,7 +1379,7 @@ export default function HomePage() {
               <button
                 onClick={() => setActiveTestimonialIdx((prev) => (prev === testimonials.length - 1 ? 0 : prev + 1))}
                 aria-label="Next Testimonial"
-                className="hidden md:flex absolute -right-5 top-1/2 -translate-y-1/2 z-10 w-10 h-10 rounded-full bg-white border border-slate-200 text-[#282023] hover:text-[#8C5288] shadow-md items-center justify-center hover:bg-[#8C5288]/5 transition-all cursor-pointer"
+                className="hidden md:flex absolute -right-5 top-1/2 -translate-y-1/2 z-10 w-10 h-10 rounded-full bg-white border border-slate-200 text-[#282023] hover:text-[#5e2b9d] shadow-md items-center justify-center hover:bg-[#5e2b9d]/5 transition-all cursor-pointer"
               >
                 <ChevronRight className="w-5 h-5" />
               </button>
@@ -1391,8 +1391,8 @@ export default function HomePage() {
                     key={idx}
                     className={`bg-white rounded-2xl p-6 border transition-all duration-300 flex flex-col justify-between ${
                       activeTestimonialIdx === idx 
-                        ? "border-[#8C5288]/50 ring-2 ring-[#8C5288]/20 shadow-lg -translate-y-1" 
-                        : "border-slate-200 shadow-xs hover:border-[#8C5288]/30 hover:shadow-md"
+                        ? "border-[#5e2b9d]/50 ring-2 ring-[#5e2b9d]/20 shadow-lg -translate-y-1" 
+                        : "border-slate-200 shadow-xs hover:border-[#5e2b9d]/30 hover:shadow-md"
                     }`}
                   >
                     <div>
@@ -1423,10 +1423,10 @@ export default function HomePage() {
         </section>
 
         {/* ========================================================================= */}
-        {/* 8. CTA BANNER -> Solid Color #8C5288 */}
+        {/* 8. CTA BANNER -> Solid Color #5e2b9d */}
         {/* ========================================================================= */}
         <section className="py-8 px-4 sm:px-6 lg:px-8">
-          <div className="max-w-7xl mx-auto rounded-3xl bg-[#8C5288] p-8 sm:p-12 shadow-2xl text-white relative overflow-hidden">
+          <div className="max-w-7xl mx-auto rounded-3xl bg-[#5e2b9d] p-8 sm:p-12 shadow-2xl text-white relative overflow-hidden">
             <div className="relative z-10 flex flex-col lg:flex-row items-center justify-between gap-8">
               
               {/* Left & Center Text */}
@@ -1448,10 +1448,10 @@ export default function HomePage() {
               <div className="shrink-0">
                 <button
                   onClick={() => setDemoModalOpen(true)}
-                  className="px-8 py-4 rounded-full bg-white hover:bg-slate-50 text-[#8C5288] font-bold text-sm sm:text-base shadow-lg hover:shadow-xl transition-all flex items-center gap-2 transform hover:scale-105 active:scale-100 cursor-pointer"
+                  className="px-8 py-4 rounded-full bg-white hover:bg-slate-50 text-[#5e2b9d] font-bold text-sm sm:text-base shadow-lg hover:shadow-xl transition-all flex items-center gap-2 transform hover:scale-105 active:scale-100 cursor-pointer"
                 >
                   <span>Get Started Today</span>
-                  <ArrowRight className="w-4 h-4 text-[#8C5288]" />
+                  <ArrowRight className="w-4 h-4 text-[#5e2b9d]" />
                 </button>
               </div>
 

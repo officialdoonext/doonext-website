@@ -23,7 +23,7 @@ export default function HeroDashboardMockup() {
   return (
     <div className="relative mx-auto w-full max-w-2xl select-none group">
       {/* Background Soft Solid Shadow/Glow */}
-      <div className="absolute -inset-2 bg-[#8C5288]/10 rounded-3xl blur-2xl -z-10 transition-all opacity-80" />
+      <div className="absolute -inset-2 bg-[#5e2b9d]/10 rounded-3xl blur-2xl -z-10 transition-all opacity-80" />
 
       {/* Main Dashboard Window */}
       <div className="relative rounded-2xl bg-white border border-slate-200 shadow-[0_20px_50px_rgba(40,32,35,0.10)] overflow-hidden font-sans text-xs">
@@ -32,7 +32,7 @@ export default function HeroDashboardMockup() {
         <div className="flex items-center justify-between px-4 py-3 border-b border-slate-100 bg-slate-50">
           <div className="flex items-center gap-3">
             {/* Logo Mark in Dashboard */}
-            <div className="w-7 h-7 rounded-lg bg-[#8C5288] flex items-center justify-center text-white font-bold text-xs shadow-xs">
+            <div className="w-7 h-7 rounded-lg bg-[#5e2b9d] flex items-center justify-center text-white font-bold text-xs shadow-xs">
               D
             </div>
             <span className="font-bold text-[#282023] text-sm tracking-tight">Dashboard</span>
@@ -53,7 +53,7 @@ export default function HeroDashboardMockup() {
 
             {/* Avatar */}
             <div className="flex items-center gap-2 pl-1 border-l border-slate-200">
-              <div className="w-7 h-7 rounded-full bg-[#8C5288] flex items-center justify-center text-white font-bold text-[10px] ring-2 ring-[#8C5288]/30">
+              <div className="w-7 h-7 rounded-full bg-[#5e2b9d] flex items-center justify-center text-white font-bold text-[10px] ring-2 ring-[#5e2b9d]/30">
                 JD
               </div>
             </div>
@@ -65,7 +65,7 @@ export default function HeroDashboardMockup() {
           
           {/* Mini Sidebar */}
           <div className="w-12 bg-[#282023] text-purple-200 flex flex-col items-center py-4 space-y-4 shrink-0">
-            <div className="p-2 rounded-lg bg-[#8C5288] text-white cursor-pointer shadow-xs">
+            <div className="p-2 rounded-lg bg-[#5e2b9d] text-white cursor-pointer shadow-xs">
               <LayoutDashboard className="w-4 h-4" />
             </div>
             <div className="p-2 rounded-lg hover:bg-white/10 cursor-pointer text-slate-300">
@@ -89,7 +89,7 @@ export default function HeroDashboardMockup() {
             <div className="grid grid-cols-2 sm:grid-cols-4 gap-2.5">
               
               {/* Stat 1: Total Sales */}
-              <div className="p-2.5 rounded-xl bg-white border border-slate-100 shadow-xs hover:border-[#8C5288]/40 transition-colors">
+              <div className="p-2.5 rounded-xl bg-white border border-slate-100 shadow-xs hover:border-[#5e2b9d]/40 transition-colors">
                 <div className="text-[10px] font-medium text-slate-500">Total Sales</div>
                 <div className="text-sm sm:text-base font-bold text-[#282023] mt-0.5">₹ 25,68,930</div>
                 <div className="flex items-center gap-1 mt-1">
@@ -103,7 +103,7 @@ export default function HeroDashboardMockup() {
               </div>
 
               {/* Stat 2: Total Customers */}
-              <div className="p-2.5 rounded-xl bg-white border border-slate-100 shadow-xs hover:border-[#8C5288]/40 transition-colors">
+              <div className="p-2.5 rounded-xl bg-white border border-slate-100 shadow-xs hover:border-[#5e2b9d]/40 transition-colors">
                 <div className="text-[10px] font-medium text-slate-500">Total Customers</div>
                 <div className="text-sm sm:text-base font-bold text-[#282023] mt-0.5">2,568</div>
                 <div className="flex items-center gap-1 mt-1">
@@ -117,7 +117,7 @@ export default function HeroDashboardMockup() {
               </div>
 
               {/* Stat 3: Total Orders */}
-              <div className="p-2.5 rounded-xl bg-white border border-slate-100 shadow-xs hover:border-[#8C5288]/40 transition-colors">
+              <div className="p-2.5 rounded-xl bg-white border border-slate-100 shadow-xs hover:border-[#5e2b9d]/40 transition-colors">
                 <div className="text-[10px] font-medium text-slate-500">Total Orders</div>
                 <div className="text-sm sm:text-base font-bold text-[#282023] mt-0.5">1,456</div>
                 <div className="flex items-center gap-1 mt-1">
@@ -131,7 +131,7 @@ export default function HeroDashboardMockup() {
               </div>
 
               {/* Stat 4: Pending Invoices */}
-              <div className="p-2.5 rounded-xl bg-white border border-slate-100 shadow-xs hover:border-[#8C5288]/40 transition-colors">
+              <div className="p-2.5 rounded-xl bg-white border border-slate-100 shadow-xs hover:border-[#5e2b9d]/40 transition-colors">
                 <div className="text-[10px] font-medium text-slate-500">Pending Invoices</div>
                 <div className="text-sm sm:text-base font-bold text-[#282023] mt-0.5">128</div>
                 <div className="flex items-center gap-1 mt-1">
@@ -177,23 +177,23 @@ export default function HeroDashboardMockup() {
                     {/* Solid fill & line */}
                     <path
                       d="M35 70 C 65 72, 85 45, 115 50 C 145 55, 165 30, 195 20 C 225 15, 245 42, 275 35 C 290 30, 305 25, 310 22 L 310 95 L 35 95 Z"
-                      fill="#8C5288"
+                      fill="#5e2b9d"
                       fillOpacity="0.12"
                     />
                     <path
                       d="M35 70 C 65 72, 85 45, 115 50 C 145 55, 165 30, 195 20 C 225 15, 245 42, 275 35 C 290 30, 305 25, 310 22"
                       fill="none"
-                      stroke="#8C5288"
+                      stroke="#5e2b9d"
                       strokeWidth="2.5"
                       strokeLinecap="round"
                     />
 
                     {/* Coordinate Nodes */}
-                    <circle cx="35" cy="70" r="3" fill="#ffffff" stroke="#8C5288" strokeWidth="2" />
-                    <circle cx="115" cy="50" r="3" fill="#ffffff" stroke="#8C5288" strokeWidth="2" />
-                    <circle cx="195" cy="20" r="3.5" fill="#8C5288" stroke="#ffffff" strokeWidth="2" />
-                    <circle cx="275" cy="35" r="3" fill="#ffffff" stroke="#8C5288" strokeWidth="2" />
-                    <circle cx="310" cy="22" r="3" fill="#ffffff" stroke="#8C5288" strokeWidth="2" />
+                    <circle cx="35" cy="70" r="3" fill="#ffffff" stroke="#5e2b9d" strokeWidth="2" />
+                    <circle cx="115" cy="50" r="3" fill="#ffffff" stroke="#5e2b9d" strokeWidth="2" />
+                    <circle cx="195" cy="20" r="3.5" fill="#5e2b9d" stroke="#ffffff" strokeWidth="2" />
+                    <circle cx="275" cy="35" r="3" fill="#ffffff" stroke="#5e2b9d" strokeWidth="2" />
+                    <circle cx="310" cy="22" r="3" fill="#ffffff" stroke="#5e2b9d" strokeWidth="2" />
 
                     {/* X Axis Months */}
                     <text x="35" y="105" fill="#94a3b8" fontSize="8" textAnchor="middle">Jan</text>
@@ -230,7 +230,7 @@ export default function HeroDashboardMockup() {
                 </div>
 
                 <div className="pt-2 text-center">
-                  <button className="w-full py-1 text-[10px] font-bold text-[#8C5288] hover:text-[#763f72] border border-[#8C5288]/30 hover:border-[#8C5288] rounded-lg hover:bg-[#8C5288]/5 transition-all cursor-pointer">
+                  <button className="w-full py-1 text-[10px] font-bold text-[#5e2b9d] hover:text-[#4d2282] border border-[#5e2b9d]/30 hover:border-[#5e2b9d] rounded-lg hover:bg-[#5e2b9d]/5 transition-all cursor-pointer">
                     View All
                   </button>
                 </div>

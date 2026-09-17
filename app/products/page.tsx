@@ -242,7 +242,7 @@ export default function ProductsPage() {
     : hardwareCatalog.filter(h => h.category === activeCategory);
 
   return (
-    <div className="min-h-screen bg-[#fafbfc] text-[#282023] flex flex-col selection:bg-[#8C5288] selection:text-white font-sans">
+    <div className="min-h-screen bg-[#fafbfc] text-[#282023] flex flex-col selection:bg-[#5e2b9d] selection:text-white font-sans">
       <Navbar onRequestDemo={() => setDemoModalOpen(true)} />
       <RequestDemoModal isOpen={demoModalOpen} onClose={() => setDemoModalOpen(false)} defaultProduct={selectedProduct} />
 
@@ -254,14 +254,14 @@ export default function ProductsPage() {
         <section className="pt-14 pb-16 lg:pt-16 lg:pb-20 bg-gradient-to-b from-[#fbf8fc] via-white to-[#fafbfc] border-b border-slate-100 relative overflow-hidden text-center">
           <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
             
-            <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#8C5288]/10 border border-[#8C5288]/20 text-[#8C5288] text-xs font-bold uppercase tracking-wider mb-5">
+            <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#5e2b9d]/10 border border-[#5e2b9d]/20 text-[#5e2b9d] text-xs font-bold uppercase tracking-wider mb-5">
               <Sparkles className="w-3.5 h-3.5" />
               <span>Certified POS Hardware &amp; Equipment</span>
             </div>
 
             <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-[#282023] tracking-tight leading-[1.14]">
               Commercial POS Hardware <br className="hidden sm:inline" />
-              <span className="text-[#8C5288]">&amp; Business Devices</span>
+              <span className="text-[#5e2b9d]">&amp; Business Devices</span>
             </h1>
 
             <p className="mt-4 text-base sm:text-lg text-slate-600 max-w-3xl mx-auto leading-relaxed">
@@ -285,8 +285,8 @@ export default function ProductsPage() {
                   onClick={() => setActiveCategory(tab.id)}
                   className={`px-4 py-2 rounded-full text-xs sm:text-sm font-bold transition-all cursor-pointer ${
                     activeCategory === tab.id
-                      ? "bg-[#8C5288] text-white shadow-md shadow-[#8C5288]/25"
-                      : "bg-white text-[#282023] hover:bg-[#8C5288]/5 hover:text-[#8C5288] border border-slate-200"
+                      ? "bg-[#5e2b9d] text-white shadow-md shadow-[#5e2b9d]/25"
+                      : "bg-white text-[#282023] hover:bg-[#5e2b9d]/5 hover:text-[#5e2b9d] border border-slate-200"
                   }`}
                 >
                   {tab.label}
@@ -316,17 +316,17 @@ export default function ProductsPage() {
                       
                       {/* Top Header */}
                       <div className="flex items-start justify-between gap-3">
-                        <div className="w-12 h-12 rounded-2xl bg-[#8C5288]/10 text-[#8C5288] flex items-center justify-center shrink-0 shadow-2xs group-hover:bg-[#8C5288] group-hover:text-white transition-colors">
+                        <div className="w-12 h-12 rounded-2xl bg-[#5e2b9d]/10 text-[#5e2b9d] flex items-center justify-center shrink-0 shadow-2xs group-hover:bg-[#5e2b9d] group-hover:text-white transition-colors">
                           <Icon className="w-6 h-6" />
                         </div>
-                        <span className="text-[10px] font-bold uppercase tracking-wider px-2.5 py-0.5 rounded-full bg-[#8C5288]/10 text-[#8C5288] border border-[#8C5288]/20">
+                        <span className="text-[10px] font-bold uppercase tracking-wider px-2.5 py-0.5 rounded-full bg-[#5e2b9d]/10 text-[#5e2b9d] border border-[#5e2b9d]/20">
                           {item.badge}
                         </span>
                       </div>
 
                       {/* Title & Tagline */}
                       <div>
-                        <h3 className="text-xl font-bold text-[#282023] group-hover:text-[#8C5288] transition-colors leading-snug">
+                        <h3 className="text-xl font-bold text-[#282023] group-hover:text-[#5e2b9d] transition-colors leading-snug">
                           {item.title}
                         </h3>
                         <p className="text-xs text-slate-500 mt-1 leading-relaxed">
@@ -367,7 +367,7 @@ export default function ProductsPage() {
                     <div className="pt-6 mt-6 border-t border-slate-200/80 flex items-center justify-between gap-3">
                       <button
                         onClick={() => openQuoteFor(item.title)}
-                        className="flex-1 py-2.5 px-4 rounded-xl bg-[#8C5288] hover:bg-[#763f72] text-white font-bold text-xs shadow-md transition-all flex items-center justify-center gap-1.5 cursor-pointer"
+                        className="flex-1 py-2.5 px-4 rounded-xl bg-[#5e2b9d] hover:bg-[#4d2282] text-white font-bold text-xs shadow-md transition-all flex items-center justify-center gap-1.5 cursor-pointer"
                       >
                         <span>Get Hardware Quote</span>
                         <ArrowRight className="w-3.5 h-3.5" />
@@ -395,7 +395,7 @@ export default function ProductsPage() {
         <section className="py-16 bg-[#fafbfc] border-t border-slate-100">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center max-w-3xl mx-auto mb-12">
-              <div className="inline-block text-xs font-bold text-[#8C5288] uppercase tracking-widest bg-[#8C5288]/10 px-3 py-1 rounded-full border border-[#8C5288]/20 mb-2">
+              <div className="inline-block text-xs font-bold text-[#5e2b9d] uppercase tracking-widest bg-[#5e2b9d]/10 px-3 py-1 rounded-full border border-[#5e2b9d]/20 mb-2">
                 RELIABILITY COMMITMENTS
               </div>
               <h2 className="text-3xl font-bold text-[#282023]">The Doonext Hardware Guarantee</h2>
@@ -406,7 +406,7 @@ export default function ProductsPage() {
 
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 text-left">
               <div className="p-6 rounded-2xl bg-white border border-slate-200 shadow-2xs space-y-2">
-                <div className="w-10 h-10 rounded-xl bg-[#8C5288]/10 text-[#8C5288] flex items-center justify-center">
+                <div className="w-10 h-10 rounded-xl bg-[#5e2b9d]/10 text-[#5e2b9d] flex items-center justify-center">
                   <ShieldCheck className="w-5 h-5" />
                 </div>
                 <h3 className="font-bold text-[#282023] text-sm">1-Year Replacement Warranty</h3>
@@ -453,14 +453,14 @@ export default function ProductsPage() {
         {/* ========================================================================= */}
         <section className="pt-8">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="rounded-3xl bg-gradient-to-r from-[#8C5288] via-[#763f72] to-[#5b2857] p-8 sm:p-12 shadow-xl text-white flex flex-col md:flex-row items-center justify-between gap-6">
+            <div className="rounded-3xl bg-gradient-to-r from-[#5e2b9d] via-[#4d2282] to-[#3b1766] p-8 sm:p-12 shadow-xl text-white flex flex-col md:flex-row items-center justify-between gap-6">
               <div>
                 <h3 className="text-2xl sm:text-3xl font-bold">Need a custom hardware quote for multiple counters?</h3>
                 <p className="text-purple-100 text-sm mt-1">Get discounted bulk pricing and free on-site installation for your store chain.</p>
               </div>
               <button
                 onClick={() => setDemoModalOpen(true)}
-                className="px-8 py-3.5 rounded-full bg-white text-[#8C5288] font-bold text-sm hover:bg-slate-50 shadow-md transition-all shrink-0 cursor-pointer"
+                className="px-8 py-3.5 rounded-full bg-white text-[#5e2b9d] font-bold text-sm hover:bg-slate-50 shadow-md transition-all shrink-0 cursor-pointer"
               >
                 Request Hardware Pricing
               </button>

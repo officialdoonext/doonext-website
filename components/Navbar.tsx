@@ -34,7 +34,7 @@ export default function Navbar({ onRequestDemo }: NavbarProps) {
   ];
 
   return (
-    <header className="sticky top-0 z-40 w-full bg-white/95 backdrop-blur-md border-b border-[#8C5288]/15 shadow-xs transition-all">
+    <header className="sticky top-0 z-40 w-full bg-white/95 backdrop-blur-md border-b border-[#5e2b9d]/15 shadow-xs transition-all">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-20">
           
@@ -60,8 +60,8 @@ export default function Navbar({ onRequestDemo }: NavbarProps) {
                   href={link.href}
                   className={`px-4 py-2 rounded-lg transition-all ${
                     active
-                      ? "text-[#8C5288] font-bold bg-[#8C5288]/5"
-                      : "hover:text-[#8C5288] hover:bg-[#8C5288]/5"
+                      ? "text-[#5e2b9d] font-bold bg-[#5e2b9d]/5"
+                      : "hover:text-[#5e2b9d] hover:bg-[#5e2b9d]/5"
                   }`}
                 >
                   {link.label}
@@ -76,8 +76,8 @@ export default function Navbar({ onRequestDemo }: NavbarProps) {
               href="/login"
               className={`px-3.5 py-2 rounded-lg text-sm font-semibold transition-all ${
                 isActive("/login")
-                  ? "text-[#8C5288] font-bold"
-                  : "text-[#282023] hover:text-[#8C5288] hover:bg-[#8C5288]/5"
+                  ? "text-[#5e2b9d] font-bold"
+                  : "text-[#282023] hover:text-[#5e2b9d] hover:bg-[#5e2b9d]/5"
               }`}
             >
               Sign In
@@ -87,17 +87,17 @@ export default function Navbar({ onRequestDemo }: NavbarProps) {
               href="/profile"
               className={`inline-flex items-center gap-1.5 px-3.5 py-2 rounded-lg text-sm font-semibold transition-all ${
                 isActive("/profile")
-                  ? "text-[#8C5288] font-bold bg-[#8C5288]/10"
-                  : "text-[#282023] hover:text-[#8C5288] hover:bg-[#8C5288]/5"
+                  ? "text-[#5e2b9d] font-bold bg-[#5e2b9d]/10"
+                  : "text-[#282023] hover:text-[#5e2b9d] hover:bg-[#5e2b9d]/5"
               }`}
             >
-              <User className="w-4 h-4 text-[#8C5288]" />
+              <User className="w-4 h-4 text-[#5e2b9d]" />
               <span>Profile</span>
             </Link>
 
             <button
               onClick={onRequestDemo}
-              className="px-5 py-2.5 rounded-full bg-[#8C5288] hover:bg-[#763f72] text-white text-xs font-bold tracking-wide shadow-md shadow-[#8C5288]/25 hover:shadow-lg transition-all transform hover:-translate-y-0.5 active:translate-y-0 cursor-pointer"
+              className="px-5 py-2.5 rounded-full bg-[#5e2b9d] hover:bg-[#4d2282] text-white text-xs font-bold tracking-wide shadow-md shadow-[#5e2b9d]/25 hover:shadow-lg transition-all transform hover:-translate-y-0.5 active:translate-y-0 cursor-pointer"
             >
               Request Demo
             </button>
@@ -107,13 +107,13 @@ export default function Navbar({ onRequestDemo }: NavbarProps) {
           <div className="flex lg:hidden items-center gap-2">
             <Link
               href="/login"
-              className="px-3 py-1.5 rounded-lg text-xs font-bold text-[#8C5288] bg-[#8C5288]/10"
+              className="px-3 py-1.5 rounded-lg text-xs font-bold text-[#5e2b9d] bg-[#5e2b9d]/10"
             >
               Sign In
             </Link>
             <button
               onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-              className="p-2 rounded-lg text-[#282023] hover:bg-[#8C5288]/5 transition-colors"
+              className="p-2 rounded-lg text-[#282023] hover:bg-[#5e2b9d]/5 transition-colors"
               aria-label="Toggle menu"
             >
               {mobileMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
@@ -125,14 +125,14 @@ export default function Navbar({ onRequestDemo }: NavbarProps) {
 
       {/* Mobile Drawer Navigation */}
       {mobileMenuOpen && (
-        <div className="lg:hidden border-t border-[#8C5288]/15 bg-white px-4 pt-3 pb-6 space-y-2 shadow-xl animate-in slide-in-from-top-2">
+        <div className="lg:hidden border-t border-[#5e2b9d]/15 bg-white px-4 pt-3 pb-6 space-y-2 shadow-xl animate-in slide-in-from-top-2">
           {navLinks.map((link) => (
             <Link
               key={link.href}
               href={link.href}
               onClick={() => setMobileMenuOpen(false)}
               className={`block px-4 py-2.5 rounded-xl font-medium ${
-                isActive(link.href) ? "bg-[#8C5288]/10 text-[#8C5288] font-bold" : "text-[#282023]"
+                isActive(link.href) ? "bg-[#5e2b9d]/10 text-[#5e2b9d] font-bold" : "text-[#282023]"
               }`}
             >
               {link.label}
@@ -150,7 +150,7 @@ export default function Navbar({ onRequestDemo }: NavbarProps) {
             <Link
               href="/profile"
               onClick={() => setMobileMenuOpen(false)}
-              className="flex-1 text-center py-2.5 rounded-xl bg-[#8C5288]/10 font-bold text-xs text-[#8C5288]"
+              className="flex-1 text-center py-2.5 rounded-xl bg-[#5e2b9d]/10 font-bold text-xs text-[#5e2b9d]"
             >
               Profile
             </Link>
@@ -162,7 +162,7 @@ export default function Navbar({ onRequestDemo }: NavbarProps) {
                 setMobileMenuOpen(false);
                 if (onRequestDemo) onRequestDemo();
               }}
-              className="w-full py-3 rounded-xl bg-[#8C5288] hover:bg-[#763f72] text-white font-bold text-sm shadow-md"
+              className="w-full py-3 rounded-xl bg-[#5e2b9d] hover:bg-[#4d2282] text-white font-bold text-sm shadow-md"
             >
               Request Free Demo
             </button>

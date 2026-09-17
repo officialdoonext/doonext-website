@@ -47,7 +47,7 @@ export default function ContactPage() {
   };
 
   return (
-    <div className="min-h-screen bg-[#fafbfc] text-[#282023] flex flex-col selection:bg-[#8C5288] selection:text-white font-sans">
+    <div className="min-h-screen bg-[#fafbfc] text-[#282023] flex flex-col selection:bg-[#5e2b9d] selection:text-white font-sans">
       <Navbar onRequestDemo={() => setDemoModalOpen(true)} />
       <RequestDemoModal isOpen={demoModalOpen} onClose={() => setDemoModalOpen(false)} />
 
@@ -85,7 +85,7 @@ export default function ContactPage() {
                   
                   {/* Item 1 */}
                   <div className="space-y-2">
-                    <div className="w-11 h-11 rounded-full bg-purple-50 border border-purple-100 text-[#8C5288] flex items-center justify-center shadow-2xs">
+                    <div className="w-11 h-11 rounded-full bg-purple-50 border border-purple-100 text-[#5e2b9d] flex items-center justify-center shadow-2xs">
                       <Headphones className="w-5 h-5" />
                     </div>
                     <div>
@@ -98,7 +98,7 @@ export default function ContactPage() {
 
                   {/* Item 2 */}
                   <div className="space-y-2">
-                    <div className="w-11 h-11 rounded-full bg-purple-50 border border-purple-100 text-[#8C5288] flex items-center justify-center shadow-2xs">
+                    <div className="w-11 h-11 rounded-full bg-purple-50 border border-purple-100 text-[#5e2b9d] flex items-center justify-center shadow-2xs">
                       <User className="w-5 h-5" />
                     </div>
                     <div>
@@ -182,7 +182,7 @@ export default function ContactPage() {
                           message: "",
                         });
                       }}
-                      className="mt-4 px-6 py-2.5 bg-[#8C5288] hover:bg-[#763f72] text-white rounded-xl text-xs font-bold transition-all cursor-pointer"
+                      className="mt-4 px-6 py-2.5 bg-[#5e2b9d] hover:bg-[#4d2282] text-white rounded-xl text-xs font-bold transition-all cursor-pointer"
                     >
                       Send Another Message
                     </button>
@@ -201,7 +201,7 @@ export default function ContactPage() {
                         placeholder="Enter your full name"
                         value={formData.name}
                         onChange={(e) => setFormData({ ...formData, name: e.target.value })}
-                        className="w-full px-4 py-3 text-sm rounded-xl border border-slate-200 focus:border-[#8C5288] focus:ring-2 focus:ring-[#8C5288]/15 outline-hidden transition-all text-[#282023] placeholder:text-slate-400 bg-white"
+                        className="w-full px-4 py-3 text-sm rounded-xl border border-slate-200 focus:border-[#5e2b9d] focus:ring-2 focus:ring-[#5e2b9d]/15 outline-hidden transition-all text-[#282023] placeholder:text-slate-400 bg-white"
                       />
                     </div>
 
@@ -217,7 +217,7 @@ export default function ContactPage() {
                           placeholder="Enter your email address"
                           value={formData.email}
                           onChange={(e) => setFormData({ ...formData, email: e.target.value })}
-                          className="w-full px-4 py-3 text-sm rounded-xl border border-slate-200 focus:border-[#8C5288] focus:ring-2 focus:ring-[#8C5288]/15 outline-hidden transition-all text-[#282023] placeholder:text-slate-400 bg-white"
+                          className="w-full px-4 py-3 text-sm rounded-xl border border-slate-200 focus:border-[#5e2b9d] focus:ring-2 focus:ring-[#5e2b9d]/15 outline-hidden transition-all text-[#282023] placeholder:text-slate-400 bg-white"
                         />
                       </div>
 
@@ -230,7 +230,7 @@ export default function ContactPage() {
                           placeholder="Enter your phone number"
                           value={formData.phone}
                           onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
-                          className="w-full px-4 py-3 text-sm rounded-xl border border-slate-200 focus:border-[#8C5288] focus:ring-2 focus:ring-[#8C5288]/15 outline-hidden transition-all text-[#282023] placeholder:text-slate-400 bg-white"
+                          className="w-full px-4 py-3 text-sm rounded-xl border border-slate-200 focus:border-[#5e2b9d] focus:ring-2 focus:ring-[#5e2b9d]/15 outline-hidden transition-all text-[#282023] placeholder:text-slate-400 bg-white"
                         />
                       </div>
                     </div>
@@ -245,7 +245,7 @@ export default function ContactPage() {
                         placeholder="Enter your company name"
                         value={formData.company}
                         onChange={(e) => setFormData({ ...formData, company: e.target.value })}
-                        className="w-full px-4 py-3 text-sm rounded-xl border border-slate-200 focus:border-[#8C5288] focus:ring-2 focus:ring-[#8C5288]/15 outline-hidden transition-all text-[#282023] placeholder:text-slate-400 bg-white"
+                        className="w-full px-4 py-3 text-sm rounded-xl border border-slate-200 focus:border-[#5e2b9d] focus:ring-2 focus:ring-[#5e2b9d]/15 outline-hidden transition-all text-[#282023] placeholder:text-slate-400 bg-white"
                       />
                     </div>
 
@@ -258,7 +258,7 @@ export default function ContactPage() {
                         required
                         value={formData.subject}
                         onChange={(e) => setFormData({ ...formData, subject: e.target.value })}
-                        className="w-full px-4 py-3 text-sm rounded-xl border border-slate-200 focus:border-[#8C5288] focus:ring-2 focus:ring-[#8C5288]/15 outline-hidden bg-white text-[#282023] cursor-pointer"
+                        className="w-full px-4 py-3 text-sm rounded-xl border border-slate-200 focus:border-[#5e2b9d] focus:ring-2 focus:ring-[#5e2b9d]/15 outline-hidden bg-white text-[#282023] cursor-pointer"
                       >
                         <option value="">Select a subject</option>
                         <option value="billing-pos">Doonext Billing POS Demo &amp; Pricing</option>
@@ -282,7 +282,7 @@ export default function ContactPage() {
                         placeholder="Write your message here..."
                         value={formData.message}
                         onChange={(e) => setFormData({ ...formData, message: e.target.value })}
-                        className="w-full px-4 py-3 text-sm rounded-xl border border-slate-200 focus:border-[#8C5288] focus:ring-2 focus:ring-[#8C5288]/15 outline-hidden transition-all text-[#282023] placeholder:text-slate-400 resize-none bg-white"
+                        className="w-full px-4 py-3 text-sm rounded-xl border border-slate-200 focus:border-[#5e2b9d] focus:ring-2 focus:ring-[#5e2b9d]/15 outline-hidden transition-all text-[#282023] placeholder:text-slate-400 resize-none bg-white"
                       />
                     </div>
 
@@ -323,17 +323,17 @@ export default function ContactPage() {
                   
                   {/* Phone */}
                   <div className="flex items-start gap-4">
-                    <div className="w-11 h-11 rounded-full bg-purple-50 border border-purple-100 text-[#8C5288] flex items-center justify-center shrink-0 shadow-2xs">
+                    <div className="w-11 h-11 rounded-full bg-purple-50 border border-purple-100 text-[#5e2b9d] flex items-center justify-center shrink-0 shadow-2xs">
                       <Phone className="w-5 h-5" />
                     </div>
                     <div>
                       <div className="text-xs font-bold text-slate-400 uppercase tracking-wider">Phone</div>
                       <div className="text-sm font-bold text-[#282023] mt-1 space-y-0.5">
                         <div>
-                          <a href="tel:+911234567890" className="hover:text-[#8C5288] transition-colors">+91 12345 67890</a>
+                          <a href="tel:+911234567890" className="hover:text-[#5e2b9d] transition-colors">+91 12345 67890</a>
                         </div>
                         <div>
-                          <a href="tel:+919876543210" className="hover:text-[#8C5288] transition-colors">+91 98765 43210</a>
+                          <a href="tel:+919876543210" className="hover:text-[#5e2b9d] transition-colors">+91 98765 43210</a>
                         </div>
                       </div>
                     </div>
@@ -348,10 +348,10 @@ export default function ContactPage() {
                       <div className="text-xs font-bold text-slate-400 uppercase tracking-wider">Email</div>
                       <div className="text-sm font-bold text-[#282023] mt-1 space-y-0.5">
                         <div>
-                          <a href="mailto:hello@doonext.com" className="hover:text-[#8C5288] transition-colors">hello@doonext.com</a>
+                          <a href="mailto:hello@doonext.com" className="hover:text-[#5e2b9d] transition-colors">hello@doonext.com</a>
                         </div>
                         <div>
-                          <a href="mailto:support@doonext.com" className="hover:text-[#8C5288] transition-colors">support@doonext.com</a>
+                          <a href="mailto:support@doonext.com" className="hover:text-[#5e2b9d] transition-colors">support@doonext.com</a>
                         </div>
                       </div>
                     </div>
@@ -359,7 +359,7 @@ export default function ContactPage() {
 
                   {/* Office Address */}
                   <div className="flex items-start gap-4">
-                    <div className="w-11 h-11 rounded-full bg-purple-50 border border-purple-100 text-[#8C5288] flex items-center justify-center shrink-0 shadow-2xs">
+                    <div className="w-11 h-11 rounded-full bg-purple-50 border border-purple-100 text-[#5e2b9d] flex items-center justify-center shrink-0 shadow-2xs">
                       <MapPin className="w-5 h-5" />
                     </div>
                     <div>
@@ -392,13 +392,13 @@ export default function ContactPage() {
 
                   {/* Website */}
                   <div className="flex items-start gap-4">
-                    <div className="w-11 h-11 rounded-full bg-purple-50 border border-purple-100 text-[#8C5288] flex items-center justify-center shrink-0 shadow-2xs">
+                    <div className="w-11 h-11 rounded-full bg-purple-50 border border-purple-100 text-[#5e2b9d] flex items-center justify-center shrink-0 shadow-2xs">
                       <Globe className="w-5 h-5" />
                     </div>
                     <div>
                       <div className="text-xs font-bold text-slate-400 uppercase tracking-wider">Website</div>
                       <div className="text-sm font-bold text-[#282023] mt-1">
-                        <a href="https://www.doonext.com" target="_blank" rel="noreferrer" className="hover:text-[#8C5288] transition-colors">
+                        <a href="https://www.doonext.com" target="_blank" rel="noreferrer" className="hover:text-[#5e2b9d] transition-colors">
                           www.doonext.com
                         </a>
                       </div>
@@ -443,11 +443,11 @@ export default function ContactPage() {
               {/* Center Map Pin Beacon */}
               <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 z-10 flex flex-col items-center">
                 <div className="relative">
-                  <div className="w-12 h-12 rounded-full bg-[#8C5288] text-white flex items-center justify-center shadow-2xl shadow-purple-900/40 border-2 border-white transform hover:scale-110 transition-transform">
+                  <div className="w-12 h-12 rounded-full bg-[#5e2b9d] text-white flex items-center justify-center shadow-2xl shadow-purple-900/40 border-2 border-white transform hover:scale-110 transition-transform">
                     <MapPin className="w-6 h-6 fill-current text-white" />
                   </div>
                   {/* Ping Animation */}
-                  <span className="absolute -inset-2 rounded-full bg-[#8C5288]/30 animate-ping pointer-events-none" />
+                  <span className="absolute -inset-2 rounded-full bg-[#5e2b9d]/30 animate-ping pointer-events-none" />
                 </div>
                 <div className="mt-2 px-3 py-1 rounded-full bg-white/90 backdrop-blur-xs border border-slate-200 shadow-md text-[11px] font-bold text-[#282023]">
                   Doonext HQ
@@ -478,7 +478,7 @@ export default function ContactPage() {
                     href="https://maps.google.com/?q=Coimbatore,Tamil+Nadu,India"
                     target="_blank"
                     rel="noreferrer"
-                    className="inline-flex items-center gap-1.5 text-xs font-bold text-[#8C5288] hover:text-[#763f72] transition-colors"
+                    className="inline-flex items-center gap-1.5 text-xs font-bold text-[#5e2b9d] hover:text-[#4d2282] transition-colors"
                   >
                     <span>View on Google Maps</span>
                     <ExternalLink className="w-3.5 h-3.5" />
@@ -498,7 +498,7 @@ export default function ContactPage() {
             <div className="rounded-3xl bg-gradient-to-r from-[#f7f2fa] via-[#faf6fc] to-[#f4f0f9] border border-purple-100/80 p-8 sm:p-10 shadow-xs flex flex-col md:flex-row items-center justify-between gap-6">
               
               <div className="flex items-center gap-5 text-left">
-                <div className="w-14 h-14 rounded-2xl bg-white border border-purple-100 text-[#8C5288] flex items-center justify-center shrink-0 shadow-sm">
+                <div className="w-14 h-14 rounded-2xl bg-white border border-purple-100 text-[#5e2b9d] flex items-center justify-center shrink-0 shadow-sm">
                   <MessageSquare className="w-7 h-7" />
                 </div>
                 <div>
