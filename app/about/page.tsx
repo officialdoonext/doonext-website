@@ -148,7 +148,7 @@ export default function AboutPage() {
   ];
 
   return (
-    <div className="min-h-screen bg-[#fafbfc] text-[#282023] flex flex-col selection:bg-[#5e2b9d] selection:text-white">
+    <div className="min-h-screen text-[#282023] flex flex-col selection:bg-[#5e2b9d] selection:text-white">
       <Navbar onRequestDemo={() => setDemoModalOpen(true)} />
       <RequestDemoModal isOpen={demoModalOpen} onClose={() => setDemoModalOpen(false)} />
 
@@ -156,10 +156,11 @@ export default function AboutPage() {
         {/* ========================================================================= */}
         {/* 1. HERO SECTION -> Dynamic Split Composition */}
         {/* ========================================================================= */}
-        <section className="relative pt-12 pb-20 lg:pt-16 lg:pb-28 bg-gradient-to-b from-[#f8f4fc] via-white to-[#fafbfc] border-b border-slate-100 overflow-hidden">
-          {/* Subtle ambient lighting decorations */}
-          <div className="absolute top-10 left-1/4 w-[500px] h-[350px] bg-[#5e2b9d]/5 rounded-full blur-3xl pointer-events-none" />
-          <div className="absolute bottom-10 right-10 w-[400px] h-[300px] bg-[#40C351]/5 rounded-full blur-3xl pointer-events-none" />
+        <section className="relative pt-12 pb-20 lg:pt-16 lg:pb-28 bg-gradient-to-b from-[#f8f3fd] via-[#fbf9fe] to-transparent border-b border-purple-100/60 overflow-hidden">
+          {/* Subtle ambient lighting & grid pattern */}
+          <div className="absolute inset-0 bg-grid-tech opacity-60 pointer-events-none" />
+          <div className="absolute top-10 left-1/4 w-[500px] h-[350px] bg-[#5e2b9d]/10 rounded-full blur-3xl pointer-events-none" />
+          <div className="absolute bottom-10 right-10 w-[400px] h-[300px] bg-[#40C351]/10 rounded-full blur-3xl pointer-events-none" />
 
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
             <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-8 items-center">

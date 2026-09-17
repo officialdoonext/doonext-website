@@ -40,7 +40,7 @@ export default function RootLayout({
           rel="stylesheet" 
         />
       </head>
-      <body className={`min-h-full flex flex-col bg-[#fafbfc] text-[#282023] ${poppins.className}`} suppressHydrationWarning>
+      <body className={`min-h-full flex flex-col text-[#282023] ${poppins.className}`} suppressHydrationWarning>
         {children}
       </body>
     </html>

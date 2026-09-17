@@ -390,7 +390,7 @@ export default function HomePage() {
   ];
 
   return (
-    <div className="min-h-screen bg-[#fafbfc] text-[#282023] flex flex-col selection:bg-[#5e2b9d] selection:text-white">
+    <div className="min-h-screen text-[#282023] flex flex-col selection:bg-[#5e2b9d] selection:text-white">
       {/* Navbar */}
       <Navbar onRequestDemo={() => setDemoModalOpen(true)} />
 
@@ -407,8 +407,16 @@ export default function HomePage() {
         {/* ========================================================================= */}
         {/* 1. HERO SECTION */}
         {/* ========================================================================= */}
-        <section className="relative pt-12 pb-20 lg:pt-16 lg:pb-24 bg-[#f8f4fc]">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <section className="relative pt-12 pb-20 lg:pt-16 lg:pb-24 overflow-hidden border-b border-purple-100/60 bg-gradient-to-b from-[#f8f3fd] via-[#fbf9fe] to-transparent">
+          {/* Tech Grid Pattern Overlay */}
+          <div className="absolute inset-0 bg-grid-tech opacity-70 pointer-events-none" />
+          
+          {/* Ambient Radiant Glow Blobs */}
+          <div className="absolute -top-24 -left-24 w-96 h-96 bg-[#5e2b9d]/12 rounded-full blur-3xl pointer-events-none" />
+          <div className="absolute top-1/3 -right-24 w-[420px] h-[420px] bg-[#40C351]/10 rounded-full blur-3xl pointer-events-none" />
+          <div className="absolute -bottom-20 left-1/2 -translate-x-1/2 w-[520px] h-64 bg-[#EFAF08]/08 rounded-full blur-3xl pointer-events-none" />
+
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
             <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-8 items-center">
               
               {/* Left Column: Hero Copy */}
@@ -473,9 +481,10 @@ export default function HomePage() {
         {/* ========================================================================= */}
         {/* 2. TRUSTED BY 500+ BUSINESSES ACROSS INDIA */}
         {/* ========================================================================= */}
-        <section className="py-16 bg-white border-y border-slate-100 relative overflow-hidden">
-          {/* Subtle ambient background glow */}
-          <div className="absolute inset-0 bg-gradient-to-r from-[#5e2b9d]/[0.02] via-slate-50/60 to-[#40C351]/[0.02] pointer-events-none" />
+        <section className="py-16 bg-white/80 backdrop-blur-xs border-y border-slate-200/70 relative overflow-hidden">
+          {/* Subtle dot pattern & ambient glow */}
+          <div className="absolute inset-0 bg-dots-tech opacity-40 pointer-events-none" />
+          <div className="absolute inset-0 bg-gradient-to-r from-[#5e2b9d]/[0.03] via-transparent to-[#40C351]/[0.03] pointer-events-none" />
 
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
             
@@ -581,10 +590,11 @@ export default function HomePage() {
         {/* ========================================================================= */}
         {/* 3. WHAT WE OFFER -> Modern Bento Grid Ecosystem */}
         {/* ========================================================================= */}
-        <section className="py-24 bg-[#fafbfc] border-t border-slate-100 relative overflow-hidden">
-          {/* Ambient background glow decoration */}
-          <div className="absolute top-1/3 -right-20 w-96 h-96 bg-[#5e2b9d]/5 rounded-full blur-3xl pointer-events-none" />
-          <div className="absolute bottom-10 -left-20 w-96 h-96 bg-[#40C351]/5 rounded-full blur-3xl pointer-events-none" />
+        <section className="py-24 bg-gradient-to-b from-transparent via-[#faf7fd]/70 to-transparent border-t border-slate-200/70 relative overflow-hidden">
+          {/* Ambient background glow decoration & grid */}
+          <div className="absolute inset-0 bg-grid-tech opacity-35 pointer-events-none" />
+          <div className="absolute top-1/3 -right-20 w-96 h-96 bg-[#5e2b9d]/8 rounded-full blur-3xl pointer-events-none" />
+          <div className="absolute bottom-10 -left-20 w-96 h-96 bg-[#40C351]/8 rounded-full blur-3xl pointer-events-none" />
 
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             
@@ -913,11 +923,12 @@ export default function HomePage() {
         {/* ========================================================================= */}
         {/* 4. INDUSTRIES WE SERVE -> Software for Every Industry */}
         {/* ========================================================================= */}
-        <section className="relative py-24 bg-gradient-to-b from-white via-[#faf7fd]/50 to-white border-t border-slate-100 overflow-hidden">
-          {/* Subtle ambient decorative blurs */}
-          <div className="absolute top-10 left-1/2 -translate-x-1/2 w-[600px] h-[300px] bg-[#5e2b9d]/5 rounded-full blur-3xl pointer-events-none -z-10" />
+        <section className="relative py-24 bg-gradient-to-b from-white/80 via-[#faf7fd]/70 to-white/80 backdrop-blur-xs border-t border-slate-200/70 overflow-hidden">
+          {/* Subtle ambient decorative pattern & blurs */}
+          <div className="absolute inset-0 bg-dots-tech opacity-35 pointer-events-none" />
+          <div className="absolute top-10 left-1/2 -translate-x-1/2 w-[600px] h-[300px] bg-[#5e2b9d]/8 rounded-full blur-3xl pointer-events-none -z-10" />
           
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
             
             {/* Section Header */}
             <div className="text-center max-w-3xl mx-auto">
@@ -1031,8 +1042,9 @@ export default function HomePage() {
         {/* ========================================================================= */}
         {/* 5. OUR PRODUCTS -> Powerful Products to Simplify Your Business */}
         {/* ========================================================================= */}
-        <section className="py-20 bg-[#fafbfc] border-t border-slate-100">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+        <section className="py-20 bg-gradient-to-b from-transparent via-[#faf7fd]/70 to-transparent border-t border-slate-200/70 relative overflow-hidden">
+          <div className="absolute inset-0 bg-grid-tech opacity-30 pointer-events-none" />
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
             
             <div className="inline-block text-xs font-bold text-[#5e2b9d] uppercase tracking-widest mb-2 bg-[#5e2b9d]/10 px-3 py-1 rounded-full border border-[#5e2b9d]/20">
               OUR PRODUCTS
@@ -1096,10 +1108,11 @@ export default function HomePage() {
         {/* ========================================================================= */}
         {/* 6. WHY CHOOSE DOONEXT? -> High-Converting Pillar Section */}
         {/* ========================================================================= */}
-        <section className="py-24 bg-white border-t border-slate-100 relative overflow-hidden">
-          {/* Subtle ambient lighting */}
-          <div className="absolute top-1/4 -left-32 w-96 h-96 bg-[#5e2b9d]/5 rounded-full blur-3xl pointer-events-none" />
-          <div className="absolute bottom-1/4 -right-32 w-96 h-96 bg-[#40C351]/5 rounded-full blur-3xl pointer-events-none" />
+        <section className="py-24 bg-white/80 backdrop-blur-xs border-t border-slate-200/70 relative overflow-hidden">
+          {/* Subtle ambient lighting & dots pattern */}
+          <div className="absolute inset-0 bg-dots-tech opacity-30 pointer-events-none" />
+          <div className="absolute top-1/4 -left-32 w-96 h-96 bg-[#5e2b9d]/8 rounded-full blur-3xl pointer-events-none" />
+          <div className="absolute bottom-1/4 -right-32 w-96 h-96 bg-[#40C351]/8 rounded-full blur-3xl pointer-events-none" />
 
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
             
@@ -1351,8 +1364,9 @@ export default function HomePage() {
         {/* ========================================================================= */}
         {/* 7. WHAT OUR CLIENTS SAY -> Testimonials */}
         {/* ========================================================================= */}
-        <section className="py-20 bg-[#fafbfc] border-t border-slate-100">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <section className="py-20 bg-gradient-to-b from-transparent via-[#faf7fd]/70 to-transparent border-t border-slate-200/70 relative overflow-hidden">
+          <div className="absolute inset-0 bg-grid-tech opacity-30 pointer-events-none" />
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
             
             <div className="text-center mb-12">
               <div className="inline-block text-xs font-bold text-[#5e2b9d] uppercase tracking-widest mb-2 bg-[#5e2b9d]/10 px-3 py-1 rounded-full border border-[#5e2b9d]/20">

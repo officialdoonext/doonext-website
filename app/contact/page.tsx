@@ -47,7 +47,7 @@ export default function ContactPage() {
   };
 
   return (
-    <div className="min-h-screen bg-[#fafbfc] text-[#282023] flex flex-col selection:bg-[#5e2b9d] selection:text-white font-sans">
+    <div className="min-h-screen text-[#282023] flex flex-col selection:bg-[#5e2b9d] selection:text-white font-sans">
       <Navbar onRequestDemo={() => setDemoModalOpen(true)} />
       <RequestDemoModal isOpen={demoModalOpen} onClose={() => setDemoModalOpen(false)} />
 
@@ -56,7 +56,12 @@ export default function ContactPage() {
         {/* ========================================================================= */}
         {/* 1. HERO SECTION (Matching image with Envelope Illustration) */}
         {/* ========================================================================= */}
-        <section className="pt-12 pb-16 lg:pt-16 lg:pb-20 bg-gradient-to-b from-[#fbf8fc] via-white to-[#fafbfc] overflow-hidden relative">
+        <section className="pt-12 pb-16 lg:pt-16 lg:pb-20 bg-gradient-to-b from-[#f8f3fd] via-[#fbf9fe] to-transparent border-b border-purple-100/60 overflow-hidden relative">
+          {/* Subtle grid pattern & ambient lighting */}
+          <div className="absolute inset-0 bg-grid-tech opacity-60 pointer-events-none" />
+          <div className="absolute -top-20 -left-20 w-80 h-80 bg-[#5e2b9d]/10 rounded-full blur-3xl pointer-events-none" />
+          <div className="absolute -top-20 -right-20 w-80 h-80 bg-[#40C351]/10 rounded-full blur-3xl pointer-events-none" />
+
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
             <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-8 items-center">
               
