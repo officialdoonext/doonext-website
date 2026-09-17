@@ -1,3 +1,5 @@
+"use client";
+
 import React from "react";
 import Link from "next/link";
 import Image from "next/image";
@@ -5,70 +7,100 @@ import {
   MapPin, 
   Phone, 
   Mail, 
-  Globe,
-  ArrowRight,
-  ShieldCheck,
-  Zap,
-  Sparkles,
-  Headphones,
-  CheckCircle2,
-  Clock,
-  MessageCircle,
-  Building2
+  Globe, 
+  ArrowRight, 
+  ShieldCheck, 
+  Zap, 
+  Sparkles, 
+  Headphones, 
+  CheckCircle2, 
+  Clock, 
+  MessageCircle, 
+  Building2, 
+  ArrowUp,
+  Receipt,
+  Boxes,
+  Users2,
+  Lock,
+  Star
 } from "lucide-react";
 
-export default function Footer() {
+interface FooterProps {
+  onRequestDemo?: () => void;
+}
+
+export default function Footer({ onRequestDemo }: FooterProps) {
+  const scrollToTop = () => {
+    if (typeof window !== "undefined") {
+      window.scrollTo({ top: 0, behavior: "smooth" });
+    }
+  };
+
   return (
     <footer className="bg-white text-[#282023] pt-14 pb-10 border-t border-slate-200/90 relative overflow-hidden">
-      {/* Ambient background glows */}
-      <div className="absolute top-0 right-1/4 w-[600px] h-[300px] bg-[#5e2b9d]/[0.03] rounded-full blur-3xl pointer-events-none" />
-      <div className="absolute bottom-10 left-10 w-[500px] h-[300px] bg-[#40C351]/[0.03] rounded-full blur-3xl pointer-events-none" />
+      {/* Ambient decorative background glows & micro-grid */}
+      <div className="absolute inset-0 bg-dots-tech opacity-40 pointer-events-none" />
+      <div className="absolute top-0 right-1/4 w-[650px] h-[350px] bg-[#5e2b9d]/[0.035] rounded-full blur-3xl pointer-events-none" />
+      <div className="absolute bottom-10 left-10 w-[550px] h-[350px] bg-[#40C351]/[0.03] rounded-full blur-3xl pointer-events-none" />
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         
         {/* ========================================================================= */}
         {/* 1. TOP INTERACTIVE SUPPORT & DEMO ACTION RIBBON */}
         {/* ========================================================================= */}
-        <div className="mb-14 p-6 sm:p-8 rounded-3xl bg-gradient-to-r from-[#faf7fd] via-white to-[#f6fbf7] border border-slate-200/90 shadow-2xs flex flex-col lg:flex-row items-center justify-between gap-6">
-          <div className="space-y-1.5 text-center lg:text-left">
-            <div className="inline-flex items-center gap-2 px-2.5 py-0.5 rounded-full bg-[#5e2b9d]/10 text-[#5e2b9d] text-[11px] font-bold uppercase tracking-wider">
-              <Sparkles className="w-3 h-3 text-[#5e2b9d]" />
-              <span>Doonext Live Helpline &amp; Consultation</span>
+        <div className="mb-14 p-6 sm:p-8 lg:p-10 rounded-3xl bg-gradient-to-r from-[#faf7fd] via-white to-[#f6fbf7] border border-[#5e2b9d]/15 shadow-sm flex flex-col lg:flex-row items-center justify-between gap-6 relative overflow-hidden group">
+          {/* Subtle top-right glow */}
+          <div className="absolute top-0 right-0 w-64 h-64 bg-[#5e2b9d]/5 rounded-full blur-2xl pointer-events-none" />
+          
+          <div className="space-y-2 text-center lg:text-left relative z-10 max-w-2xl">
+            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[#5e2b9d]/10 text-[#5e2b9d] text-[11px] font-bold uppercase tracking-wider border border-[#5e2b9d]/20">
+              <Sparkles className="w-3.5 h-3.5 text-[#EFAF08]" />
+              <span>COIMBATORE SOLUTIONS DESK • PAN-INDIA ADOPTION</span>
             </div>
-            <h3 className="text-lg sm:text-xl font-bold text-[#282023]">
-              Need a personalized recommendation for your business?
+            <h3 className="text-xl sm:text-2xl lg:text-[26px] font-bold text-[#282023] tracking-tight leading-snug">
+              Transform Your Billing Counter into a Resilient Profit Engine
             </h3>
-            <p className="text-xs sm:text-sm text-slate-500">
-              Speak directly with our Coimbatore solution architects — zero automated bots, 100% human guidance.
+            <p className="text-xs sm:text-sm text-slate-600 leading-relaxed">
+              Speak directly with our Coimbatore solution architects — zero bot hurdles, 100% human guidance tailored for your retail, restaurant, hotel, or wholesale counter.
             </p>
           </div>
 
-          <div className="flex flex-wrap items-center justify-center gap-3 shrink-0">
+          <div className="flex flex-wrap items-center justify-center gap-3 shrink-0 relative z-10">
             <a
-              href="tel:+911234567890"
-              className="inline-flex items-center gap-2 px-5 py-2.5 rounded-full bg-white hover:bg-slate-50 text-[#282023] text-xs font-bold border border-slate-200/90 shadow-2xs hover:shadow-xs transition-all"
+              href="tel:+919500618277"
+              className="inline-flex items-center gap-2 px-5 py-3 rounded-full bg-white hover:bg-slate-50 text-[#282023] text-xs font-bold border border-slate-200/90 shadow-2xs hover:shadow-xs transition-all"
             >
               <Phone className="w-3.5 h-3.5 text-[#40C351]" />
-              <span>+91 12345 67890</span>
+              <span>+91 95006 18277</span>
             </a>
             
             <a
-              href="https://wa.me/911234567890"
+              href="https://wa.me/919500618277?text=Hi%20Doonext%2C%20I%20would%20like%20to%20learn%20more%20about%20your%20software"
               target="_blank"
               rel="noreferrer"
-              className="inline-flex items-center gap-2 px-5 py-2.5 rounded-full bg-[#40C351]/10 hover:bg-[#40C351]/20 text-[#2d963b] text-xs font-bold border border-[#40C351]/25 shadow-2xs hover:shadow-xs transition-all"
+              className="inline-flex items-center gap-2 px-5 py-3 rounded-full bg-[#40C351]/10 hover:bg-[#40C351]/20 text-[#2d963b] text-xs font-bold border border-[#40C351]/25 shadow-2xs hover:shadow-xs transition-all"
             >
               <MessageCircle className="w-3.5 h-3.5 text-[#40C351]" />
               <span>WhatsApp Us</span>
             </a>
 
-            <Link
-              href="/contact"
-              className="inline-flex items-center gap-2 px-6 py-2.5 rounded-full bg-[#5e2b9d] hover:bg-[#4d2282] text-white text-xs font-bold shadow-md shadow-[#5e2b9d]/20 hover:shadow-lg transition-all"
-            >
-              <span>Request Free Demo</span>
-              <ArrowRight className="w-3.5 h-3.5" />
-            </Link>
+            {onRequestDemo ? (
+              <button
+                onClick={onRequestDemo}
+                className="inline-flex items-center gap-2 px-6 py-3 rounded-full bg-[#5e2b9d] hover:bg-[#4d2282] text-white text-xs font-bold shadow-md shadow-[#5e2b9d]/20 hover:shadow-lg transition-all cursor-pointer hover:scale-[1.02]"
+              >
+                <span>Request Free Demo</span>
+                <ArrowRight className="w-3.5 h-3.5" />
+              </button>
+            ) : (
+              <Link
+                href="/contact"
+                className="inline-flex items-center gap-2 px-6 py-3 rounded-full bg-[#5e2b9d] hover:bg-[#4d2282] text-white text-xs font-bold shadow-md shadow-[#5e2b9d]/20 hover:shadow-lg transition-all hover:scale-[1.02]"
+              >
+                <span>Request Free Demo</span>
+                <ArrowRight className="w-3.5 h-3.5" />
+              </Link>
+            )}
           </div>
         </div>
 
@@ -76,28 +108,28 @@ export default function Footer() {
         {/* 2. 4 CORE TRUST HIGHLIGHT PILLS */}
         {/* ========================================================================= */}
         <div className="grid grid-cols-2 md:grid-cols-4 gap-3 sm:gap-4 pb-12 border-b border-slate-100">
-          <div className="flex items-center gap-3 p-3.5 rounded-2xl bg-white border border-slate-200/80 shadow-2xs">
-            <div className="w-8 h-8 rounded-xl bg-[#5e2b9d]/10 text-[#5e2b9d] flex items-center justify-center shrink-0">
+          <div className="flex items-center gap-3 p-4 rounded-2xl bg-white border border-slate-200/80 shadow-2xs hover:border-[#5e2b9d]/30 transition-all">
+            <div className="w-9 h-9 rounded-xl bg-[#5e2b9d]/10 text-[#5e2b9d] flex items-center justify-center shrink-0">
               <Zap className="w-4 h-4" />
             </div>
             <div>
               <div className="text-xs font-bold text-[#282023]">&lt; 0.2s Sub-Second Scan</div>
-              <div className="text-[10px] text-slate-500">Ultra-fast checkout counter</div>
+              <div className="text-[10px] text-slate-500">Express thermal billing</div>
             </div>
           </div>
 
-          <div className="flex items-center gap-3 p-3.5 rounded-2xl bg-white border border-slate-200/80 shadow-2xs">
-            <div className="w-8 h-8 rounded-xl bg-[#40C351]/10 text-[#40C351] flex items-center justify-center shrink-0">
+          <div className="flex items-center gap-3 p-4 rounded-2xl bg-white border border-slate-200/80 shadow-2xs hover:border-[#40C351]/30 transition-all">
+            <div className="w-9 h-9 rounded-xl bg-[#40C351]/10 text-[#40C351] flex items-center justify-center shrink-0">
               <ShieldCheck className="w-4 h-4" />
             </div>
             <div>
               <div className="text-xs font-bold text-[#282023]">Offline-First Guaranteed</div>
-              <div className="text-[10px] text-slate-500">Zero downtime during outages</div>
+              <div className="text-[10px] text-slate-500">Zero network downtime</div>
             </div>
           </div>
 
-          <div className="flex items-center gap-3 p-3.5 rounded-2xl bg-white border border-slate-200/80 shadow-2xs">
-            <div className="w-8 h-8 rounded-xl bg-amber-50 text-[#EFAF08] flex items-center justify-center shrink-0">
+          <div className="flex items-center gap-3 p-4 rounded-2xl bg-white border border-slate-200/80 shadow-2xs hover:border-[#EFAF08] transition-all">
+            <div className="w-9 h-9 rounded-xl bg-amber-50 text-[#EFAF08] flex items-center justify-center shrink-0">
               <Building2 className="w-4 h-4" />
             </div>
             <div>
@@ -106,36 +138,36 @@ export default function Footer() {
             </div>
           </div>
 
-          <div className="flex items-center gap-3 p-3.5 rounded-2xl bg-white border border-slate-200/80 shadow-2xs">
-            <div className="w-8 h-8 rounded-xl bg-sky-50 text-sky-600 flex items-center justify-center shrink-0">
+          <div className="flex items-center gap-3 p-4 rounded-2xl bg-white border border-slate-200/80 shadow-2xs hover:border-sky-400 transition-all">
+            <div className="w-9 h-9 rounded-xl bg-sky-50 text-sky-600 flex items-center justify-center shrink-0">
               <CheckCircle2 className="w-4 h-4" />
             </div>
             <div>
               <div className="text-xs font-bold text-[#282023]">100% GST &amp; E-Way Ready</div>
-              <div className="text-[10px] text-slate-500">One-click compliant filings</div>
+              <div className="text-[10px] text-slate-500">Compliant automated filings</div>
             </div>
           </div>
         </div>
 
         {/* ========================================================================= */}
-        {/* 3. MAIN 5-COLUMN NAVIGATION GRID */}
+        {/* 3. MAIN 5-COLUMN NAVIGATION & CONTACT GRID */}
         {/* ========================================================================= */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-10 lg:gap-8 py-12 border-b border-slate-100">
           
-          {/* Column 1: Brand & Headquarters Info (4 cols) */}
+          {/* Column 1: Brand & Coimbatore Innovation Core (4 cols) */}
           <div className="lg:col-span-4 space-y-5">
-            <Link href="/" className="inline-block">
+            <Link href="/" className="inline-block group">
               <Image
                 src="/logo.png"
                 alt="Doonext Logo"
-                width={150}
-                height={40}
-                className="h-9 w-auto object-contain"
+                width={155}
+                height={42}
+                className="h-9 w-auto object-contain transition-transform group-hover:scale-[1.02]"
               />
             </Link>
 
-            <p className="text-slate-600 text-sm leading-relaxed max-w-sm">
-              Doonext crafts high-performance, offline-first billing POS, ERP, CRM, and payroll software that turns everyday commerce into an automated, profitable engine.
+            <p className="text-slate-600 text-xs sm:text-sm leading-relaxed max-w-sm">
+              Doonext crafts high-performance, offline-first billing POS, ERP, CRM, and biometric payroll software engineered to power everyday commerce into an automated, profitable engine.
             </p>
 
             {/* Coimbatore Identity Pill */}
@@ -199,12 +231,15 @@ export default function Footer() {
               <span className="w-1.5 h-1.5 rounded-full bg-[#5e2b9d]" />
               Softwares
             </h4>
-            <ul className="space-y-2.5 text-sm font-medium text-slate-600">
+            <ul className="space-y-2.5 text-xs sm:text-sm font-medium text-slate-600">
               <li>
                 <Link href="/softwares" className="hover:text-[#5e2b9d] transition-colors flex items-center justify-between group">
                   <span>Billing POS</span>
                   <span className="text-[9px] font-bold text-[#5e2b9d] bg-[#5e2b9d]/10 px-1.5 py-0.5 rounded">HOT</span>
                 </Link>
+              </li>
+              <li>
+                <Link href="/softwares" className="hover:text-[#5e2b9d] transition-colors">Restaurant KOT</Link>
               </li>
               <li>
                 <Link href="/softwares" className="hover:text-[#5e2b9d] transition-colors">ERP &amp; Inventory</Link>
@@ -230,7 +265,7 @@ export default function Footer() {
               <span className="w-1.5 h-1.5 rounded-full bg-[#40C351]" />
               Industries
             </h4>
-            <ul className="space-y-2.5 text-sm font-medium text-slate-600">
+            <ul className="space-y-2.5 text-xs sm:text-sm font-medium text-slate-600">
               <li>
                 <Link href="/products#industries" className="hover:text-[#5e2b9d] transition-colors">Supermarkets &amp; Retail</Link>
               </li>
@@ -247,7 +282,7 @@ export default function Footer() {
                 <Link href="/products#industries" className="hover:text-[#5e2b9d] transition-colors">Pharmacies &amp; Clinics</Link>
               </li>
               <li>
-                <Link href="/products#industries" className="hover:text-[#5e2b9d] transition-colors">Manufacturing Units</Link>
+                <Link href="/products#industries" className="hover:text-[#5e2b9d] transition-colors">Manufacturing &amp; Mills</Link>
               </li>
             </ul>
           </div>
@@ -258,7 +293,7 @@ export default function Footer() {
               <span className="w-1.5 h-1.5 rounded-full bg-[#EFAF08]" />
               Quick Links
             </h4>
-            <ul className="space-y-2.5 text-sm font-medium text-slate-600">
+            <ul className="space-y-2.5 text-xs sm:text-sm font-medium text-slate-600">
               <li>
                 <Link href="/" className="hover:text-[#5e2b9d] transition-colors">Home</Link>
               </li>
@@ -274,10 +309,13 @@ export default function Footer() {
               <li>
                 <Link href="/contact" className="hover:text-[#5e2b9d] transition-colors">Contact Us</Link>
               </li>
+              <li>
+                <Link href="/contact" className="hover:text-[#5e2b9d] transition-colors font-semibold text-[#5e2b9d]">Book Live Demo</Link>
+              </li>
             </ul>
           </div>
 
-          {/* Column 5: Direct Contact Card (2 cols) */}
+          {/* Column 5: Direct Regional Office & Live Desk (2 cols) */}
           <div className="lg:col-span-2 space-y-4">
             <h4 className="text-xs font-bold text-slate-400 uppercase tracking-widest flex items-center gap-1.5">
               <span className="w-1.5 h-1.5 rounded-full bg-sky-500" />
@@ -287,12 +325,12 @@ export default function Footer() {
             <div className="space-y-3 text-xs text-slate-600">
               <div className="flex items-start gap-2">
                 <MapPin className="w-4 h-4 text-[#5e2b9d] shrink-0 mt-0.5" />
-                <span className="leading-relaxed">Coimbatore, Tamil Nadu, India</span>
+                <span className="leading-relaxed">Coimbatore, Tamil Nadu, India - 641001</span>
               </div>
               
               <div className="flex items-center gap-2">
                 <Phone className="w-4 h-4 text-[#40C351] shrink-0" />
-                <a href="tel:+911234567890" className="font-semibold hover:text-[#5e2b9d] transition-colors">+91 12345 67890</a>
+                <a href="tel:+919500618277" className="font-semibold hover:text-[#5e2b9d] transition-colors">+91 95006 18277</a>
               </div>
               
               <div className="flex items-center gap-2">
@@ -306,15 +344,18 @@ export default function Footer() {
               </div>
             </div>
 
-            {/* Operating Hours & Status */}
-            <div className="pt-2">
-              <div className="p-2.5 rounded-xl bg-slate-50 border border-slate-200/70 space-y-1">
-                <div className="flex items-center gap-1.5 text-[10px] font-bold text-[#40C351]">
-                  <span className="w-1.5 h-1.5 rounded-full bg-[#40C351] animate-pulse" />
-                  <span>Support Desk Active</span>
+            {/* Operating Hours & Status Box */}
+            <div className="pt-1">
+              <div className="p-3 rounded-2xl bg-gradient-to-br from-slate-50 to-[#faf7fd] border border-[#5e2b9d]/15 space-y-1.5 shadow-2xs">
+                <div className="flex items-center justify-between text-[11px] font-bold text-[#40C351]">
+                  <span className="flex items-center gap-1.5">
+                    <span className="w-2 h-2 rounded-full bg-[#40C351] animate-pulse" />
+                    Support Desk Active
+                  </span>
+                  <span className="text-[10px] text-slate-400">&lt; 18s Pickup</span>
                 </div>
-                <div className="text-[10px] text-slate-500">
-                  Mon – Sat: 9:00 AM – 7:00 PM IST
+                <div className="text-[10px] text-slate-500 font-medium">
+                  Mon – Sat: 8:00 AM – 10:00 PM IST
                 </div>
               </div>
             </div>
@@ -323,7 +364,7 @@ export default function Footer() {
         </div>
 
         {/* ========================================================================= */}
-        {/* 4. BOTTOM COPYRIGHT & LEGAL BAR */}
+        {/* 4. BOTTOM COPYRIGHT, LEGAL BAR & SCROLL TO TOP */}
         {/* ========================================================================= */}
         <div className="pt-8 flex flex-col sm:flex-row items-center justify-between text-xs text-slate-500 gap-4">
           <div className="flex items-center gap-2 text-center sm:text-left">
@@ -339,14 +380,20 @@ export default function Footer() {
             <span className="text-slate-300">•</span>
             <span className="text-[#40C351] font-semibold flex items-center gap-1">
               <CheckCircle2 className="w-3.5 h-3.5" />
-              100% Indian GST &amp; E-Way Ready 🇮🇳
+              <span>100% Made in India 🇮🇳</span>
             </span>
           </div>
+
+          <button
+            onClick={scrollToTop}
+            aria-label="Scroll to top"
+            className="w-8 h-8 rounded-full bg-slate-100 hover:bg-[#5e2b9d] text-slate-500 hover:text-white flex items-center justify-center transition-all cursor-pointer shadow-2xs hover:shadow-xs"
+          >
+            <ArrowUp className="w-4 h-4" />
+          </button>
         </div>
 
       </div>
     </footer>
   );
 }
-
-
