@@ -1,0 +1,721 @@
+/* =========================================================
+   DESKTOP VIEW (100% UNCHANGED)
+   ========================================================= */
+.wrapper {
+    background-color: #ffffff;
+    width: 100%;
+    overflow: hidden;
+}
+
+.container {
+    max-width: 1320px;
+    margin: 0 auto;
+    padding: 0 1.5rem;
+}
+
+/* Section Headers */
+.headerBlock {
+    text-align: center;
+    max-width: 680px;
+    margin: 0 auto 2.75rem;
+}
+
+.topBadge {
+    display: inline-block;
+    font-size: 0.78rem;
+    font-weight: 700;
+    letter-spacing: 1px;
+    color: #0288d1;
+    text-transform: uppercase;
+    margin-bottom: 0.6rem;
+}
+
+.mainTitle {
+    font-size: 2.35rem;
+    font-weight: 800;
+    color: #101c3d;
+    letter-spacing: -0.8px;
+    line-height: 1.22;
+    margin-bottom: 0.65rem;
+}
+
+.subTitle {
+    font-size: 1rem;
+    color: #64748b;
+    line-height: 1.55;
+}
+
+/* ================= 1. Industries Grid ================= */
+.industriesSection {
+    padding: 3.5rem 0 2.5rem;
+}
+
+.industriesGrid {
+    display: grid;
+    grid-template-columns: repeat(8, 1fr);
+    gap: 1rem;
+}
+
+.industryCard {
+    background: #ffffff;
+    border: 1px solid #edf0f7;
+    border-radius: 14px;
+    padding: 1.15rem 0.6rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 0.65rem;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.02);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.industryCard:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 18px rgba(99, 69, 237, 0.08);
+    border-color: #e2dcfe;
+}
+
+.iconCircle {
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    background-color: #f6f5fe;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #5b28ec;
+}
+
+.iconCircle svg {
+    width: 20px;
+    height: 20px;
+}
+
+.industryLabel {
+    font-size: 0.76rem;
+    font-weight: 600;
+    color: #334155;
+    line-height: 1.35;
+}
+
+/* ================= 2. CTA Banner (Desktop) ================= */
+.ctaBannerSection {
+    padding: 2.5rem 0;
+}
+
+.bannerCard {
+    position: relative;
+    background-color: #4f21db;
+    background-image: url("/herocustomer.png");
+    background-size: cover;
+    background-position: right center;
+    background-repeat: no-repeat;
+    border-radius: 28px;
+    overflow: hidden;
+    box-shadow: 0 20px 45px rgba(79, 33, 219, 0.22);
+    min-height: 380px;
+}
+
+.bannerGrid {
+    display: grid;
+    grid-template-columns: 1.15fr 1fr;
+    align-items: center;
+    min-height: 380px;
+}
+
+.bannerContent {
+    padding: 3.5rem 2rem 3.5rem 3.5rem;
+    display: flex;
+    flex-direction: column;
+    z-index: 2;
+}
+
+.bannerBadge {
+    font-size: 0.76rem;
+    font-weight: 700;
+    letter-spacing: 0.9px;
+    color: #38bdf8;
+    margin-bottom: 0.85rem;
+    text-transform: uppercase;
+}
+
+.bannerHeading {
+    font-size: 2.5rem;
+    font-weight: 800;
+    color: #ffffff;
+    line-height: 1.2;
+    letter-spacing: -0.6px;
+    margin-bottom: 1rem;
+}
+
+.bannerDesc {
+    font-size: 0.96rem;
+    line-height: 1.6;
+    color: #e0e7ff;
+    max-width: 480px;
+    margin-bottom: 2rem;
+}
+
+.bannerButtons {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.btnPrimary {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    background-color: #ffffff;
+    color: #4f21db;
+    padding: 0.78rem 1.6rem;
+    font-size: 0.92rem;
+    font-weight: 700;
+    border-radius: 9px;
+    text-decoration: none;
+    box-shadow: 0 4px 14px rgba(0, 0, 0, 0.15);
+    transition: all 0.2s ease;
+    white-space: nowrap;
+}
+
+.btnPrimary:hover {
+    transform: translateY(-2px);
+    background-color: #f8fafc;
+}
+
+.btnOutline {
+    display: inline-flex;
+    align-items: center;
+    background-color: transparent;
+    color: #ffffff;
+    border: 1.5px solid rgba(255, 255, 255, 0.45);
+    padding: 0.75rem 1.6rem;
+    font-size: 0.92rem;
+    font-weight: 600;
+    border-radius: 9px;
+    text-decoration: none;
+    transition: all 0.2s ease;
+    white-space: nowrap;
+}
+
+.btnOutline:hover {
+    border-color: #ffffff;
+    background-color: rgba(255, 255, 255, 0.08);
+}
+
+.bannerVisualSpacer {
+    min-height: 380px;
+}
+
+/* ================= 3. Testimonials Section ================= */
+.testimonialsSection {
+    padding: 3rem 0 4rem;
+}
+
+.testimonialsGrid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+}
+
+.testimonialCard {
+    background: #ffffff;
+    border: 1px solid #edf0f7;
+    border-radius: 18px;
+    padding: 1.65rem 1.45rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    box-shadow: 0 4px 18px rgba(0, 0, 0, 0.03);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.testimonialCard:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 12px 28px rgba(0, 0, 0, 0.06);
+}
+
+.quoteText {
+    font-size: 0.94rem;
+    line-height: 1.6;
+    color: #334155;
+    margin-bottom: 1.75rem;
+}
+
+.authorRow {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-top: 1rem;
+    border-top: 1px solid #f1f5f9;
+}
+
+.authorLeft {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+}
+
+.authorAvatar {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.authorMeta {
+    display: flex;
+    flex-direction: column;
+}
+
+.authorName {
+    font-size: 0.86rem;
+    font-weight: 700;
+    color: #0f172a;
+}
+
+.authorRole {
+    font-size: 0.75rem;
+    color: #64748b;
+}
+
+.starsWrapper {
+    color: #f59e0b;
+    font-size: 0.95rem;
+    letter-spacing: 2px;
+}
+
+/* =========================================================
+   TABLET VIEW (<= 1024px & > 425px) (100% UNCHANGED)
+   ========================================================= */
+@media (max-width: 1024px) and (min-width: 426px) {
+    .industriesGrid {
+        grid-template-columns: repeat(4, 1fr);
+    }
+
+    .bannerCard {
+        background-image:
+            linear-gradient(to right,
+                #4f21db 0%,
+                #4f21db 46%,
+                rgba(79, 33, 219, 0.85) 60%,
+                transparent 85%),
+            url("/herocustomer.png");
+        background-size: cover;
+        background-position: right center;
+        background-repeat: no-repeat;
+        min-height: 360px;
+    }
+
+    .bannerGrid {
+        grid-template-columns: 1.4fr 1fr;
+        align-items: center;
+    }
+
+    .bannerContent {
+        padding: 2.5rem 1.5rem 2.5rem 2.25rem;
+        align-items: flex-start;
+        text-align: left;
+    }
+
+    .bannerBadge {
+        font-size: 0.72rem;
+        margin-bottom: 0.65rem;
+    }
+
+    .bannerHeading {
+        font-size: 2.1rem;
+        line-height: 1.22;
+        margin-bottom: 0.85rem;
+    }
+
+    .bannerDesc {
+        font-size: 0.92rem;
+        line-height: 1.55;
+        max-width: 440px;
+        margin-bottom: 1.6rem;
+    }
+
+    .bannerButtons {
+        justify-content: flex-start;
+        gap: 0.85rem;
+    }
+
+    .btnPrimary,
+    .btnOutline {
+        padding: 0.72rem 1.4rem;
+        font-size: 0.88rem;
+    }
+
+    .bannerVisualSpacer {
+        min-height: 360px;
+        display: block;
+    }
+
+    .testimonialsGrid {
+        grid-template-columns: 1fr;
+        gap: 1.25rem;
+    }
+}
+
+/* =========================================================
+   MOBILE VIEW (320px to 425px) - FULL RESOLVED COLOR & CONTRAST
+   ========================================================= */
+@media (max-width: 425px) {
+    .industriesSection {
+        padding: 2.25rem 0 1.5rem;
+    }
+
+    .headerBlock {
+        margin-bottom: 1.75rem;
+    }
+
+    .mainTitle {
+        font-size: 1.65rem;
+        letter-spacing: -0.5px;
+        margin-bottom: 0.5rem;
+    }
+
+    .subTitle {
+        font-size: 0.88rem;
+    }
+
+    .industriesGrid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 0.75rem;
+    }
+
+    .industryCard {
+        padding: 0.9rem 0.5rem;
+    }
+
+    .iconCircle {
+        width: 38px;
+        height: 38px;
+    }
+
+    .iconCircle svg {
+        width: 18px;
+        height: 18px;
+    }
+
+    .industryLabel {
+        font-size: 0.74rem;
+    }
+
+    /* --- CTA Banner Mobile --- */
+    .ctaBannerSection {
+        padding: 1.75rem 0;
+    }
+
+    .bannerCard {
+        background-color: #5b28ec;
+        background: linear-gradient(160deg, #5b28ec 0%, #4717ce 100%);
+        border-radius: 22px;
+        overflow: hidden;
+        box-shadow: 0 14px 35px rgba(91, 40, 236, 0.3);
+        min-height: auto;
+        width: 100%;
+        box-sizing: border-box;
+    }
+
+    .bannerGrid {
+        display: flex;
+        flex-direction: column;
+        min-height: auto;
+        width: 100%;
+    }
+
+    .bannerContent {
+        padding: 2.4rem 1.25rem 2.6rem;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        width: 100%;
+        box-sizing: border-box;
+    }
+
+    .bannerBadge {
+        display: inline-block;
+        font-size: 0.72rem;
+        font-weight: 700;
+        letter-spacing: 0.8px;
+        color: #38bdf8;
+        text-transform: uppercase;
+        margin-bottom: 0.75rem;
+    }
+
+    .bannerHeading {
+        display: block;
+        font-size: 1.85rem;
+        font-weight: 800;
+        color: #ffffff;
+        line-height: 1.25;
+        letter-spacing: -0.5px;
+        margin-bottom: 0.85rem;
+    }
+
+    .bannerHeading br {
+        display: inline;
+    }
+
+    .bannerDesc {
+        display: block;
+        font-size: 0.92rem;
+        line-height: 1.6;
+        color: #e2e8f0;
+        margin-bottom: 1.75rem;
+        max-width: 100%;
+    }
+
+    .bannerButtons {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        gap: 0.75rem;
+    }
+
+    .btnPrimary {
+        width: 100%;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        gap: 0.5rem;
+        background-color: #ffffff;
+        color: #5b28ec;
+        padding: 0.82rem 1rem;
+        font-size: 0.94rem;
+        font-weight: 700;
+        border-radius: 12px;
+        box-shadow: 0 4px 14px rgba(0, 0, 0, 0.12);
+    }
+
+    .btnOutline {
+        width: 100%;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        background-color: transparent;
+        color: #ffffff;
+        border: 1.5px solid rgba(255, 255, 255, 0.45);
+        padding: 0.8rem 1rem;
+        font-size: 0.94rem;
+        font-weight: 600;
+        border-radius: 12px;
+    }
+
+    .bannerVisualSpacer {
+        display: none;
+    }
+
+    /* Testimonials Mobile */
+    .testimonialsSection {
+        padding: 2rem 0 3rem;
+    }
+
+    .testimonialCard {
+        padding: 1.25rem 1.1rem;
+        border-radius: 14px;
+    }
+
+    .quoteText {
+        font-size: 0.86rem;
+        margin-bottom: 1.25rem;
+    }
+
+    .authorAvatar {
+        width: 36px;
+        height: 36px;
+    }
+
+    .authorName {
+        font-size: 0.82rem;
+    }
+
+    .authorRole {
+        font-size: 0.7rem;
+    }
+
+    .starsWrapper {
+        font-size: 0.85rem;
+        letter-spacing: 1px;
+    }
+}
+
+/* Extra small (320px) */
+@media (max-width: 340px) {
+    .mainTitle {
+        font-size: 1.45rem;
+    }
+
+    .bannerHeading {
+        font-size: 1.6rem;
+    }
+
+    .bannerContent {
+        padding: 2rem 0.9rem 2.2rem;
+    }
+
+    .btnPrimary,
+    .btnOutline {
+        padding: 0.75rem 0.8rem;
+        font-size: 0.88rem;
+    }
+}
+
+/* =========================================================
+   3. Testimonials Section (Desktop Default)
+   ========================================================= */
+.testimonialsSection {
+    padding: 3rem 0 4rem;
+}
+
+.testimonialsGrid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+}
+
+.testimonialCard {
+    background: #ffffff;
+    border: 1px solid #edf0f7;
+    border-radius: 18px;
+    padding: 1.65rem 1.45rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    box-shadow: 0 4px 18px rgba(0, 0, 0, 0.03);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.testimonialCard:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 12px 28px rgba(0, 0, 0, 0.06);
+}
+
+.quoteText {
+    font-size: 0.94rem;
+    line-height: 1.6;
+    color: #334155;
+    margin-bottom: 1.75rem;
+}
+
+.authorRow {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-top: 1rem;
+    border-top: 1px solid #f1f5f9;
+    gap: 0.75rem;
+}
+
+.authorLeft {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+}
+
+.authorAvatar {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    object-fit: cover;
+    flex-shrink: 0;
+}
+
+.authorMeta {
+    display: flex;
+    flex-direction: column;
+}
+
+.authorName {
+    font-size: 0.86rem;
+    font-weight: 700;
+    color: #0f172a;
+}
+
+.authorRole {
+    font-size: 0.75rem;
+    color: #64748b;
+}
+
+.starsWrapper {
+    color: #f59e0b;
+    font-size: 0.95rem;
+    letter-spacing: 2px;
+    white-space: nowrap;
+}
+
+/* =========================================================
+   TABLET VIEW (<= 1024px & > 425px)
+   ========================================================= */
+@media (max-width: 1024px) and (min-width: 426px) {
+    .testimonialsGrid {
+        grid-template-columns: 1fr;
+        gap: 1.25rem;
+    }
+}
+
+/* =========================================================
+   MOBILE VIEW (320px to 425px) - FULL CARD FIT & NO OVERLAP
+   ========================================================= */
+@media (max-width: 425px) {
+    .testimonialsSection {
+        padding: 2.25rem 0 3rem;
+    }
+
+    /* Force single vertical column without cutoffs */
+    .testimonialsGrid {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        gap: 1.25rem;
+        overflow: visible;
+    }
+
+    .testimonialCard {
+        width: 100%;
+        box-sizing: border-box;
+        padding: 1.35rem 1.15rem;
+        border-radius: 16px;
+    }
+
+    .quoteText {
+        font-size: 0.9rem;
+        line-height: 1.55;
+        margin-bottom: 1.25rem;
+    }
+
+    /* Wrap author info cleanly so stars and names don't collide */
+    .authorRow {
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: space-between;
+        gap: 0.5rem;
+        padding-top: 0.85rem;
+    }
+
+    .authorLeft {
+        gap: 0.65rem;
+    }
+
+    .authorAvatar {
+        width: 38px;
+        height: 38px;
+    }
+
+    .authorName {
+        font-size: 0.84rem;
+    }
+
+    .authorRole {
+        font-size: 0.72rem;
+    }
+
+    .starsWrapper {
+        font-size: 0.82rem;
+        letter-spacing: 1px;
+    }
+}

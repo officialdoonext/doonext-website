@@ -1,0 +1,858 @@
+/* =========================================================
+   DESKTOP VIEW (Base - 100% UNCHANGED)
+   ========================================================= */
+.pageWrapper {
+    background-color: #ffffff;
+    width: 100%;
+    overflow-x: hidden;
+}
+
+.container {
+    max-width: 1320px;
+    margin: 0 auto;
+    padding: 0 1.5rem;
+    box-sizing: border-box;
+}
+
+/* Mobile top hero visual spacer (hidden on Desktop and Tablet) */
+.mobileHeroTopImage {
+    display: none;
+}
+
+/* ---------------- 1. Hero Section ---------------- */
+.heroSection {
+    position: relative;
+    width: 100%;
+    min-height: 560px;
+    background-color: #ffffff;
+    background-image:
+        linear-gradient(to right,
+            #ffffff 0%,
+            #ffffff 42%,
+            rgba(255, 255, 255, 0.94) 52%,
+            rgba(255, 255, 255, 0.6) 68%,
+            transparent 88%),
+        url("/aboutbackground.png");
+    background-size: cover;
+    background-position: right center;
+    background-repeat: no-repeat;
+    padding: 4.5rem 0 4rem;
+    display: flex;
+    align-items: center;
+}
+
+.heroGrid {
+    display: grid;
+    grid-template-columns: 1.25fr 1fr;
+    align-items: center;
+    gap: 2.5rem;
+}
+
+.heroContent {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.badge {
+    display: inline-block;
+    background: #ede9fe;
+    color: #5b28ec;
+    font-size: 0.76rem;
+    font-weight: 700;
+    letter-spacing: 0.8px;
+    padding: 0.35rem 0.85rem;
+    border-radius: 20px;
+    margin-bottom: 1rem;
+    text-transform: uppercase;
+}
+
+.heroTitle {
+    font-size: 3.25rem;
+    font-weight: 800;
+    line-height: 1.15;
+    color: #101c3d;
+    letter-spacing: -1px;
+    margin-bottom: 1.25rem;
+}
+
+.highlightText {
+    color: #5b28ec;
+}
+
+.heroDesc {
+    font-size: 1.05rem;
+    line-height: 1.65;
+    color: #55627a;
+    max-width: 520px;
+    margin-bottom: 2.2rem;
+}
+
+.heroCtas {
+    display: flex;
+    align-items: center;
+    gap: 1.15rem;
+}
+
+.primaryBtn {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.6rem;
+    background-color: #5b28ec;
+    color: #ffffff;
+    padding: 0.82rem 1.65rem;
+    font-size: 0.95rem;
+    font-weight: 600;
+    border-radius: 9px;
+    text-decoration: none;
+    box-shadow: 0 6px 16px rgba(91, 40, 236, 0.28);
+    transition: all 0.25s ease;
+    white-space: nowrap;
+}
+
+.primaryBtn:hover {
+    background-color: #4a19dc;
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(91, 40, 236, 0.35);
+}
+
+.secondaryBtn {
+    display: inline-flex;
+    align-items: center;
+    background: #ffffff;
+    color: #242f49;
+    border: 1.5px solid #e2e8f0;
+    padding: 0.75rem 1.4rem;
+    font-size: 0.92rem;
+    font-weight: 600;
+    border-radius: 9px;
+    text-decoration: none;
+    transition: all 0.25s ease;
+    white-space: nowrap;
+}
+
+.secondaryBtn:hover {
+    border-color: #cbd5e1;
+    background-color: #f8fafc;
+    transform: translateY(-2px);
+}
+
+.heroVisualSpacer {
+    min-height: 400px;
+}
+
+/* ---------------- 2. Impact Strip ---------------- */
+.statsSection {
+    padding: 3rem 0;
+    background-color: #fcfcff;
+    border-top: 1px solid #f1f5f9;
+    border-bottom: 1px solid #f1f5f9;
+}
+
+.statsGrid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1.5rem;
+}
+
+.statCard {
+    background: #ffffff;
+    border: 1px solid #edf0f7;
+    border-radius: 16px;
+    padding: 1.75rem 1.25rem;
+    text-align: center;
+    box-shadow: 0 4px 14px rgba(0, 0, 0, 0.02);
+    display: flex;
+    flex-direction: column;
+    gap: 0.4rem;
+}
+
+.statNumber {
+    font-size: 2.2rem;
+    font-weight: 800;
+    color: #5b28ec;
+    letter-spacing: -0.8px;
+}
+
+.statLabel {
+    font-size: 0.88rem;
+    font-weight: 600;
+    color: #475569;
+}
+
+/* ---------------- Common Section Headers ---------------- */
+.headerBlock {
+    text-align: center;
+    max-width: 660px;
+    margin: 0 auto 3rem;
+}
+
+.sectionBadge {
+    display: inline-block;
+    font-size: 0.76rem;
+    font-weight: 700;
+    letter-spacing: 1px;
+    color: #0288d1;
+    text-transform: uppercase;
+    margin-bottom: 0.6rem;
+}
+
+.sectionTitle {
+    font-size: 2.4rem;
+    font-weight: 800;
+    color: #101c3d;
+    letter-spacing: -0.8px;
+    line-height: 1.22;
+    margin-bottom: 0.75rem;
+}
+
+.sectionSubtitle {
+    font-size: 0.98rem;
+    color: #64748b;
+    line-height: 1.6;
+}
+
+/* ---------------- 3. Core Values ---------------- */
+.valuesSection {
+    padding: 4.5rem 0 3.5rem;
+}
+
+.valuesGrid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1.5rem;
+}
+
+.valueCard {
+    background: #ffffff;
+    border: 1px solid #edf0f7;
+    border-radius: 18px;
+    padding: 1.85rem 1.5rem;
+    box-shadow: 0 4px 18px rgba(0, 0, 0, 0.03);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.valueCard:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 12px 28px rgba(91, 40, 236, 0.08);
+    border-color: #ede9fe;
+}
+
+.valueIcon {
+    width: 46px;
+    height: 46px;
+    border-radius: 12px;
+    background-color: #f3f0ff;
+    color: #5b28ec;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 1.25rem;
+}
+
+.valueIcon svg {
+    width: 22px;
+    height: 22px;
+}
+
+.valueTitle {
+    font-size: 1.15rem;
+    font-weight: 700;
+    color: #101c3d;
+    margin-bottom: 0.6rem;
+}
+
+.valueDesc {
+    font-size: 0.88rem;
+    line-height: 1.55;
+    color: #64748b;
+}
+
+/* ---------------- 4. Journey Timeline ---------------- */
+.journeySection {
+    padding: 3.5rem 0 4.5rem;
+    background-color: #fcfcff;
+}
+
+.timelineGrid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+}
+
+.timelineCard {
+    background: #ffffff;
+    border: 1px solid #edf0f7;
+    border-radius: 20px;
+    padding: 2.2rem 1.8rem;
+    position: relative;
+    box-shadow: 0 4px 18px rgba(0, 0, 0, 0.02);
+}
+
+.timelineYear {
+    display: inline-block;
+    background: #ede9fe;
+    color: #5b28ec;
+    font-size: 0.82rem;
+    font-weight: 800;
+    padding: 0.35rem 0.85rem;
+    border-radius: 8px;
+    margin-bottom: 1rem;
+}
+
+.timelineTitle {
+    font-size: 1.25rem;
+    font-weight: 800;
+    color: #101c3d;
+    margin-bottom: 0.65rem;
+}
+
+.timelineDesc {
+    font-size: 0.9rem;
+    line-height: 1.55;
+    color: #55627a;
+}
+
+/* ---------------- 5. CTA Banner (Desktop Base) ---------------- */
+.ctaBannerSection {
+    padding: 2.5rem 0 4.5rem;
+}
+
+.bannerCard {
+    position: relative;
+    background-color: #4f21db;
+    background-image: url("/herocustomer.png");
+    background-size: cover;
+    background-position: right center;
+    background-repeat: no-repeat;
+    border-radius: 28px;
+    overflow: hidden;
+    box-shadow: 0 20px 45px rgba(79, 33, 219, 0.22);
+    min-height: 360px;
+}
+
+.bannerGrid {
+    display: grid;
+    grid-template-columns: 1.2fr 1fr;
+    align-items: center;
+    min-height: 360px;
+}
+
+.bannerContent {
+    padding: 3.5rem 2.5rem 3.5rem 3.5rem;
+    display: flex;
+    flex-direction: column;
+    z-index: 2;
+}
+
+.bannerBadge {
+    font-size: 0.76rem;
+    font-weight: 700;
+    letter-spacing: 0.9px;
+    color: #38bdf8;
+    margin-bottom: 0.85rem;
+    text-transform: uppercase;
+}
+
+.bannerHeading {
+    font-size: 2.4rem;
+    font-weight: 800;
+    color: #ffffff;
+    line-height: 1.2;
+    letter-spacing: -0.6px;
+    margin-bottom: 1rem;
+}
+
+.bannerDesc {
+    font-size: 0.96rem;
+    line-height: 1.6;
+    color: #e0e7ff;
+    max-width: 480px;
+    margin-bottom: 2rem;
+}
+
+.bannerButtons {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.bannerBtnPrimary {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    background-color: #ffffff;
+    color: #4f21db;
+    padding: 0.8rem 1.6rem;
+    font-size: 0.92rem;
+    font-weight: 700;
+    border-radius: 9px;
+    text-decoration: none;
+    box-shadow: 0 4px 14px rgba(0, 0, 0, 0.15);
+    transition: all 0.2s ease;
+    white-space: nowrap;
+}
+
+.bannerBtnPrimary:hover {
+    transform: translateY(-2px);
+    background-color: #f8fafc;
+}
+
+.bannerBtnOutline {
+    display: inline-flex;
+    align-items: center;
+    background-color: transparent;
+    color: #ffffff;
+    border: 1.5px solid rgba(255, 255, 255, 0.45);
+    padding: 0.76rem 1.6rem;
+    font-size: 0.92rem;
+    font-weight: 600;
+    border-radius: 9px;
+    text-decoration: none;
+    transition: all 0.2s ease;
+    white-space: nowrap;
+}
+
+.bannerBtnOutline:hover {
+    border-color: #ffffff;
+    background-color: rgba(255, 255, 255, 0.08);
+}
+
+.bannerVisualSpacer {
+    min-height: 360px;
+}
+
+/* =========================================================
+   TABLET VIEW (<= 1024px & >= 481px) (100% UNCHANGED)
+   ========================================================= */
+@media (max-width: 1024px) and (min-width: 481px) {
+    .heroSection {
+        padding: 3.5rem 0 4rem;
+        min-height: 520px;
+        background-color: #ffffff;
+        background-image:
+            linear-gradient(to right,
+                #ffffff 0%,
+                #ffffff 36%,
+                rgba(255, 255, 255, 0.92) 50%,
+                rgba(255, 255, 255, 0.5) 68%,
+                transparent 90%),
+            url("/aboutbackground.png");
+        background-size: cover;
+        background-position: right center;
+        background-repeat: no-repeat;
+    }
+
+    .heroGrid {
+        grid-template-columns: 1.35fr 1fr;
+        gap: 1.5rem;
+        align-items: center;
+    }
+
+    .heroTitle {
+        font-size: 2.6rem;
+        line-height: 1.18;
+        letter-spacing: -0.8px;
+        margin-bottom: 1rem;
+    }
+
+    .heroDesc {
+        font-size: 0.95rem;
+        line-height: 1.6;
+        max-width: 440px;
+        margin-bottom: 1.85rem;
+    }
+
+    .heroCtas {
+        gap: 0.85rem;
+    }
+
+    .primaryBtn {
+        padding: 0.75rem 1.45rem;
+        font-size: 0.9rem;
+    }
+
+    .secondaryBtn {
+        padding: 0.7rem 1.25rem;
+        font-size: 0.9rem;
+    }
+
+    .heroVisualSpacer {
+        min-height: 380px;
+        display: block;
+    }
+
+    .statsGrid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1.25rem;
+    }
+
+    .statNumber {
+        font-size: 1.95rem;
+    }
+
+    .valuesGrid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1.25rem;
+    }
+
+    .timelineGrid {
+        grid-template-columns: 1fr;
+        gap: 1.25rem;
+    }
+
+    .bannerCard {
+        background-image:
+            linear-gradient(to right,
+                #4f21db 0%,
+                #4f21db 46%,
+                rgba(79, 33, 219, 0.85) 60%,
+                transparent 85%),
+            url("/herocustomer.png");
+        background-position: right center;
+    }
+
+    .bannerGrid {
+        grid-template-columns: 1.35fr 1fr;
+    }
+
+    .bannerContent {
+        padding: 2.75rem 2rem;
+    }
+
+    .bannerHeading {
+        font-size: 2.1rem;
+    }
+}
+
+/* =========================================================
+   MOBILE VIEW (320px to 480px) - ACCURATELY APPLIED
+   ========================================================= */
+@media (max-width: 480px) {
+    .container {
+        padding: 0 1rem;
+        width: 100%;
+        box-sizing: border-box;
+    }
+
+    /* 1. Hero Section Mobile */
+    .heroSection {
+        display: flex;
+        flex-direction: column;
+        padding: 0 0 2.5rem;
+        background-color: #f8fbff;
+        background-image: none;
+        min-height: auto;
+    }
+
+    .mobileHeroTopImage {
+        display: block;
+        width: 100%;
+        height: 200px;
+        background-image: url("/aboutbackground.png");
+        background-size: cover;
+        background-position: right top;
+        background-repeat: no-repeat;
+        border-bottom: 1px solid #edf2f7;
+        margin-bottom: 1.5rem;
+    }
+
+    .heroGrid {
+        display: flex;
+        flex-direction: column;
+        gap: 0;
+    }
+
+    .heroVisualSpacer {
+        display: none;
+    }
+
+    .badge {
+        font-size: 0.68rem;
+        padding: 0.3rem 0.75rem;
+        margin-bottom: 0.75rem;
+    }
+
+    .heroTitle {
+        font-size: 1.85rem;
+        line-height: 1.22;
+        letter-spacing: -0.5px;
+        margin-bottom: 0.85rem;
+    }
+
+    .heroDesc {
+        font-size: 0.88rem;
+        line-height: 1.55;
+        color: #55627a;
+        margin-bottom: 1.6rem;
+    }
+
+    .heroCtas {
+        flex-direction: column;
+        width: 100%;
+        gap: 0.75rem;
+    }
+
+    .primaryBtn,
+    .secondaryBtn {
+        width: 100%;
+        justify-content: center;
+        padding: 0.82rem 1rem;
+        font-size: 0.92rem;
+        font-weight: 700;
+        border-radius: 11px;
+        box-sizing: border-box;
+    }
+
+    /* 2. Impact Strip Mobile */
+    .statsSection {
+        padding: 2rem 0;
+        background-color: #ffffff;
+    }
+
+    .statsGrid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 0.75rem;
+    }
+
+    .statCard {
+        padding: 1.25rem 0.65rem;
+        border-radius: 14px;
+        background: #fbfbfe;
+    }
+
+    .statNumber {
+        font-size: 1.6rem;
+        letter-spacing: -0.5px;
+    }
+
+    .statLabel {
+        font-size: 0.76rem;
+    }
+
+    /* 3. Values Section Mobile */
+    .valuesSection {
+        padding: 2.75rem 0 2rem;
+    }
+
+    .headerBlock {
+        margin-bottom: 1.85rem;
+        text-align: left;
+    }
+
+    .sectionBadge {
+        font-size: 0.7rem;
+        margin-bottom: 0.45rem;
+    }
+
+    .sectionTitle {
+        font-size: 1.7rem;
+        line-height: 1.22;
+        letter-spacing: -0.5px;
+        margin-bottom: 0.6rem;
+    }
+
+    .sectionSubtitle {
+        font-size: 0.86rem;
+        line-height: 1.5;
+    }
+
+    .valuesGrid {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+    }
+
+    .valueCard {
+        padding: 1.4rem 1.15rem;
+        border-radius: 16px;
+        background: #ffffff;
+    }
+
+    .valueIcon {
+        width: 42px;
+        height: 42px;
+        border-radius: 10px;
+        margin-bottom: 1rem;
+    }
+
+    .valueIcon svg {
+        width: 20px;
+        height: 20px;
+    }
+
+    .valueTitle {
+        font-size: 1.05rem;
+        margin-bottom: 0.45rem;
+    }
+
+    .valueDesc {
+        font-size: 0.85rem;
+        line-height: 1.52;
+    }
+
+    /* 4. Journey Timeline Mobile */
+    .journeySection {
+        padding: 2.5rem 0 3rem;
+    }
+
+    .timelineGrid {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+    }
+
+    .timelineCard {
+        padding: 1.5rem 1.2rem;
+        border-radius: 16px;
+    }
+
+    .timelineYear {
+        font-size: 0.78rem;
+        padding: 0.28rem 0.75rem;
+        margin-bottom: 0.75rem;
+    }
+
+    .timelineTitle {
+        font-size: 1.15rem;
+        margin-bottom: 0.45rem;
+    }
+
+    .timelineDesc {
+        font-size: 0.85rem;
+        line-height: 1.52;
+    }
+
+    /* ----------------------------------------------------
+     5. CTA BANNER MOBILE (DEEP BRAND PURPLE & HIGH CONTRAST)
+     ---------------------------------------------------- */
+    .ctaBannerSection {
+        padding: 1rem 0 3.5rem;
+        width: 100%;
+        box-sizing: border-box;
+    }
+
+    .bannerCard {
+        background: #5b28ec !important;
+        background-color: #5b28ec !important;
+        background-image: linear-gradient(145deg, #5b28ec 0%, #3f12b8 100%) !important;
+        border-radius: 22px !important;
+        box-shadow: 0 14px 35px rgba(91, 40, 236, 0.35) !important;
+        min-height: auto !important;
+        width: 100% !important;
+        overflow: hidden !important;
+        box-sizing: border-box !important;
+    }
+
+    .bannerGrid {
+        display: flex !important;
+        flex-direction: column !important;
+        min-height: auto !important;
+        width: 100% !important;
+    }
+
+    .bannerContent {
+        padding: 2.5rem 1.25rem !important;
+        display: flex !important;
+        flex-direction: column !important;
+        align-items: center !important;
+        text-align: center !important;
+        width: 100% !important;
+        box-sizing: border-box !important;
+    }
+
+    .bannerBadge {
+        display: inline-block !important;
+        font-size: 0.74rem !important;
+        font-weight: 700 !important;
+        letter-spacing: 0.85px !important;
+        color: #67e8f9 !important;
+        text-transform: uppercase !important;
+        margin-bottom: 0.75rem !important;
+    }
+
+    .bannerHeading {
+        display: block !important;
+        font-size: 1.85rem !important;
+        font-weight: 800 !important;
+        color: #ffffff !important;
+        line-height: 1.25 !important;
+        letter-spacing: -0.5px !important;
+        margin-bottom: 0.95rem !important;
+    }
+
+    .bannerDesc {
+        display: block !important;
+        font-size: 0.92rem !important;
+        line-height: 1.6 !important;
+        color: #e0e7ff !important;
+        margin-bottom: 1.75rem !important;
+        max-width: 100% !important;
+    }
+
+    .bannerButtons {
+        display: flex !important;
+        flex-direction: column !important;
+        width: 100% !important;
+        gap: 0.75rem !important;
+    }
+
+    .bannerBtnPrimary {
+        width: 100% !important;
+        display: inline-flex !important;
+        align-items: center !important;
+        justify-content: center !important;
+        gap: 0.5rem !important;
+        background-color: #ffffff !important;
+        color: #5b28ec !important;
+        padding: 0.85rem 1rem !important;
+        font-size: 0.95rem !important;
+        font-weight: 700 !important;
+        border-radius: 12px !important;
+        box-shadow: 0 4px 14px rgba(0, 0, 0, 0.15) !important;
+        box-sizing: border-box !important;
+    }
+
+    .bannerBtnOutline {
+        width: 100% !important;
+        display: inline-flex !important;
+        align-items: center !important;
+        justify-content: center !important;
+        background-color: transparent !important;
+        color: #ffffff !important;
+        border: 1.5px solid rgba(255, 255, 255, 0.5) !important;
+        padding: 0.82rem 1rem !important;
+        font-size: 0.95rem !important;
+        font-weight: 600 !important;
+        border-radius: 12px !important;
+        box-sizing: border-box !important;
+    }
+
+    .bannerVisualSpacer {
+        display: none !important;
+    }
+}
+
+/* Extra Small Screens (320px) */
+@media (max-width: 340px) {
+    .mobileHeroTopImage {
+        height: 180px;
+    }
+
+    .heroTitle {
+        font-size: 1.6rem;
+    }
+
+    .statsGrid {
+        grid-template-columns: 1fr;
+    }
+
+    .sectionTitle {
+        font-size: 1.48rem;
+    }
+
+    .bannerHeading {
+        font-size: 1.55rem;
+    }
+}

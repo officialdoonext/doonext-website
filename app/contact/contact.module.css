@@ -1,0 +1,959 @@
+/* =========================================================
+   DESKTOP VIEW (100% UNCHANGED)
+   ========================================================= */
+.pageWrapper {
+    position: relative;
+    background-color: #ffffff;
+    width: 100%;
+    overflow-x: hidden;
+}
+
+/* Hero Section with Soft Horizontal White Fade Overlay */
+.heroSection {
+    position: relative;
+    width: 100%;
+    min-height: 640px;
+    background-color: #ffffff;
+    background-image:
+        linear-gradient(to right,
+            #ffffff 0%,
+            #ffffff 40%,
+            rgba(255, 255, 255, 0.94) 48%,
+            rgba(255, 255, 255, 0.72) 58%,
+            rgba(255, 255, 255, 0.15) 75%,
+            transparent 100%),
+        url("/contacthero.png");
+    background-size: cover;
+    background-position: right center;
+    background-repeat: no-repeat;
+    padding: 3.5rem 1.5rem 4rem;
+    box-sizing: border-box;
+}
+
+.heroContainer {
+    max-width: 1320px;
+    margin: 0 auto;
+}
+
+/* Header Title Block */
+.headerBlock {
+    margin-bottom: 2.25rem;
+}
+
+.pageBadge {
+    display: inline-block;
+    background: #ede9fe;
+    color: #5b28ec;
+    font-size: 0.76rem;
+    font-weight: 700;
+    letter-spacing: 0.8px;
+    padding: 0.35rem 0.85rem;
+    border-radius: 20px;
+    margin-bottom: 0.85rem;
+    text-transform: uppercase;
+}
+
+.pageTitle {
+    font-size: 2.9rem;
+    font-weight: 800;
+    line-height: 1.15;
+    color: #101c3d;
+    letter-spacing: -0.8px;
+    margin-bottom: 0.75rem;
+}
+
+.highlightTitle {
+    color: #5b28ec;
+}
+
+.pageSubtitle {
+    font-size: 0.98rem;
+    line-height: 1.6;
+    color: #64748b;
+    max-width: 600px;
+}
+
+/* Content Grid: Form (Left), Info (Center), Reception Space (Right) */
+.heroContentGrid {
+    display: grid;
+    grid-template-columns: 370px 280px 1fr;
+    gap: 2.5rem;
+    align-items: flex-start;
+}
+
+/* 1. Form Card */
+.formCard {
+    background: #ffffff;
+    border: 1px solid #edf0f7;
+    border-radius: 20px;
+    padding: 1.75rem 1.6rem;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+    display: flex;
+    flex-direction: column;
+}
+
+.formTitle {
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: #101c3d;
+    margin-bottom: 1.35rem;
+}
+
+.formElement {
+    display: flex;
+    flex-direction: column;
+    gap: 0.9rem;
+}
+
+.inputRow {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0.75rem;
+}
+
+.inputGroup {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.inputIcon {
+    position: absolute;
+    left: 12px;
+    width: 16px;
+    height: 16px;
+    color: #94a3b8;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    pointer-events: none;
+}
+
+.inputIcon svg {
+    width: 16px;
+    height: 16px;
+}
+
+.textInput,
+.selectInput {
+    width: 100%;
+    padding: 0.72rem 0.85rem 0.72rem 2.35rem;
+    font-size: 0.86rem;
+    border: 1px solid #e2e8f0;
+    border-radius: 9px;
+    background-color: #f8fafc;
+    color: #1e293b;
+    font-family: inherit;
+    outline: none;
+    transition: all 0.2s ease;
+}
+
+.selectInput {
+    appearance: none;
+    background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%2364748b' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3e%3cpolyline points='6 9 12 15 18 9'%3e%3c/polyline%3e%3c/svg%3e");
+    background-repeat: no-repeat;
+    background-position: right 12px center;
+    background-size: 13px;
+    cursor: pointer;
+}
+
+.textInput:focus,
+.selectInput:focus,
+.textareaInput:focus {
+    border-color: #5b28ec;
+    background-color: #ffffff;
+    box-shadow: 0 0 0 3px rgba(91, 40, 236, 0.1);
+}
+
+.inputGroupTextarea {
+    position: relative;
+}
+
+.textareaIcon {
+    position: absolute;
+    left: 12px;
+    top: 12px;
+    width: 16px;
+    height: 16px;
+    color: #94a3b8;
+    display: flex;
+    align-items: center;
+    pointer-events: none;
+}
+
+.textareaIcon svg {
+    width: 16px;
+    height: 16px;
+}
+
+.textareaInput {
+    width: 100%;
+    padding: 0.72rem 0.85rem 0.72rem 2.35rem;
+    font-size: 0.86rem;
+    border: 1px solid #e2e8f0;
+    border-radius: 9px;
+    background-color: #f8fafc;
+    color: #1e293b;
+    font-family: inherit;
+    resize: vertical;
+    outline: none;
+    transition: all 0.2s ease;
+}
+
+.submitBtn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    width: 100%;
+    background: #5b28ec;
+    color: #ffffff;
+    padding: 0.8rem 1.4rem;
+    font-size: 0.92rem;
+    font-weight: 600;
+    border-radius: 9px;
+    border: none;
+    cursor: pointer;
+    box-shadow: 0 4px 14px rgba(91, 40, 236, 0.25);
+    transition: all 0.2s ease;
+    margin-top: 0.2rem;
+}
+
+.submitBtn:hover {
+    background: #4719d2;
+    transform: translateY(-1px);
+    box-shadow: 0 6px 18px rgba(91, 40, 236, 0.35);
+}
+
+/* 2. Contact Details Column */
+.contactDetailsCol {
+    display: flex;
+    flex-direction: column;
+    gap: 1.6rem;
+    padding-top: 0.5rem;
+    background: transparent;
+    border: none;
+    box-shadow: none;
+}
+
+.contactDetailItem {
+    display: flex;
+    align-items: flex-start;
+    gap: 1.15rem;
+}
+
+.detailIconCircle {
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    box-shadow: 0 4px 14px rgba(0, 0, 0, 0.04);
+}
+
+.detailIconCircle svg {
+    width: 20px;
+    height: 20px;
+}
+
+.purpleIcon {
+    background-color: #f3f0ff;
+    color: #6345ed;
+}
+
+.blueIcon {
+    background-color: #e0f2fe;
+    color: #0284c7;
+}
+
+.tealIcon {
+    background-color: #e6fcf5;
+    color: #0ca678;
+}
+
+.detailText {
+    display: flex;
+    flex-direction: column;
+}
+
+.detailLabel {
+    font-size: 0.88rem;
+    font-weight: 700;
+    color: #1e293b;
+    margin-bottom: 2px;
+}
+
+.detailValueBold {
+    font-size: 0.96rem;
+    font-weight: 800;
+    color: #0f172a;
+    text-decoration: none;
+    line-height: 1.35;
+    transition: color 0.2s ease;
+}
+
+.detailValueBold:hover {
+    color: #6345ed;
+}
+
+.detailSub {
+    font-size: 0.8rem;
+    color: #64748b;
+    line-height: 1.45;
+    margin-top: 3px;
+}
+
+/* 3. Hero Visual Spacer */
+.heroVisualSpacer {
+    min-height: 380px;
+}
+
+/* ================= Lower Section: Map + Help + Chat ================= */
+.lowerContainer {
+    max-width: 1320px;
+    margin: 0 auto;
+    padding: 3rem 1.5rem 4.5rem;
+}
+
+.middleGrid {
+    display: grid;
+    grid-template-columns: 1.35fr 1fr 1.45fr;
+    gap: 1.5rem;
+    margin-bottom: 2rem;
+}
+
+.mapCard {
+    background: #ffffff;
+    border-radius: 18px;
+    border: 1px solid #edf0f7;
+    overflow: hidden;
+    height: 240px;
+    box-shadow: 0 4px 18px rgba(0, 0, 0, 0.03);
+}
+
+.mockMapArea {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    background: #eef2f6;
+    overflow: hidden;
+}
+
+.mapGridPattern {
+    position: absolute;
+    inset: 0;
+    background-image:
+        linear-gradient(#e2e8f0 1px, transparent 1px),
+        linear-gradient(90deg, #e2e8f0 1px, transparent 1px);
+    background-size: 24px 24px;
+    opacity: 0.5;
+}
+
+.mapRoad1 {
+    position: absolute;
+    top: 45%;
+    left: 0;
+    right: 0;
+    height: 10px;
+    background: #ffffff;
+    border-top: 1px solid #cbd5e1;
+    border-bottom: 1px solid #cbd5e1;
+    transform: rotate(-10deg);
+}
+
+.mapRoad2 {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 45%;
+    width: 12px;
+    background: #ffffff;
+    border-left: 1px solid #cbd5e1;
+    border-right: 1px solid #cbd5e1;
+    transform: rotate(15deg);
+}
+
+.metroLine {
+    position: absolute;
+    top: 25%;
+    bottom: 0;
+    left: 65%;
+    width: 4px;
+    background: #38bdf8;
+    border-radius: 2px;
+}
+
+.landmarkTag1,
+.landmarkTag2,
+.landmarkTag3 {
+    position: absolute;
+    font-size: 0.65rem;
+    font-weight: 700;
+    color: #64748b;
+    background: rgba(255, 255, 255, 0.85);
+    padding: 2px 6px;
+    border-radius: 4px;
+}
+
+.landmarkTag1 {
+    top: 30%;
+    left: 8%;
+}
+
+.landmarkTag2 {
+    top: 40%;
+    right: 12%;
+}
+
+.landmarkTag3 {
+    bottom: 15%;
+    right: 10%;
+}
+
+.mainPinBox {
+    position: absolute;
+    top: 28%;
+    left: 40%;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    z-index: 5;
+}
+
+.pinCircle {
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    background: #5b28ec;
+    box-shadow: 0 4px 12px rgba(91, 40, 236, 0.4);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.pinBubble {
+    background: #ffffff;
+    padding: 4px 8px;
+    border-radius: 6px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+}
+
+.pinBubble strong {
+    font-size: 0.72rem;
+    color: #5b28ec;
+}
+
+.pinBubble span {
+    font-size: 0.62rem;
+    color: #64748b;
+}
+
+.locationDetailsCard {
+    background: #ffffff;
+    border-radius: 18px;
+    border: 1px solid #edf0f7;
+    padding: 1.5rem 1.35rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    box-shadow: 0 4px 18px rgba(0, 0, 0, 0.03);
+}
+
+.miniBadge {
+    display: inline-block;
+    font-size: 0.68rem;
+    font-weight: 700;
+    letter-spacing: 0.8px;
+    color: #0288d1;
+    text-transform: uppercase;
+    margin-bottom: 0.35rem;
+}
+
+.sectionHeading {
+    font-size: 1.3rem;
+    font-weight: 800;
+    color: #101c3d;
+    margin-bottom: 0.5rem;
+}
+
+.sectionText {
+    font-size: 0.84rem;
+    color: #64748b;
+    line-height: 1.5;
+    margin-bottom: 1.25rem;
+}
+
+.mapLinkBtn {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.45rem;
+    color: #5b28ec;
+    font-size: 0.86rem;
+    font-weight: 700;
+    text-decoration: none;
+    transition: all 0.2s ease;
+}
+
+.mapLinkBtn:hover {
+    color: #4719d2;
+    transform: translateX(2px);
+}
+
+.helpCard {
+    background: #ffffff;
+    border-radius: 18px;
+    border: 1px solid #edf0f7;
+    padding: 1.5rem 1.45rem;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0 4px 18px rgba(0, 0, 0, 0.03);
+}
+
+.helpFeaturesRow {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 0.85rem;
+    margin-top: 1rem;
+}
+
+.helpFeature {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.helpIconCircle {
+    width: 34px;
+    height: 34px;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 0.6rem;
+}
+
+.helpIconCircle svg {
+    width: 17px;
+    height: 17px;
+}
+
+.helpTitle {
+    font-size: 0.82rem;
+    font-weight: 700;
+    color: #0f172a;
+    line-height: 1.25;
+    margin-bottom: 2px;
+}
+
+.helpDesc {
+    font-size: 0.72rem;
+    color: #64748b;
+    line-height: 1.35;
+}
+
+.bottomHelpBar {
+    background: #ffffff;
+    border: 1px solid #edf0f7;
+    border-radius: 16px;
+    padding: 1rem 1.6rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.03);
+}
+
+.barLeft {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.barHeadsetCircle {
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    background: #eff6ff;
+    color: #2563eb;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+}
+
+.barHeadsetCircle svg {
+    width: 20px;
+    height: 20px;
+}
+
+.barText {
+    display: flex;
+    flex-direction: column;
+}
+
+.barTitle {
+    font-size: 0.98rem;
+    font-weight: 700;
+    color: #0f172a;
+}
+
+.barSub {
+    font-size: 0.82rem;
+    color: #64748b;
+}
+
+.liveChatBtn {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    background: #5b28ec;
+    color: #ffffff;
+    padding: 0.65rem 1.25rem;
+    font-size: 0.9rem;
+    font-weight: 600;
+    border-radius: 8px;
+    border: none;
+    cursor: pointer;
+    box-shadow: 0 4px 12px rgba(91, 40, 236, 0.25);
+    transition: all 0.2s ease;
+    white-space: nowrap;
+}
+
+.liveChatBtn:hover {
+    background: #4719d2;
+    transform: translateY(-1px);
+}
+
+/* =========================================================
+   TABLET VIEW (<= 1024px & > 425px) - MATCHING SCREENSHOT 1
+   - 3-Column horizontal spread preserving the office background
+   ========================================================= */
+@media (max-width: 1024px) and (min-width: 426px) {
+    .heroSection {
+        padding: 3rem 1.5rem 3.5rem;
+        min-height: 560px;
+        background-image:
+            linear-gradient(to right,
+                #ffffff 0%,
+                #ffffff 44%,
+                rgba(255, 255, 255, 0.92) 54%,
+                rgba(255, 255, 255, 0.6) 68%,
+                transparent 85%),
+            url("/contacthero.png");
+        background-size: cover;
+        background-position: right center;
+        background-repeat: no-repeat;
+    }
+
+    .headerBlock {
+        margin-bottom: 1.75rem;
+    }
+
+    .pageTitle {
+        font-size: 2.35rem;
+        line-height: 1.18;
+        margin-bottom: 0.65rem;
+    }
+
+    .pageSubtitle {
+        font-size: 0.9rem;
+        line-height: 1.5;
+        max-width: 500px;
+    }
+
+    /* 3-Column Layout: Form (Left), Contact Details (Center), Office (Right) */
+    .heroContentGrid {
+        display: grid;
+        grid-template-columns: 310px 220px 1fr;
+        gap: 1.25rem;
+        align-items: flex-start;
+    }
+
+    .formCard {
+        padding: 1.35rem 1.15rem;
+        border-radius: 16px;
+    }
+
+    .formTitle {
+        font-size: 1.1rem;
+        margin-bottom: 1rem;
+    }
+
+    .formElement {
+        gap: 0.75rem;
+    }
+
+    .inputRow {
+        gap: 0.6rem;
+    }
+
+    .textInput,
+    .selectInput,
+    .textareaInput {
+        padding: 0.65rem 0.75rem 0.65rem 2.15rem;
+        font-size: 0.82rem;
+    }
+
+    .submitBtn {
+        padding: 0.75rem 1rem;
+        font-size: 0.88rem;
+    }
+
+    .contactDetailsCol {
+        gap: 1.25rem;
+        padding-top: 0.25rem;
+    }
+
+    .contactDetailItem {
+        gap: 0.75rem;
+    }
+
+    .detailIconCircle {
+        width: 38px;
+        height: 38px;
+    }
+
+    .detailIconCircle svg {
+        width: 17px;
+        height: 17px;
+    }
+
+    .detailLabel {
+        font-size: 0.75rem;
+    }
+
+    .detailValueBold {
+        font-size: 0.88rem;
+    }
+
+    .detailSub {
+        font-size: 0.74rem;
+    }
+
+    .heroVisualSpacer {
+        min-height: 320px;
+        display: block;
+    }
+
+    .middleGrid {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .helpCard {
+        grid-column: span 2;
+    }
+}
+
+/* =========================================================
+   MOBILE VIEW (320px to 425px) - EXPANDED FORM WIDTH
+   ========================================================= */
+@media (max-width: 425px) {
+    .heroSection {
+        padding: 2rem 0.65rem 2.5rem;
+        background: linear-gradient(180deg, #f4f8ff 0%, #ffffff 45%, #ffffff 100%);
+        background-image: none;
+        min-height: auto;
+    }
+
+    .heroContainer {
+        width: 100%;
+        padding: 0;
+    }
+
+    .headerBlock {
+        margin-bottom: 1.5rem;
+        padding: 0 0.5rem;
+        text-align: left;
+    }
+
+    .headerBlock .pageBadge {
+        display: none;
+    }
+
+    .pageTitle {
+        font-size: 1.85rem;
+        line-height: 1.22;
+        letter-spacing: -0.6px;
+        margin-bottom: 0.75rem;
+    }
+
+    .pageSubtitle {
+        font-size: 0.88rem;
+        line-height: 1.55;
+        color: #475569;
+    }
+
+    .heroContentGrid {
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+        width: 100%;
+    }
+
+    /* Form Card: Full Width Expansion */
+    .formCard {
+        width: 100%;
+        box-sizing: border-box;
+        padding: 1.5rem 1rem;
+        border-radius: 18px;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.06);
+        border: 1px solid #edf0f7;
+        position: relative;
+    }
+
+    /* Mobile Badge on top of Form Title */
+    .formCard::before {
+        content: "CONTACT US";
+        display: inline-block;
+        background: #ede9fe;
+        color: #5b28ec;
+        font-size: 0.68rem;
+        font-weight: 700;
+        letter-spacing: 0.75px;
+        padding: 0.3rem 0.75rem;
+        border-radius: 20px;
+        margin-bottom: 0.75rem;
+        align-self: flex-start;
+        width: fit-content;
+    }
+
+    .formTitle {
+        font-size: 1.35rem;
+        font-weight: 800;
+        color: #101c3d;
+        margin-bottom: 1.15rem;
+    }
+
+    .formElement {
+        gap: 0.75rem;
+        width: 100%;
+    }
+
+    .inputRow {
+        grid-template-columns: 1fr 1fr;
+        gap: 0.65rem;
+        width: 100%;
+    }
+
+    .inputGroup,
+    .inputGroupTextarea {
+        width: 100%;
+    }
+
+    .textInput,
+    .selectInput,
+    .textareaInput {
+        width: 100%;
+        box-sizing: border-box;
+        padding: 0.72rem 0.85rem 0.72rem 2.25rem;
+        font-size: 0.84rem;
+        border-radius: 10px;
+    }
+
+    .submitBtn {
+        width: 100%;
+        box-sizing: border-box;
+        padding: 0.82rem 1rem;
+        font-size: 0.94rem;
+        font-weight: 700;
+        border-radius: 10px;
+        margin-top: 0.35rem;
+    }
+
+    /* Contact details rendered below form */
+    .contactDetailsCol {
+        display: flex;
+        flex-direction: column;
+        gap: 1.25rem;
+        padding: 0.5rem 0.5rem;
+        width: 100%;
+        box-sizing: border-box;
+    }
+
+    .contactDetailItem {
+        gap: 0.85rem;
+    }
+
+    .detailIconCircle {
+        width: 42px;
+        height: 42px;
+    }
+
+    .detailIconCircle svg {
+        width: 18px;
+        height: 18px;
+    }
+
+    .detailLabel {
+        font-size: 0.78rem;
+    }
+
+    .detailValueBold {
+        font-size: 0.92rem;
+    }
+
+    .detailSub {
+        font-size: 0.76rem;
+    }
+
+    .heroVisualSpacer {
+        display: none;
+    }
+
+    /* Lower Section Mobile */
+    .lowerContainer {
+        padding: 2rem 0.75rem 3rem;
+    }
+
+    .middleGrid {
+        grid-template-columns: 1fr;
+        gap: 1.25rem;
+    }
+
+    .helpCard {
+        grid-column: span 1;
+    }
+
+    .helpFeaturesRow {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+    }
+
+    .bottomHelpBar {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 1rem;
+        padding: 1.15rem;
+    }
+
+    .liveChatBtn {
+        width: 100%;
+        justify-content: center;
+    }
+}
+
+/* Extra small (320px) */
+@media (max-width: 340px) {
+    .heroSection {
+        padding: 1.75rem 0.4rem 2.25rem;
+    }
+
+    .pageTitle {
+        font-size: 1.65rem;
+    }
+
+    .inputRow {
+        grid-template-columns: 1fr;
+    }
+
+    .formCard {
+        padding: 1.25rem 0.75rem;
+    }
+
+    .sectionHeading {
+        font-size: 1.15rem;
+    }
+}

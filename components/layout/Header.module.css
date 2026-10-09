@@ -1,0 +1,480 @@
+/* =========================================================
+   HEADER ROOT & BASE LAYOUT
+   ========================================================= */
+.headerWrapper {
+    position: sticky;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: #ffffff;
+    border-bottom: 1px solid #edf0f5;
+    z-index: 1000;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.02);
+}
+
+.container {
+    max-width: 1320px;
+    margin: 0 auto;
+    padding: 0.75rem 1.5rem;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: nowrap;
+    position: relative;
+}
+
+/* Left Brand Section */
+.leftBrandSection {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 1.25rem;
+    flex-shrink: 0;
+    flex-wrap: nowrap;
+}
+
+.logoLink {
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+}
+
+.logoImage {
+    width: auto;
+    height: 68px;
+    object-fit: contain;
+    display: block;
+}
+
+/* =========================================================
+   DESKTOP NAVIGATION
+   ========================================================= */
+.desktopNav {
+    display: flex;
+    align-items: center;
+}
+
+.navList {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    margin: 0;
+    padding: 0;
+}
+
+.navItem {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.navLink {
+    text-decoration: none;
+    font-size: 0.95rem;
+    font-weight: 500;
+    color: #2e3547;
+    padding: 0.5rem 0.2rem;
+    transition: color 0.2s ease-in-out;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.35rem;
+    font-family: inherit;
+}
+
+.navLink:hover {
+    color: #4a2fe3;
+}
+
+.activeLink {
+    color: #4a2fe3;
+    font-weight: 600;
+}
+
+.activeIndicator {
+    position: absolute;
+    bottom: -6px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 24px;
+    height: 3px;
+    background-color: #4a2fe3;
+    border-radius: 4px;
+}
+
+/* Desktop Dropdown Trigger & Chevron */
+.dropdownTrigger {
+    outline: none;
+}
+
+.chevronIcon {
+    width: 14px;
+    height: 14px;
+    transition: transform 0.25s ease;
+}
+
+.chevronOpen {
+    transform: rotate(180deg);
+}
+
+/* Desktop Dropdown Menu Card */
+.dropdownContainer {
+    position: relative;
+}
+
+.dropdownMenu {
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transform: translateX(-50%) translateY(8px);
+    width: 280px;
+    background: #ffffff;
+    border: 1px solid #edf0f7;
+    border-radius: 14px;
+    box-shadow: 0 12px 30px rgba(15, 23, 42, 0.08);
+    padding: 0.6rem;
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+    transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+    z-index: 1005;
+}
+
+.dropdownMenuOpen {
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+    transform: translateX(-50%) translateY(0);
+}
+
+.dropdownInner {
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
+}
+
+.dropdownItem {
+    display: flex;
+    flex-direction: column;
+    padding: 0.65rem 0.85rem;
+    border-radius: 9px;
+    text-decoration: none;
+    transition: background 0.15s ease;
+}
+
+.dropdownItem:hover {
+    background: #f8fafc;
+}
+
+.activeDropdownItem {
+    background: #f3f0ff;
+}
+
+.dropdownItemTitle {
+    font-size: 0.92rem;
+    font-weight: 700;
+    color: #101c3d;
+}
+
+.activeDropdownItem .dropdownItemTitle {
+    color: #4a2fe3;
+}
+
+.dropdownItemDesc {
+    font-size: 0.76rem;
+    color: #64748b;
+    margin-top: 2px;
+}
+
+/* =========================================================
+   CTA BUTTON
+   ========================================================= */
+.ctaWrapper {
+    display: flex;
+    align-items: center;
+    flex-shrink: 0;
+}
+
+.ctaButton {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    background: #5b28ec;
+    color: #ffffff;
+    padding: 0.72rem 1.45rem;
+    font-size: 0.92rem;
+    font-weight: 600;
+    border-radius: 8px;
+    text-decoration: none;
+    transition: all 0.25s ease-in-out;
+    border: 1px solid transparent;
+    box-shadow: 0 4px 12px rgba(91, 40, 236, 0.25);
+    white-space: nowrap;
+}
+
+.ctaButton:hover {
+    background: #4719d2;
+    box-shadow: 0 6px 16px rgba(91, 40, 236, 0.35);
+    transform: translateY(-1px);
+}
+
+.arrowIcon {
+    transition: transform 0.2s ease;
+}
+
+.ctaButton:hover .arrowIcon {
+    transform: translateX(3px);
+}
+
+/* =========================================================
+   HAMBURGER BUTTON
+   ========================================================= */
+.mobileToggle {
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 24px;
+    height: 18px;
+    min-width: 24px;
+    min-height: 18px;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+    margin: 0;
+    z-index: 1002;
+    flex-shrink: 0;
+}
+
+.hamburgerBar {
+    display: block;
+    height: 2.2px;
+    width: 100%;
+    background-color: #1e2432;
+    border-radius: 2px;
+    transition: all 0.3s ease-in-out;
+}
+
+.mobileToggle.open .hamburgerBar:nth-child(1) {
+    transform: translateY(8px) rotate(45deg);
+}
+
+.mobileToggle.open .hamburgerBar:nth-child(2) {
+    opacity: 0;
+}
+
+.mobileToggle.open .hamburgerBar:nth-child(3) {
+    transform: translateY(-8px) rotate(-45deg);
+}
+
+/* Mobile Drawer & Backdrop */
+.mobileDrawer {
+    display: none;
+}
+
+.backdrop {
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.4);
+    z-index: 998;
+}
+
+/* =========================================================
+   TABLET VIEW (<= 992px)
+   ========================================================= */
+@media (max-width: 992px) {
+    .desktopNav {
+        display: none;
+    }
+
+    .mobileToggle {
+        display: flex;
+    }
+
+    .logoImage {
+        height: 56px;
+    }
+
+    .leftBrandSection {
+        gap: 1rem;
+    }
+
+    .mobileDrawer {
+        display: block;
+        position: fixed;
+        top: 85px;
+        left: 0;
+        right: auto;
+        width: 310px;
+        height: calc(100vh - 85px);
+        background: #ffffff;
+        box-shadow: 4px 0 20px rgba(0, 0, 0, 0.08);
+        transform: translateX(-100%);
+        transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        z-index: 999;
+        padding: 1.75rem 1.4rem;
+        overflow-y: auto;
+    }
+
+    .drawerOpen {
+        transform: translateX(0);
+    }
+
+    .mobileNavList {
+        list-style: none;
+        padding: 0;
+        margin: 0 0 2rem 0;
+        display: flex;
+        flex-direction: column;
+        gap: 1.15rem;
+    }
+
+    .mobileNavLink {
+        display: block;
+        text-decoration: none;
+        font-size: 1.05rem;
+        font-weight: 500;
+        color: #2e3547;
+        padding: 0.35rem 0;
+        transition: color 0.2s ease;
+    }
+
+    .mobileNavLink:hover,
+    .mobileActive {
+        color: #4a2fe3;
+        font-weight: 600;
+    }
+
+    /* Mobile Dropdown Button & Accordion */
+    .mobileDropdownTrigger {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        width: 100%;
+        background: transparent;
+        border: none;
+        font-size: 1.05rem;
+        font-weight: 500;
+        color: #2e3547;
+        padding: 0.35rem 0;
+        cursor: pointer;
+        font-family: inherit;
+    }
+
+    .mobileChevron {
+        width: 16px;
+        height: 16px;
+        transition: transform 0.25s ease;
+    }
+
+    .mobileSubListWrapper {
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.3s ease-out;
+    }
+
+    .subListOpen {
+        max-height: 240px;
+    }
+
+    .mobileSubList {
+        list-style: none;
+        padding: 0.5rem 0 0.5rem 1rem;
+        margin: 0;
+        display: flex;
+        flex-direction: column;
+        gap: 0.75rem;
+        border-left: 2px solid #ede9fe;
+    }
+
+    .mobileSubLink {
+        text-decoration: none;
+        font-size: 0.94rem;
+        color: #64748b;
+        font-weight: 500;
+        transition: color 0.2s ease;
+    }
+
+    .mobileSubLink:hover,
+    .subActive {
+        color: #5b28ec;
+        font-weight: 600;
+    }
+
+    .mobileCtaWrapper {
+        width: 100%;
+    }
+
+    .mobileCtaWrapper .ctaButton {
+        width: 100%;
+        text-align: center;
+    }
+}
+
+/* =========================================================
+   MOBILE VIEW (320px to 425px)
+   ========================================================= */
+@media (max-width: 425px) {
+    .container {
+        padding: 0.55rem 0.85rem;
+    }
+
+    .leftBrandSection {
+        gap: 0.75rem;
+    }
+
+    .mobileToggle {
+        width: 22px;
+        height: 16px;
+        min-width: 22px;
+        min-height: 16px;
+    }
+
+    .logoImage {
+        height: 50px;
+    }
+
+    .mobileDrawer {
+        width: 82%;
+        max-width: 300px;
+        top: 72px;
+        height: calc(100vh - 72px);
+        padding: 1.5rem 1.15rem;
+    }
+
+    .ctaButton {
+        padding: 0.55rem 0.9rem;
+        font-size: 0.82rem;
+    }
+
+    .ctaButton .arrowIcon {
+        width: 13px;
+        height: 13px;
+    }
+}
+
+/* Extra Small (320px) */
+@media (max-width: 340px) {
+    .container {
+        padding: 0.45rem 0.65rem;
+    }
+
+    .leftBrandSection {
+        gap: 0.5rem;
+    }
+
+    .logoImage {
+        height: 44px;
+    }
+
+    .ctaButton {
+        padding: 0.45rem 0.7rem;
+        font-size: 0.76rem;
+    }
+}

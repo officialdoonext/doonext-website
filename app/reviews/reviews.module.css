@@ -1,0 +1,1179 @@
+/* =========================================================
+   REVIEWS PAGE ROOT (Base & Desktop - 100% UNCHANGED)
+   ========================================================= */
+.pageWrapper {
+    background-color: #fafbfd;
+    width: 100%;
+    overflow-x: hidden;
+}
+
+.container {
+    max-width: 1320px;
+    margin: 0 auto;
+    padding: 0 1.5rem;
+    box-sizing: border-box;
+}
+
+/* =========================================================
+   1. HERO SECTION: Community Dashboard Style
+   ========================================================= */
+.reviewsHero {
+    position: relative;
+    background-color: #ffffff;
+    border-bottom: 1px solid #edf0f5;
+    padding: 4.5rem 0 3.75rem;
+}
+
+.heroSplit {
+    display: grid;
+    grid-template-columns: 1.25fr 0.95fr;
+    align-items: center;
+    gap: 3.5rem;
+}
+
+.heroLeft {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.heroBadge {
+    display: inline-block;
+    background: #ede9fe;
+    color: #5b28ec;
+    font-size: 0.76rem;
+    font-weight: 700;
+    letter-spacing: 0.8px;
+    padding: 0.35rem 0.85rem;
+    border-radius: 20px;
+    margin-bottom: 1rem;
+    text-transform: uppercase;
+}
+
+.heroHeading {
+    font-size: 3.1rem;
+    font-weight: 800;
+    line-height: 1.15;
+    color: #101c3d;
+    letter-spacing: -0.8px;
+    margin-bottom: 1.15rem;
+}
+
+.purpleAccent {
+    color: #5b28ec;
+}
+
+.heroSubText {
+    font-size: 1.05rem;
+    line-height: 1.62;
+    color: #55627a;
+    max-width: 540px;
+    margin-bottom: 2rem;
+}
+
+.heroActionCluster {
+    display: flex;
+    align-items: center;
+    gap: 1.75rem;
+    flex-wrap: wrap;
+}
+
+.writeReviewBtn {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.55rem;
+    background: #5b28ec;
+    color: #ffffff;
+    padding: 0.82rem 1.65rem;
+    font-size: 0.95rem;
+    font-weight: 600;
+    border-radius: 9px;
+    border: none;
+    cursor: pointer;
+    box-shadow: 0 6px 18px rgba(91, 40, 236, 0.28);
+    transition: all 0.25s ease;
+    white-space: nowrap;
+}
+
+.writeReviewBtn:hover {
+    background: #4719d2;
+    transform: translateY(-2px);
+    box-shadow: 0 8px 22px rgba(91, 40, 236, 0.35);
+}
+
+.trustSummary {
+    display: flex;
+    flex-direction: column;
+    gap: 0.15rem;
+}
+
+.starsCluster {
+    color: #f59e0b;
+    font-size: 1.05rem;
+    letter-spacing: 2px;
+}
+
+.ratingCount {
+    font-size: 0.84rem;
+    color: #64748b;
+    font-weight: 600;
+}
+
+/* Scorecard Snapshot on Right */
+.heroRight {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.scoreBoardCard {
+    background: #ffffff;
+    border: 1px solid #edf0f7;
+    border-radius: 20px;
+    padding: 2rem 2.25rem;
+    box-shadow: 0 12px 35px rgba(15, 23, 42, 0.05);
+    width: 100%;
+    max-width: 440px;
+    box-sizing: border-box;
+}
+
+.scoreHeader {
+    display: flex;
+    align-items: center;
+    gap: 1.25rem;
+    padding-bottom: 1.4rem;
+    border-bottom: 1px solid #f1f5f9;
+    margin-bottom: 1.4rem;
+}
+
+.bigScore {
+    font-size: 3.4rem;
+    font-weight: 800;
+    color: #101c3d;
+    line-height: 1;
+}
+
+.scoreMeta {
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
+}
+
+.starRow {
+    color: #f59e0b;
+    font-size: 1.15rem;
+    letter-spacing: 2px;
+}
+
+.scoreText {
+    font-size: 0.84rem;
+    color: #64748b;
+    font-weight: 600;
+}
+
+.scoreBreakdown {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+    margin-bottom: 1.4rem;
+}
+
+.barItem {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    font-size: 0.82rem;
+    color: #64748b;
+    font-weight: 600;
+}
+
+.barLabel {
+    width: 44px;
+}
+
+.track {
+    flex: 1;
+    height: 8px;
+    background: #f1f5f9;
+    border-radius: 6px;
+    overflow: hidden;
+}
+
+.fill {
+    height: 100%;
+    background: #f59e0b;
+    border-radius: 6px;
+}
+
+.percent {
+    width: 32px;
+    text-align: right;
+    font-size: 0.78rem;
+    color: #475569;
+}
+
+.cardFooterNote {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 0.82rem;
+    color: #059669;
+    font-weight: 700;
+    padding-top: 1rem;
+    border-top: 1px solid #f1f5f9;
+}
+
+.greenDot {
+    width: 8px;
+    height: 8px;
+    background: #10b981;
+    border-radius: 50%;
+}
+
+/* =========================================================
+   2. WALL OF LOVE & MASONRY GRID
+   ========================================================= */
+.wallSection {
+    padding: 4.5rem 0 3.5rem;
+}
+
+.filterSectionHeader {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    gap: 1.5rem;
+    margin-bottom: 2.75rem;
+    flex-wrap: wrap;
+}
+
+.filterLeft {
+    display: flex;
+    flex-direction: column;
+}
+
+.sectionTitle {
+    font-size: 2.35rem;
+    font-weight: 800;
+    color: #101c3d;
+    letter-spacing: -0.8px;
+    margin-bottom: 0.35rem;
+}
+
+.sectionDesc {
+    font-size: 0.95rem;
+    color: #64748b;
+}
+
+.filterTabs {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    flex-wrap: wrap;
+}
+
+.tabBtn {
+    background: #ffffff;
+    border: 1px solid #e2e8f0;
+    color: #475569;
+    padding: 0.55rem 1.15rem;
+    font-size: 0.88rem;
+    font-weight: 600;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.tabBtn:hover {
+    background: #f8fafc;
+    color: #1e293b;
+}
+
+.activeTab {
+    background: #5b28ec !important;
+    color: #ffffff !important;
+    border-color: #5b28ec !important;
+    box-shadow: 0 4px 12px rgba(91, 40, 236, 0.22);
+}
+
+.masonryGrid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.65rem;
+}
+
+.reviewArticle {
+    background: #ffffff;
+    border: 1px solid #edf0f7;
+    border-radius: 20px;
+    padding: 1.85rem 1.6rem;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.025);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    position: relative;
+}
+
+.reviewArticle:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 12px 28px rgba(0, 0, 0, 0.05);
+}
+
+.cardHeader {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 1.15rem;
+}
+
+.productBadge {
+    background: #eff6ff;
+    color: #2563eb;
+    font-size: 0.74rem;
+    font-weight: 700;
+    padding: 0.28rem 0.65rem;
+    border-radius: 6px;
+    letter-spacing: 0.3px;
+}
+
+.starCluster {
+    color: #f59e0b;
+    font-size: 0.95rem;
+    letter-spacing: 2px;
+}
+
+.reviewHeadline {
+    font-size: 1.12rem;
+    font-weight: 700;
+    color: #101c3d;
+    line-height: 1.35;
+    margin-bottom: 0.75rem;
+}
+
+.reviewQuote {
+    font-size: 0.92rem;
+    line-height: 1.62;
+    color: #475569;
+    font-weight: 450;
+    margin-bottom: 1.85rem;
+}
+
+.authorSection {
+    display: flex;
+    align-items: center;
+    gap: 0.85rem;
+    padding-top: 1.15rem;
+    border-top: 1px solid #f8fafc;
+}
+
+.avatarCircle {
+    width: 42px;
+    height: 42px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, #ede9fe 0%, #c7d2fe 100%);
+    color: #4338ca;
+    font-weight: 800;
+    font-size: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+}
+
+.authorInfo {
+    display: flex;
+    flex-direction: column;
+    min-width: 0;
+}
+
+.nameRow {
+    display: flex;
+    align-items: center;
+    gap: 0.45rem;
+}
+
+.authorName {
+    font-size: 0.92rem;
+    color: #0f172a;
+    font-weight: 700;
+}
+
+.verifiedTag {
+    display: inline-flex;
+    align-items: center;
+    gap: 2px;
+    color: #059669;
+    font-size: 0.7rem;
+    font-weight: 700;
+    background: #ecfdf5;
+    padding: 1px 6px;
+    border-radius: 4px;
+}
+
+.authorSub {
+    font-size: 0.76rem;
+    color: #64748b;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    margin-top: 1px;
+}
+
+/* =========================================================
+   3. BOTTOM CTA BANNER
+   ========================================================= */
+.ctaBannerSection {
+    padding: 2rem 0 4.5rem;
+}
+
+.bannerWrapper {
+    background: linear-gradient(145deg, #5b28ec 0%, #3e12b6 100%);
+    background-color: #5b28ec;
+    border-radius: 26px;
+    box-shadow: 0 18px 45px rgba(91, 40, 236, 0.28);
+    overflow: hidden;
+    padding: 3.5rem 2.5rem;
+    text-align: center;
+    box-sizing: border-box;
+}
+
+.bannerInner {
+    max-width: 680px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.bannerBadge {
+    display: inline-block;
+    font-size: 0.74rem;
+    font-weight: 700;
+    letter-spacing: 0.9px;
+    color: #67e8f9;
+    text-transform: uppercase;
+    margin-bottom: 0.85rem;
+}
+
+.bannerHeading {
+    font-size: 2.35rem;
+    font-weight: 800;
+    color: #ffffff;
+    line-height: 1.2;
+    letter-spacing: -0.6px;
+    margin-bottom: 1rem;
+}
+
+.bannerDesc {
+    font-size: 0.98rem;
+    line-height: 1.6;
+    color: #e0e7ff;
+    margin-bottom: 2.2rem;
+}
+
+.bannerBtnGroup {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1.15rem;
+}
+
+.primaryDemoBtn {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    background: #ffffff;
+    color: #5b28ec;
+    padding: 0.82rem 1.65rem;
+    font-size: 0.94rem;
+    font-weight: 700;
+    border-radius: 9px;
+    text-decoration: none;
+    box-shadow: 0 4px 14px rgba(0, 0, 0, 0.12);
+    transition: all 0.2s ease;
+    white-space: nowrap;
+}
+
+.primaryDemoBtn:hover {
+    transform: translateY(-2px);
+    background: #f8fafc;
+}
+
+.outlineReviewBtn {
+    display: inline-flex;
+    align-items: center;
+    background: transparent;
+    color: #ffffff;
+    border: 1.5px solid rgba(255, 255, 255, 0.45);
+    padding: 0.78rem 1.5rem;
+    font-size: 0.94rem;
+    font-weight: 600;
+    border-radius: 9px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    white-space: nowrap;
+}
+
+.outlineReviewBtn:hover {
+    border-color: #ffffff;
+    background: rgba(255, 255, 255, 0.08);
+}
+
+/* =========================================================
+   4. MODERN ANIMATED MODAL & STAR PICKER
+   ========================================================= */
+@keyframes overlayFadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes modalSlideUp {
+    from {
+        opacity: 0;
+        transform: translateY(24px) scale(0.97);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
+}
+
+@keyframes starPop {
+    0% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.35) rotate(8deg);
+    }
+
+    100% {
+        transform: scale(1) rotate(0deg);
+    }
+}
+
+.modalOverlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(15, 23, 42, 0.65);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    z-index: 2000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1.25rem;
+    animation: overlayFadeIn 0.22s ease-out forwards;
+}
+
+.modalDialog {
+    background: #ffffff;
+    border: 1px solid rgba(226, 232, 240, 0.8);
+    border-radius: 24px;
+    width: 100%;
+    max-width: 600px;
+    max-height: 92vh;
+    overflow-y: auto;
+    box-shadow: 0 25px 60px -15px rgba(15, 23, 42, 0.25), 0 0 0 1px rgba(255, 255, 255, 0.8);
+    padding: 2.2rem 2.25rem 2.4rem;
+    box-sizing: border-box;
+    animation: modalSlideUp 0.26s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+.dialogHeader {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    margin-bottom: 1.5rem;
+}
+
+.headerTitleWrap {
+    display: flex;
+    flex-direction: column;
+}
+
+.dialogBadge {
+    font-size: 0.72rem;
+    font-weight: 700;
+    letter-spacing: 0.85px;
+    color: #5b28ec;
+    text-transform: uppercase;
+}
+
+.dialogTitle {
+    font-size: 1.6rem;
+    font-weight: 800;
+    color: #101c3d;
+    letter-spacing: -0.4px;
+    margin: 0.25rem 0 0.35rem;
+}
+
+.dialogSubtitle {
+    font-size: 0.84rem;
+    color: #64748b;
+    margin: 0;
+    line-height: 1.45;
+}
+
+.closeBtn {
+    background: #f1f5f9;
+    border: none;
+    width: 34px;
+    height: 34px;
+    border-radius: 50%;
+    font-size: 1rem;
+    color: #64748b;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.2s ease;
+    flex-shrink: 0;
+    margin-left: 0.5rem;
+}
+
+.closeBtn:hover {
+    background: #e2e8f0;
+    color: #0f172a;
+    transform: rotate(90deg);
+}
+
+.reviewForm {
+    display: flex;
+    flex-direction: column;
+    gap: 1.15rem;
+}
+
+/* Star Picker Glass Card */
+.starPickerCard {
+    background: linear-gradient(135deg, #fbfbfe 0%, #f4f6fb 100%);
+    border: 1px solid #edf0f7;
+    border-radius: 18px;
+    padding: 1.25rem 1.4rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 0.6rem;
+    box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.02);
+}
+
+.pickerHeaderLabel {
+    font-size: 0.78rem;
+    font-weight: 700;
+    color: #64748b;
+    text-transform: uppercase;
+    letter-spacing: 0.6px;
+}
+
+.interactiveStarRow {
+    display: flex;
+    align-items: center;
+    gap: 0.65rem;
+}
+
+.starBtnAnimated {
+    background: transparent;
+    border: none;
+    padding: 0.2rem;
+    cursor: pointer;
+    outline: none;
+    transition: transform 0.2s cubic-bezier(0.34, 1.56, 0.64, 1);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.starBtnAnimated:hover {
+    transform: scale(1.22);
+}
+
+.starBtnAnimated:active {
+    transform: scale(0.95);
+}
+
+.starSvgIcon {
+    width: 36px;
+    height: 36px;
+    transition: fill 0.2s ease, filter 0.2s ease;
+}
+
+.starBtnLit .starSvgIcon {
+    fill: #f59e0b;
+    filter: drop-shadow(0 3px 6px rgba(245, 158, 11, 0.35));
+    animation: starPop 0.28s ease-out;
+}
+
+.starBtnDim .starSvgIcon {
+    fill: #cbd5e1;
+}
+
+.ratingSentimentBadge {
+    background: #ffffff;
+    border: 1px solid #e2e8f0;
+    padding: 0.3rem 0.9rem;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    font-weight: 700;
+    color: #101c3d;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+    transition: all 0.2s ease;
+}
+
+/* Modern Form Fields */
+.inputGrid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+}
+
+.fieldBlock {
+    display: flex;
+    flex-direction: column;
+    gap: 0.4rem;
+}
+
+.fieldLabel {
+    font-size: 0.82rem;
+    font-weight: 700;
+    color: #334155;
+}
+
+.formInput,
+.formSelect,
+.formTextarea {
+    width: 100%;
+    padding: 0.75rem 0.9rem;
+    font-size: 0.88rem;
+    border: 1.5px solid #e2e8f0;
+    border-radius: 11px;
+    background: #f8fafc;
+    color: #0f172a;
+    font-family: inherit;
+    outline: none;
+    box-sizing: border-box;
+    transition: all 0.2s ease;
+}
+
+.formInput:focus,
+.formSelect:focus,
+.formTextarea:focus {
+    border-color: #5b28ec;
+    background: #ffffff;
+    box-shadow: 0 0 0 3px rgba(91, 40, 236, 0.12);
+}
+
+.formSelect {
+    cursor: pointer;
+}
+
+.formTextarea {
+    resize: vertical;
+}
+
+.dialogActions {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 0.85rem;
+    margin-top: 0.5rem;
+}
+
+.dismissBtn {
+    background: #f1f5f9;
+    color: #475569;
+    border: none;
+    padding: 0.75rem 1.35rem;
+    font-size: 0.92rem;
+    font-weight: 600;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background 0.2s ease;
+}
+
+.dismissBtn:hover {
+    background: #e2e8f0;
+    color: #1e293b;
+}
+
+.postBtn {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.55rem;
+    background: #5b28ec;
+    color: #ffffff;
+    border: none;
+    padding: 0.75rem 1.6rem;
+    font-size: 0.92rem;
+    font-weight: 700;
+    border-radius: 10px;
+    cursor: pointer;
+    box-shadow: 0 4px 14px rgba(91, 40, 236, 0.25);
+    transition: all 0.2s ease;
+}
+
+.postBtn:hover {
+    background: #4a19dc;
+    transform: translateY(-1px);
+    box-shadow: 0 6px 18px rgba(91, 40, 236, 0.35);
+}
+
+/* =========================================================
+   TABLET VIEW (<= 1024px & >= 481px - 100% UNCHANGED)
+   ========================================================= */
+@media (max-width: 1024px) and (min-width: 481px) {
+    .reviewsHero {
+        padding: 3.5rem 0 3rem;
+    }
+
+    .heroSplit {
+        grid-template-columns: 1fr;
+        gap: 2.5rem;
+    }
+
+    .heroHeading {
+        font-size: 2.6rem;
+    }
+
+    .heroRight {
+        justify-content: flex-start;
+    }
+
+    .scoreBoardCard {
+        max-width: 100%;
+    }
+
+    .masonryGrid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1.35rem;
+    }
+
+    .bannerWrapper {
+        padding: 3rem 2rem;
+    }
+
+    .bannerHeading {
+        font-size: 2.1rem;
+    }
+}
+
+/* =========================================================
+   MOBILE VIEW (320px to 480px - FIXED & RESPONSIVE)
+   ========================================================= */
+@media (max-width: 480px) {
+    .container {
+        padding: 0 1rem;
+        width: 100%;
+        box-sizing: border-box;
+        overflow-x: hidden;
+    }
+
+    /* 1. Hero Mobile */
+    .reviewsHero {
+        padding: 2.5rem 0 2rem;
+    }
+
+    .heroSplit {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+
+    .heroBadge {
+        font-size: 0.7rem;
+        margin-bottom: 0.75rem;
+    }
+
+    .heroHeading {
+        font-size: 1.95rem;
+        line-height: 1.22;
+        letter-spacing: -0.6px;
+        margin-bottom: 0.85rem;
+    }
+
+    .heroSubText {
+        font-size: 0.88rem;
+        line-height: 1.55;
+        margin-bottom: 1.5rem;
+    }
+
+    .heroActionCluster {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 1rem;
+        width: 100%;
+    }
+
+    .writeReviewBtn {
+        width: 100%;
+        justify-content: center;
+        padding: 0.82rem 1rem;
+        font-size: 0.92rem;
+        font-weight: 700;
+    }
+
+    .scoreBoardCard {
+        padding: 1.5rem 1.2rem;
+        border-radius: 18px;
+        width: 100%;
+        box-sizing: border-box;
+    }
+
+    .bigScore {
+        font-size: 2.8rem;
+    }
+
+    /* 2. Wall Section & Cards Mobile (Clean Framing & No Cut-offs) */
+    .wallSection {
+        padding: 2.25rem 0 2rem;
+        width: 100%;
+        overflow-x: hidden;
+    }
+
+    .filterSectionHeader {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 1rem;
+        margin-bottom: 1.5rem;
+        width: 100%;
+    }
+
+    .sectionTitle {
+        font-size: 1.7rem;
+        letter-spacing: -0.5px;
+        margin-bottom: 0.25rem;
+    }
+
+    .sectionDesc {
+        font-size: 0.86rem;
+        line-height: 1.45;
+    }
+
+    /* Smooth scrollable pills row without breaking page container */
+    .filterTabs {
+        display: flex;
+        width: calc(100% + 2rem);
+        margin: 0 -1rem;
+        padding: 0.25rem 1rem 0.5rem;
+        overflow-x: auto;
+        flex-wrap: nowrap;
+        gap: 0.5rem;
+        -webkit-overflow-scrolling: touch;
+        scrollbar-width: none;
+    }
+
+    .filterTabs::-webkit-scrollbar {
+        display: none;
+    }
+
+    .tabBtn {
+        font-size: 0.82rem;
+        padding: 0.45rem 0.95rem;
+        white-space: nowrap;
+        flex-shrink: 0;
+    }
+
+    /* Masonry Grid constrained to full mobile width */
+    .masonryGrid {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        gap: 1.15rem;
+    }
+
+    .reviewArticle {
+        width: 100%;
+        box-sizing: border-box;
+        padding: 1.4rem 1.15rem;
+        border-radius: 18px;
+        box-shadow: 0 4px 18px rgba(0, 0, 0, 0.04);
+        overflow: hidden;
+    }
+
+    .cardHeader {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin-bottom: 0.85rem;
+        width: 100%;
+    }
+
+    .productBadge {
+        font-size: 0.72rem;
+        padding: 0.25rem 0.6rem;
+    }
+
+    .starCluster {
+        font-size: 0.92rem;
+        letter-spacing: 1px;
+        white-space: nowrap;
+        flex-shrink: 0;
+    }
+
+    .reviewHeadline {
+        font-size: 1.12rem;
+        line-height: 1.35;
+        word-break: break-word;
+        margin-bottom: 0.65rem;
+    }
+
+    .reviewQuote {
+        font-size: 0.88rem;
+        line-height: 1.58;
+        color: #475569;
+        word-break: break-word;
+        margin-bottom: 1.35rem;
+    }
+
+    .authorSection {
+        display: flex;
+        align-items: center;
+        gap: 0.75rem;
+        padding-top: 1rem;
+        border-top: 1px solid #f1f5f9;
+        width: 100%;
+        box-sizing: border-box;
+    }
+
+    .avatarCircle {
+        width: 38px;
+        height: 38px;
+        font-size: 0.92rem;
+        flex-shrink: 0;
+    }
+
+    .authorInfo {
+        display: flex;
+        flex-direction: column;
+        min-width: 0;
+        flex: 1;
+    }
+
+    .nameRow {
+        display: flex;
+        align-items: center;
+        gap: 0.45rem;
+        flex-wrap: wrap;
+    }
+
+    .authorName {
+        font-size: 0.9rem;
+        color: #0f172a;
+        font-weight: 700;
+    }
+
+    .verifiedTag {
+        font-size: 0.68rem;
+        padding: 1px 5px;
+    }
+
+    .authorSub {
+        font-size: 0.75rem;
+        color: #64748b;
+        white-space: normal;
+        word-break: break-word;
+        line-height: 1.35;
+        margin-top: 2px;
+    }
+
+    /* 3. CTA Banner Mobile */
+    .ctaBannerSection {
+        padding: 1rem 0 3.5rem;
+    }
+
+    .bannerWrapper {
+        padding: 2.5rem 1.25rem;
+        border-radius: 22px;
+    }
+
+    .bannerBadge {
+        font-size: 0.68rem;
+    }
+
+    .bannerHeading {
+        font-size: 1.75rem;
+        line-height: 1.22;
+    }
+
+    .bannerDesc {
+        font-size: 0.88rem;
+        margin-bottom: 1.75rem;
+    }
+
+    .bannerBtnGroup {
+        flex-direction: column;
+        width: 100%;
+        gap: 0.75rem;
+    }
+
+    .primaryDemoBtn,
+    .outlineReviewBtn {
+        width: 100%;
+        justify-content: center;
+        padding: 0.82rem 1rem;
+        font-size: 0.92rem;
+        box-sizing: border-box;
+    }
+
+    /* 4. Modal Mobile */
+    .modalOverlay {
+        padding: 0.65rem;
+    }
+
+    .modalDialog {
+        padding: 1.6rem 1.15rem;
+        border-radius: 20px;
+        max-height: 94vh;
+    }
+
+    .starSvgIcon {
+        width: 30px;
+        height: 30px;
+    }
+
+    .interactiveStarRow {
+        gap: 0.45rem;
+    }
+
+    .inputGrid {
+        grid-template-columns: 1fr;
+        gap: 0.85rem;
+    }
+
+    .dialogActions {
+        flex-direction: column-reverse;
+        width: 100%;
+        gap: 0.65rem;
+    }
+
+    .dismissBtn,
+    .postBtn {
+        width: 100%;
+        justify-content: center;
+        padding: 0.82rem;
+    }
+}
+
+/* Extra Small Screens (320px) */
+@media (max-width: 340px) {
+    .heroHeading {
+        font-size: 1.65rem;
+    }
+
+    .sectionTitle {
+        font-size: 1.5rem;
+    }
+
+    .bannerHeading {
+        font-size: 1.5rem;
+    }
+
+    .starSvgIcon {
+        width: 26px;
+        height: 26px;
+    }
+}
