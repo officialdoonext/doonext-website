@@ -1,16 +1,72 @@
-* {
+:root {
+  --primary: #5e2b9d;
+  --primary-hover: #4e2283;
+  --primary-light: #f6f0fc;
+  --primary-tint: #ede3f8;
+  --primary-rgb: 94, 43, 157;
+  --radius-max: 8px;
+}
+
+*,
+*::before,
+*::after {
   box-sizing: border-box;
   padding: 0;
   margin: 0;
+  font-family: var(--font-sora), "Sora", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
 }
 
 html,
 body {
   max-width: 100vw;
   overflow-x: hidden;
-  font-family: var(--font-sora), system-ui, -apple-system, sans-serif;
+  font-family: var(--font-sora), "Sora", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
   color: #1a1f2c;
   background-color: #ffffff;
+  font-weight: 400;
+}
+
+/* Enforce maximum font-weight of 500 across all elements */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+b,
+strong,
+th,
+dt,
+optgroup,
+button,
+input,
+select,
+textarea {
+  font-family: var(--font-sora), "Sora", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+b,
+strong,
+th,
+dt,
+optgroup {
+  font-weight: 500;
+}
+
+/* Global button, input, dropdown constraints - max height 34px and max border-radius 8px */
+button,
+input:not([type="checkbox"]):not([type="radio"]):not([type="range"]):not([type="color"]),
+select,
+[role="button"] {
+  max-height: 34px;
+  border-radius: var(--radius-max);
+  box-sizing: border-box;
 }
 
 main {

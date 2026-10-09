@@ -59,7 +59,7 @@
 .socialIcon {
     width: 32px;
     height: 32px;
-    border-radius: 50%;
+    border-radius: 8px;
     background: rgba(255, 255, 255, 0.08);
     display: flex;
     align-items: center;
@@ -79,7 +79,7 @@
 /* Column Common Styling */
 .columnTitle {
     font-size: 0.95rem;
-    font-weight: 700;
+    font-weight: 500;
     color: #ffffff;
     margin-bottom: 1.25rem;
     letter-spacing: -0.2px;
@@ -177,7 +177,7 @@
 }
 
 .subBrand {
-    font-weight: 700;
+    font-weight: 500;
     color: #94a3b8;
     letter-spacing: 0.5px;
 }
@@ -234,6 +234,7 @@
     .socialIcon {
         width: 36px;
         height: 36px;
+        border-radius: 8px;
         background: rgba(255, 255, 255, 0.06);
     }
 
@@ -253,7 +254,7 @@
         left: 0;
         width: 22px;
         height: 2px;
-        background: #5b28ec;
+        background: #5e2b9d;
         border-radius: 2px;
     }
 
@@ -347,5 +348,6 @@
     .socialIcon {
         width: 30px;
         height: 30px;
+        border-radius: 8px;
     }
 }

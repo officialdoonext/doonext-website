@@ -39,20 +39,20 @@
 
 .heroBadge {
     display: inline-block;
-    background: #ede9fe;
-    color: #5b28ec;
+    background: #f6f0fc;
+    color: #5e2b9d;
     font-size: 0.76rem;
-    font-weight: 700;
+    font-weight: 500;
     letter-spacing: 0.8px;
     padding: 0.35rem 0.85rem;
-    border-radius: 20px;
+    border-radius: 8px;
     margin-bottom: 1rem;
     text-transform: uppercase;
 }
 
 .heroHeading {
     font-size: 3.1rem;
-    font-weight: 800;
+    font-weight: 500;
     line-height: 1.15;
     color: #101c3d;
     letter-spacing: -0.8px;
@@ -60,7 +60,7 @@
 }
 
 .purpleAccent {
-    color: #5b28ec;
+    color: #5e2b9d;
 }
 
 .heroSubText {
@@ -81,24 +81,28 @@
 .writeReviewBtn {
     display: inline-flex;
     align-items: center;
+    justify-content: center;
     gap: 0.55rem;
-    background: #5b28ec;
+    background: #5e2b9d;
     color: #ffffff;
-    padding: 0.82rem 1.65rem;
-    font-size: 0.95rem;
-    font-weight: 600;
-    border-radius: 9px;
+    height: 34px;
+    max-height: 34px;
+    padding: 0 1.25rem;
+    font-size: 0.88rem;
+    font-weight: 500;
+    border-radius: 8px;
     border: none;
     cursor: pointer;
-    box-shadow: 0 6px 18px rgba(91, 40, 236, 0.28);
+    box-shadow: 0 6px 18px rgba(94, 43, 157, 0.28);
     transition: all 0.25s ease;
     white-space: nowrap;
+    box-sizing: border-box;
 }
 
 .writeReviewBtn:hover {
-    background: #4719d2;
+    background: #4e2283;
     transform: translateY(-2px);
-    box-shadow: 0 8px 22px rgba(91, 40, 236, 0.35);
+    box-shadow: 0 8px 22px rgba(94, 43, 157, 0.35);
 }
 
 .trustSummary {
@@ -116,7 +120,7 @@
 .ratingCount {
     font-size: 0.84rem;
     color: #64748b;
-    font-weight: 600;
+    font-weight: 500;
 }
 
 /* Scorecard Snapshot on Right */
@@ -128,7 +132,7 @@
 .scoreBoardCard {
     background: #ffffff;
     border: 1px solid #edf0f7;
-    border-radius: 20px;
+    border-radius: 8px;
     padding: 2rem 2.25rem;
     box-shadow: 0 12px 35px rgba(15, 23, 42, 0.05);
     width: 100%;
@@ -147,7 +151,7 @@
 
 .bigScore {
     font-size: 3.4rem;
-    font-weight: 800;
+    font-weight: 500;
     color: #101c3d;
     line-height: 1;
 }
@@ -167,7 +171,7 @@
 .scoreText {
     font-size: 0.84rem;
     color: #64748b;
-    font-weight: 600;
+    font-weight: 500;
 }
 
 .scoreBreakdown {
@@ -183,7 +187,7 @@
     gap: 0.75rem;
     font-size: 0.82rem;
     color: #64748b;
-    font-weight: 600;
+    font-weight: 500;
 }
 
 .barLabel {
@@ -217,7 +221,7 @@
     gap: 0.5rem;
     font-size: 0.82rem;
     color: #059669;
-    font-weight: 700;
+    font-weight: 500;
     padding-top: 1rem;
     border-top: 1px solid #f1f5f9;
 }
@@ -226,7 +230,7 @@
     width: 8px;
     height: 8px;
     background: #10b981;
-    border-radius: 50%;
+    border-radius: 8px;
 }
 
 /* =========================================================
@@ -252,7 +256,7 @@
 
 .sectionTitle {
     font-size: 2.35rem;
-    font-weight: 800;
+    font-weight: 500;
     color: #101c3d;
     letter-spacing: -0.8px;
     margin-bottom: 0.35rem;
@@ -274,12 +278,18 @@
     background: #ffffff;
     border: 1px solid #e2e8f0;
     color: #475569;
-    padding: 0.55rem 1.15rem;
+    height: 34px;
+    max-height: 34px;
+    padding: 0 1rem;
     font-size: 0.88rem;
-    font-weight: 600;
-    border-radius: 20px;
+    font-weight: 500;
+    border-radius: 8px;
     cursor: pointer;
     transition: all 0.2s ease;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    box-sizing: border-box;
 }
 
 .tabBtn:hover {
@@ -288,10 +298,10 @@
 }
 
 .activeTab {
-    background: #5b28ec !important;
+    background: #5e2b9d !important;
     color: #ffffff !important;
-    border-color: #5b28ec !important;
-    box-shadow: 0 4px 12px rgba(91, 40, 236, 0.22);
+    border-color: #5e2b9d !important;
+    box-shadow: 0 4px 12px rgba(94, 43, 157, 0.22);
 }
 
 .masonryGrid {
@@ -303,7 +313,7 @@
 .reviewArticle {
     background: #ffffff;
     border: 1px solid #edf0f7;
-    border-radius: 20px;
+    border-radius: 8px;
     padding: 1.85rem 1.6rem;
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.025);
     display: flex;
@@ -329,7 +339,7 @@
     background: #eff6ff;
     color: #2563eb;
     font-size: 0.74rem;
-    font-weight: 700;
+    font-weight: 500;
     padding: 0.28rem 0.65rem;
     border-radius: 6px;
     letter-spacing: 0.3px;
@@ -343,7 +353,7 @@
 
 .reviewHeadline {
     font-size: 1.12rem;
-    font-weight: 700;
+    font-weight: 500;
     color: #101c3d;
     line-height: 1.35;
     margin-bottom: 0.75rem;
@@ -353,7 +363,7 @@
     font-size: 0.92rem;
     line-height: 1.62;
     color: #475569;
-    font-weight: 450;
+    font-weight: 500;
     margin-bottom: 1.85rem;
 }
 
@@ -368,10 +378,10 @@
 .avatarCircle {
     width: 42px;
     height: 42px;
-    border-radius: 50%;
-    background: linear-gradient(135deg, #ede9fe 0%, #c7d2fe 100%);
-    color: #4338ca;
-    font-weight: 800;
+    border-radius: 8px;
+    background: linear-gradient(135deg, #f6f0fc 0%, #e0d7fe 100%);
+    color: #5e2b9d;
+    font-weight: 500;
     font-size: 1rem;
     display: flex;
     align-items: center;
@@ -394,7 +404,7 @@
 .authorName {
     font-size: 0.92rem;
     color: #0f172a;
-    font-weight: 700;
+    font-weight: 500;
 }
 
 .verifiedTag {
@@ -403,7 +413,7 @@
     gap: 2px;
     color: #059669;
     font-size: 0.7rem;
-    font-weight: 700;
+    font-weight: 500;
     background: #ecfdf5;
     padding: 1px 6px;
     border-radius: 4px;
@@ -426,10 +436,10 @@
 }
 
 .bannerWrapper {
-    background: linear-gradient(145deg, #5b28ec 0%, #3e12b6 100%);
-    background-color: #5b28ec;
-    border-radius: 26px;
-    box-shadow: 0 18px 45px rgba(91, 40, 236, 0.28);
+    background: linear-gradient(145deg, #5e2b9d 0%, #4e2283 100%);
+    background-color: #5e2b9d;
+    border-radius: 8px;
+    box-shadow: 0 18px 45px rgba(94, 43, 157, 0.28);
     overflow: hidden;
     padding: 3.5rem 2.5rem;
     text-align: center;
@@ -447,7 +457,7 @@
 .bannerBadge {
     display: inline-block;
     font-size: 0.74rem;
-    font-weight: 700;
+    font-weight: 500;
     letter-spacing: 0.9px;
     color: #67e8f9;
     text-transform: uppercase;
@@ -456,7 +466,7 @@
 
 .bannerHeading {
     font-size: 2.35rem;
-    font-weight: 800;
+    font-weight: 500;
     color: #ffffff;
     line-height: 1.2;
     letter-spacing: -0.6px;
@@ -480,17 +490,21 @@
 .primaryDemoBtn {
     display: inline-flex;
     align-items: center;
+    justify-content: center;
     gap: 0.5rem;
     background: #ffffff;
-    color: #5b28ec;
-    padding: 0.82rem 1.65rem;
-    font-size: 0.94rem;
-    font-weight: 700;
-    border-radius: 9px;
+    color: #5e2b9d;
+    height: 34px;
+    max-height: 34px;
+    padding: 0 1.25rem;
+    font-size: 0.88rem;
+    font-weight: 500;
+    border-radius: 8px;
     text-decoration: none;
     box-shadow: 0 4px 14px rgba(0, 0, 0, 0.12);
     transition: all 0.2s ease;
     white-space: nowrap;
+    box-sizing: border-box;
 }
 
 .primaryDemoBtn:hover {
@@ -501,16 +515,20 @@
 .outlineReviewBtn {
     display: inline-flex;
     align-items: center;
+    justify-content: center;
     background: transparent;
     color: #ffffff;
     border: 1.5px solid rgba(255, 255, 255, 0.45);
-    padding: 0.78rem 1.5rem;
-    font-size: 0.94rem;
-    font-weight: 600;
-    border-radius: 9px;
+    height: 34px;
+    max-height: 34px;
+    padding: 0 1.25rem;
+    font-size: 0.88rem;
+    font-weight: 500;
+    border-radius: 8px;
     cursor: pointer;
     transition: all 0.2s ease;
     white-space: nowrap;
+    box-sizing: border-box;
 }
 
 .outlineReviewBtn:hover {
@@ -574,7 +592,7 @@
 .modalDialog {
     background: #ffffff;
     border: 1px solid rgba(226, 232, 240, 0.8);
-    border-radius: 24px;
+    border-radius: 8px;
     width: 100%;
     max-width: 600px;
     max-height: 92vh;
@@ -599,15 +617,15 @@
 
 .dialogBadge {
     font-size: 0.72rem;
-    font-weight: 700;
+    font-weight: 500;
     letter-spacing: 0.85px;
-    color: #5b28ec;
+    color: #5e2b9d;
     text-transform: uppercase;
 }
 
 .dialogTitle {
     font-size: 1.6rem;
-    font-weight: 800;
+    font-weight: 500;
     color: #101c3d;
     letter-spacing: -0.4px;
     margin: 0.25rem 0 0.35rem;
@@ -625,7 +643,8 @@
     border: none;
     width: 34px;
     height: 34px;
-    border-radius: 50%;
+    max-height: 34px;
+    border-radius: 8px;
     font-size: 1rem;
     color: #64748b;
     cursor: pointer;
@@ -635,6 +654,7 @@
     transition: all 0.2s ease;
     flex-shrink: 0;
     margin-left: 0.5rem;
+    box-sizing: border-box;
 }
 
 .closeBtn:hover {
@@ -653,7 +673,7 @@
 .starPickerCard {
     background: linear-gradient(135deg, #fbfbfe 0%, #f4f6fb 100%);
     border: 1px solid #edf0f7;
-    border-radius: 18px;
+    border-radius: 8px;
     padding: 1.25rem 1.4rem;
     display: flex;
     flex-direction: column;
@@ -665,7 +685,7 @@
 
 .pickerHeaderLabel {
     font-size: 0.78rem;
-    font-weight: 700;
+    font-weight: 500;
     color: #64748b;
     text-transform: uppercase;
     letter-spacing: 0.6px;
@@ -717,9 +737,9 @@
     background: #ffffff;
     border: 1px solid #e2e8f0;
     padding: 0.3rem 0.9rem;
-    border-radius: 20px;
+    border-radius: 8px;
     font-size: 0.8rem;
-    font-weight: 700;
+    font-weight: 500;
     color: #101c3d;
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
     transition: all 0.2s ease;
@@ -740,18 +760,19 @@
 
 .fieldLabel {
     font-size: 0.82rem;
-    font-weight: 700;
+    font-weight: 500;
     color: #334155;
 }
 
 .formInput,
-.formSelect,
-.formTextarea {
+.formSelect {
     width: 100%;
-    padding: 0.75rem 0.9rem;
+    height: 34px;
+    max-height: 34px;
+    padding: 0 0.9rem;
     font-size: 0.88rem;
     border: 1.5px solid #e2e8f0;
-    border-radius: 11px;
+    border-radius: 8px;
     background: #f8fafc;
     color: #0f172a;
     font-family: inherit;
@@ -760,20 +781,31 @@
     transition: all 0.2s ease;
 }
 
+.formTextarea {
+    width: 100%;
+    padding: 0.75rem 0.9rem;
+    font-size: 0.88rem;
+    border: 1.5px solid #e2e8f0;
+    border-radius: 8px;
+    background: #f8fafc;
+    color: #0f172a;
+    font-family: inherit;
+    outline: none;
+    box-sizing: border-box;
+    transition: all 0.2s ease;
+    resize: vertical;
+}
+
 .formInput:focus,
 .formSelect:focus,
 .formTextarea:focus {
-    border-color: #5b28ec;
+    border-color: #5e2b9d;
     background: #ffffff;
-    box-shadow: 0 0 0 3px rgba(91, 40, 236, 0.12);
+    box-shadow: 0 0 0 3px rgba(94, 43, 157, 0.12);
 }
 
 .formSelect {
     cursor: pointer;
-}
-
-.formTextarea {
-    resize: vertical;
 }
 
 .dialogActions {
@@ -788,12 +820,15 @@
     background: #f1f5f9;
     color: #475569;
     border: none;
-    padding: 0.75rem 1.35rem;
-    font-size: 0.92rem;
-    font-weight: 600;
-    border-radius: 10px;
+    height: 34px;
+    max-height: 34px;
+    padding: 0 1.25rem;
+    font-size: 0.88rem;
+    font-weight: 500;
+    border-radius: 8px;
     cursor: pointer;
     transition: background 0.2s ease;
+    box-sizing: border-box;
 }
 
 .dismissBtn:hover {
@@ -804,23 +839,27 @@
 .postBtn {
     display: inline-flex;
     align-items: center;
+    justify-content: center;
     gap: 0.55rem;
-    background: #5b28ec;
+    background: #5e2b9d;
     color: #ffffff;
     border: none;
-    padding: 0.75rem 1.6rem;
-    font-size: 0.92rem;
-    font-weight: 700;
-    border-radius: 10px;
+    height: 34px;
+    max-height: 34px;
+    padding: 0 1.4rem;
+    font-size: 0.88rem;
+    font-weight: 500;
+    border-radius: 8px;
     cursor: pointer;
-    box-shadow: 0 4px 14px rgba(91, 40, 236, 0.25);
+    box-shadow: 0 4px 14px rgba(94, 43, 157, 0.25);
     transition: all 0.2s ease;
+    box-sizing: border-box;
 }
 
 .postBtn:hover {
-    background: #4a19dc;
+    background: #4e2283;
     transform: translateY(-1px);
-    box-shadow: 0 6px 18px rgba(91, 40, 236, 0.35);
+    box-shadow: 0 6px 18px rgba(94, 43, 157, 0.35);
 }
 
 /* =========================================================
@@ -846,6 +885,7 @@
 
     .scoreBoardCard {
         max-width: 100%;
+        border-radius: 8px;
     }
 
     .masonryGrid {
@@ -855,6 +895,7 @@
 
     .bannerWrapper {
         padding: 3rem 2rem;
+        border-radius: 8px;
     }
 
     .bannerHeading {
@@ -910,15 +951,18 @@
 
     .writeReviewBtn {
         width: 100%;
+        height: 34px;
+        max-height: 34px;
         justify-content: center;
-        padding: 0.82rem 1rem;
-        font-size: 0.92rem;
-        font-weight: 700;
+        padding: 0 1rem;
+        font-size: 0.88rem;
+        font-weight: 500;
+        border-radius: 8px;
     }
 
     .scoreBoardCard {
         padding: 1.5rem 1.2rem;
-        border-radius: 18px;
+        border-radius: 8px;
         width: 100%;
         box-sizing: border-box;
     }
@@ -927,7 +971,7 @@
         font-size: 2.8rem;
     }
 
-    /* 2. Wall Section & Cards Mobile (Clean Framing & No Cut-offs) */
+    /* 2. Wall Section & Cards Mobile */
     .wallSection {
         padding: 2.25rem 0 2rem;
         width: 100%;
@@ -972,9 +1016,12 @@
 
     .tabBtn {
         font-size: 0.82rem;
-        padding: 0.45rem 0.95rem;
+        height: 34px;
+        max-height: 34px;
+        padding: 0 0.85rem;
         white-space: nowrap;
         flex-shrink: 0;
+        border-radius: 8px;
     }
 
     /* Masonry Grid constrained to full mobile width */
@@ -989,7 +1036,7 @@
         width: 100%;
         box-sizing: border-box;
         padding: 1.4rem 1.15rem;
-        border-radius: 18px;
+        border-radius: 8px;
         box-shadow: 0 4px 18px rgba(0, 0, 0, 0.04);
         overflow: hidden;
     }
@@ -1043,6 +1090,7 @@
         width: 38px;
         height: 38px;
         font-size: 0.92rem;
+        border-radius: 8px;
         flex-shrink: 0;
     }
 
@@ -1063,7 +1111,7 @@
     .authorName {
         font-size: 0.9rem;
         color: #0f172a;
-        font-weight: 700;
+        font-weight: 500;
     }
 
     .verifiedTag {
@@ -1087,7 +1135,7 @@
 
     .bannerWrapper {
         padding: 2.5rem 1.25rem;
-        border-radius: 22px;
+        border-radius: 8px;
     }
 
     .bannerBadge {
@@ -1113,9 +1161,13 @@
     .primaryDemoBtn,
     .outlineReviewBtn {
         width: 100%;
+        height: 34px;
+        max-height: 34px;
         justify-content: center;
-        padding: 0.82rem 1rem;
-        font-size: 0.92rem;
+        padding: 0 1rem;
+        font-size: 0.88rem;
+        font-weight: 500;
+        border-radius: 8px;
         box-sizing: border-box;
     }
 
@@ -1126,7 +1178,7 @@
 
     .modalDialog {
         padding: 1.6rem 1.15rem;
-        border-radius: 20px;
+        border-radius: 8px;
         max-height: 94vh;
     }
 
@@ -1153,8 +1205,12 @@
     .dismissBtn,
     .postBtn {
         width: 100%;
+        height: 34px;
+        max-height: 34px;
         justify-content: center;
-        padding: 0.82rem;
+        padding: 0 1rem;
+        font-size: 0.88rem;
+        border-radius: 8px;
     }
 }
 

@@ -42,14 +42,14 @@
 .iconCircle {
     width: 60px;
     height: 60px;
-    border-radius: 50%;
-    background: radial-gradient(circle, #f3f0ff 0%, #eeebff 100%);
+    border-radius: 8px;
+    background: radial-gradient(circle, #f6f0fc 0%, #ede3f8 100%);
     display: flex;
     align-items: center;
     justify-content: center;
-    color: #5b28ec;
+    color: #5e2b9d;
     flex-shrink: 0;
-    border: 1px solid rgba(91, 40, 236, 0.08);
+    border: 1px solid rgba(94, 43, 157, 0.08);
 }
 
 .iconSvg {
@@ -66,15 +66,15 @@
 
 .statValue {
     font-size: 2rem;
-    font-weight: 800;
-    color: #5b28ec;
+    font-weight: 500;
+    color: #5e2b9d;
     line-height: 1.1;
     letter-spacing: -0.5px;
 }
 
 .statLabel {
     font-size: 0.9rem;
-    font-weight: 600;
+    font-weight: 500;
     color: #64748b;
     margin-top: 4px;
     white-space: nowrap;
@@ -113,6 +113,7 @@
     .iconCircle {
         width: 52px;
         height: 52px;
+        border-radius: 8px;
     }
 
     .iconSvg {
@@ -138,7 +139,7 @@
         background: #fbfbfe;
         border: 1px solid #f1f4fb;
         padding: 0.85rem 1.15rem;
-        border-radius: 14px;
+        border-radius: 8px;
         justify-content: flex-start;
         gap: 1rem;
     }
@@ -146,6 +147,7 @@
     .iconCircle {
         width: 46px;
         height: 46px;
+        border-radius: 8px;
     }
 
     .iconSvg {
@@ -176,6 +178,7 @@
     .iconCircle {
         width: 42px;
         height: 42px;
+        border-radius: 8px;
     }
 
     .iconSvg {

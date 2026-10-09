@@ -40,7 +40,7 @@
 .badge {
     display: inline-block;
     font-size: 0.76rem;
-    font-weight: 700;
+    font-weight: 500;
     letter-spacing: 1px;
     color: #0288d1;
     text-transform: uppercase;
@@ -49,7 +49,7 @@
 
 .title {
     font-size: 3.35rem;
-    font-weight: 800;
+    font-weight: 500;
     line-height: 1.16;
     color: #101c3d;
     letter-spacing: -1.2px;
@@ -57,7 +57,7 @@
 }
 
 .highlightText {
-    color: #5b28ec;
+    color: #5e2b9d;
 }
 
 .description {
@@ -85,38 +85,45 @@
     align-items: center;
     justify-content: center;
     gap: 0.6rem;
-    background-color: #5b28ec;
+    background-color: #5e2b9d;
     color: #ffffff;
-    padding: 0.82rem 1.65rem;
-    font-size: 0.96rem;
-    font-weight: 600;
-    border-radius: 9px;
+    height: 34px;
+    max-height: 34px;
+    padding: 0 1.25rem;
+    font-size: 0.88rem;
+    font-weight: 500;
+    border-radius: 8px;
     text-decoration: none;
-    box-shadow: 0 6px 16px rgba(91, 40, 236, 0.28);
+    box-shadow: 0 6px 16px rgba(94, 43, 157, 0.28);
     transition: all 0.25s ease;
     white-space: nowrap;
+    box-sizing: border-box;
 }
 
 .primaryBtn:hover {
-    background-color: #4a19dc;
+    background-color: #4e2283;
     transform: translateY(-2px);
-    box-shadow: 0 8px 20px rgba(91, 40, 236, 0.35);
+    box-shadow: 0 8px 20px rgba(94, 43, 157, 0.35);
 }
 
 .secondaryBtn {
     display: inline-flex;
     align-items: center;
+    justify-content: center;
     gap: 0.65rem;
     background: #ffffff;
     color: #242f49;
     border: 1.5px solid #e2e8f0;
-    padding: 0.75rem 1.4rem;
-    font-size: 0.94rem;
-    font-weight: 600;
-    border-radius: 9px;
+    height: 34px;
+    max-height: 34px;
+    padding: 0 1.15rem;
+    font-size: 0.88rem;
+    font-weight: 500;
+    border-radius: 8px;
     cursor: pointer;
     transition: all 0.25s ease;
     white-space: nowrap;
+    box-sizing: border-box;
 }
 
 .secondaryBtn:hover {
@@ -126,10 +133,10 @@
 }
 
 .playIconWrapper {
-    width: 24px;
-    height: 24px;
-    border-radius: 50%;
-    background: #ede9fe;
+    width: 22px;
+    height: 22px;
+    border-radius: 8px;
+    background: #f6f0fc;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -147,7 +154,7 @@
     align-items: center;
     gap: 0.45rem;
     font-size: 0.85rem;
-    font-weight: 600;
+    font-weight: 500;
     color: #475569;
 }
 
@@ -218,13 +225,17 @@
     }
 
     .primaryBtn {
-        padding: 0.75rem 1.45rem;
-        font-size: 0.9rem;
+        height: 34px;
+        max-height: 34px;
+        padding: 0 1.15rem;
+        font-size: 0.88rem;
     }
 
     .secondaryBtn {
-        padding: 0.7rem 1.25rem;
-        font-size: 0.9rem;
+        height: 34px;
+        max-height: 34px;
+        padding: 0 1rem;
+        font-size: 0.88rem;
     }
 
     .trustRow {
@@ -258,7 +269,6 @@
         min-height: auto;
         background-color: #f7f9fd;
         background-image: none;
-        /* Split into separate top image & bottom text */
     }
 
     /* 1. Top Half: Office Reception Photo */
@@ -292,7 +302,7 @@
 
     .title {
         font-size: 1.75rem;
-        font-weight: 800;
+        font-weight: 500;
         line-height: 1.2;
         color: #101c3d;
         letter-spacing: -0.5px;
@@ -300,7 +310,7 @@
     }
 
     .highlightText {
-        color: #5b28ec;
+        color: #5e2b9d;
     }
 
     .description {
@@ -314,7 +324,7 @@
     .mobileSubTag {
         display: block;
         font-size: 0.68rem;
-        font-weight: 700;
+        font-weight: 500;
         letter-spacing: 0.6px;
         color: #334155;
         text-transform: uppercase;
@@ -332,19 +342,23 @@
 
     .primaryBtn {
         width: 100%;
-        padding: 0.8rem 1rem;
-        font-size: 0.92rem;
-        font-weight: 700;
-        border-radius: 9px;
+        height: 34px;
+        max-height: 34px;
+        padding: 0 1rem;
+        font-size: 0.88rem;
+        font-weight: 500;
+        border-radius: 8px;
         justify-content: center;
     }
 
     .secondaryBtn {
         width: 100%;
-        padding: 0.78rem 1rem;
-        font-size: 0.92rem;
-        font-weight: 600;
-        border-radius: 9px;
+        height: 34px;
+        max-height: 34px;
+        padding: 0 1rem;
+        font-size: 0.88rem;
+        font-weight: 500;
+        border-radius: 8px;
         justify-content: center;
         background: #ffffff;
         border: 1px solid #e2e8f0;
@@ -380,7 +394,9 @@
 
     .primaryBtn,
     .secondaryBtn {
-        padding: 0.75rem 0.85rem;
-        font-size: 0.88rem;
+        height: 34px;
+        max-height: 34px;
+        padding: 0 0.85rem;
+        font-size: 0.84rem;
     }
 }

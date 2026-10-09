@@ -65,7 +65,7 @@ export default function HomeHero() {
                                     fill="none"
                                     xmlns="http://www.w3.org/2000/svg"
                                 >
-                                    <path d="M5 3.5L13 8L5 12.5V3.5Z" fill="#5b28ec" />
+                                    <path d="M5 3.5L13 8L5 12.5V3.5Z" fill="#5e2b9d" />
                                 </svg>
                             </span>
                             <span>Watch Video</span>
@@ -83,12 +83,12 @@ export default function HomeHero() {
                             >
                                 <path
                                     d="M17.5 10c0 4.142-3.358 7.5-7.5 7.5s-7.5-3.358-7.5-7.5S5.858 2.5 10 2.5s7.5 3.358 7.5 7.5z"
-                                    stroke="#5b28ec"
+                                    stroke="#5e2b9d"
                                     strokeWidth="1.5"
                                 />
                                 <path
                                     d="M7 10l2 2 4-4"
-                                    stroke="#5b28ec"
+                                    stroke="#5e2b9d"
                                     strokeWidth="1.5"
                                     strokeLinecap="round"
                                     strokeLinejoin="round"
@@ -104,10 +104,10 @@ export default function HomeHero() {
                                 fill="none"
                                 xmlns="http://www.w3.org/2000/svg"
                             >
-                                <circle cx="10" cy="10" r="7.5" stroke="#5b28ec" strokeWidth="1.5" />
+                                <circle cx="10" cy="10" r="7.5" stroke="#5e2b9d" strokeWidth="1.5" />
                                 <path
                                     d="M10 6v8M8 8h4"
-                                    stroke="#5b28ec"
+                                    stroke="#5e2b9d"
                                     strokeWidth="1.5"
                                     strokeLinecap="round"
                                 />
@@ -124,7 +124,7 @@ export default function HomeHero() {
                             >
                                 <path
                                     d="M10 2.5l6 2.5v5c0 4.2-2.8 7.6-6 8.5-3.2-.9-6-4.3-6-8.5v-5l6-2.5z"
-                                    stroke="#5b28ec"
+                                    stroke="#5e2b9d"
                                     strokeWidth="1.5"
                                     strokeLinejoin="round"
                                 />

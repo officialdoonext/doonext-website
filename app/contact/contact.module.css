@@ -42,20 +42,20 @@
 
 .pageBadge {
     display: inline-block;
-    background: #ede9fe;
-    color: #5b28ec;
+    background: #f6f0fc;
+    color: #5e2b9d;
     font-size: 0.76rem;
-    font-weight: 700;
+    font-weight: 500;
     letter-spacing: 0.8px;
     padding: 0.35rem 0.85rem;
-    border-radius: 20px;
+    border-radius: 8px;
     margin-bottom: 0.85rem;
     text-transform: uppercase;
 }
 
 .pageTitle {
     font-size: 2.9rem;
-    font-weight: 800;
+    font-weight: 500;
     line-height: 1.15;
     color: #101c3d;
     letter-spacing: -0.8px;
@@ -63,7 +63,7 @@
 }
 
 .highlightTitle {
-    color: #5b28ec;
+    color: #5e2b9d;
 }
 
 .pageSubtitle {
@@ -85,7 +85,7 @@
 .formCard {
     background: #ffffff;
     border: 1px solid #edf0f7;
-    border-radius: 20px;
+    border-radius: 8px;
     padding: 1.75rem 1.6rem;
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
     display: flex;
@@ -94,7 +94,7 @@
 
 .formTitle {
     font-size: 1.25rem;
-    font-weight: 700;
+    font-weight: 500;
     color: #101c3d;
     margin-bottom: 1.35rem;
 }
@@ -137,15 +137,18 @@
 .textInput,
 .selectInput {
     width: 100%;
-    padding: 0.72rem 0.85rem 0.72rem 2.35rem;
+    height: 34px;
+    max-height: 34px;
+    padding: 0 0.85rem 0 2.35rem;
     font-size: 0.86rem;
     border: 1px solid #e2e8f0;
-    border-radius: 9px;
+    border-radius: 8px;
     background-color: #f8fafc;
     color: #1e293b;
     font-family: inherit;
     outline: none;
     transition: all 0.2s ease;
+    box-sizing: border-box;
 }
 
 .selectInput {
@@ -160,9 +163,9 @@
 .textInput:focus,
 .selectInput:focus,
 .textareaInput:focus {
-    border-color: #5b28ec;
+    border-color: #5e2b9d;
     background-color: #ffffff;
-    box-shadow: 0 0 0 3px rgba(91, 40, 236, 0.1);
+    box-shadow: 0 0 0 3px rgba(94, 43, 157, 0.1);
 }
 
 .inputGroupTextarea {
@@ -191,13 +194,14 @@
     padding: 0.72rem 0.85rem 0.72rem 2.35rem;
     font-size: 0.86rem;
     border: 1px solid #e2e8f0;
-    border-radius: 9px;
+    border-radius: 8px;
     background-color: #f8fafc;
     color: #1e293b;
     font-family: inherit;
     resize: vertical;
     outline: none;
     transition: all 0.2s ease;
+    box-sizing: border-box;
 }
 
 .submitBtn {
@@ -206,23 +210,26 @@
     justify-content: center;
     gap: 0.5rem;
     width: 100%;
-    background: #5b28ec;
+    background: #5e2b9d;
     color: #ffffff;
-    padding: 0.8rem 1.4rem;
-    font-size: 0.92rem;
-    font-weight: 600;
-    border-radius: 9px;
+    height: 34px;
+    max-height: 34px;
+    padding: 0 1.4rem;
+    font-size: 0.88rem;
+    font-weight: 500;
+    border-radius: 8px;
     border: none;
     cursor: pointer;
-    box-shadow: 0 4px 14px rgba(91, 40, 236, 0.25);
+    box-shadow: 0 4px 14px rgba(94, 43, 157, 0.25);
     transition: all 0.2s ease;
     margin-top: 0.2rem;
+    box-sizing: border-box;
 }
 
 .submitBtn:hover {
-    background: #4719d2;
+    background: #4e2283;
     transform: translateY(-1px);
-    box-shadow: 0 6px 18px rgba(91, 40, 236, 0.35);
+    box-shadow: 0 6px 18px rgba(94, 43, 157, 0.35);
 }
 
 /* 2. Contact Details Column */
@@ -245,7 +252,7 @@
 .detailIconCircle {
     width: 48px;
     height: 48px;
-    border-radius: 50%;
+    border-radius: 8px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -259,8 +266,8 @@
 }
 
 .purpleIcon {
-    background-color: #f3f0ff;
-    color: #6345ed;
+    background-color: #f6f0fc;
+    color: #5e2b9d;
 }
 
 .blueIcon {
@@ -280,14 +287,14 @@
 
 .detailLabel {
     font-size: 0.88rem;
-    font-weight: 700;
+    font-weight: 500;
     color: #1e293b;
     margin-bottom: 2px;
 }
 
 .detailValueBold {
     font-size: 0.96rem;
-    font-weight: 800;
+    font-weight: 500;
     color: #0f172a;
     text-decoration: none;
     line-height: 1.35;
@@ -295,7 +302,7 @@
 }
 
 .detailValueBold:hover {
-    color: #6345ed;
+    color: #5e2b9d;
 }
 
 .detailSub {
@@ -326,7 +333,7 @@
 
 .mapCard {
     background: #ffffff;
-    border-radius: 18px;
+    border-radius: 8px;
     border: 1px solid #edf0f7;
     overflow: hidden;
     height: 240px;
@@ -390,7 +397,7 @@
 .landmarkTag3 {
     position: absolute;
     font-size: 0.65rem;
-    font-weight: 700;
+    font-weight: 500;
     color: #64748b;
     background: rgba(255, 255, 255, 0.85);
     padding: 2px 6px;
@@ -425,9 +432,9 @@
 .pinCircle {
     width: 36px;
     height: 36px;
-    border-radius: 50%;
-    background: #5b28ec;
-    box-shadow: 0 4px 12px rgba(91, 40, 236, 0.4);
+    border-radius: 8px;
+    background: #5e2b9d;
+    box-shadow: 0 4px 12px rgba(94, 43, 157, 0.4);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -444,7 +451,8 @@
 
 .pinBubble strong {
     font-size: 0.72rem;
-    color: #5b28ec;
+    font-weight: 500;
+    color: #5e2b9d;
 }
 
 .pinBubble span {
@@ -454,7 +462,7 @@
 
 .locationDetailsCard {
     background: #ffffff;
-    border-radius: 18px;
+    border-radius: 8px;
     border: 1px solid #edf0f7;
     padding: 1.5rem 1.35rem;
     display: flex;
@@ -466,7 +474,7 @@
 .miniBadge {
     display: inline-block;
     font-size: 0.68rem;
-    font-weight: 700;
+    font-weight: 500;
     letter-spacing: 0.8px;
     color: #0288d1;
     text-transform: uppercase;
@@ -475,7 +483,7 @@
 
 .sectionHeading {
     font-size: 1.3rem;
-    font-weight: 800;
+    font-weight: 500;
     color: #101c3d;
     margin-bottom: 0.5rem;
 }
@@ -491,21 +499,21 @@
     display: inline-flex;
     align-items: center;
     gap: 0.45rem;
-    color: #5b28ec;
+    color: #5e2b9d;
     font-size: 0.86rem;
-    font-weight: 700;
+    font-weight: 500;
     text-decoration: none;
     transition: all 0.2s ease;
 }
 
 .mapLinkBtn:hover {
-    color: #4719d2;
+    color: #4e2283;
     transform: translateX(2px);
 }
 
 .helpCard {
     background: #ffffff;
-    border-radius: 18px;
+    border-radius: 8px;
     border: 1px solid #edf0f7;
     padding: 1.5rem 1.45rem;
     display: flex;
@@ -543,7 +551,7 @@
 
 .helpTitle {
     font-size: 0.82rem;
-    font-weight: 700;
+    font-weight: 500;
     color: #0f172a;
     line-height: 1.25;
     margin-bottom: 2px;
@@ -558,7 +566,7 @@
 .bottomHelpBar {
     background: #ffffff;
     border: 1px solid #edf0f7;
-    border-radius: 16px;
+    border-radius: 8px;
     padding: 1rem 1.6rem;
     display: flex;
     align-items: center;
@@ -575,7 +583,7 @@
 .barHeadsetCircle {
     width: 44px;
     height: 44px;
-    border-radius: 50%;
+    border-radius: 8px;
     background: #eff6ff;
     color: #2563eb;
     display: flex;
@@ -596,7 +604,7 @@
 
 .barTitle {
     font-size: 0.98rem;
-    font-weight: 700;
+    font-weight: 500;
     color: #0f172a;
 }
 
@@ -608,28 +616,31 @@
 .liveChatBtn {
     display: inline-flex;
     align-items: center;
+    justify-content: center;
     gap: 0.5rem;
-    background: #5b28ec;
+    background: #5e2b9d;
     color: #ffffff;
-    padding: 0.65rem 1.25rem;
-    font-size: 0.9rem;
-    font-weight: 600;
+    height: 34px;
+    max-height: 34px;
+    padding: 0 1.25rem;
+    font-size: 0.88rem;
+    font-weight: 500;
     border-radius: 8px;
     border: none;
     cursor: pointer;
-    box-shadow: 0 4px 12px rgba(91, 40, 236, 0.25);
+    box-shadow: 0 4px 12px rgba(94, 43, 157, 0.25);
     transition: all 0.2s ease;
     white-space: nowrap;
+    box-sizing: border-box;
 }
 
 .liveChatBtn:hover {
-    background: #4719d2;
+    background: #4e2283;
     transform: translateY(-1px);
 }
 
 /* =========================================================
    TABLET VIEW (<= 1024px & > 425px) - MATCHING SCREENSHOT 1
-   - 3-Column horizontal spread preserving the office background
    ========================================================= */
 @media (max-width: 1024px) and (min-width: 426px) {
     .heroSection {
@@ -674,7 +685,7 @@
 
     .formCard {
         padding: 1.35rem 1.15rem;
-        border-radius: 16px;
+        border-radius: 8px;
     }
 
     .formTitle {
@@ -693,12 +704,16 @@
     .textInput,
     .selectInput,
     .textareaInput {
-        padding: 0.65rem 0.75rem 0.65rem 2.15rem;
+        height: 34px;
+        max-height: 34px;
+        padding: 0 0.75rem 0 2.15rem;
         font-size: 0.82rem;
     }
 
     .submitBtn {
-        padding: 0.75rem 1rem;
+        height: 34px;
+        max-height: 34px;
+        padding: 0 1rem;
         font-size: 0.88rem;
     }
 
@@ -714,6 +729,7 @@
     .detailIconCircle {
         width: 38px;
         height: 38px;
+        border-radius: 8px;
     }
 
     .detailIconCircle svg {
@@ -744,6 +760,7 @@
 
     .helpCard {
         grid-column: span 2;
+        border-radius: 8px;
     }
 }
 
@@ -798,7 +815,7 @@
         width: 100%;
         box-sizing: border-box;
         padding: 1.5rem 1rem;
-        border-radius: 18px;
+        border-radius: 8px;
         box-shadow: 0 10px 30px rgba(0, 0, 0, 0.06);
         border: 1px solid #edf0f7;
         position: relative;
@@ -808,13 +825,13 @@
     .formCard::before {
         content: "CONTACT US";
         display: inline-block;
-        background: #ede9fe;
-        color: #5b28ec;
+        background: #f6f0fc;
+        color: #5e2b9d;
         font-size: 0.68rem;
-        font-weight: 700;
+        font-weight: 500;
         letter-spacing: 0.75px;
         padding: 0.3rem 0.75rem;
-        border-radius: 20px;
+        border-radius: 8px;
         margin-bottom: 0.75rem;
         align-self: flex-start;
         width: fit-content;
@@ -822,7 +839,7 @@
 
     .formTitle {
         font-size: 1.35rem;
-        font-weight: 800;
+        font-weight: 500;
         color: #101c3d;
         margin-bottom: 1.15rem;
     }
@@ -844,22 +861,33 @@
     }
 
     .textInput,
-    .selectInput,
+    .selectInput {
+        width: 100%;
+        height: 34px;
+        max-height: 34px;
+        box-sizing: border-box;
+        padding: 0 0.85rem 0 2.25rem;
+        font-size: 0.84rem;
+        border-radius: 8px;
+    }
+
     .textareaInput {
         width: 100%;
         box-sizing: border-box;
         padding: 0.72rem 0.85rem 0.72rem 2.25rem;
         font-size: 0.84rem;
-        border-radius: 10px;
+        border-radius: 8px;
     }
 
     .submitBtn {
         width: 100%;
+        height: 34px;
+        max-height: 34px;
         box-sizing: border-box;
-        padding: 0.82rem 1rem;
+        padding: 0 1rem;
         font-size: 0.94rem;
-        font-weight: 700;
-        border-radius: 10px;
+        font-weight: 500;
+        border-radius: 8px;
         margin-top: 0.35rem;
     }
 
@@ -880,6 +908,7 @@
     .detailIconCircle {
         width: 42px;
         height: 42px;
+        border-radius: 8px;
     }
 
     .detailIconCircle svg {
@@ -915,6 +944,7 @@
 
     .helpCard {
         grid-column: span 1;
+        border-radius: 8px;
     }
 
     .helpFeaturesRow {
@@ -927,10 +957,13 @@
         align-items: flex-start;
         gap: 1rem;
         padding: 1.15rem;
+        border-radius: 8px;
     }
 
     .liveChatBtn {
         width: 100%;
+        height: 34px;
+        max-height: 34px;
         justify-content: center;
     }
 }
@@ -951,6 +984,7 @@
 
     .formCard {
         padding: 1.25rem 0.75rem;
+        border-radius: 8px;
     }
 
     .sectionHeading {
