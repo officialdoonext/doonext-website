@@ -84,6 +84,23 @@ const products: ProductCard[] = [
         imageUrl:
             "/retail.png",
     },
+    {
+        id: "menext",
+        name: "MeNext",
+        badgeTag: "WhatsApp CRM & Sales Automation",
+        description:
+            "Enterprise-grade WhatsApp CRM with shared multi-agent inbox, sales pipelines, visual automations, and AI replies.",
+        features: [
+            "Shared Team Inbox",
+            "Kanban Sales Pipelines",
+            "Broadcast Campaigns",
+            "Visual Automations & AI",
+        ],
+        buttonText: "Learn More",
+        href: "/menext",
+        imageUrl:
+            "/menext.png",
+    },
 ];
 
 export default function HomeProducts() {

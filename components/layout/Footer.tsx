@@ -105,6 +105,7 @@ export default function Footer() {
                             <li><Link href="/pharmanext" className={styles.footerLink}>PharmaNext</Link></li>
                             <li><Link href="/grownext" className={styles.footerLink}>GrowNext</Link></li>
                             <li><Link href="/retailnext" className={styles.footerLink}>RetailNext</Link></li>
+                            <li><Link href="/menext" className={styles.footerLink}>MeNext</Link></li>
                         </ul>
                     </div>
 

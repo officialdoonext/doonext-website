@@ -17,6 +17,7 @@ const productsList: ProductItem[] = [
     { label: "PharmaNext", href: "/pharmanext", desc: "Pharmacy & expiry management" },
     { label: "GrowNext", href: "/grownext", desc: "CRM & business growth tools" },
     { label: "RetailNext", href: "/retailnext", desc: "Retail inventory & barcode billing" },
+    { label: "MeNext", href: "/menext", desc: "WhatsApp CRM & sales automation" },
 ];
 
 export default function Header() {

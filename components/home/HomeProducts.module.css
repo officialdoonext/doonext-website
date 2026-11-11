@@ -42,10 +42,10 @@
     line-height: 1.5;
 }
 
-/* Unified 4 Cards Grid */
+/* Unified Cards Grid */
 .grid {
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
     gap: 1.35rem;
     align-items: stretch;
 }
@@ -200,14 +200,21 @@
    Responsive Breakpoints: Desktop -> Tablet -> Mobile (320px - 425px)
    ========================================================= */
 
-@media (max-width: 1120px) {
+@media (max-width: 1200px) {
     .grid {
-        grid-template-columns: repeat(2, 1fr);
+        grid-template-columns: repeat(3, 1fr);
         gap: 1.25rem;
     }
 
     .productDesc {
         min-height: auto;
+    }
+}
+
+@media (max-width: 860px) {
+    .grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1.15rem;
     }
 }
 

@@ -1,0 +1,435 @@
+/* =========================================================
+   MENEXT PRIVACY POLICY STYLES
+   Adhering to Doonext Design System:
+   - Font: Sora, max font-weight: 500
+   - Primary: #5e2b9d, Accent Green: #059669
+   - Buttons: max-height 34px, border-radius 8px
+   ========================================================= */
+
+.pageWrapper {
+    background-color: #ffffff;
+    width: 100%;
+    min-height: 100vh;
+}
+
+.container {
+    max-width: 1080px;
+    margin: 0 auto;
+    padding: 0 1.5rem;
+    box-sizing: border-box;
+}
+
+/* Header & Breadcrumb */
+.headerSection {
+    padding: 3.5rem 0 2.5rem;
+    background: linear-gradient(180deg, #f0fdf4 0%, #faf7fc 60%, #ffffff 100%);
+    border-bottom: 1px solid #edf0f5;
+}
+
+.breadcrumbNav {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 0.82rem;
+    color: #64748b;
+    margin-bottom: 1.25rem;
+}
+
+.breadcrumbLink {
+    color: #5e2b9d;
+    text-decoration: none;
+    transition: color 0.2s;
+}
+
+.breadcrumbLink:hover {
+    color: #4e2283;
+    text-decoration: underline;
+}
+
+.breadcrumbSep {
+    color: #cbd5e1;
+}
+
+.badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.45rem;
+    background-color: #ecfdf5;
+    color: #065f46;
+    border: 1px solid #a7f3d0;
+    font-size: 0.76rem;
+    font-weight: 500;
+    letter-spacing: 0.8px;
+    padding: 0.35rem 0.85rem;
+    border-radius: 8px;
+    margin-bottom: 1rem;
+    text-transform: uppercase;
+}
+
+.mainTitle {
+    font-size: 2.75rem;
+    font-weight: 500;
+    line-height: 1.2;
+    color: #101c3d;
+    margin-bottom: 0.85rem;
+    letter-spacing: -0.6px;
+}
+
+.metaRow {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+    font-size: 0.85rem;
+    color: #64748b;
+    flex-wrap: wrap;
+}
+
+.metaItem {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.45rem;
+}
+
+.contentWrapper {
+    padding: 3.5rem 0 4rem;
+}
+
+.layoutGrid {
+    display: grid;
+    grid-template-columns: 260px 1fr;
+    gap: 3.5rem;
+    align-items: flex-start;
+}
+
+/* Sticky Sidebar Table of Contents */
+.tocSidebar {
+    position: sticky;
+    top: 5.5rem;
+    background: #f8fafc;
+    border: 1px solid #e2e8f0;
+    border-radius: 8px;
+    padding: 1.25rem;
+}
+
+.tocTitle {
+    font-size: 0.85rem;
+    font-weight: 500;
+    color: #101c3d;
+    text-transform: uppercase;
+    letter-spacing: 0.6px;
+    margin-bottom: 0.85rem;
+    padding-bottom: 0.65rem;
+    border-bottom: 1px solid #e2e8f0;
+}
+
+.tocList {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 0.45rem;
+}
+
+.tocLink {
+    font-size: 0.82rem;
+    color: #475569;
+    text-decoration: none;
+    display: block;
+    padding: 0.25rem 0.45rem;
+    border-radius: 4px;
+    transition: all 0.2s ease;
+    line-height: 1.4;
+}
+
+.tocLink:hover {
+    color: #5e2b9d;
+    background: #f6f0fc;
+}
+
+/* Main Article Document */
+.policyArticle {
+    display: flex;
+    flex-direction: column;
+    gap: 2.75rem;
+    color: #334155;
+    line-height: 1.7;
+    font-size: 0.95rem;
+}
+
+.introCallout {
+    background: #f8fafc;
+    border-left: 4px solid #059669;
+    padding: 1.25rem 1.5rem;
+    border-radius: 0 8px 8px 0;
+    font-size: 0.95rem;
+    color: #334155;
+    line-height: 1.65;
+}
+
+.policySection {
+    scroll-margin-top: 6rem;
+    border-bottom: 1px solid #f1f5f9;
+    padding-bottom: 2.5rem;
+}
+
+.policySection:last-child {
+    border-bottom: none;
+    padding-bottom: 0;
+}
+
+.sectionHeading {
+    font-size: 1.5rem;
+    font-weight: 500;
+    color: #101c3d;
+    margin-bottom: 1.15rem;
+    display: flex;
+    align-items: center;
+    gap: 0.65rem;
+}
+
+.subHeading {
+    font-size: 1.15rem;
+    font-weight: 500;
+    color: #1e293b;
+    margin: 1.25rem 0 0.65rem;
+}
+
+.paragraph {
+    margin-bottom: 1rem;
+    color: #475569;
+    line-height: 1.7;
+}
+
+.bulletList {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 0.65rem;
+    margin: 0.85rem 0 1.25rem;
+    padding-left: 0.5rem;
+}
+
+.bulletItem {
+    display: flex;
+    align-items: flex-start;
+    gap: 0.65rem;
+    line-height: 1.55;
+    color: #334155;
+}
+
+.bulletDot {
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background-color: #059669;
+    margin-top: 0.55rem;
+    flex-shrink: 0;
+}
+
+/* Permissions Table */
+.tableContainer {
+    margin: 1.5rem 0;
+    overflow-x: auto;
+    border: 1px solid #e2e8f0;
+    border-radius: 8px;
+    background: #ffffff;
+}
+
+.permissionsTable {
+    width: 100%;
+    border-collapse: collapse;
+    text-align: left;
+    font-size: 0.88rem;
+}
+
+.permissionsTable th {
+    background: #f8fafc;
+    color: #1e293b;
+    padding: 0.85rem 1.25rem;
+    font-weight: 500;
+    border-bottom: 1px solid #e2e8f0;
+}
+
+.permissionsTable td {
+    padding: 1rem 1.25rem;
+    border-bottom: 1px solid #f1f5f9;
+    color: #475569;
+    line-height: 1.55;
+    vertical-align: top;
+}
+
+.permissionsTable tr:last-child td {
+    border-bottom: none;
+}
+
+.permissionCode {
+    font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+    font-size: 0.82rem;
+    font-weight: 500;
+    color: #065f46;
+    background: #ecfdf5;
+    padding: 0.2rem 0.5rem;
+    border-radius: 4px;
+    border: 1px solid #a7f3d0;
+    display: inline-block;
+}
+
+/* Third-Party Services Card */
+.thirdPartyGrid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.25rem;
+    margin: 1.5rem 0;
+}
+
+.thirdPartyCard {
+    background: #fafbfc;
+    border: 1px solid #e2e8f0;
+    border-radius: 8px;
+    padding: 1.25rem;
+}
+
+.thirdPartyTitle {
+    font-size: 1rem;
+    font-weight: 500;
+    color: #101c3d;
+    margin-bottom: 0.45rem;
+}
+
+.thirdPartyDesc {
+    font-size: 0.82rem;
+    color: #64748b;
+    line-height: 1.5;
+}
+
+/* Deletion Box */
+.deletionBox {
+    background: #fffbeb;
+    border: 1px solid #fde68a;
+    border-radius: 8px;
+    padding: 1.35rem 1.5rem;
+    margin: 1.25rem 0;
+}
+
+.deletionTitle {
+    font-size: 1rem;
+    font-weight: 500;
+    color: #92400e;
+    margin-bottom: 0.5rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.deletionText {
+    font-size: 0.9rem;
+    color: #78350f;
+    line-height: 1.6;
+}
+
+/* Contact Card */
+.contactCard {
+    background: #f8fafc;
+    border: 1px solid #e2e8f0;
+    border-radius: 8px;
+    padding: 1.5rem;
+    margin-top: 1rem;
+}
+
+.contactList {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 0.65rem;
+    font-size: 0.9rem;
+}
+
+.contactLink {
+    color: #5e2b9d;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.contactLink:hover {
+    text-decoration: underline;
+}
+
+/* Footer Action Buttons */
+.footerActions {
+    display: flex;
+    align-items: center;
+    gap: 1.25rem;
+    margin-top: 2rem;
+    padding-top: 2rem;
+    border-top: 1px solid #e2e8f0;
+    flex-wrap: wrap;
+}
+
+.primaryBtn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.55rem;
+    background-color: #5e2b9d;
+    color: #ffffff;
+    height: 34px;
+    max-height: 34px;
+    padding: 0 1.25rem;
+    font-size: 0.88rem;
+    font-weight: 500;
+    border-radius: 8px;
+    text-decoration: none;
+    box-shadow: 0 4px 12px rgba(94, 43, 157, 0.25);
+    transition: all 0.25s ease;
+    white-space: nowrap;
+    box-sizing: border-box;
+}
+
+.primaryBtn:hover {
+    background-color: #4e2283;
+}
+
+.secondaryBtn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.55rem;
+    background-color: #ffffff;
+    color: #101c3d;
+    border: 1px solid #cbd5e1;
+    height: 34px;
+    max-height: 34px;
+    padding: 0 1.25rem;
+    font-size: 0.88rem;
+    font-weight: 500;
+    border-radius: 8px;
+    text-decoration: none;
+    transition: all 0.25s ease;
+    white-space: nowrap;
+    box-sizing: border-box;
+}
+
+.secondaryBtn:hover {
+    background-color: #f6f0fc;
+    border-color: #5e2b9d;
+    color: #5e2b9d;
+}
+
+@media (max-width: 900px) {
+    .layoutGrid {
+        grid-template-columns: 1fr;
+    }
+
+    .tocSidebar {
+        position: static;
+        margin-bottom: 2rem;
+    }
+
+    .thirdPartyGrid {
+        grid-template-columns: 1fr;
+    }
+
+    .mainTitle {
+        font-size: 2.15rem;
+    }
+}
+
