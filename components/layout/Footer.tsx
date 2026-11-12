@@ -89,9 +89,18 @@ export default function Footer() {
                                 className={styles.socialIcon}
                                 aria-label="YouTube"
                             >
-                                <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor">
-                                    <path d="M22.54 6.42a2.78 2.78 0 0 0-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 0 0-1.94 2A29 29 0 0 0 1 11.75a29 29 0 0 0 .46 5.33A2.78 2.78 0 0 0 3.4 19c1.72.46 8.6.46 8.6.46s6.88 0 8.6-.46a2.78 2.78 0 0 0 1.94-2 29 29 0 0 0 .46-5.25 29 29 0 0 0-.46-5.33z" />
-                                    <polygon points="9.75 15.02 15.5 11.75 9.75 8.48 9.75 15.02" fill="#081d33" />
+                                <svg
+                                    width="15"
+                                    height="15"
+                                    viewBox="0 0 24 24"
+                                    fill="none"
+                                    stroke="currentColor"
+                                    strokeWidth="2"
+                                    strokeLinecap="round"
+                                    strokeLinejoin="round"
+                                >
+                                    <path d="M2.5 17a24.12 24.12 0 0 1 0-10 2 2 0 0 1 1.4-1.4 49.56 49.56 0 0 1 16.2 0A2 2 0 0 1 21.5 7a24.12 24.12 0 0 1 0 10 2 2 0 0 1-1.4 1.4 49.55 49.55 0 0 1-16.2 0A2 2 0 0 1 2.5 17" />
+                                    <polygon points="10 15 15 12 10 9 10 15" fill="currentColor" />
                                 </svg>
                             </a>
                         </div>
@@ -101,7 +110,11 @@ export default function Footer() {
                     <div className={styles.linksCol}>
                         <h4 className={styles.columnTitle}>Products</h4>
                         <ul className={styles.linkList}>
-                            <li><Link href="/products" className={styles.footerLink} style={{ color: "#5e2b9d", fontWeight: 500 }}>All Products &rarr;</Link></li>
+                            <li>
+                                <Link href="/products" className={`${styles.footerLink} ${styles.allProductsLink}`}>
+                                    All Products &rarr;
+                                </Link>
+                            </li>
                             <li><Link href="/retailnext" className={styles.footerLink}>RetailNext</Link></li>
                             <li><Link href="/menext" className={styles.footerLink}>MeNext</Link></li>
                             <li><Link href="/grownext" className={styles.footerLink}>GrowNext</Link></li>
