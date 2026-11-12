@@ -193,6 +193,39 @@
     margin-top: 2px;
 }
 
+.dropdownDivider {
+    height: 1px;
+    background: #f1f5f9;
+    margin: 0.25rem 0.5rem;
+}
+
+.allProductsDropdownLink {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0.55rem 0.85rem;
+    font-size: 0.82rem;
+    font-weight: 500;
+    color: #5e2b9d;
+    background: #f6f0fc;
+    border-radius: 6px;
+    text-decoration: none;
+    transition: all 0.15s ease;
+}
+
+.allProductsDropdownLink:hover {
+    background: #ede3f8;
+    color: #4e2283;
+}
+
+.mobileViewAllLink {
+    color: #5e2b9d !important;
+    font-weight: 500 !important;
+    background: #f6f0fc;
+    border-radius: 6px;
+    padding-left: 0.75rem !important;
+}
+
 /* =========================================================
    CTA BUTTON
    ========================================================= */

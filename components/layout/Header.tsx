@@ -27,9 +27,10 @@ export default function Header() {
     const dropdownRef = useRef<HTMLLIElement>(null);
     const pathname = usePathname();
 
-    const isProductActive = productsList.some(
-        (item) => pathname === item.href || pathname.startsWith(`${item.href}/`)
-    );
+    const isProductActive =
+        productsList.some(
+            (item) => pathname === item.href || pathname.startsWith(`${item.href}/`)
+        ) || pathname === "/products" || pathname.startsWith("/products/");
 
     // Close menus on page navigation
     useEffect(() => {
@@ -157,6 +158,13 @@ export default function Header() {
                                             </Link>
                                         );
                                     })}
+                                    <div className={styles.dropdownDivider} />
+                                    <Link
+                                        href="/products"
+                                        className={`${styles.allProductsDropdownLink} ${pathname === "/products" ? styles.activeDropdownItem : ""}`}
+                                    >
+                                        <span>View All Products &rarr;</span>
+                                    </Link>
                                 </div>
                             </div>
                         </li>
@@ -298,6 +306,14 @@ export default function Header() {
                                             </li>
                                         );
                                     })}
+                                    <li className={styles.mobileSubItem}>
+                                        <Link
+                                            href="/products"
+                                            className={`${styles.mobileSubLink} ${styles.mobileViewAllLink} ${pathname === "/products" ? styles.subActive : ""}`}
+                                        >
+                                            View All Products &rarr;
+                                        </Link>
+                                    </li>
                                 </ul>
                             </div>
                         </li>

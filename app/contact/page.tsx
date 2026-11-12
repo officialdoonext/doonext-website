@@ -142,6 +142,7 @@ export default function ContactPage() {
                                         <option value="pharmanext">PharmaNext</option>
                                         <option value="grownext">GrowNext</option>
                                         <option value="retailnext">RetailNext</option>
+                                        <option value="menext">MeNext (WhatsApp CRM)</option>
                                         <option value="custom">Custom Solution</option>
                                     </select>
                                 </div>

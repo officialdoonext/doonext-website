@@ -101,11 +101,12 @@ export default function Footer() {
                     <div className={styles.linksCol}>
                         <h4 className={styles.columnTitle}>Products</h4>
                         <ul className={styles.linkList}>
-                            <li><Link href="/billnext" className={styles.footerLink}>BillNext</Link></li>
-                            <li><Link href="/pharmanext" className={styles.footerLink}>PharmaNext</Link></li>
-                            <li><Link href="/grownext" className={styles.footerLink}>GrowNext</Link></li>
+                            <li><Link href="/products" className={styles.footerLink} style={{ color: "#5e2b9d", fontWeight: 500 }}>All Products &rarr;</Link></li>
                             <li><Link href="/retailnext" className={styles.footerLink}>RetailNext</Link></li>
                             <li><Link href="/menext" className={styles.footerLink}>MeNext</Link></li>
+                            <li><Link href="/grownext" className={styles.footerLink}>GrowNext</Link></li>
+                            <li><Link href="/billnext" className={styles.footerLink}>BillNext</Link></li>
+                            <li><Link href="/pharmanext" className={styles.footerLink}>PharmaNext</Link></li>
                         </ul>
                     </div>
 
