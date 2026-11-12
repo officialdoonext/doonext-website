@@ -82,10 +82,11 @@ export default function Header() {
                             src="/logo.png"
                             alt="DooNext Logo"
                             width={280}
-                            height={76}
+                            height={38}
                             priority
                             loading="eager"
                             className={styles.logoImage}
+                            style={{ height: '38px' }}
                         />
                     </Link>
                 </div>
